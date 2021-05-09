@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    /* overflow: hidden; */
+}
+
+main {
+    width: 100%;
+}
+
+#overlay-cookies {
+    background-color: #000;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    display: none;
+}
+
+.cookie-container {
+    position: fixed;
+    bottom: -100%;
+    left: 38%;
+    background: whitesmoke;
+    color: black;
+    padding: 0 32px;
+    box-shadow: 0 -2px 16px black;
+    width: 450px;
+    height: 300px;
+    transition: 0.8s;
+    z-index: 10;
+    opacity: 1;
+}
+
+.cookie-container h1 {
+    margin-top: 20px;
+}
+
+.cookie-container p {
+    text-align: justify;
+    margin: 24px 0;
+    line-height: 2;
+}
+
+.cookie-container.active {
+    bottom: 40%;
+}
+
+.cookie-container a {
+    color: black;
+}
+
+.cookie-btn {
+    background: gold;
+    border: 0;
+    padding: 12px 48px;
+    font-size: 18px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out ;
+    margin-right: 20px;
+}
+
+.cookie-btn:hover {
+    opacity: 0.6;
+}
+
+@media only screen and (max-width: 1277px) {
+    .cookie-container {
+        left: 29%;
+    }
+}
+
+@media only screen and (max-width: 904px) {
+    .cookie-container {
+        left: 28%;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    .cookie-container {
+        left: 20%;
+    }
+}
+
+@media only screen and (max-width: 565px) {
+    .cookie-container {
+        left: 8%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .cookie-container {
+        left: 14%;
+        width: 350px;
+        height: 220px;
+    }
+
+    .cookie-container h1 {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    
+    .cookie-container p {
+        text-align: justify;
+        margin: 12px 0;
+        line-height: 2;
+        font-size: 12px;
+    }
+
+    .cookie-btn {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    .cookie-container a {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    .cookie-container {
+        left: 4%;
+        width: 350px;
+        height: 220px;
+    }
+
+    .cookie-container h1 {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    
+    .cookie-container p {
+        text-align: justify;
+        margin: 12px 0;
+        line-height: 2;
+        font-size: 12px;
+    }
+
+    .cookie-btn {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    .cookie-container a {
+        font-size: 16px;
+    }
+}
+

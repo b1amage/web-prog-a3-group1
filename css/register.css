@@ -1,0 +1,445 @@
+/* Import the font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #f6f6f6;
+}
+
+form {
+    position: fixed;
+    top: 17.5%;
+    left: 10%;
+    height: 70%;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 1px 2px 3px rgb(80, 79, 79);
+    padding: 0.25% 5%;
+    background-color: rgb(241, 236, 228);
+    overflow-y: auto;
+}
+  
+form h1 {
+    text-align: center;
+}
+
+#line {
+    display: flex;
+    justify-content: center;
+    margin: 1% 0;
+}
+
+form hr {
+    width: 90%;
+}
+
+#info {
+    display: grid;
+    margin-left: 10%;
+    width: 80%;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 3px;
+}
+
+/* Hide the spin button in the number field*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {/* Chrome, Safari, Edge, Opera */
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {/* Firefox */
+  -moz-appearance: textfield;
+}
+
+::-webkit-input-placeholder {/* Edge */
+    font-family: 'Poppins';
+    color: black;
+}
+
+:-ms-input-placeholder {/* Internet Explorer */  
+    font-family: 'Poppins';
+    color: black;
+    font-weight: 300;
+}
+
+/* Custom the style of placeholder */
+::placeholder { /* Chrome, Firefox, Opera, Safari */
+    font-family: 'Poppins';
+    color: black;
+    font-weight: 300;
+  }
+  
+:-ms-input-placeholder { /* Internet Explorer */
+    font-family: 'Poppins';
+    color: black;
+    font-weight: 300;}
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+    font-family: 'Poppins';
+    color: black;
+    font-weight: 300;
+}
+
+.email {
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.phone {
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.address {
+    grid-area: 4 / 1 / span 1 / span 2;
+}
+
+.account {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.profile-picture {
+    background-color: white;
+    padding-left: 5px;
+    height: 50px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    grid-area: 6 / 1 / span 1 / span 1;
+    margin: 0 1.5px;
+}
+
+.profile-picture label {
+    font-family: 'Poppins';
+    display: block;
+    width: 70%;
+}
+
+input[type=file]:focus {
+    outline: none;
+}
+
+.country {
+    background-color:transparent;
+    height: 50px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    grid-area: 6 / 2 / span 1 / span 1;
+    margin: 0 1.5px;
+}
+
+.country label {
+    font-family: 'Poppins';
+}
+
+.country select {
+    background-color: white;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;
+    padding-left: 5px;
+    border-radius: 6px;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    -webkit-appearance: none;    
+}
+
+.country select:hover {
+    cursor: pointer;
+}
+
+.country select:focus {
+    box-shadow: none;
+}
+
+input:not([type=file], [type=radio]) {
+    padding-left: 5px;
+    width: 100%;
+    height: 40px;
+    border: 2px solid #dddfe2;
+    border-radius: 6px;
+    font-family: 'Poppins';
+    font-size: 15px;
+    outline: none;
+}
+
+input:not([type=radio], [type=submit], [type=reset], [type=file]):focus {
+    border-color: rgba(59, 59, 59, 0.849);
+    box-shadow: 0 0 10px rgba(122, 121, 121, 0.849);
+}
+
+.invalid {
+    display: none;
+    color: red;
+    font-size: 12.5px;
+    float: right;
+}
+
+input.error {
+    color: red;
+}
+
+input.error:focus {
+    border-color: red;
+}
+
+input.success {
+    color: green;
+}
+
+input.success:focus {
+    border-color: green;
+}
+
+.center {
+    text-align: center;
+    margin: 5px 0;
+}
+
+#radio-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#radio-check #shopper-account, #store-owner-account {
+    margin: 0 15px;
+}
+
+#radio-check input{
+    margin: 0 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: grid;
+    margin: 5px 10%;
+    width: 80%;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 3px;
+}
+
+.store-category {
+    grid-area: 2 / 1 / span 1 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.store-category label {
+    right: 0;
+    margin: 0 36px;
+}
+
+.store-category select {
+    padding: 2px;
+    outline: none;
+    border: 2px solid black;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    font-size: 15px;
+}
+
+.store-category select:hover {
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    margin: 12.5px 10%;
+    width: 80%;
+    justify-content: center;
+}
+
+input[type=submit], input[type=reset] {
+    color: white;
+    font-family: 'Poppins';
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    background-color: rgb(38, 38, 39);
+    width: 25%;
+    display: inline-flex;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    transition: all 0.15s linear;
+    margin: 0 5px;
+}
+
+input[type=submit]:hover , input[type=reset]:hover {
+    cursor: pointer;
+    background-color: rgba(38, 38, 39, 0.37);
+}
+
+/* Responsive */
+
+@media only screen and (min-width: 2500px) {
+    form {
+        top: 25% !important;
+        height: 55% !important;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    form {
+        top: 25% !important;
+        left: 5% !important;
+        height: 50% !important;
+        width: 90% !important;
+    }
+
+    .profile-picture label {
+        width: 65% !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    form {
+        top: 20% !important;
+        left: 0.5% !important;
+        width: 99% !important;
+        height: 60% !important;
+    }
+
+    #info {
+        margin-left: 2.5% !important;
+        width: 95% !important;
+    }
+
+    .profile-picture label {
+        width: 70% !important;
+    }
+
+    #radio-check #shopper-account, #store-owner-account {
+        width: 15%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .email {
+        grid-area: 1 / 1 / span 1 / span 2 !important;
+    }
+
+    .phone {
+        grid-area: 2 / 1 / span 1 / span 2 !important;
+    }
+
+    .password {
+        grid-area: 3 / 1 / span 1 / span 2 !important;
+    }
+
+    .re-password {
+        grid-area: 4 / 1 / span 1 / span 2 !important;
+    }
+
+    .address {
+        grid-area: 5 / 1 / span 1 / span 2 !important;
+    }
+
+    label, ::placeholder, :-ms-input-placeholder, ::-ms-input-placeholder, input {
+        font-size: 12px;
+    }
+    
+    form {
+        height: 70% !important;
+        font-size: 12px !important;
+    }
+
+    .profile-picture {
+        grid-area: 8 / 1 / span 1 / span 2 !important;
+    }
+
+    .country {
+        grid-area: 9 / 1 / span 1 / span 2 !important;
+    }
+
+    input[value=store-owner]:checked ~ .hidden {
+        margin: 5px 2.5%;
+        width: 95%;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .store-category label {
+        font-size: 17.5px;
+        margin-left: 3px;
+    }
+
+    input[type=submit], input[type=reset] {
+        display: block;
+        padding-left: 0.5px;
+    }    
+}
+
+@media only screen and (max-width: 600px) {
+    #radio-check #shopper-account, #store-owner-account {
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #radio-check #shopper-account, #store-owner-account {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #radio-check #shopper-account, #store-owner-account {
+        width: 27%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #radio-check #shopper-account, #store-owner-account {
+        width: 30%;
+    }
+
+    input[type=submit], input[type=reset] {
+        display: block;
+        padding-left: 2px;
+    }    
+}
+
+@media only screen and (max-width: 350px) {
+    #radio-check #shopper-account, #store-owner-account {
+        width: 35%;
+    }
+
+    .store-category label {
+        font-size: 15px;
+        margin-left: 10px !important;
+    }
+
+    input[type=submit], input[type=reset] {
+        display: block;
+        width: 70px !important;
+    } 
+}
+
+@media only screen and (max-width: 365px) {
+    .store-category label {
+        font-size: 14px;
+        margin-left: 12.5px !important;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    #radio-check #shopper-account, #store-owner-account {
+        width: 40%;
+        margin: 0 5px;
+    }
+}

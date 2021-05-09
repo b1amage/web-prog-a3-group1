@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+body{
+    background-color: #f6f6f6;
+
+}
+.box{
+    width:75%;
+    margin: 100px auto;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,.3);
+}
+.box .title{
+    background-color:#c7bdb1;
+    color: white;
+    border-radius: 7px 7px 0px 0px;
+    padding: 12px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+}
+.FAQs{
+    padding: 10px 20px;
+}
+details{
+    background-color: #f6f6f6;
+    padding: 15px;
+    border-radius: 7px;
+    margin-top: 10px;
+    font-size: 24px;
+}
+details summary{
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 690;
+}
+details p{
+    font-family: 'Ubuntu', sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 31px;
+}
+details summary:hover{
+    cursor: pointer;
+}
+@media screen and (max-width:1024px){
+    .box{
+        width:85%;
+    }
+    details{
+        padding:10px;
+    }
+    details summary{
+        font-size: 20px;
+    }
+    details p{
+        font-size: 16px;
+        line-height: 30px;
+    }
+    
+}
+@media screen and (max-width:769px) {
+    .box{
+        width:95%;
+    }
+    .box .title{
+        font-size: 27px;
+    }
+    details{
+        padding:6px;
+        margin-top: 5px;
+    }
+    details summary{
+        font-size:14px;
+    }
+    details p{
+        font-size: 13px;
+        margin-top: 6px;
+        line-height: 23px;
+    }
+}

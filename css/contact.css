@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+h1.title{
+   background-color: #c7bdb1;
+   text-align: center; 
+   padding: 15px;
+   width: 100%;
+   margin: 0;
+   border:0;
+   font-size: 45px;
+   font-family: 'Poppins', sans-serif;
+   color:white;
+   margin-top: 70px;
+
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 75px;
+}
+input[type="text"], input[type="email"], input[type="tel"]{
+    width: 100%;
+    padding: 15px;
+    margin-top: auto;
+}
+input[type="text"]:focus{
+    border: 3px solid #555;
+    background-color: cornsilk;
+}
+input[type="tel"]:focus{
+    border: 3px solid #555;
+    background-color: cornsilk;
+}
+input[type="email"]:focus{
+    border: 3px solid #555;
+    background-color: cornsilk;
+}
+button[type="submit"]{
+    background-color: #c7bdb1;
+    padding: 10px;
+    color:rgb(250, 252, 252);
+    border: 2px solid black;
+    font-weight: 600;
+    width: 150px;
+    font-size: 20px;
+    margin-left: 8px;
+    border-radius: 25px;
+}
+button[type="submit"]:hover{
+    background-color: rgb(7, 124, 7);
+    padding: 10px;
+    color:rgb(250, 252, 252);
+    border: 2px solid black;
+    font-weight: 600;
+    width: 150px;
+    cursor: pointer;
+}
+button[type="reset"]{
+    background-color: #c7bdb1;
+    padding: 10px;
+    color: white;
+    border: 2px solid black;
+    font-weight: 600;
+    width: 150px;
+    font-size: 20px;
+    border-radius: 25px;
+}
+button[type="reset"]:hover{
+    background-color:rgb(223, 0, 0);
+    padding: 10px;
+    color: white;
+    border: 2px solid black;
+    font-weight: 600;
+    width: 150px;
+    cursor: pointer;
+}
+form{
+    font-size: 25px;
+}
+div.contact_form label{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    display: inline-block;
+}
+div.contact_form label.message{
+    font-size: 25px;
+    font-style: normal;
+}
+.container{
+    border-radius: 50px;
+    background-color: #f2f2f2;
+    padding: 50px;
+    margin-top: 15px;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+#msg{
+    width: 100%
+}
+#message_alert, #name_alert, #phone_alert, #email_alert, #radio_alert, #checkbox_alert{
+    font-size: 15px;
+}
+.a{
+    color: red;
+}
+.b{
+    color:rgb(25, 136, 25)
+}
+
+@media only screen and (max-width:1024px){
+    .container{
+        margin-bottom: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+}
+@media only screen and (max-width:804px){
+    .container{
+        margin-left: 8%;
+        margin-right: 8%;
+        padding: 5px;
+        border-radius: 0%;
+        border-radius: 5%;
+    }
+    input[type="text"], input[type="email"], input[type="tel"]{
+        width: 100%;
+        padding: 8px;
+        margin-top: auto;
+    }
+    
+    .contact_form p{
+        font-size: 15px;
+    }
+    .purpose{
+        font-size: 15px;
+    }
+    div.contact_form label{
+        font-size: 14px;
+    }
+    div.contact_form label.message{
+        font-size: 15px;
+    }
+    button[type="submit"]{
+        font-weight: 500;
+        width: 75px;
+        font-size: 17px;
+        margin-left: 5px;  
+    }
+    button[type="reset"]{
+        border: 2px solid black;
+        font-weight: 500;
+        width: 75px;
+        font-size: 17px;
+    } 
+    h1.title{
+        font-size: 30px;
+        padding: 20px;
+    }
+    #message_alert, #name_alert, #phone_alert, #email_alert, #radio_alert, #checkbox_alertt{
+        font-size: 10px;
+    }
+}

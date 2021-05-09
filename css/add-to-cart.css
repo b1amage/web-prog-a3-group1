@@ -1,0 +1,20 @@
+.product-1,
+.product-2,
+.product-3 {
+    display: none;
+}
+
+#submit-discount-btn {
+    width: 60px;
+    background-color: #5a473a;
+    border: none;
+    outline: none;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out;
+}
+
+#submit-discount-btn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}

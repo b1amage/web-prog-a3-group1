@@ -1,0 +1,198 @@
+/* Import the font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Reset html */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Set some basic feature for the whole html */
+html {
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.product-container {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    border: 3px solid black;
+    margin: 20px 10px;
+    text-align: center;
+}
+
+.product-container .product h3 {
+    text-align: center;
+    width: 100%;
+}
+
+
+.product-container .product h3 {
+    padding: 15px 0px;
+}
+
+
+.product a img:hover {
+    cursor: pointer;
+}
+
+h3 a {
+    text-decoration: none;
+    color: black;
+}
+
+.title-2 h1 {
+    text-align: center;
+    width: 100%;
+    margin: 30px 0px;
+    padding: 0px;
+}
+
+.product .overlay {
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    transition: 0.75s ease;
+    display: flex;
+    align-items: center;
+}
+
+.product:hover .overlay {
+    opacity: 0.95;
+}
+
+.overlay p {
+    font-size: 14px;
+    display: inline;
+    text-align: center;
+    width: 100%;
+}
+
+body main {
+    margin-top: 60px;
+}
+
+#details {
+    display: none;
+}
+
+.pd1 {
+    display: none;
+}
+
+#details:checked ~ .pd1 {
+    display: flex;
+}
+
+#details-2 {
+    display: none;
+}
+
+.pd2 {
+    display: none;
+}
+
+#details-2:checked ~ .pd2 {
+    display: flex;
+}
+
+#details-3 {
+    display: none;
+}
+
+.pd3 {
+    display: none;
+    margin-bottom: 100px;
+}
+
+#details-3:checked ~ .pd3 {
+    display: flex;
+}
+
+#details-4{
+    display: none;
+}
+
+.pd4{
+    display: none;
+    margin-bottom: 100px;
+}
+
+#details-4:checked ~ .pd4 {
+    display: flex;
+}
+
+#details-5{
+    display: none;
+}
+
+.pd5{
+    display: none;
+    margin-bottom: 100px;
+}
+
+#details-5:checked ~ .pd5 {
+    display: flex;
+}
+
+
+.category {
+    font-weight: bold;
+    font-size: 50px;
+    margin: 100px 20px;
+    display: block;
+}
+
+.category:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ti-angle-double-down {
+    font-size: 80px;
+}
+
+@media only screen and (max-width: 1156px) {
+    .pd1, 
+    .pd2,
+    .pd3, 
+    .pd4,
+    .pd5 {
+        margin-bottom: 350px;
+    }
+
+    .category {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 702px) {
+    .pd1, 
+    .pd2,
+    .pd3,
+    .pd4,
+    .pd5 {
+        margin-bottom: 650px;
+    }
+}
+
+@media only screen and (max-width: 476px) {
+    .pd1, 
+    .pd2,
+    .pd3,
+    .pd4,
+    .pd5 {
+        margin-bottom: 1250px;
+    }
+}

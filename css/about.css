@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Poppins:wght@200;300;400;500;600;700;800&family=Ubuntu:wght@300;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body
+{
+    height: 200vh;
+    background: white;
+}
+.container{
+    margin-top: 120px;
+}
+.about,
+.team{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+/* title styling */
+.title{
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+}
+/* Create a line after the title */
+/* .title::after{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: black;
+    opacity: 0.8;
+    transform: translateX(-50%);
+} */
+
+/* content styling */
+.content{
+    margin: 0px 80px;
+    line-height: 1.6;
+    word-spacing: 2px;
+}
+.content h4{
+    margin-top: -20px;
+    color: #363636;
+    font-size: 16px;
+    font-weight: 400;
+}
+.content h5{
+    color: #363636;
+    font-size: 18px;
+    font-weight: 500;
+}
+.content ul{
+    margin-left: 50px;
+}
+.content p, li{
+    color: black;
+    font-size: 15px;
+    font-weight: 300;
+}
+/* avatar box styling */
+.avatar-box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    margin: 15px;
+    background: whitesmoke;
+    transition: 0.8s;
+}
+.avatar-box:hover{
+    cursor: pointer;
+    height: 420px;
+}
+.avatar-box .img-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.avatar-box .img-box img{
+    max-width: 100%;
+    opacity: 0.1;
+    transition: 0.5s;
+}
+.avatar-box:hover .img-box img{
+    opacity: 1;
+}
+.avatar-box::before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+.avatar-box::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+.avatar-box:before,
+.avatar-box:after{
+    background: linear-gradient(250deg,#ffc8a4,#010615,#f0622a);
+}
+/* .team .avatar-box:nth-child(2):before,
+.team .avatar-box:nth-child(2):after{
+    background: linear-gradient(220deg,#f0792a,#010615,#f0792a);
+}
+.team .avatar-box:nth-child(3):before,
+.team .avatar-box:nth-child(3):after{
+    background: linear-gradient(180deg,#f0792a,#010615,#f0792a);
+}
+.team .avatar-box:nth-child(4):before,
+.team .avatar-box:nth-child(4):after{
+    background: linear-gradient(180deg,#f0792a,#010615,#f0792a); 
+} */
+.avatar-box .box-content{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 100px;
+    background: #444444;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+.avatar-box:hover .box-content{
+    opacity: 1;
+}
+.avatar-box .box-content h1{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+.avatar-box .box-content span{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+/* .avatar-box .box-content p{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 1px;
+} */
+
+@media only screen and (max-width: 1053px) {
+    .about{
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+}

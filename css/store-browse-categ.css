@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Poppins:wght@200;300;400;500;600;700;800&family=Ubuntu:wght@300;400;500;700&display=swap');
+/* Reset html */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Set some basic feature for the whole html */
+html {
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.store-container {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.title{
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+}
+.store {
+    border: 3px solid black;
+    margin: 20px 10px;
+    text-align: center;
+}
+
+.store-container .store h3 {
+    text-align: center;
+    width: 100%;
+}
+
+
+.store-container .store h3 {
+    padding: 15px 0px;
+}
+
+
+.store a img:hover {
+    cursor: pointer;
+}
+
+h3 a {
+    text-decoration: none;
+    color: black;
+}
+
+.title-2 h1 {
+    text-align: center;
+    width: 100%;
+    margin: 30px 0px;
+    padding: 0px;
+}
+
+.store .overlay {
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    transition: 0.75s ease;
+    display: flex;
+    align-items: center;
+}
+
+.store:hover .overlay {
+    opacity: 0.95;
+}
+
+.overlay p {
+    font-size: 14px;
+    display: inline;
+    text-align: center;
+    width: 100%;
+}
+
+body main {
+    margin-top: 60px;
+}
+
+.label {
+    display: inline;
+}
+
+#details,
+#details-2,
+#details-3,
+#details-4,
+#details-5,
+#details-6,
+#details-7,
+#details-8,
+#details-9,
+#details-10,
+#details-11,
+#details-12,
+#details-13,
+#details-14,
+#details-15,
+#details-16,
+#details-17,
+#details-18,
+#details-19,
+#details-20,
+#details-21,
+#details-22,
+#details-23,
+#details-24,
+#details-25,
+#details-26 {
+    display: none;
+}
+
+.s1,
+.s2,
+.s3,
+.s4,
+.s5,
+.s6,
+.s7,
+.s8,
+.s9,
+.s10,
+.s11,
+.s12,
+.s13,
+.s14,
+.s15,
+.s16,
+.s17,
+.s18,
+.s19,
+.s20,
+.s21,
+.s22,
+.s23,
+.s24,
+.s25,
+.s26 {
+    display: none;
+}
+
+.s26 {
+    margin-bottom: 100px;
+}
+
+#details:checked ~ .s1,
+#details-2:checked ~ .s2,
+#details-3:checked ~ .s3,
+#details-4:checked ~ .s4,
+#details-5:checked ~ .s5,
+#details-6:checked ~ .s6,
+#details-7:checked ~ .s7,
+#details-8:checked ~ .s8,
+#details-9:checked ~ .s9,
+#details-10:checked ~ .s10,
+#details-11:checked ~ .s11,
+#details-12:checked ~ .s12,
+#details-13:checked ~ .s13
+#details-14:checked ~ .s14,
+#details-15:checked ~ .s15,
+#details-16:checked ~ .s16,
+#details-17:checked ~ .s17,
+#details-18:checked ~ .s18,
+#details-19:checked ~ .s19,
+#details-20:checked ~ .s20,
+#details-21:checked ~ .s21,
+#details-22:checked ~ .s22,
+#details-23:checked ~ .s23,
+#details-24:checked ~ .s24,
+#details-25:checked ~ .s25,
+#details-26:checked ~ .s26 {
+    display: flex;
+}
+
+.category {
+    font-weight: bold;
+    font-size: 50px;
+    margin: 100px 20px;
+    display: block;
+}
+
+.category:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ti-angle-double-down {
+    font-size: 80px;
+}
+
+@media only screen and (max-width: 1156px) {
+    .s1,
+    .s2,
+    .s3,
+    .s4,
+    .s5,
+    .s6,
+    .s7,
+    .s8,
+    .s9,
+    .s10,
+    .s11,
+    .s12,
+    .s13,
+    .s14,
+    .s15,
+    .s16,
+    .s17,
+    .s18,
+    .s19,
+    .s20,
+    .s21,
+    .s22,
+    .s23,
+    .s24,
+    .s25,
+    .s26 {
+        margin-bottom: 350px;
+    }
+
+    .category {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 702px) {
+    .s1,
+    .s2,
+    .s3,
+    .s4,
+    .s5,
+    .s6,
+    .s7,
+    .s8,
+    .s9,
+    .s10,
+    .s11,
+    .s12,
+    .s13,
+    .s14,
+    .s15,
+    .s16,
+    .s17,
+    .s18,
+    .s19,
+    .s20,
+    .s21,
+    .s22,
+    .s23,
+    .s24,
+    .s25,
+    .s26 {
+        margin-bottom: 650px;
+    }
+}
+
+@media only screen and (max-width: 476px) {
+    .s1,
+    .s2,
+    .s3,
+    .s4,
+    .s5,
+    .s6,
+    .s7,
+    .s8,
+    .s9,
+    .s10,
+    .s11,
+    .s12,
+    .s13,
+    .s14,
+    .s15,
+    .s16,
+    .s17,
+    .s18,
+    .s19,
+    .s20,
+    .s21,
+    .s22,
+    .s23,
+    .s24,
+    .s25,
+    .s26 {
+        margin-bottom: 1250px;
+    }
+}

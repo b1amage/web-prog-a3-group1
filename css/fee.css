@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    line-height: 1.5;
+}
+p{
+    line-height: 1.6;
+}
+.owner-container,
+.shopper-container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.5s ease-in;
+}
+.owner-container{
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+.shopper-container{
+    margin-bottom: 50px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    width: 100%;
+    padding-bottom: 20px;
+
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.price-table{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    position: relative;
+    padding-bottom: 25px;
+    text-align: center;
+    transition: all 0.35s ease-in;
+    margin: 15px;
+    width: 380px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px black;
+}
+.price-header{
+    background-color: #5a473a;
+    margin-bottom: 2.5rem;
+    padding-top: 2.5rem;
+    position: relative;
+}
+.price-table:hover{
+    box-shadow: 0 14px 28px black;
+}
+.price-table .popular{
+    padding-top: 0;
+}
+.price-popular{
+    position: absolute;
+    top: 20px;
+    right: -27px;
+    transform: rotate(40deg);
+}
+.price-popular h4{
+    color: black;
+    background-color: #ffd200;
+    margin-bottom: 0;
+    padding: 5px 40px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.price-plan{
+    margin-bottom: 0.5rem;
+}
+.price-plan h1{
+    font-weight: 600;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    margin-top: -2px;
+}
+.line{
+    background-color: white;
+    margin: 0 auto;
+    height: 2px;
+    width: 60px
+}
+.price-pay{
+    margin: 1.75rem 0;
+}
+.price-pay h3{
+    font-size: 4rem;
+    font-weight: 800;
+    color: #ffd200;
+    margin-bottom: 0;
+    margin-top: -15px;
+}
+.price-pay h3 span{
+    font-size: 2rem;
+}
+.price-info{
+    padding: 0 3rem;
+    margin-bottom: 2.5rem;
+}
+.price-info p{
+    margin-bottom: 0;
+}
+.price-info p::after{
+    content: none;
+    display: block;
+    border-bottom: 1px solid black;
+    margin: 1rem 0;
+}
+i{
+    margin-right: 10px;
+}
+
+.price-table .btn{
+    border: none;
+    border-radius: 100px;
+    padding: 0.5rem 2rem;
+    transition: all 0.35s ease-in-out;
+    color: black;
+    font-size: 1rem;
+}
+.btn-primary{
+    background-color: #ffd200;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.15);
+}
+.btn-primary:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+
+}
+.short-text{
+    font-size: 11px;
+    margin-top: 25px;
+    color: rgb(180, 180, 180);
+}
+
+@media only screen and (max-width: 480px){
+    .content{
+        display: block;
+    }
+    .price-table{
+        width: auto;
+        margin: 25px auto;
+    }
+}

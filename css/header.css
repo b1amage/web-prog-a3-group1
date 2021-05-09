@@ -1,0 +1,313 @@
+/* Import the font  */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Reset html */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Set some basic feature for the whole html */
+html {
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+main {
+    width: 100%;
+    /* min-height: 100vh; */
+    max-width: 100%;
+    /* margin: auto; */
+    padding-bottom: 20px;
+}
+
+.logo a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 20px;
+    color: #fff;
+    font-size: 40px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.logo a:hover {
+    cursor: pointer;
+    color:#c7bdb1;
+}
+
+.first-nav {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: #5a473a;
+    border-bottom: 1px solid black;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+}
+
+a.nav__link {
+    margin-left: 15px;
+    color: #ddd9d6;
+    /* padding: 10px; */
+    font-size: 24px;
+    border-bottom: 0px solid #fff;
+    transition: border-bottom 0.2s ease;
+
+}
+
+a.nav__link.push {
+    margin-left: 400px;
+}
+
+a.nav__link:hover {
+    cursor: pointer;
+    color: #ffffff;
+    border-bottom: 3px solid #fff;
+    
+}
+
+.nav__mobile-close:hover {
+    cursor: pointer;
+    color: black;
+}
+
+a.nav__mobile-link {
+    padding: 10px;
+}
+
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 48px;
+    min-width: 80px;
+    min-height: 100px;
+    line-height: 100px;
+}
+
+/* Mobile nav bar */
+.nav__bars-btn {
+    width: 28px;
+    height: 28px;
+    color: #fff;
+    display: none;
+    margin-left: 50%;
+    position: absolute;
+    right: 50px;
+}
+
+.nav__bars-btn:hover {
+    cursor: pointer;
+}
+
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: FadeIn linear 0.2s;
+}
+
+
+.nav__mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    background: white;
+    transform: translateX(200%);
+    opacity: 0;
+    transition: transform linear 0.2s, opacity linear 0.2s;
+}
+
+.nav__mobile-list{
+    margin-top: 24px;
+    list-style: none;
+}
+
+.nav__mobile-link {
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-size: 1.4rem;
+    padding: 0px 0px;
+}
+
+.my-account {
+    text-decoration: none;
+}
+
+.nav__mobile-link:hover{
+    color: #5a473a;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav__mobile-close {
+    width: 28px;
+    height: 28px;
+    color: #666;
+    position: absolute;
+    top: 0.4rem;
+    right: 1rem;
+}
+
+.nav__input:checked ~ .nav__overlay {
+    display: block;
+}
+
+.nav__input:checked ~ .nav__mobile {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+@media (max-width: 1813px) {
+    .nav__bars-btn {
+        display: block;
+    }
+
+    .nav__pc {
+        display: none;
+    }
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .logo a {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .nav__mobile {
+        width: 200px;
+    }
+}
+
+.nav__list li:hover .subnav {
+    display: block;
+}
+
+.nav__list .subnav li:hover a,
+.nav__list > li:hover > a {
+    text-decoration: none;
+}
+
+.nav_list .subnav li {
+    padding-top: 100px;
+}
+
+.nav__list .subnav {
+    display: none;
+    position: absolute;
+    background-color: #5a473a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    min-width: 160px;
+    min-height: 100px;
+    top: 75px;
+    right: 600;
+    list-style: none;
+    z-index: 2;
+    
+}
+
+.nav__list .subnav a {
+    color: black;
+    padding: 0px 12px;
+    line-height: 38px;
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.subnav-mobile-account,
+.subnav-mobile-browse {
+    display: none;
+}
+
+.subnav-mobile-account li,
+.subnav-mobile-browse li {
+    list-style: none;
+    padding: 10px 30px;
+    font-size: 18px;
+    
+}
+
+.subnav-mobile-account li a,
+.subnav-mobile-browse li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.subnav-mobile-account li:hover a,
+.subnav-mobile-browse li:hover a{
+    text-decoration: underline;
+    color: #5a473a;
+}
+
+.check-subnav-account:checked ~ .subnav-mobile-account,
+.check-subnav-browse:checked ~ .subnav-mobile-browse {
+    display: block;
+}
+
+#subnav-mobile-check-account,
+#subnav-mobile-check-browse {
+    position: absolute;
+    top: 320px;
+    left: 100px;
+    display: none;
+}
+
+.hover-account,
+.hover-browse {
+    padding: 10px;
+    list-style: none;
+}
+
+.ti-angle-double-down,
+.ti-angle-double-up {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+li:hover a.nav__link i {
+    text-decoration: none;
+}
+
+.ti-shopping-cart {
+    width: 50px;
+    height: 50px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 35px;
+}
+
+
+
+
+

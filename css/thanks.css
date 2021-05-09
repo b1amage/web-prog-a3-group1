@@ -1,0 +1,55 @@
+.content-tks {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    min-height: 700px;
+}
+
+.text-tks,
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.text-tks {
+    flex-direction: column;
+}
+
+.text-tks h4,
+.text-tks h1 {
+    text-align: center;
+}
+
+.text-tks h4 {
+    padding: 30px 0px;
+    font-size: 36px;
+}
+
+.text-tks h1 {
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 420px) {
+    .content-tks {
+        min-height: 500px;
+    }
+
+    .button-container img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .text-tks h4 {
+        padding: 20px 0px;
+        font-size: 16px;
+    }
+    
+    .text-tks h1 {
+        font-size: 20px;
+    }
+}

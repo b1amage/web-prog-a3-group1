@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Poppins:wght@200;300;400;500;600;700;800&family=Ubuntu:wght@300;400;500;700&display=swap');
+/* Reset html */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Set some basic feature for the whole html */
+html {
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.title{
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.categ-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px
+}
+
+.name-categ {
+    padding: 20px 50px;
+    color: #000000;
+    background-color: #c7bdb1;
+    border: 1px solid #ddd9d6;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.name-categ:focus,
+.name-categ:hover:hover {
+    outline: none;
+    border: 1px solid #ddd9d6;
+}
+.name-categ option {
+    font-size: 12px;
+    background: #ddd9d6;
+}
+
+.store-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.store {
+    border: 3px solid black;
+    margin: 20px 10px;
+    text-align: center;
+}
+
+.store-container .store h3 {
+    text-align: center;
+    width: 100%;
+}
+
+
+.store-container .store h3 {
+    padding: 15px 0px;
+}
+
+
+.store a img:hover {
+    cursor: pointer;
+}
+
+h3 a {
+    text-decoration: none;
+    color: black;
+}
+
+.title-2 h1 {
+    text-align: center;
+    width: 100%;
+    margin: 30px 0px;
+    padding: 0px;
+}
+
+.store .overlay {
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    transition: 0.75s ease;
+    display: flex;
+    align-items: center;
+}
+
+.store:hover .overlay {
+    opacity: 0.95;
+}
+
+.overlay p {
+    font-size: 14px;
+    display: inline;
+    text-align: center;
+    width: 100%;
+}
+
+body main {
+    margin-top: 60px;
+}
+
+.s1 {
+    display: flex;
+}
+
+.category {
+    font-weight: bold;
+    font-size: 50px;
+    margin: 100px 20px;
+    display: block;
+}
+
+.category:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ti-angle-double-down {
+    font-size: 80px;
+}
+
+.last {
+    margin-bottom: 200px;
+}
+
+@media only screen and (max-width: 1156px) {
+    .s1 {
+        margin-bottom: 50px;
+    }
+
+    .category {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 702px) {
+    .s1 {
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 476px) {
+    .s1 {
+        margin-bottom: 100px;
+    }
+}
