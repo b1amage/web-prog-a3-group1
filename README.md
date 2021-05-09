@@ -5,7 +5,7 @@ Assignment 3 of web programming course
 This is the Retailez mall in which sell a myriad of product from different brands. It is just like Van Hanh Mall or Crescent Mall
 
 # Link to our website:
-https://retailezasm2.netlify.app/
+https://retailezasm3.netlify.app/
 
 # Github
 https://github.com/s3877698/web_programmming_asm3_group1
@@ -75,7 +75,5 @@ All of the images from another source used in the website (in the store pages an
 - Deerus, FlyP, Impact
 - Babimart, Disney, Fat Brain, Funnyland, MyKingdom
 
-### 6. The sample data
-  We have created three sample data pages named product-detail.html, product-detail2.html, product-detail3.html
 
 
