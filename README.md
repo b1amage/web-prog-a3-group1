@@ -61,7 +61,7 @@ https://typeful.co/privacy-policy/RW-Z1mfH
 
 All of the images from another source used in the website (in the store pages and products page) are from these brands:
 - Canva
-- Index.html:
+- index.php:
   - Nike, Adidas, GLAB, Rolex, Unilo
   - The Mix, Vans, Puma, Bobui, KFC, Kick Geeks, Lv
 - Adler, Anice, Bcorner, Little Devil, Moji
