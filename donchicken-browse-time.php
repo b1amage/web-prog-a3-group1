@@ -27,19 +27,19 @@
                 <nav class="nav__pc">
                     <ul class="nav__list">
                         <li><a href="./index.php" class="nav__link push" id="underline">Home</a></li>
-                        <li><a href="./about.html" class="nav__link" id="underline">About Us</a></li>
-                        <li><a href="./fee.html" class="nav__link" id="underline">Fees</a></li>
-                        <li><a href="./login-box.html" class="nav__link my-account">My Account</a></li>
+                        <li><a href="./about.php" class="nav__link" id="underline">About Us</a></li>
+                        <li><a href="./fee.php" class="nav__link" id="underline">Fees</a></li>
+                        <li><a href="./login-box.php" class="nav__link my-account">My Account</a></li>
                         <li>
                             <a href="#" class="nav__link">Browse<i class="ti-angle-double-down"></i></a>
                             <ul class="subnav">
-                                <li><a href="./store-browse-name.html">Store By Name</a></li>
-                                <li><a href="./store-browse-categ.html">Store By Category</a></li>
+                                <li><a href="./store-browse-name.php">Store By Name</a></li>
+                                <li><a href="./store-browse-categ.php">Store By Category</a></li>
                             </ul>
                         </li>
-                        <li><a href="./faqs.html" class="nav__link">FAQs</a></li>
-                        <li><a href="./contact.html" class="nav__link">Contact</a></li>
-                        <li><a href="./order_placement.html" class="nav__link"><i class="ti-shopping-cart"></i></a></li>
+                        <li><a href="./faqs.php" class="nav__link">FAQs</a></li>
+                        <li><a href="./contact.php" class="nav__link">Contact</a></li>
+                        <li><a href="./order_placement.php" class="nav__link"><i class="ti-shopping-cart"></i></a></li>
                     </ul>
                 </nav>
     
@@ -62,22 +62,22 @@
                     </label>
                     <ul class="nav__mobile-list">
                         <li><a href="./index.php" class="nav__mobile-link">Home</a></li>
-                        <li><a href="./about.html" class="nav__mobile-link">About us</a></li>
-                        <li><a href="./fee.html" class="nav__mobile-link">Fees</a></li>
+                        <li><a href="./about.php" class="nav__mobile-link">About us</a></li>
+                        <li><a href="./fee.php" class="nav__mobile-link">Fees</a></li>
                         <li>
-                            <a class="my-account" href="./login-box.html"><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
+                            <a class="my-account" href="./login-box.php"><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
                         </li>
                         <li>
                             <label for="subnav-mobile-check-browse" class="nav__mobile-link hover-browse">Browse<i class="ti-angle-double-down"></i></label>
                             <input type="checkbox" id="subnav-mobile-check-browse" class="check-subnav-browse">
                                 <ul class="subnav-mobile-browse">
-                                    <li><a href="./store-browse-name.html">By Name</a></li>
-                                    <li><a href="./store-browse-categ.html">By Category</a></li>
+                                    <li><a href="./store-browse-name.php">By Name</a></li>
+                                    <li><a href="./store-browse-categ.php">By Category</a></li>
                                 </ul>
                         </li>
-                        <li><a href="./faqs.html" class="nav__mobile-link">FAQs</a></li>
-                        <li><a href="./contact.html" class="nav__mobile-link">Contact</a></li>
-                        <li><a href="./order_placement.html" class="nav__mobile-link"><i class="ti-shopping-cart"></i></a></li>
+                        <li><a href="./faqs.php" class="nav__mobile-link">FAQs</a></li>
+                        <li><a href="./contact.php" class="nav__mobile-link">Contact</a></li>
+                        <li><a href="./order_placement.php" class="nav__mobile-link"><i class="ti-shopping-cart"></i></a></li>
                     </ul>
                 </nav>
                 
@@ -94,32 +94,32 @@
                 <!-- <div class="overlay">
                     <p>20$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/don-chicken/app1.jpg" alt="chicken soup" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Chicken Soup</a></h3>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/app1.jpg" alt="chicken soup" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Chicken Soup</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>12$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/don-chicken/app2.jpg" alt="chicken salad" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Chicken Salad</a></h3>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/app2.jpg" alt="chicken salad" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Chicken Salad</a></h3>
             </div>
     
             <div class="product lst">
                 <!-- <div class="overlay">
                     <p>25$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/don-chicken/app3.jpg" alt="boiled shrimp" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Boiled Shirmp</a></h3>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/app3.jpg" alt="boiled shrimp" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Boiled Shirmp</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>17$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/don-chicken/app4.jpg" alt="chicken roll" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Chicken Roll</a></h3>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/app4.jpg" alt="chicken roll" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Chicken Roll</a></h3>
             </div>
         </div>
 
@@ -132,39 +132,39 @@
                 <!-- <div class="overlay">
                     <p>35$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/don-chicken/main1.jpg" alt="steak" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Steak</a></h3>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/main1.jpg" alt="steak" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Steak</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>25$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/don-chicken/main2.jpg" alt="grilled chicken" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Grilled Chicken</a></h3>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/main2.jpg" alt="grilled chicken" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Grilled Chicken</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>18$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/don-chicken/main3.jpg" alt="rice chicken" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Rice Chicken</a></h3>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/main3.jpg" alt="rice chicken" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Rice Chicken</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>17$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/don-chicken/main4.jpg" alt="steam chicken" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Steamed Chicken</a></h3>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/main4.jpg" alt="steam chicken" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Steamed Chicken</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>19$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/don-chicken/main5.jpg" alt="fried chicken" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/main5.jpg" alt="fried chicken" width="200" height="200"></a>
                 <h3><a href="#">Fried Chicken</a></h3>
             </div>
         </div>
@@ -177,24 +177,24 @@
                 <!-- <div class="overlay">
                     <p>25$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/don-chicken/class1.jpg" alt="boneless chicken" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Boneless chicken</a></h3>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/class1.jpg" alt="boneless chicken" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Boneless chicken</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>35$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/don-chicken/class2.jpg" alt="beef and cheesy rice" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Beef and cheesy rice</a></h3>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/class2.jpg" alt="beef and cheesy rice" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Beef and cheesy rice</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>28$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/don-chicken/class3.jpg" alt="cheese chicken" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Cheese chicken</a></h3>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/class3.jpg" alt="cheese chicken" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Cheese chicken</a></h3>
             </div>
     
             <div class="product">
@@ -218,9 +218,9 @@
         <nav>
             <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>
             <ul>
-                <li><a href="./copyright.html">Copyright</a></li>
-                <li><a href="./tos.html">ToS</a></li>
-                <li><a href="./policy.html">Privacy Policy</a></li>
+                <li><a href="./copyright.php">Copyright</a></li>
+                <li><a href="./tos.php">ToS</a></li>
+                <li><a href="./policy.php">Privacy Policy</a></li>
             </ul>
             <h3 class="right">Design by developer team</h3>
         </nav>

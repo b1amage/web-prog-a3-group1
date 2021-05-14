@@ -16,7 +16,7 @@ All icons can be viewed at: http://themify.me/themify-icons
 LICENSE
 
 - Themify Icons font licensed under: http://scripts.sil.org/OFL
-- Code licensed under: http://opensource.org/licenses/mit-license.html
+- Code licensed under: http://opensource.org/licenses/mit-license.php
 - All brand icons are copyright/trademarks of their respective owners.
 
 

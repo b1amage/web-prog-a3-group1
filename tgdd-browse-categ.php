@@ -27,19 +27,19 @@
                 <nav class="nav__pc">
                     <ul class="nav__list">
                         <li><a href="./index.php" class="nav__link push" id="underline">Home</a></li>
-                        <li><a href="./about.html" class="nav__link" id="underline">About Us</a></li>
-                        <li><a href="./fee.html" class="nav__link" id="underline">Fees</a></li>
-                        <li><a href="./login-box.html" class="nav__link my-account">My Account</a></li>
+                        <li><a href="./about.php" class="nav__link" id="underline">About Us</a></li>
+                        <li><a href="./fee.php" class="nav__link" id="underline">Fees</a></li>
+                        <li><a href="./login-box.php" class="nav__link my-account">My Account</a></li>
                         <li>
                             <a href="#" class="nav__link">Browse<i class="ti-angle-double-down"></i></a>
                             <ul class="subnav">
-                                <li><a href="./store-browse-name.html">Store By Name</a></li>
-                                <li><a href="./store-browse-categ.html">Store By Category</a></li>
+                                <li><a href="./store-browse-name.php">Store By Name</a></li>
+                                <li><a href="./store-browse-categ.php">Store By Category</a></li>
                             </ul>
                         </li>
-                        <li><a href="./faqs.html" class="nav__link">FAQs</a></li>
-                        <li><a href="./contact.html" class="nav__link">Contact</a></li>
-                        <li><a href="./order_placement.html" class="nav__link"><i class="ti-shopping-cart"></i></a></li>
+                        <li><a href="./faqs.php" class="nav__link">FAQs</a></li>
+                        <li><a href="./contact.php" class="nav__link">Contact</a></li>
+                        <li><a href="./order_placement.php" class="nav__link"><i class="ti-shopping-cart"></i></a></li>
                     </ul>
                 </nav>
     
@@ -62,22 +62,22 @@
                     </label>
                     <ul class="nav__mobile-list">
                         <li><a href="./index.php" class="nav__mobile-link">Home</a></li>
-                        <li><a href="./about.html" class="nav__mobile-link">About us</a></li>
-                        <li><a href="./fee.html" class="nav__mobile-link">Fees</a></li>
+                        <li><a href="./about.php" class="nav__mobile-link">About us</a></li>
+                        <li><a href="./fee.php" class="nav__mobile-link">Fees</a></li>
                         <li>
-                            <a class="my-account" href="./login-box.html"><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
+                            <a class="my-account" href="./login-box.php"><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
                         </li>
                         <li>
                             <label for="subnav-mobile-check-browse" class="nav__mobile-link hover-browse">Browse<i class="ti-angle-double-down"></i></label>
                             <input type="checkbox" id="subnav-mobile-check-browse" class="check-subnav-browse">
                                 <ul class="subnav-mobile-browse">
-                                    <li><a href="./store-browse-name.html">By Name</a></li>
-                                    <li><a href="./store-browse-categ.html">By Category</a></li>
+                                    <li><a href="./store-browse-name.php">By Name</a></li>
+                                    <li><a href="./store-browse-categ.php">By Category</a></li>
                                 </ul>
                         </li>
-                        <li><a href="./faqs.html" class="nav__mobile-link">FAQs</a></li>
-                        <li><a href="./contact.html" class="nav__mobile-link">Contact</a></li>
-                        <li><a href="./order_placement.html" class="nav__mobile-link"><i class="ti-shopping-cart"></i></a></li>
+                        <li><a href="./faqs.php" class="nav__mobile-link">FAQs</a></li>
+                        <li><a href="./contact.php" class="nav__mobile-link">Contact</a></li>
+                        <li><a href="./order_placement.php" class="nav__mobile-link"><i class="ti-shopping-cart"></i></a></li>
                     </ul>
                 </nav>
                 
@@ -94,40 +94,40 @@
                 <!-- <div class="overlay">
                     <p>$1434.78</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/iphone12pro.jpg" alt="IPhone 12 Pro" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">IPhone 12 Pro</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/iphone12pro.jpg" alt="IPhone 12 Pro" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">IPhone 12 Pro</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>$364.78</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/opporeno5.jpg" alt="Oppo Reno 5" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Oppo Reno 5</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/opporeno5.jpg" alt="Oppo Reno 5" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Oppo Reno 5</a></h3>
             </div>
     
             <div class="product lst">
                 <!-- <div class="overlay">
                     <p>$913.04</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/xiaomi_mi_11_5G.jpg" alt="Xiaomi Mi 11 5G" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Xiaomi Mi 11 5G</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/xiaomi_mi_11_5G.jpg" alt="Xiaomi Mi 11 5G" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Xiaomi Mi 11 5G</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>$296.55</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/vivoY12s.jpg" alt="Vivo Y12s" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Vivo Y12s</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/vivoY12s.jpg" alt="Vivo Y12s" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Vivo Y12s</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>$120</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/nokia5.4.jpg" alt="Nokia 5.4" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Nokia 5.4</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/nokia5.4.jpg" alt="Nokia 5.4" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Nokia 5.4</a></h3>
             </div>
             
         </div>
@@ -141,40 +141,40 @@
                 <!-- <div class="overlay">
                     <p>$1980</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/macbook_pro.jpeg" alt="Macbook Pro" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Macbook Pro 13-inch</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/macbook_pro.jpeg" alt="Macbook Pro" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Macbook Pro 13-inch</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>1029$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/asus_vivobook15.jpg" alt="Asus Vivobook 15" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Asus Vivobook 15</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/asus_vivobook15.jpg" alt="Asus Vivobook 15" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Asus Vivobook 15</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>1828$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/xps_13_9370.jpg" alt="Dell XPS 13" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Dell XPS 13 9370</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/xps_13_9370.jpg" alt="Dell XPS 13" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Dell XPS 13 9370</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>975$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/dell_vostro_3500.jpg" alt="Dell Vostro 3500" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Dell Vostro 3500</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/dell_vostro_3500.jpg" alt="Dell Vostro 3500" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Dell Vostro 3500</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>1529$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/hpenvy.jpg" alt="HP Envy 13" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">HP Envy 13</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/hpenvy.jpg" alt="HP Envy 13" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">HP Envy 13</a></h3>
             </div>
         </div>
 
@@ -186,40 +186,40 @@
                 <!-- <div class="overlay">
                     <p>120$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/galaxy_tab_A.jpg" alt="Samsung Galaxy Tab A10" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Samsung Galaxy Tab A10</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/galaxy_tab_A.jpg" alt="Samsung Galaxy Tab A10" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Samsung Galaxy Tab A10</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>679$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/ipad-pro-2018.jpg" alt="Ipad Pro 2018" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Ipad Pro 2018</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/ipad-pro-2018.jpg" alt="Ipad Pro 2018" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Ipad Pro 2018</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>468$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/ipad_air_4.jpg" alt="Ipad Air 4" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Ipad Air 4</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/ipad_air_4.jpg" alt="Ipad Air 4" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Ipad Air 4</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>298$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/lenovo_tab.jpg" alt="Lenovo Tab" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Lenovo Tab</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/lenovo_tab.jpg" alt="Lenovo Tab" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Lenovo Tab</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>312$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/huawei_mate.jpg" alt="Huawei Mate" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Huawei Mate</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/huawei_mate.jpg" alt="Huawei Mate" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Huawei Mate</a></h3>
             </div>
         </div>
 
@@ -231,40 +231,40 @@
                 <!-- <div class="overlay">
                     <p>12$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/usb_type_c.jpg" alt="Usb Type C Wire" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Usb Type C Wire</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/usb_type_c.jpg" alt="Usb Type C Wire" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Usb Type C Wire</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>$450</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/airpod_pro.jpg" alt="Airpod Pro" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Airpod Pro</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/airpod_pro.jpg" alt="Airpod Pro" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Airpod Pro</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>$89</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/anker_powercore.jpg" alt="Anker Powercore Battery" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Anker Powercore Battery</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/anker_powercore.jpg" alt="Anker Powercore Battery" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Anker Powercore Battery</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>25$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/sandisk_microsd_128gb.jpg" alt="Micro Usb 128GB Sandisk" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Micro Usb 128GB Sandisk</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/sandisk_microsd_128gb.jpg" alt="Micro Usb 128GB Sandisk" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Micro Usb 128GB Sandisk</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>9$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/iphone_case.jpg" alt="Iphone Case" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Iphone Case</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/iphone_case.jpg" alt="Iphone Case" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Iphone Case</a></h3>
             </div>
         </div>
         
@@ -276,40 +276,40 @@
                 <!-- <div class="overlay">
                     <p>18$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/jetflash_300_8GB.jpg" alt="Jet Flash 300 8GB" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Jet Flash 300 8GB</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/jetflash_300_8GB.jpg" alt="Jet Flash 300 8GB" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Jet Flash 300 8GB</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>489$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/xiaomi_bud.jpg" alt="Xiaomi Bud True Wireless" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Xiaomi Bud True Wireless</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/xiaomi_bud.jpg" alt="Xiaomi Bud True Wireless" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Xiaomi Bud True Wireless</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>218$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/router_wifi_mesh_3.jpg" alt="Router Wifi Mesh 3" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Router Wifi Mesh 3</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/router_wifi_mesh_3.jpg" alt="Router Wifi Mesh 3" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Router Wifi Mesh 3</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>715$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/galaxy_watch_active.jpg" alt="Samsung Galaxy Watch Active" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Samsung Galaxy Watch Active</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/galaxy_watch_active.jpg" alt="Samsung Galaxy Watch Active" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Samsung Galaxy Watch Active</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
                     <p>124$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/nokia5.4.jpg" alt="Nokia 5.4" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Nokia 5.4</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/nokia5.4.jpg" alt="Nokia 5.4" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Nokia 5.4</a></h3>
             </div>
         </div>
     </main>
@@ -317,9 +317,9 @@
         <nav>
             <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>
             <ul>
-                <li><a href="./copyright.html">Copyright</a></li>
-                <li><a href="./tos.html">ToS</a></li>
-                <li><a href="./policy.html">Privacy Policy</a></li>
+                <li><a href="./copyright.php">Copyright</a></li>
+                <li><a href="./tos.php">ToS</a></li>
+                <li><a href="./policy.php">Privacy Policy</a></li>
             </ul>
             <h3 class="right">Design by developer team</h3>
         </nav>

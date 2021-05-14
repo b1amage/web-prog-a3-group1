@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browse Created Time-TheGioiDiDong</title>
+    <title>Browse Created Time-Nike</title>
     <link rel="stylesheet" href="./css/product-browse.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -27,19 +27,19 @@
                 <nav class="nav__pc">
                     <ul class="nav__list">
                         <li><a href="./index.php" class="nav__link push" id="underline">Home</a></li>
-                        <li><a href="./about.html" class="nav__link" id="underline">About Us</a></li>
-                        <li><a href="./fee.html" class="nav__link" id="underline">Fees</a></li>
-                        <li><a href="./login-box.html" class="nav__link my-account">My Account</a></li>
+                        <li><a href="./about.php" class="nav__link" id="underline">About Us</a></li>
+                        <li><a href="./fee.php" class="nav__link" id="underline">Fees</a></li>
+                        <li><a href="./login-box.php" class="nav__link my-account">My Account</a></li>
                         <li>
                             <a href="#" class="nav__link">Browse<i class="ti-angle-double-down"></i></a>
                             <ul class="subnav">
-                                <li><a href="./store-browse-name.html">Store By Name</a></li>
-                                <li><a href="./store-browse-categ.html">Store By Category</a></li>
+                                <li><a href="./store-browse-name.php">Store By Name</a></li>
+                                <li><a href="./store-browse-categ.php">Store By Category</a></li>
                             </ul>
                         </li>
-                        <li><a href="./faqs.html" class="nav__link">FAQs</a></li>
-                        <li><a href="./contact.html" class="nav__link">Contact</a></li>
-                        <li><a href="./order_placement.html" class="nav__link"><i class="ti-shopping-cart"></i></a></li>
+                        <li><a href="./faqs.php" class="nav__link">FAQs</a></li>
+                        <li><a href="./contact.php" class="nav__link">Contact</a></li>
+                        <li><a href="./order_placement.php" class="nav__link"><i class="ti-shopping-cart"></i></a></li>
                     </ul>
                 </nav>
     
@@ -62,22 +62,22 @@
                     </label>
                     <ul class="nav__mobile-list">
                         <li><a href="./index.php" class="nav__mobile-link">Home</a></li>
-                        <li><a href="./about.html" class="nav__mobile-link">About us</a></li>
-                        <li><a href="./fee.html" class="nav__mobile-link">Fees</a></li>
+                        <li><a href="./about.php" class="nav__mobile-link">About us</a></li>
+                        <li><a href="./fee.php" class="nav__mobile-link">Fees</a></li>
                         <li>
-                            <a class="my-account" href="./login-box.html"><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
+                            <a class="my-account" href="./login-box.php"><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
                         </li>
                         <li>
                             <label for="subnav-mobile-check-browse" class="nav__mobile-link hover-browse">Browse<i class="ti-angle-double-down"></i></label>
                             <input type="checkbox" id="subnav-mobile-check-browse" class="check-subnav-browse">
                                 <ul class="subnav-mobile-browse">
-                                    <li><a href="./store-browse-name.html">By Name</a></li>
-                                    <li><a href="./store-browse-categ.html">By Category</a></li>
+                                    <li><a href="./store-browse-name.php">By Name</a></li>
+                                    <li><a href="./store-browse-categ.php">By Category</a></li>
                                 </ul>
                         </li>
-                        <li><a href="./faqs.html" class="nav__mobile-link">FAQs</a></li>
-                        <li><a href="./contact.html" class="nav__mobile-link">Contact</a></li>
-                        <li><a href="./order_placement.html" class="nav__mobile-link"><i class="ti-shopping-cart"></i></a></li>
+                        <li><a href="./faqs.php" class="nav__mobile-link">FAQs</a></li>
+                        <li><a href="./contact.php" class="nav__mobile-link">Contact</a></li>
+                        <li><a href="./order_placement.php" class="nav__mobile-link"><i class="ti-shopping-cart"></i></a></li>
                     </ul>
                 </nav>
                 
@@ -86,105 +86,106 @@
     </header>
 
     <main>
-        <label for="details" class="category">Newest --> Oldest Products<i class="ti-angle-double-down"></i></label>
+        <label for="details" class="category">Newest Products<i class="ti-angle-double-down"></i></label>
         <input type="checkbox" name="details" id="details">
 
         <div class="product-container pd1">
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>$1434.78</p>
+                    <p>180$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/iphone12pro.jpg" alt="phone" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">IPhone 12 Pro</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/airzoom.jpg" alt="airzoom" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Airzoom</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>$364.78</p>
+                    <p>150$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/opporeno5.jpg" alt="phone" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Oppo Reno 5</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/vapormax.jpg" alt="vapormax" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Vapormax</a></h3>
             </div>
     
             <div class="product lst">
                 <!-- <div class="overlay">
-                    <p>$913.04</p>
+                    <p>115$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/xiaomi_mi_11_5G.jpg" alt="phone" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Xiaomi Mi 11 5G</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/tennis1.jpg" alt="tennis shoes" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Tennis shoes</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>$296.55</p>
+                    <p>185$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/vivoY12s.jpg" alt="phone" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Chicken Roll</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/lebron1.jpg" alt="lebron" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Lebron</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>$120</p>
+                    <p>59$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/nokia5.4.jpg" alt="phone" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Nokia 5.4</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/hoodie1.jpg" alt="hoodie" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Hoodie</a></h3>
             </div>
             
         </div>
 
 
-        <label for="details-5" class="category">Oldest --> Newest Products<i class="ti-angle-double-down"></i></label>
+        <label for="details-5" class="category">Oldest Products<i class="ti-angle-double-down"></i></label>
         <input type="checkbox" name="details" id="details-5">
 
         <div class="product-container pd5">
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>$1980</p>
+                    <p>200$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/macbook_pro.jpeg" alt="laptop" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Macbook Pro 13-inch</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/aj1.jpg" alt="air jordan" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Air Jordan</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>1029$</p>
+                    <p>190$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/asus_vivobook15.jpg" alt="laptop" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Asus Vivobook 15</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/aj2.jpg" alt="air jordan" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Air Jordan</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>1828$</p>
+                    <p>55$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/xps_13_9370.jpg" alt="laptop" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Dell XPS 13 9370</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/hoodie2.jpg" alt="hoodie" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Hoodie</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>975$</p>
+                    <p>39$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/dell_vostro_3500.jpg" alt="laptop" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">Dell Vostro 3500</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/jacket.jpg" alt="jacket" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Jacket</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>1529$</p>
+                    <p>50$</p>
                 </div> -->
-                <a href="./product-detail.html" ><img src="./images/stores-image/technology_stores/tgdd/hpenvy.jpg" alt="laptop" width="200" height="200"></a>
-                <h3><a href="./product-detail.html">HP Envy 13</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/sweater.jpg" alt="sweater" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Sweater</a></h3>
             </div>
         </div>
     </main>
+    <div class="push"></div>
     <footer>
         <nav>
             <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>
             <ul>
-                <li><a href="./copyright.html">Copyright</a></li>
-                <li><a href="./tos.html">ToS</a></li>
-                <li><a href="./policy.html">Privacy Policy</a></li>
+                <li><a href="./copyright.php">Copyright</a></li>
+                <li><a href="./tos.php">ToS</a></li>
+                <li><a href="./policy.php">Privacy Policy</a></li>
             </ul>
             <h3 class="right">Design by developer team</h3>
         </nav>
