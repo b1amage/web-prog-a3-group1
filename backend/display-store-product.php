@@ -24,7 +24,8 @@ foreach($products_data as $product_row) {
     }
 }
 
-print_r_with_lines($store_and_product)
+// print_r_with_lines($store_and_product)
 
 ?>
+
 
