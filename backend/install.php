@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 // $_SESSION["user_data"] = [];
 $error_count = 0;
 if (isset($_POST["submit-btn"])) {
@@ -23,8 +23,12 @@ if (isset($_POST["submit-btn"])) {
             $_POST["username"] => password_hash($_POST["password"], PASSWORD_DEFAULT)
         ];
 
-        $_SESSION["user_data"][] = $information;
-        print_r($_SESSION["user_data"]);
+        $data_file = fopen('data.txt', 'w');
+
+        fwrite($data_file, $_POST["username"]);
+        fwrite($data_file,"\n");
+        fwrite($data_file, password_hash($_POST["password"], PASSWORD_DEFAULT));
+        fclose($data_file);
     }
 
 // Kiem tra xem file nay co ton tai hay ko (de vao tat ca file php khac)
