@@ -1,4 +1,27 @@
 <?php 
+    $field_name_categories = [
+        "id" => 0,
+        "name" => 1
+    ];
+
+    $field_name_stores = [
+        "id" => 0,
+        "name" => 1,
+        "category_id" => 2,
+        "created_time" => 3,
+        "featured" =>4
+    ];
+
+    $field_name_products = [
+        "id" => 0,
+        "name" => 1,
+        "price" => 2,
+        "created_time" => 3,
+        "store_id" => 4,
+        "featured_in_mall" => 5,
+        "featured_in_store" => 6
+    ];
+
     function get_data_from_csv($file_name) {
         // Open, get raw data and close file
         $data_open = fopen($file_name, 'r');
@@ -23,9 +46,17 @@
         echo '</pre>';
     }
 
-    // Test
-    print_r_with_lines(get_data_from_csv("./products.csv"));
-    print_r_with_lines(get_data_from_csv("./stores.csv"));
-    print_r_with_lines(get_data_from_csv("./categories.csv"));
+    // Test full mảng
+    // print_r_with_lines(get_data_from_csv("./products.csv"));
+    // print_r_with_lines(get_data_from_csv("./stores.csv"));
+    // print_r_with_lines(get_data_from_csv("./categories.csv"));
+
+    // Cú pháp: <Tên mảng>[hàng thứ n][$field_name_<tên mảng>["tên trường]]
+    // Dùng để truy cập mảng theo tên của cột, không cần dùng id
+
+    // Test gọi trường bất kỳ
+    // echo get_data_from_csv("./categories.csv")[1][$field_name_categories["name"]];
+    // echo get_data_from_csv("./stores.csv")[1][$field_name_stores["name"]];
+    // echo get_data_from_csv("./products.csv")[1][$field_name_products["name"]];
 
  ?>
