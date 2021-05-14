@@ -27,24 +27,23 @@
         $new_records[] = $value;
     }
 
-    $allow = true;
-
-    $previous_records = get_data_from_csv($registration_file);
-
-    for ($index = 0; $index < count($previous_records); $index++) {
-        if ($previous_records[$index][0] === $new_records[0] || $previous_records[$index][1] === $new_records[1]) {
-            $allow = false;
-            break;
+    if (isset($_POST['submit'])) {
+        $allow = true;
+        $previous_records = get_data_from_csv($registration_file);
+        for ($index = 0; $index < count($previous_records); $index++) {
+            if ($previous_records[$index][0] === $new_records[0] || $previous_records[$index][1] === $new_records[1]) {
+                $allow = false;
+                break;
+            }
         }
+        if ($allow) {
+            $registration = implode(",", $new_records);
+            fwrite($fp, $registration."\n");
+        } else {
+            echo "<script>alert('This account has been used')</script>";
+        }    
     }
-
-    if ($allow) {
-        $registration = implode(",", $new_records);
-        fwrite($fp, $registration."\n");
-    } else {
-        echo "<script>alert('This account has been used')</script>";
-    }
-
+    
     flock($fp, LOCK_UN);
     fclose($fp);
 ?>
@@ -280,7 +279,7 @@
                 </div>
                 <div class="buttons">
                     <input id="clear" type="reset" value="Clear">
-                    <input type="submit" value="Submit">
+                    <input type="submit" name="submit" value="Submit">
                 </div>
             </form>
         </div>
