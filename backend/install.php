@@ -1,6 +1,7 @@
 <?php
 // session_start();
 // $_SESSION["user_data"] = [];
+
 $error_count = 0;
 if (isset($_POST["submit-btn"])) {
     if ($_POST["username"] == "") {
