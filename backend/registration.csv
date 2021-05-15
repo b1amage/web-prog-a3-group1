@@ -1,5 +1,3 @@
-email,phone,password,re-password,first_name,last_name,address,city,zipcode,profile_picture,country,account_type,business_name,store_name,store_category
-tuan@gmail.com,0222222222,09092002Tuan!,09092002Tuan!,aaa,aaa,aaa,aaa,2222,Main unit tasks.docx,AF,shopper,,
-aae@gm.sad,222222222,09092002Tuan!,09092002Tuan!,tuan,dao,dsf,aaa,2222,IMG_4519.PNG,AF,shopper,,,Submit
-aa4@g.sd,123456789,09092002Tuan!,09092002Tuan!,daa,daa,daa,daa,222222,Lecture 4b (Extra) - Personas goals use-case-scenarios(2) (1).pptx,AF,shopper,,,Submit
-tuan@gmal.com,02222222221,09092002Tuan!,09092002Tuan!,aaa,aaa,aaa,aaa,2222,step1.PNG,AF,shopper,,,Submit
+email,phone,password,re-password,first_name,last_name,address,city,zipcode,profile_picture,country,account_type,business_name,store_name,store_category,Submit
+tuan@gmail.com,+93222222222,        $phoneRegex ,        $phoneRegex ,aaa,aaa,aaa,aaa,2222,Main unit tasks.docx,AF,shopper,,,Submit
+tuannew@gmail.com,123456789 12,        $phoneRegex ,        $phoneRegex ,aaa,aaa,aaa,aaa,2222,Main unit tasks.docx,AF,shopper,,,Submit
