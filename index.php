@@ -239,45 +239,48 @@ include './backend/display-store-product.php';
                 <h1>Featured Stores</h1>
             </div>
             <div id="scroll" class="feature-container first">
-                <div class="feature first 1">
-                    <!-- <div class="overlay">
-                        <i class="ti-location-pin"></i><p>15 Tran Hung Dao, District 1</p>
-                    </div> -->
+                <?php 
+                $feature_count = 0;
+                foreach ($stores_data as $store):
+                    if ($store[$field_name_stores["featured"]] == "TRUE") { 
+                        if ($feature_count == 10) {
+                            break;
+                        } else {
+                        $feature_count++; ?>
+
+                        <div class="feature first">
+                            <a href="./tgdd-home.php" ><img src="./images/index-img/G _ LAB.jpg" alt="glab-logo" width="200" height="200"></a>
+                            <h3><a href="./tgdd-home.php" class="underline"><?=$store[$field_name_stores["name"]];?></a></h3>
+                        </div>
+                        
+                <?php    } };
+                ?>
+                <?php endforeach;?>
+
+                <!-- <div class="feature first 1">
                     <a href="./tgdd-home.php" ><img src="./images/index-img/G _ LAB.jpg" alt="glab-logo" width="200" height="200"></a>
                     <h3><a href="./tgdd-home.php" class="underline">GLAB</a></h3>
                 </div>
 
                 <div class="feature first 2">
-                    <!-- <div class="overlay">
-                        <p>Local Brand Clothes</p>
-                    </div> -->
                     <a href="./tgdd-home.php" ><img src="./images/index-img/bobui.jpeg" alt="bobui-logo" width="200" height="200"></a>
                     <h3><a href="./tgdd-home.php" class="underline">BoBui</a></h3>
                 </div>
 
                 <div class="feature first 3">
-                    <!-- <div class="overlay">
-                        <p>Chicken Food</p>
-                    </div> -->
                     <a href="./tgdd-home.php" ><img src="./images/index-img/donchicken.jpeg" alt="donchicken-logo" width="200" height="200"></a>
                     <h3><a href="./tgdd-home.php" class="underline">Don Chicken</a></h3>
                 </div>
 
                 <div class="feature first 4">
-                    <!-- <div class="overlay">
-                        <p>Coffees & Freeze</p>
-                    </div> -->
                     <a href="./tgdd-home.php" ><img src="./images/index-img/highlands.jpeg" alt="highland-logo" width="200" height="200"></a>
                     <h3><a href="./tgdd-home.php" class="underline">Highlands</a></h3>
                 </div>
 
                 <div class="feature first 5">
-                    <!-- <div class="overlay">
-                        <p>Luxury Watch</p>
-                    </div> -->
                     <a href="./tgdd-home.php" ><img src="./images/index-img/rolex.jpeg" alt="rolex-logo" width="200" height="200"></a>
                     <h3><a href="./tgdd-home.php" class="underline">Rolex</a></h3>
-                </div>
+                </div> -->
             </div>
         </div>
         
@@ -287,45 +290,49 @@ include './backend/display-store-product.php';
                 <h1>Featured Products</h1>
             </div>
             <div id="scroll" class="feature-container last">
-                <div class="feature-last 1">
-                    <!-- <div class="overlay">
-                        <p>180$</p>
-                    </div> -->
+
+            <?php 
+                $feature_product_count = 0;
+                foreach ($products_data as $product):
+                    if ($product[$field_name_products["featured_in_mall"]] == "TRUE") { 
+                        if ($feature_product_count == 10) {
+                            break;
+                        } else {
+                        $feature_product_count++; ?>
+
+                            <div class="feature-last 1">
+                                <a href="./product-detail.php" ><img src="./images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
+                                <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
+                            </div>
+                        
+                <?php    } };
+                ?>
+                <?php endforeach;?>
+                            
+                <!-- <div class="feature-last 1">
                     <a href="./product-detail.php" ><img src="./images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
                     <h3><a href="./product-detail.php" class="underline">Yellow T-Shirt</a></h3>
                 </div>
 
                 <div class="feature-last 2">
-                    <!-- <div class="overlay">
-                        <p>130$</p>
-                    </div> -->
                     <a href="./product-detail2.php" ><img src="./images/index-img/bobui-product.jpeg" alt="bobui-img" width="200" height="200"></a>
                     <h3><a href="./product-detail2.php" class="underline">Yellow T-Shirt</a></h3>
                 </div>
 
                 <div class="feature-last 3">
-                    <!-- <div class="overlay">
-                        <p>20$</p>
-                    </div> -->
                     <a href="./product-detail3.php" ><img src="./images/index-img/donchicken-product.jpeg" alt="bobui-img" width="200" height="200"></a>
                     <h3><a href="./product-detail3.php" class="underline">Cheese Chicken</a></h3>
                 </div>
 
                 <div class="feature-last 4">
-                    <!-- <div class="overlay">
-                        <p>16$</p>
-                    </div> -->
                     <a href="./product-detail.php" ><img src="./images/index-img/highlands-product.jpeg" alt="highlands-img" width="200" height="200"></a>
                     <h3><a href="./product-detail.php" class="underline">Freeze Chocolate</a></h3>
                 </div>
 
                 <div class="feature-last 5">
-                    <!-- <div class="overlay">
-                        <p>1300$</p>
-                    </div> -->
                     <a href="./product-detail2.php" ><img src="./images/index-img/rolex-product.jpeg" alt="rolex-img" width="200" height="200"></a>
                     <h3><a href="./product-detail2.php" class="underline">Airking Rolex</a></h3>
-                </div>
+                </div> -->
 
             </div>
         </div>
