@@ -1,51 +1,4 @@
 <?php
-    // include ('./backend/get-data.php');
-
-    function get_data_from_csv($file_name) {
-        // Open, get raw data and close file
-        $data_open = fopen($file_name, 'r');
-        $raw_data = fread($data_open,filesize($file_name));
-        fclose(($data_open));
-
-        // Split the raw data by lines
-        $data_split_line = (explode("\n", $raw_data));
-        
-        // Use loop to split the data by the comma
-        foreach($data_split_line as $index => $sub_data_array) {
-            $array_full_data[] = explode(",", $sub_data_array);
-        }
-
-        return $array_full_data;
-    }
-
-    $registration_file = './backend/registration.csv';
-    $fp = fopen($registration_file, "a");
-    flock($fp, LOCK_SH);
-    
-    $new_records = [];
-    foreach($_POST as $key => $value) {
-        $new_records[] = $value;
-    }
-
-    if (isset($_POST['submit'])) {
-        $allow = true;
-        $previous_records = get_data_from_csv($registration_file);
-        for ($index = 0; $index < count($previous_records); $index++) {
-            if ($previous_records[$index][0] === $new_records[0] || $previous_records[$index][1] === $new_records[1]) {
-                $allow = false;
-                break;
-            }
-        }
-        if ($allow) {
-            $registration = implode(",", $new_records);
-            fwrite($fp, $registration."\n");
-        } else {
-            echo "<script>alert('This account has been used')</script>";
-        }    
-    }
-    
-    flock($fp, LOCK_UN);
-    fclose($fp);
 ?>
 
 <!DOCTYPE html>
@@ -138,7 +91,7 @@
 
     <main>
         <div class="login-box">
-            <form action="#" method="POST" autocomplete="off">
+            <form action="./backend/registration.php" method="POST" autocomplete="off">
                 <h1>Create your new account</h1>
                 <div id="line">
                     <hr>
@@ -297,7 +250,7 @@
     </footer>
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
-    <script src="./script/validate_form.js" defer></script>
+    <!-- <script src="./script/validate_form.js" defer></script> -->
     <script src="./script/show_hide.js" defer></script>
     </body>
 
