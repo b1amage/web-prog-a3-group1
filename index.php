@@ -1,3 +1,7 @@
+<?php 
+include './backend/get-data.php';
+include './backend/display-store-product.php';
+?>
 <!DOCTYPE html>
 <html lang="en" id="full-html">
 <head>
@@ -141,6 +145,29 @@
                 </div>
 
                 <div class="store 7">
+                    <!-- <div class="overlay">
+                        <p>Luxury Items</p>
+                    </div> -->
+                    <a href="./nike-home.php" ><img src="./images/stores-image/department_stores/circlek.jpg" alt="Circle K" width="200" height="200"></a>
+                    <h3><a href="./nike-home.php" class="underline">Circle K</a></h3>
+                </div>
+
+                <div class="store 8">
+                    <!-- <div class="overlay">
+                        <p>Luxury Items</p>
+                    </div> -->
+                    <a href="./nike-home.php" ><img src="./images/stores-image/department_stores/circlek.jpg" alt="Circle K" width="200" height="200"></a>
+                    <h3><a href="./nike-home.php" class="underline">Circle K</a></h3>
+                </div>
+                <div class="store 9">
+                    <!-- <div class="overlay">
+                        <p>Luxury Items</p>
+                    </div> -->
+                    <a href="./nike-home.php" ><img src="./images/stores-image/department_stores/circlek.jpg" alt="Circle K" width="200" height="200"></a>
+                    <h3><a href="./nike-home.php" class="underline">Circle K</a></h3>
+                </div>
+
+                <div class="store 10">
                     <!-- <div class="overlay">
                         <p>Luxury Items</p>
                     </div> -->
