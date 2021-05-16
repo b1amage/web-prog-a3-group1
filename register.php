@@ -135,7 +135,7 @@
                     </div>
                     <div class="profile-picture">
                         <label for="profile-picture">Select a profile picture:</label>
-                        <input id="profile-picture" required type="file" name="profile-picture" placeholder="Profile picture">
+                        <input id="profile-picture" required type="file" name="profile-picture" accept="image/*" placeholder="Profile picture">
                     </div>
                     <div class="country">
                         <select id="country" name="country" required>
@@ -208,8 +208,8 @@
                     </div>
                 </div>
                 <div id="additional" class="hidden">
-                    <input id="business" type="text" name="business-name" pattern="[a-zA-Z]*" placeholder="Business name" title="Only text is allowed">
-                    <input id="store-name" type="text" name="store-name" pattern="[a-zA-Z]*" placeholder="Store name" title="Only text is allowed">
+                    <input id="business" type="text" name="business-name" placeholder="Business name">
+                    <input id="store-name" type="text" name="store-name" placeholder="Store name">
                     <div class="store-category">
                         <label for="store-category">Store category</label>
                         <select id="store-category" name="store-category">
@@ -250,7 +250,7 @@
     </footer>
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
-    <!-- <script src="./script/validate_form.js" defer></script> -->
+    <script src="./script/validate_form.js" defer></script>
     <script src="./script/show_hide.js" defer></script>
     </body>
 
