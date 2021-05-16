@@ -127,7 +127,7 @@ function validatePassword() {
         return true;
     } else {
         invalidPassword.style.display = 'block';
-        invalidPassword.innerHTML = "Invalid password";
+        invalidPassword.innerHTML = "The password must contains 8 to 20 characters, no space, with at least 1 lower case letter, at least 1 upper case letter, at least 1 digit, and at least 1 special character in the set !@#$%^&*";
         showError(qs("#password")); // Turn the invalid input to red
         return false;
     }
