@@ -96,84 +96,69 @@ include './backend/display-store-product.php';
                 <h1>New Store</h1>
             </div>
             <div id="scroll" class="store-container">
-                <div class="store 1">
-                    <!-- <div class="overlay">
-                        <p>Shoes & Sport Clothes</p>
-                    </div> -->
+
+            <?php $store_count = 0;
+                foreach($stores_data as $store): 
+                    if ($store_count == 10) {
+                        break;
+                    } else {
+                        $store_count++; ?>
+
+                    <div class="store 1">
+                    <a href="./nike-home.php" ><img src="./images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
+                    <h3><a href="./nike-home.php" class="underline"><?=$store[$field_name_stores["name"]]; ?></a></h3>
+                    </div>
+                    <?php }; ?>
+                    <?php endforeach; ?>
+            
+                <!-- <div class="store 1">
                     <a href="./nike-home.php" ><img src="./images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
                     <h3><a href="./nike-home.php" class="underline">Nike</a></h3>
                 </div>
 
                 <div class="store 2">
-                    <!-- <div class="overlay">
-                        <p>Casual Clothes</p>
-                    </div> -->
                     <a href="./nike-home.php" ><img src="./images/index-img/uniqlo.jpeg" alt="uniqlo" width="200" height="200"></a>
                     <h3><a href="./nike-home.php" class="underline">Uniqlo</a></h3>
                 </div>
 
                 <div class="store 3">
-                    <!-- <div class="overlay">
-                        <p>Fried Chicken</p>
-                    </div> -->
                     <a href="./nike-home.php" ><img src="./images/index-img/kfc.jpeg" alt="kfc" width="200" height="200"></a>
                     <h3><a href="./nike-home.php" class="underline">KFC</a></h3>
                 </div>
 
                 <div class="store 4">
-                    <!-- <div class="overlay">
-                        <p>Milk Tea</p>
-                    </div> -->
                     <a href="./nike-home.php" ><img src="./images/index-img/gongcha.jpeg" alt="gongcha-logo" width="200" height="200"></a>
                     <h3><a href="./nike-home.php" class="underline">Gongcha</a></h3>
                 </div>
 
                 <div class="store 5">
-                    <!-- <div class="overlay">
-                        <p>Luxury Items</p>
-                    </div> -->
                     <a href="./nike-home.php" ><img src="./images/index-img/lv.jpeg" alt="LV-logo" width="200" height="200"></a>
                     <h3><a href="./nike-home.php" class="underline">Louis Vuitton</a></h3>
                 </div>
 
                 <div class="store 6">
-                    <!-- <div class="overlay">
-                        <p>Luxury Items</p>
-                    </div> -->
                     <a href="./nike-home.php" ><img src="./images/stores-image/restaurants/gogi.jpg" alt="gogi" width="200" height="200"></a>
                     <h3><a href="./nike-home.php" class="underline">GoGi</a></h3>
                 </div>
 
                 <div class="store 7">
-                    <!-- <div class="overlay">
-                        <p>Luxury Items</p>
-                    </div> -->
                     <a href="./nike-home.php" ><img src="./images/stores-image/department_stores/circlek.jpg" alt="Circle K" width="200" height="200"></a>
                     <h3><a href="./nike-home.php" class="underline">Circle K</a></h3>
                 </div>
 
                 <div class="store 8">
-                    <!-- <div class="overlay">
-                        <p>Luxury Items</p>
-                    </div> -->
                     <a href="./nike-home.php" ><img src="./images/stores-image/department_stores/circlek.jpg" alt="Circle K" width="200" height="200"></a>
                     <h3><a href="./nike-home.php" class="underline">Circle K</a></h3>
                 </div>
                 <div class="store 9">
-                    <!-- <div class="overlay">
-                        <p>Luxury Items</p>
-                    </div> -->
                     <a href="./nike-home.php" ><img src="./images/stores-image/department_stores/circlek.jpg" alt="Circle K" width="200" height="200"></a>
                     <h3><a href="./nike-home.php" class="underline">Circle K</a></h3>
                 </div>
 
                 <div class="store 10">
-                    <!-- <div class="overlay">
-                        <p>Luxury Items</p>
-                    </div> -->
                     <a href="./nike-home.php" ><img src="./images/stores-image/department_stores/circlek.jpg" alt="Circle K" width="200" height="200"></a>
                     <h3><a href="./nike-home.php" class="underline">Circle K</a></h3>
-                </div>
+                </div> -->
             </div>
         </div>
         
@@ -183,53 +168,50 @@ include './backend/display-store-product.php';
                 <h1>New Product</h1>
             </div>
             <div id="scroll" class="product-container">
-                <div class="product 1">
-                    <!-- <div class="overlay">
-                        <p>2000$</p>
-                    </div> -->
+
+            <?php $product_count = 0;
+                foreach($products_data as $product): 
+                    if ($product_count == 10) {
+                        break;
+                    } else {
+                        $product_count++; ?>
+
+                    <div class="product 1">
+                        <a href="./product-detail.php" ><img src="./images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
+                        <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
+                    </div>
+                    <?php }; ?>
+                    <?php endforeach; ?>
+
+                <!-- <div class="product 1">
                     <a href="./product-detail.php" ><img src="./images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
                     <h3><a href="./product-detail.php" class="underline">Nike Jordan 1 Dior</a></h3>
                 </div>
 
                 <div class="product 2">
-                    <!-- <div class="overlay">
-                        <p>250$</p>
-                    </div> -->
                     <a href="./product-detail2.php" ><img src="./images/index-img/unqilo-product.jpeg" alt="uniqlo-product" width="200" height="200"></a>
                     <h3><a href="./product-detail.php" class="underline">Uniqlo Blazzer</a></h3>
                 </div>
 
                 <div class="product 3">
-                    <!-- <div class="overlay">
-                        <p>10$</p>
-                    </div> -->
                     <a href="./product-detail3.php" ><img src="./images/index-img/kfc-product.jpeg" alt="kfc-product" width="200" height="200"></a>
                     <h3><a href="./product-detail.php" class="underline">Fried Spicy Chicken</a></h3>
                 </div>
 
                 <div class="product 4">
-                    <!-- <div class="overlay">
-                        <p>9$</p>
-                    </div> -->
                     <a href="./product-detail.php" ><img src="./images/index-img/gongcha-product.jpeg" alt="gongcha-product" width="200" height="200"></a>
                     <h3><a href="./product-detail.php" class="underline">Bubble Milk Tea</a></h3>
                 </div>
 
                 <div class="product 5">
-                    <!-- <div class="overlay">
-                        <p>3100$</p>
-                    </div> -->
                     <a href="./product-detail2.php" ><img src="./images/index-img/lv-product.jpeg" alt="lv-product" width="200" height="200"></a>
                     <h3><a href="./product-detail.php" class="underline">T-Shirt LV</a></h3>
                 </div>
 
                 <div class="product 6">
-                    <!-- <div class="overlay">
-                        <p>3100$</p>
-                    </div> -->
                     <a href="./product-detail.php" ><img src="./images/index-img/lebron18.jpg" alt="lebron 18 product" width="200" height="200"></a>
                     <h3><a href="./product-detail.php" class="underline">Lebron 18 shoes</a></h3>
-                </div>
+                </div> -->
             </div>
         </div>
         

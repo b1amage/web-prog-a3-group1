@@ -1,8 +1,8 @@
 <?php 
 // include './get-data.php';
 
-function created_time_cmp($time1, $time2) {
-    return strtotime($time1) - strtotime($time2);
+function created_time_cmp($store_or_product_1, $store_or_product_2) {
+    return strtotime($store_or_product_2[3]) - strtotime($store_or_product_1[3]);
   }
 
 $products_data = get_data_from_csv('./backend/products.csv');
@@ -50,6 +50,12 @@ $stores_data = get_data_from_csv('./backend/stores.csv');
 
 // print_r_with_lines($product_by_store);
 
+usort($stores_data, "created_time_cmp");
+usort($products_data, "created_time_cmp");
+
+
+// print_r_with_lines($stores_data);
+// print_r_with_lines($products_data);
 ?>
 
 
