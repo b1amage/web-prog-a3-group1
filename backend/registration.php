@@ -197,11 +197,11 @@
         // Store the phone number submitted without special characters in a variable
         $new_phone_number = preg_replace('/[^0-9]/', '', $new_record[1]);
 
-        // If the email or phone number is reused, set the $unique variable to false
         for ($index = 1; $index < count($previous_records); $index++) {
             // Store the phone number already in the server without special characters in a variable
             $previous_phone_number = preg_replace('/[^0-9]/', '', $previous_records[$index][1]);
 
+            // If the email or phone number is reused, set the $unique variable to false
             if ($previous_records[$index][0] === $new_record[0] || $previous_phone_number === $new_phone_number) {
                 // Show error message when users reused an account
                 $error_message = base64_encode("This account has been used. Register again");
