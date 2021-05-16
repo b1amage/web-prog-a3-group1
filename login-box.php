@@ -92,6 +92,13 @@
                 <input required type="text" id="email/phone" name="email/phone" autocomplete="off" placeholder="Email or phone number">  
                 <input required type="password" id="password" name="password" placeholder="Password">
                 <div id="error">Invalid password</div>
+                <h5 style="color:red;text-align:center">
+                    <?php 
+                        if (isset($_GET['error_message'])) {
+                            echo base64_decode($_GET['error_message']);
+                        }
+                    ?>
+                </h5>
                 <input type="submit" name="button-submit" value="Login">
                 <div id="forgot-password">
                     <a href="forgot-password.php">Forgot password?</a>

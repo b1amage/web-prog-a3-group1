@@ -17,11 +17,11 @@
     }
 
     // A function to validate email
-    function validate_email() {
+    function validate_email($field_name) {
         // Check if the email field is filled out
-        if (fill_out('email')) {
+        if (fill_out($field_name)) {
             // Store the value of the email submitted
-            $new_email = $_POST['email']; 
+            $new_email = $_POST[$field_name]; 
 
             // The regex to validate the email
             $email_regex = "/^(?=[^\.])[a-zA-Z0-9.]{2,}[a-zA-Z0-9]+[@](?=[^\.])[a-zA-Z0-9.]+[.][a-zA-Z]{2,5}$/"; 
@@ -43,11 +43,11 @@
     }
   
     // A function to validate phone number
-    function validate_phone() {
+    function validate_phone($field_name) {
         // Check if the phone field is filled out
-        if (fill_out('phone')) {
+        if (fill_out($field_name)) {
             // Store the value of the phone number submitted
-            $new_phone = $_POST['phone'];
+            $new_phone = $_POST[$field_name];
 
             // The regex to validate phone number
             $phone_regex = "/^(?=[^\.])(?=[^\-])(?=[^\s])[0-9 .-]*[\d]$/";
@@ -61,7 +61,7 @@
             $symbols = " .-";
             $phone_len = strlen($new_phone);
             for ($index = 0; $index <= $phone_len - 2; $index++) {
-                if (strpos($symbols, $new_phone[$index]) && strpos($symbols, $new_phone[$index + 1])) {
+                if (strpos($symbols, $new_phone[$index]) !== false && strpos($symbols, $new_phone[$index + 1]) !== false) {
                     return false;
                 } 
             }
@@ -88,11 +88,11 @@
     }
 
     // A function to validate password
-    function validate_password() {
+    function validate_password($field_name) {
         // Check if the password field is filled out
-        if (fill_out('password')) {
+        if (fill_out($field_name)) {
             // Store the value of the password submitted
-            $new_password = $_POST['password'];
+            $new_password = $_POST[$field_name];
             
             // Store the value of re-password submitted
             $new_repassword = $_POST['re-password'];
@@ -139,11 +139,11 @@
     }
 
     // A function to validate zipcode
-    function validate_zipcode() {
+    function validate_zipcode($field_name) {
         // Check if the zipcode field is filled out
-        if (fill_out('zipcode')) {
+        if (fill_out($field_name)) {
             // Store the value of the zipcode submitted
-            $new_zipcode = $_POST['zipcode'];
+            $new_zipcode = $_POST[$field_name];
 
             // The regex to validate zipcode
             $zipcode_regex = "/^\d{4,6}$/";
@@ -174,7 +174,7 @@
         return false;
     }
 
-    // Check phone and email unique
+    // Check if users submit the form
     if (fill_out('submit')) {
         // A variable to check the if the account is unique
         $unique = true;
@@ -205,17 +205,12 @@
 
             // If the email or phone number is reused, set the $unique variable to false
             if ($previous_records[$index][0] === $new_record[0] || $previous_phone_number === $new_phone_number) {
-                // Show error message when users reused an account
-                $error_message = base64_encode("This account has been used. Register again");
                 $unique = false;
-
-                // Redirect to the register.php page
-                header("Location: ../register.php?error_message=$error_message");
             }
         }
 
         // If all the validation processes are passed, redirect to the login-box.php page. Else, redirect back to the register.php page
-        if ($unique && validate_email() && validate_phone() && validate_password() && check_length('first-name') && check_length('last-name') && check_length('address') && check_length('city') && validate_zipcode() && fill_out('profile-picture') && fill_out('country') && fill_out_account_type()) {
+        if ($unique && validate_email('email') && validate_phone('phone') && validate_password('password') && check_length('first-name') && check_length('last-name') && check_length('address') && check_length('city') && validate_zipcode('zipcode') && fill_out('profile-picture') && fill_out('country') && fill_out_account_type()) {
             // Store the phone number without special characters in the registartion.csv
             $new_record[1] = $new_phone_number;
 
@@ -227,13 +222,19 @@
 
             // Redirect to the login-box.php page
             header("Location: ../login-box.php");
+        } else if (!$unique) {
+            // Show error message when there are problems in registration
+            $error_message = base64_encode("This account has been used. Register again");
+
+            // Re direct to the register.php page
+            header("Location: ../register.php?error_message=$error_message");
         } else {
             // Show error message when there are problems in registration
             $error_message = base64_encode("Some errors in validation. Register again");
 
             // Re direct to the register.php page
             header("Location: ../register.php?error_message=$error_message");
-        }    
+        }
     }
 
     // Release the lock of the registration.csv

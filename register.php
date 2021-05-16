@@ -254,7 +254,7 @@
     </footer>
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
-    <script src="./script/validate_form.js" defer></script>
+    <!-- <script src="./script/validate_form.js" defer></script> -->
     <script src="./script/show_hide.js" defer></script>
     </body>
 
