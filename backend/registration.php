@@ -59,7 +59,8 @@
 
             // If the phone number has double symbols, return false 
             $symbols = " .-";
-            for ($index = 0; $index <= strlen($new_phone) - 2; $index++) {
+            $phone_len = strlen($new_phone);
+            for ($index = 0; $index <= $phone_len - 2; $index++) {
                 if (strpos($symbols, $new_phone[$index]) && strpos($symbols, $new_phone[$index + 1])) {
                     return false;
                 } 
@@ -69,7 +70,7 @@
             $number_of_digits = 0;
 
             // Count the number of digits in phone number
-            for ($index = 0; $index <strlen($new_phone); $index++) {
+            for ($index = 0; $index < $phone_len; $index++) {
                 if (is_numeric($new_phone[$index])) {
                     $number_of_digits++;
                 }
@@ -196,8 +197,9 @@
 
         // Store the phone number submitted without special characters in a variable
         $new_phone_number = preg_replace('/[^0-9]/', '', $new_record[1]);
-
-        for ($index = 1; $index < count($previous_records); $index++) {
+        
+        $records_len = count($previous_records);
+        for ($index = 1; $index < $records_len; $index++) {
             // Store the phone number already in the server without special characters in a variable
             $previous_phone_number = preg_replace('/[^0-9]/', '', $previous_records[$index][1]);
 

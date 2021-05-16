@@ -89,7 +89,7 @@
     <main>
         <div id="login-box">
             <form action="./backend/authentication.php" method="POST" onsubmit="return checkPassword()">
-                <input required type="text" id="email/phone" name="text" autocomplete="off" placeholder="Email or phone number">  
+                <input required type="text" id="email/phone" name="email/phone" autocomplete="off" placeholder="Email or phone number">  
                 <input required type="password" id="password" name="password" placeholder="Password">
                 <div id="error">Invalid password</div>
                 <input type="submit" name="button-submit" value="Login">
