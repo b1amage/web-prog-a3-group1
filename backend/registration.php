@@ -214,6 +214,9 @@
 
         // If all the validation processes are passed, redirect to the login-box.php page. Else, redirect back to the register.php page
         if ($unique && validate_email() && validate_phone() && validate_password() && check_length('first-name') && check_length('last-name') && check_length('address') && check_length('city') && validate_zipcode() && fill_out('profile-picture') && fill_out('country') && fill_out_account_type()) {
+            // Store the phone number without special characters in the registartion.csv
+            $new_record[1] = $new_phone_number;
+
             // Convert the records into a single line 
             $registration = implode(",", $new_record);
 

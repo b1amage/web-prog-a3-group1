@@ -88,7 +88,7 @@
 
     <main>
         <div id="login-box">
-            <form action="./user-information.php" method="get" onsubmit="return checkPassword()">
+            <form action="./backend/authentication.php" method="POST" onsubmit="return checkPassword()">
                 <input required type="text" id="email/phone" name="text" autocomplete="off" placeholder="Email or phone number">  
                 <input required type="password" id="password" name="password" placeholder="Password">
                 <div id="error">Invalid password</div>
@@ -118,8 +118,8 @@
         </nav>
     </footer>
     <script src="./script/cookies.js" defer></script>
-    <script src="./script/check_password.js" defer></script>
-    <script src="./script/check_login.js" defer></script>
+    <!-- <script src="./script/check_password.js" defer></script> -->
+    <!-- <script src="./script/check_login.js" defer></script> -->
     </body>
     
 
