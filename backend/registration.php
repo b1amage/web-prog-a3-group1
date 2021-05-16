@@ -175,15 +175,17 @@
 
     // Check phone and email unique
     if (fill_out('submit')) {
+        // A variable to check the if the account is unique
         $unique = true;
+
+        // A variable to store the error message
+        $error_message = "";
+
         // Add new record into an array
         $new_record = [];
         foreach($_POST as $key => $value) {
             $new_record[] = $value;
         }
-
-        // Removing special characters in phone number then save it to the server
-        $new_record[1] = preg_replace('/[^0-9]/', '', $new_record[1]);
 
         // Hashing the password and retype - password then save them to the server
         $new_record[2] = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -192,10 +194,21 @@
         // Use the get_data_from_csv function to get information about previous records in registration.csv
         $previous_records = get_data_from_csv($registration_file);
 
+        // Store the phone number submitted without special characters in a variable
+        $new_phone_number = preg_replace('/[^0-9]/', '', $new_record[1]);
+
         // If the email or phone number is reused, set the $unique variable to false
         for ($index = 1; $index < count($previous_records); $index++) {
-            if ($previous_records[$index][0] === $new_record[0] || $previous_records[$index][1] === $new_record[1]) {
+            // Store the phone number already in the server without special characters in a variable
+            $previous_phone_number = preg_replace('/[^0-9]/', '', $previous_records[$index][1]);
+
+            if ($previous_records[$index][0] === $new_record[0] || $previous_phone_number === $new_phone_number) {
+                // Show error message when users reused an account
+                $error_message = base64_encode("This account has been used. Register again");
                 $unique = false;
+
+                // Redirect to the register.php page
+                header("Location: ../register.php?error_message=$error_message");
             }
         }
 
@@ -210,8 +223,11 @@
             // Redirect to the login-box.php page
             header("Location: ../login-box.php");
         } else {
+            // Show error message when there are problems in registration
+            $error_message = base64_encode("Some errors in validation. Register again");
+
             // Re direct to the register.php page
-            header("Location: ../register.php");
+            header("Location: ../register.php?error_message=$error_message");
         }    
     }
 

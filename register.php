@@ -1,6 +1,3 @@
-<?php
-?>
-
 <!DOCTYPE html>
 <html lang="en" id="full-html">
 <head>
@@ -93,6 +90,13 @@
         <div class="login-box">
             <form action="./backend/registration.php" method="POST" autocomplete="off">
                 <h1>Create your new account</h1>
+                <h5 style="color:red;text-align:center">
+                    <?php 
+                        if (isset($_GET['error_message'])) {
+                            echo base64_decode($_GET['error_message']);
+                        }
+                    ?>
+                </h5>
                 <div id="line">
                     <hr>
                 </div>
