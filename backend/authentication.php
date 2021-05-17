@@ -71,6 +71,19 @@
             $valid_password = false;
         }
 
+        if(isset($_SESSION["submit_order_placement"])){
+            if ($valid_user && $valid_password) {
+                $_SESSION["login"] = true;
+                header("Location: ./order_placement");
+            } else {
+                // If invalid, send an error message and redirect back to login-box.php page
+                $error_message = base64_encode("Incorrect username or password. Try again");
+                header("Location: ../login-box.php?error_message=$error_message");        
+            } 
+        }
+
+
+
         // Check if the account is valid with the right email or phone number and password
         if ($valid_user && $valid_password) {
             $_SESSION["login"] = true ;

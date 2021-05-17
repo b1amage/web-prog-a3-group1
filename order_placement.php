@@ -1,6 +1,7 @@
 <?php
     session_start();
     if(isset($_POST["submit_placement"])){
+        $_SESSION["submit_order_placement"] = true;
         if(!isset($_SESSION["login"])){
             header("location: login-box.php");
         }else {
