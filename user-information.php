@@ -1,3 +1,6 @@
+<?php
+    $matched_account = unserialize(base64_decode($_GET['matched_account']));
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,14 +98,14 @@
                     <img src="./images/about-images/tuan-image.jpeg" alt="profile-picture">
                 </div>
                 <ul> 
-                    <li><span>Full name: </span>Dao Kha Tuan</li>
-                    <li><span>Email address: </span><a id="login-email" href="mailto:tuan09092002@gmail.com">tuan09092002@gmail.com</a></li>
-                    <li><span>Number: </span>0908309768</li>
-                    <li><span>Address: </span>4519 Nguyen Cuu Phu, Tan Tao A Ward, Binh Tan District, HCM City</li>
-                    <li><span>City: </span>Ho Chi Minh City</li>
-                    <li><span>Zip code: </span> 206066</li>
-                    <li><span>Country: </span>Vietnam</li>
-                    <li><span>Account type: </span>Shopper</li>
+                    <li><span>Full name: </span><?=$matched_account[4]." ".$matched_account[5];?></li>
+                    <li><span>Email: </span><a id="login-email" href=<?="mailto:{$matched_account[0]}"?>><?=$matched_account[0]?></a></li>
+                    <li><span>Phone number: </span><?=$matched_account[1]?></li>
+                    <li><span>Address: </span><?=$matched_account[6]?></li>
+                    <li><span>City: </span><?=$matched_account[7]?></li>
+                    <li><span>Zip code: </span><?=$matched_account[8]?></li>
+                    <li><span>Country: </span><?=$matched_account[10]?></li>
+                    <li><span>Account type: </span><?=$matched_account[11]?></li>
                 </ul>
             </div> 
         </div>
