@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    if(isset($_POST["submit_placement"])){
+        if(!isset($_SESSION["login"])){
+            header("location: login_box.php");
+        }else {
+            header("location: thanks.php");
+        }
+    }
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

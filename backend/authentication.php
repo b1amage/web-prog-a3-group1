@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     // Include the "get-data.php" file to use the get_data_from_csv function
     include_once('get-data.php');
 
@@ -72,6 +73,7 @@
 
         // Check if the account is valid with the right email or phone number and password
         if ($valid_user && $valid_password) {
+            $_SESSION["login"] = true ;
             // If valid, redirect to user-information.php page
             header("Location: ../user-information.php?matched_account=$matched_account");
         } else {
