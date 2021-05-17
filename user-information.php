@@ -1,4 +1,5 @@
 <?php
+    // Get the array of account's information from authentication.php
     $matched_account = unserialize(base64_decode($_GET['matched_account']));
 ?>
 <!DOCTYPE html>
@@ -98,13 +99,21 @@
                     <img src="./images/about-images/tuan-image.jpeg" alt="profile-picture">
                 </div>
                 <ul> 
+                    <!-- display the first and last name of the account -->
                     <li><span>Full name: </span><?=$matched_account[4]." ".$matched_account[5];?></li>
+                    <!-- display the email of the account -->
                     <li><span>Email: </span><a id="login-email" href=<?="mailto:{$matched_account[0]}"?>><?=$matched_account[0]?></a></li>
+                    <!-- display the phone number of the account -->                    
                     <li><span>Phone number: </span><?=$matched_account[1]?></li>
+                    <!-- display the address of the account -->
                     <li><span>Address: </span><?=$matched_account[6]?></li>
+                    <!-- display the city of the account -->
                     <li><span>City: </span><?=$matched_account[7]?></li>
+                    <!-- display the zipcode of the account --> 
                     <li><span>Zip code: </span><?=$matched_account[8]?></li>
+                    <!-- display the country of the account -->
                     <li><span>Country: </span><?=$matched_account[10]?></li>
+                    <!-- display the account type of the account -->
                     <li><span>Account type: </span><?=$matched_account[11]?></li>
                 </ul>
             </div> 

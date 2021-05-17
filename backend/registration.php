@@ -191,7 +191,10 @@
         // Hashing the password and retype - password then save them to the server
         $new_record[2] = password_hash($_POST['password'], PASSWORD_DEFAULT);
         $new_record[3] = password_hash($_POST['re-password'], PASSWORD_DEFAULT);
+
+        // Store the address in a double quotes so it can be stored in one cell only in the registration.csv 
         $new_record[6] = '"'.$_POST['address'].'"';
+
         // Use the get_data_from_csv function to get information about previous records in registration.csv
         $previous_records = get_data_from_csv_with_double_quotes($registration_file);
 
