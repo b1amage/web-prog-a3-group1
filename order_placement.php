@@ -122,7 +122,9 @@
                 <input type="number" name="quantity" id="quantity3" min="0" value="0" required>
             </div>
         </div>
+        
         <div class="ship-cod">
+        <form method = "post" action = "./login-box.php">
             <div class="first-line">
                 <h4>Discount code</h4>
                 <input type="text" name="discount" id="discount">
@@ -145,9 +147,10 @@
                 <h2 id="total-price">6330$</h2>
             </div>
             <div class="button-container">
-                <a href="./thanks.php"><button class="push">Check Out</button></a>
+                <button type ="submit" name= "submit_placement" class="push">Check Out</button></a>
                 <a href="./product-detail.php"><button>Continue Shopping</button></a>
             </div>
+        </form>
         </div>
     </main>
     <footer>
