@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if ($_SESSION["login"]) {
+        $my_account_link = "./user-information.php";
+    } else {
+        $my_account_link ="./login-box.php";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +39,7 @@
                         <li><a href="./index.php" class="nav__link push" id="underline">Home</a></li>
                         <li><a href="./about.php" class="nav__link" id="underline">About Us</a></li>
                         <li><a href="./fee.php" class="nav__link" id="underline">Fees</a></li>
-                        <li><a href="./login-box.php" class="nav__link my-account">My Account</a></li>
+                        <li><a href=<?=$my_account_link?> class="nav__link my-account">My Account</a></li>
                         <li>
                             <a href="#" class="nav__link">Browse<i class="ti-angle-double-down"></i></a>
                             <ul class="subnav">
@@ -67,7 +75,7 @@
                         <li><a href="./about.php" class="nav__mobile-link">About us</a></li>
                         <li><a href="./fee.php" class="nav__mobile-link">Fees</a></li>
                         <li>
-                            <a class="my-account" href="./login-box.php"><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
+                            <a class="my-account" href=<?=$my_account_link?>><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
                         </li>
                         <li>
                             <label for="subnav-mobile-check-browse" class="nav__mobile-link hover-browse">Browse<i class="ti-angle-double-down"></i></label>

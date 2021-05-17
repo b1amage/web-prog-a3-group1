@@ -43,7 +43,7 @@
             for ($index = 0; $index < $record_len; $index++) {
                 if ($previous_record[$index][0] === $account) {
                     $hashed_password = $previous_record[$index][2];
-                    $matched_account = base64_encode(serialize($previous_record[$index]));
+                    $matched_account = $previous_record[$index];
                     $valid_user = true;
                     break;
                 } 
@@ -57,7 +57,7 @@
             for ($index = 0; $index < $record_len; $index++) {
                 if ($previous_record[$index][1] === $account) {
                     $hashed_password = $previous_record[$index][2];
-                    $matched_account = base64_encode(serialize($previous_record[$index]));
+                    $matched_account = $previous_record[$index];
                     $valid_user = true;
                     break;
                 } 
@@ -82,13 +82,12 @@
             } 
         }
 
-
-
         // Check if the account is valid with the right email or phone number and password
         if ($valid_user && $valid_password) {
             $_SESSION["login"] = true ;
             // If valid, redirect to user-information.php page
-            header("Location: ../user-information.php?matched_account=$matched_account");
+            $_SESSION['matched_account'] = $matched_account; //++++
+            header("Location: ../user-information.php");
         } else {
             // If invalid, send an error message and redirect back to login-box.php page
             $error_message = base64_encode("Incorrect username or password. Try again");
