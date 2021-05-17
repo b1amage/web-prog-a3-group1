@@ -5,7 +5,7 @@ Assignment 3 of web programming course
 This is the Retailez mall in which sell a myriad of product from different brands. It is just like Van Hanh Mall or Crescent Mall
 
 # Link to our website:
-https://retailezasm3.netlify.app/
+
 
 # Github
 https://github.com/s3877698/web_programmming_asm3_group1
