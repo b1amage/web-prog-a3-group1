@@ -25,7 +25,7 @@ Nguyen Trong Minh Long - s3878694
 Nguyen Anh Duy (25%): 
 
 
-Nguyen Luu Quoc Bao (25%): 
+Nguyen Luu Quoc Bao (25%): Problem 0, 1, 2
 
 
 Dao Kha Tuan (25%): 
