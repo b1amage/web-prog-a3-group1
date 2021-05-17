@@ -111,54 +111,6 @@ include './backend/display-store-product.php';
                     <?php }; ?>
                     <?php endforeach; ?>
             
-                <!-- <div class="store 1">
-                    <a href="./nike-home.php" ><img src="./images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline">Nike</a></h3>
-                </div>
-
-                <div class="store 2">
-                    <a href="./nike-home.php" ><img src="./images/index-img/uniqlo.jpeg" alt="uniqlo" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline">Uniqlo</a></h3>
-                </div>
-
-                <div class="store 3">
-                    <a href="./nike-home.php" ><img src="./images/index-img/kfc.jpeg" alt="kfc" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline">KFC</a></h3>
-                </div>
-
-                <div class="store 4">
-                    <a href="./nike-home.php" ><img src="./images/index-img/gongcha.jpeg" alt="gongcha-logo" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline">Gongcha</a></h3>
-                </div>
-
-                <div class="store 5">
-                    <a href="./nike-home.php" ><img src="./images/index-img/lv.jpeg" alt="LV-logo" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline">Louis Vuitton</a></h3>
-                </div>
-
-                <div class="store 6">
-                    <a href="./nike-home.php" ><img src="./images/stores-image/restaurants/gogi.jpg" alt="gogi" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline">GoGi</a></h3>
-                </div>
-
-                <div class="store 7">
-                    <a href="./nike-home.php" ><img src="./images/stores-image/department_stores/circlek.jpg" alt="Circle K" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline">Circle K</a></h3>
-                </div>
-
-                <div class="store 8">
-                    <a href="./nike-home.php" ><img src="./images/stores-image/department_stores/circlek.jpg" alt="Circle K" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline">Circle K</a></h3>
-                </div>
-                <div class="store 9">
-                    <a href="./nike-home.php" ><img src="./images/stores-image/department_stores/circlek.jpg" alt="Circle K" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline">Circle K</a></h3>
-                </div>
-
-                <div class="store 10">
-                    <a href="./nike-home.php" ><img src="./images/stores-image/department_stores/circlek.jpg" alt="Circle K" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline">Circle K</a></h3>
-                </div> -->
             </div>
         </div>
         
@@ -183,35 +135,6 @@ include './backend/display-store-product.php';
                     <?php }; ?>
                     <?php endforeach; ?>
 
-                <!-- <div class="product 1">
-                    <a href="./product-detail.php" ><img src="./images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
-                    <h3><a href="./product-detail.php" class="underline">Nike Jordan 1 Dior</a></h3>
-                </div>
-
-                <div class="product 2">
-                    <a href="./product-detail2.php" ><img src="./images/index-img/unqilo-product.jpeg" alt="uniqlo-product" width="200" height="200"></a>
-                    <h3><a href="./product-detail.php" class="underline">Uniqlo Blazzer</a></h3>
-                </div>
-
-                <div class="product 3">
-                    <a href="./product-detail3.php" ><img src="./images/index-img/kfc-product.jpeg" alt="kfc-product" width="200" height="200"></a>
-                    <h3><a href="./product-detail.php" class="underline">Fried Spicy Chicken</a></h3>
-                </div>
-
-                <div class="product 4">
-                    <a href="./product-detail.php" ><img src="./images/index-img/gongcha-product.jpeg" alt="gongcha-product" width="200" height="200"></a>
-                    <h3><a href="./product-detail.php" class="underline">Bubble Milk Tea</a></h3>
-                </div>
-
-                <div class="product 5">
-                    <a href="./product-detail2.php" ><img src="./images/index-img/lv-product.jpeg" alt="lv-product" width="200" height="200"></a>
-                    <h3><a href="./product-detail.php" class="underline">T-Shirt LV</a></h3>
-                </div>
-
-                <div class="product 6">
-                    <a href="./product-detail.php" ><img src="./images/index-img/lebron18.jpg" alt="lebron 18 product" width="200" height="200"></a>
-                    <h3><a href="./product-detail.php" class="underline">Lebron 18 shoes</a></h3>
-                </div> -->
             </div>
         </div>
         
@@ -238,31 +161,6 @@ include './backend/display-store-product.php';
                 <?php    } };
                 ?>
                 <?php endforeach;?>
-
-                <!-- <div class="feature first 1">
-                    <a href="./tgdd-home.php" ><img src="./images/index-img/G _ LAB.jpg" alt="glab-logo" width="200" height="200"></a>
-                    <h3><a href="./tgdd-home.php" class="underline">GLAB</a></h3>
-                </div>
-
-                <div class="feature first 2">
-                    <a href="./tgdd-home.php" ><img src="./images/index-img/bobui.jpeg" alt="bobui-logo" width="200" height="200"></a>
-                    <h3><a href="./tgdd-home.php" class="underline">BoBui</a></h3>
-                </div>
-
-                <div class="feature first 3">
-                    <a href="./tgdd-home.php" ><img src="./images/index-img/donchicken.jpeg" alt="donchicken-logo" width="200" height="200"></a>
-                    <h3><a href="./tgdd-home.php" class="underline">Don Chicken</a></h3>
-                </div>
-
-                <div class="feature first 4">
-                    <a href="./tgdd-home.php" ><img src="./images/index-img/highlands.jpeg" alt="highland-logo" width="200" height="200"></a>
-                    <h3><a href="./tgdd-home.php" class="underline">Highlands</a></h3>
-                </div>
-
-                <div class="feature first 5">
-                    <a href="./tgdd-home.php" ><img src="./images/index-img/rolex.jpeg" alt="rolex-logo" width="200" height="200"></a>
-                    <h3><a href="./tgdd-home.php" class="underline">Rolex</a></h3>
-                </div> -->
             </div>
         </div>
         
@@ -290,31 +188,6 @@ include './backend/display-store-product.php';
                 <?php    } };
                 ?>
                 <?php endforeach;?>
-                            
-                <!-- <div class="feature-last 1">
-                    <a href="./product-detail.php" ><img src="./images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
-                    <h3><a href="./product-detail.php" class="underline">Yellow T-Shirt</a></h3>
-                </div>
-
-                <div class="feature-last 2">
-                    <a href="./product-detail2.php" ><img src="./images/index-img/bobui-product.jpeg" alt="bobui-img" width="200" height="200"></a>
-                    <h3><a href="./product-detail2.php" class="underline">Yellow T-Shirt</a></h3>
-                </div>
-
-                <div class="feature-last 3">
-                    <a href="./product-detail3.php" ><img src="./images/index-img/donchicken-product.jpeg" alt="bobui-img" width="200" height="200"></a>
-                    <h3><a href="./product-detail3.php" class="underline">Cheese Chicken</a></h3>
-                </div>
-
-                <div class="feature-last 4">
-                    <a href="./product-detail.php" ><img src="./images/index-img/highlands-product.jpeg" alt="highlands-img" width="200" height="200"></a>
-                    <h3><a href="./product-detail.php" class="underline">Freeze Chocolate</a></h3>
-                </div>
-
-                <div class="feature-last 5">
-                    <a href="./product-detail2.php" ><img src="./images/index-img/rolex-product.jpeg" alt="rolex-img" width="200" height="200"></a>
-                    <h3><a href="./product-detail2.php" class="underline">Airking Rolex</a></h3>
-                </div> -->
 
             </div>
         </div>

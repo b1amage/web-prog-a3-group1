@@ -1,4 +1,5 @@
 <?php 
+    // Create the field name base on index for easier access
     $field_name_categories = [
         "id" => 0,
         "name" => 1

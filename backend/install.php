@@ -1,34 +1,35 @@
 <?php
-// session_start();
-// $_SESSION["user_data"] = [];
-
+// Set error count = 0 to know if there is any error while testing
 $error_count = 0;
+
+// If the user click on the submit button
 if (isset($_POST["submit-btn"])) {
+    // Check if the username is empty
     if ($_POST["username"] == "") {
         $mess_username = "Username should not be empty";
         $error_count++;
     }
 
+    // Check if the password is empty
     if ($_POST["password"] == "") {
         $mess_password = "Password should not be empty";
         $error_count++;
     }
 
+    // Check if the password and the retype is the same
     if ($_POST["retype-password"] != $_POST["password"]) {
         $mess_retype = "Retype password must be the same to the password";
         $error_count++;
     }
 
-    if ($error_count === 0) {
-        $information = [
-            $_POST["username"] => password_hash($_POST["password"], PASSWORD_DEFAULT)
-        ];
-
+    // After testing, if there is no error, we will open the data.txt file as write mode
         $data_file = fopen('data.txt', 'w');
 
+        // Write username and the hashed password in the file
         fwrite($data_file, $_POST["username"]);
         fwrite($data_file,"\n");
         fwrite($data_file, password_hash($_POST["password"], PASSWORD_DEFAULT));
+        // Close the file after writing
         fclose($data_file);
     }
 
@@ -38,7 +39,7 @@ if (isset($_POST["submit-btn"])) {
 // } else {
 //     // Write code here
 // }
-}
+
 ?>
 
 <!DOCTYPE html>
