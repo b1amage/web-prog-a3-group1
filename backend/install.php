@@ -35,7 +35,7 @@ if (isset($_POST["submit-btn"])) {
 
 // Kiem tra xem file nay co ton tai hay ko (de vao tat ca file php khac)
 // if (file_exists("install.php")) {
-//     return "The install.php is exist!";
+//     exit("The install.php file is exit");
 // } else {
 //     // Write code here
 // }
