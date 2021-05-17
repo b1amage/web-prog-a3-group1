@@ -32,7 +32,7 @@
             } 
 
             // If the email contains double dots, return false 
-            if (strpos($new_email, "..")) {
+            if (strpos($new_email, "..") !== false) {
                 return false;
             } 
             
@@ -106,7 +106,7 @@
             }
 
             // If the password contains a space, return false
-            if (strpos($new_password, " ")) {
+            if (strpos($new_password, " ") !== false) {
                 return false;
             }
 
@@ -191,9 +191,9 @@
         // Hashing the password and retype - password then save them to the server
         $new_record[2] = password_hash($_POST['password'], PASSWORD_DEFAULT);
         $new_record[3] = password_hash($_POST['re-password'], PASSWORD_DEFAULT);
-
+        $new_record[6] = '"'.$_POST['address'].'"';
         // Use the get_data_from_csv function to get information about previous records in registration.csv
-        $previous_records = get_data_from_csv($registration_file);
+        $previous_records = get_data_from_csv_with_double_quotes($registration_file);
 
         // Store the phone number submitted without special characters in a variable
         $new_phone_number = preg_replace('/[^0-9]/', '', $new_record[1]);

@@ -40,6 +40,25 @@
         return $array_full_data;
     }
 
+    function get_data_from_csv_with_double_quotes($file_name) {
+        // Open, get raw data and close file
+        $data_open = fopen($file_name, 'r');
+        $raw_data = fread($data_open,filesize($file_name));
+        fclose($data_open);
+
+        // // Split the raw data by lines
+        // $data_split_line = (explode("\n", $raw_data));
+
+        // // Use loop to split the data by the comma
+        // foreach($data_split_line as $index => $sub_data_array) {
+        //     $array_full_data[] = str_getcsv(",", $sub_data_array);
+        // }
+
+        $array_full_data = array_map('str_getcsv', file($file_name));
+
+        return $array_full_data;        
+    }
+
     // this function use for printing complex array
     function print_r_with_lines($arr) {
         echo '<pre>';

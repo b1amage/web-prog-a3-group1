@@ -12,16 +12,13 @@
     // Check if users submit the form
     if (isset($_POST['button-submit']) && $_POST['button-submit'] !== "") {
         // Use the get_data_from_csv function to get information about previous records in registration.csv
-        $previous_record = get_data_from_csv($registration_file);
+        $previous_record = get_data_from_csv_with_double_quotes($registration_file);
 
         // Store the email or phone submitted in a variable
         $account = $_POST['email/phone'];
 
         // Store the password submitted in a variable
         $password = $_POST['password'];
-
-        // A variable to store the hashed password that matches the submitted password
-        $hashed_password = "";
 
         // A variable to check if the email or phone number is in registration.csv
         $valid_user = false;
@@ -32,6 +29,12 @@
         // A variable to store the error message
         $error_message = "";
 
+        // A variable to store the hashed password that matches the submitted password
+        $hashed_password = "";
+
+        // An array to store the matched information if the account submitted is matched
+        $matched_account = [];
+
         // Check if users submit an email
         if (validate_email('email/phone')) {
             // Iterating through the registration.csv to find the matched email
@@ -39,6 +42,7 @@
             for ($index = 0; $index < $record_len; $index++) {
                 if ($previous_record[$index][0] === $account) {
                     $hashed_password = $previous_record[$index][2];
+                    $matched_account = base64_encode(serialize($previous_record[$index]));
                     $valid_user = true;
                     break;
                 } 
@@ -52,6 +56,7 @@
             for ($index = 0; $index < $record_len; $index++) {
                 if ($previous_record[$index][1] === $account) {
                     $hashed_password = $previous_record[$index][2];
+                    $matched_account = base64_encode(serialize($previous_record[$index]));
                     $valid_user = true;
                     break;
                 } 
@@ -68,7 +73,7 @@
         // Check if the account is valid with the right email or phone number and password
         if ($valid_user && $valid_password) {
             // If valid, redirect to user-information.php page
-            header("Location: ../user-information.php");
+            header("Location: ../user-information.php?matched_account=$matched_account");
         } else {
             // If invalid, send an error message and redirect back to login-box.php page
             $error_message = base64_encode("Incorrect username or password. Try again");
