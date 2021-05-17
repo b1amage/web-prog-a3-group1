@@ -5,7 +5,7 @@ include './backend/display-store-product.php';
 
 <?php
     session_start();
-    if ($_SESSION["login"]) {
+    if (isset($_SESSION["login"])) {
         $my_account_link = "./user-information.php";
     } else {
         $my_account_link ="./login-box.php";

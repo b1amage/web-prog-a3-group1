@@ -1,7 +1,7 @@
 <?php
     session_start();
     $matched_account = $_SESSION['matched_account'];
-    if ($_SESSION["login"]) {
+    if (isset($_SESSION["login"])) {
         $my_account_link = "./user-information.php";
     } else {
         $my_account_link ="./login-box.php";
