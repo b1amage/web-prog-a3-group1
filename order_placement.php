@@ -2,7 +2,7 @@
     session_start();
     if(isset($_POST["submit_placement"])){
         if(!isset($_SESSION["login"])){
-            header("location: login_box.php");
+            header("location: login-box.php");
         }else {
             header("location: thanks.php");
         }
@@ -138,7 +138,7 @@
         </div>
         
         <div class="ship-cod">
-        <form method = "post" action = "./login-box.php">
+        <form method = "post">
             <div class="first-line">
                 <h4>Discount code</h4>
                 <input type="text" name="discount" id="discount">
