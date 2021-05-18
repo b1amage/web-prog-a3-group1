@@ -1,9 +1,4 @@
 <?php 
-include './get-data.php';
-$stores_data = get_data_from_csv("./stores.csv");
-$products_data = get_data_from_csv("./products.csv");
-
-
 $product_by_store_array = [];
 
 foreach($stores_data as $store) {
@@ -13,7 +8,5 @@ foreach($stores_data as $store) {
         }
     }
 }
-
-print_r_with_lines($product_by_store_array);
 
 ?>

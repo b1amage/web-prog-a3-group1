@@ -1,8 +1,4 @@
 <?php 
-include './get-data.php';
-$stores_data = get_data_from_csv("./stores.csv");
-$products_data = get_data_from_csv("./products.csv");
-$categories_data = get_data_from_csv('./categories.csv');
 
 
 // print_r_with_lines($stores_data);
@@ -18,6 +14,5 @@ foreach($categories_data as $categ) {
     }
 }
 
-print_r_with_lines($store_by_categ);
 
 ?>

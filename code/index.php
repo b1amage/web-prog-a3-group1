@@ -9,6 +9,8 @@ if (isset($_SESSION["login"])) {
 <?php
 include '../backend/get-data.php';
 include '../backend/display-store-product.php';
+include '../backend/product_by_store.php';
+include '../backend/display_store_by_categories.php';
 ?>
 <!DOCTYPE html>
 <html lang="en" id="full-html">
