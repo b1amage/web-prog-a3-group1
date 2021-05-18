@@ -104,45 +104,19 @@ include '../backend/display_store_by_categories.php';
             <h1>New Product</h1>
         </div>
         <div class="product-container">
+        <?php $product_count = 0;
+                foreach ($products_data as $product) :
+                    if ($product_count == 5) {
+                        break;
+                    } else {
+                        $product_count++; ?>
             <div class="product">
-                <!-- <div class="overlay">
-                    <p>350$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/bask1.jpg" alt="lebron" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Lebron</a></h3>
+                <a href="./product-detail.php?product_id=<?=$product[$field_name_products["id"]]?>" ><img src="./images/stores-image/nike-images/bask1.jpg" alt="lebron" width="200" height="200"></a>
+                <h3><a href="./product-detail.php?product_id=<?=$product[$field_name_products["id"]]?>"><?=$product[$field_name_products["name"]]; ?></a></h3>
+                
             </div>
-
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>250$</p>
-                </div> -->
-                <a href="./product-detail2.php" ><img src="./images/stores-image/nike-images/bask2.jpg" alt="lebron" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Lebron</a></h3>
-            </div>
-
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>180$</p>
-                </div> -->
-                <a href="./product-detail3.php" ><img src="./images/stores-image/nike-images/run1.jpg" alt="airmax" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Airmax</a></h3>
-            </div>
-
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>150$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/run2.jpg" alt="airmax" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Airmax</a></h3>
-            </div>
-
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>160$</p>
-                </div> -->
-                <a href="./product-detail2.php" ><img src="./images/stores-image/nike-images/football1.jpg" alt="football" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Football</a></h3>
-            </div>
+            <?php }; ?>
+            <?php endforeach; ?>
         </div>
 
         <!-- Featured Product -->
@@ -150,45 +124,28 @@ include '../backend/display_store_by_categories.php';
             <h1>Featured Products</h1>
         </div>
         <div class="feature-container ft2">
+            
+        <?php
+                $feature_count = 0;
+                foreach ($products_data as $product):
+                    $x = $product[$field_name_products["featured_in_store"]];
+                    if (strpos($x, "TRUE") !== FALSE) {
+                        if ($feature_count == 5) {
+                            break;
+                        } else {
+                            $feature_count++; ?>
             <div class="feature">
                 <!-- <div class="overlay">
                     <p>155$</p>
                 </div> -->
-                <a href="./product-detail3.php" ><img src="./images/stores-image/nike-images/football_set1.jpg" alt="full football set" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Football set</a></h3>
+                <a href="./product-detail.php?product_id=<?=$product[$field_name_products["id"]]?>" ><img src="./images/stores-image/nike-images/football_set1.jpg" alt="full football set" width="200" height="200"></a>
+                <h3><a href="./product-detail.php?product_id=<?=$product[$field_name_products["id"]]?>"><?= $product[$field_name_products["name"]]?></a></h3>
             </div>
-
-            <div class="feature">
-                <!-- <div class="overlay">
-                    <p>160$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/football_set2.jpg" alt="full football set" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Football set</a></h3>
-            </div>
-
-            <div class="feature">
-                <!-- <div class="overlay">
-                    <p>89$</p>
-                </div> -->
-                <a href="./product-detail2.php" ><img src="./images/stores-image/nike-images/hoodie1.jpg" alt="nike hoodie" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Nike Hoodie</a></h3>
-            </div>
-
-            <div class="feature">
-                <!-- <div class="overlay">
-                    <p>60$</p>
-                </div> -->
-                <a href="./product-detail3.php" ><img src="./images/stores-image/nike-images/basketball1.jpg" alt="basketball" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Basketball</a></h3>
-            </div>
-
-            <div class="feature">
-                <!-- <div class="overlay">
-                    <p>60$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/soccerball1.jpg" alt="soccer ball" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Soccer ball</a></h3>
-            </div>
+ 
+            <?php    }
+                    }
+                    ?>
+                <?php endforeach; ?> 
         </div>
     </main>
     <div class="push"></div>
