@@ -183,12 +183,12 @@
                             <option value="GU">Guam</option>
                             <option value="HK">Hong Kong</option>
                             <option value="HU">Hungary</option>
-                            <option value="IN">Indian</option>
+                            <option value="IN">India</option>
                             <option value="IE">Ireland</option>
                             <option value="IL">Israel</option>
                             <option value="IT">Italy</option>
                             <option value="JP">Japan</option>
-                            <option value="JP">Germany</option>
+                            <option value="DE">Germany</option>
                             <option value="KR">Korea, Republic of</option>
                             <option value="LT">Lithuania</option>
                             <option value="MY">Malaysia</option>

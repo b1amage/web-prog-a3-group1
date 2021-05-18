@@ -6,6 +6,64 @@
     $fp = fopen($registration_file, "a"); // Open the registration.csv file
     flock($fp, LOCK_SH); // Set the file in shared mode (reader)
 
+    $country_codes = [
+        "AF" => "Afghanistan",
+        "AL" => "Albania",
+        "DZ" => "Algeria",
+        "AS" => "American Samoa",
+        "AR" => "Argentina",
+        "AU" => "Australia",
+        "AT" => "Austria",
+        "Bh" => "Bahrain",
+        "BS" => "Bahamas",
+        "BY" => "Belarus",
+        "BE" => "Belgium",
+        "BT" => "Bhutan",
+        "BA" => "Bosnia and Herzegovina",
+        "BR" => "Brazil",
+        "BG" => "Bulgaria",
+        "KH" => "Cambodia",
+        "CL" => "Chile",
+        "CN" => "China",
+        "CO" => "Colombia",
+        "CG" => "Congo",
+        "CR" => "Costa Rica",
+        "HR" => "Croatia",
+        "DK" => "Denmark",
+        "EG" => "Egypt",
+        "ET" => "Ethiopia",
+        "FJ" => "Fiji",
+        "FI" => "Finland",
+        "FR" => "France",
+        "DE" => "Germany",
+        "GH" => "Ghana",
+        "GR" => "Greece",
+        "GU" => "Guam",
+        "HK" => "Hong Kong",
+        "HU" => "Hungary",
+        "IN" => "India",
+        "IE" => "Ireland",
+        "IL" => "Israel",
+        "IT" => "Italy",
+        "JP" => "Japan",
+        "DE" => "Germany",
+        "KR" => "Korea, Republic of",
+        "LT" => "Lithuania",
+        "MY" => "Malaysia",
+        "MX" => "Mexico",
+        "MM" => "Myanmar",
+        "NL" => "Netherlands",
+        "NG" => "Nigeria",
+        "ON" => "Oman",
+        "PK" => "Pakistan",
+        "PH" => "Philippines",
+        "RU" => "Russian Federation",
+        "SG" => "Singapore",
+        "UK" => "United Kingdom",
+        "US" => "United States",
+        "VN" => "Vietnam",
+    ];
+
     // A function to check if a field is filled out
     function fill_out($field_name) {
         // Check if the value of the field is submitted and not blank
@@ -195,6 +253,9 @@
         // Store the address in a double quotes so it can be stored in one cell only in the registration.csv 
         $new_record[6] = '"'.$_POST['address'].'"';
 
+        // Store the country name based on country code in the registration.csv
+        $new_record[10] = $country_codes[$new_record[10]];
+
         // Use the get_data_from_csv function to get information about previous records in registration.csv
         $previous_records = get_data_from_csv_with_double_quotes($registration_file);
 
@@ -224,19 +285,19 @@
             fwrite($fp, "\n{$registration}");
 
             // Redirect to the login-box.php page
-            header("Location: ../login-box.php");
+            header("Location: ../code/login-box.php");
         } else if (!$unique) {
             // Show error message when there are problems in registration
             $error_message = base64_encode("This account has been used. Register again");
 
             // Re direct to the register.php page
-            header("Location: ../register.php?error_message=$error_message");
+            header("Location: ../code/register.php?error_message=$error_message");
         } else {
             // Show error message when there are problems in registration
             $error_message = base64_encode("Some errors in validation. Register again");
 
             // Re direct to the register.php page
-            header("Location: ../register.php?error_message=$error_message");
+            header("Location: ../code/register.php?error_message=$error_message");
         }
     }
 
