@@ -3,6 +3,12 @@
     include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>
+<?php
+include '../backend/get-data.php';
+include '../backend/display-store-product.php';
+include '../backend/product_by_store.php';
+include '../backend/display_store_by_categories.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,8 +103,17 @@
 
     <main class="grid-container">
         <div class="description">
-            <h1 id="product-name">Nike Jordan 1 Dior</h1>
-            <h2 id="product-price">$2000</h2>
+            <?php $id=$_GET["product_id"];
+            foreach ($products_data as $product):
+                if ($product[$field_name_products["id"]]==$id){
+                    $name = $product[$field_name_products["name"]];
+                    $price = $product[$field_name_products["price"]];
+                }
+                endforeach;
+            
+            ?>
+            <h1 id="product-name"><?=$name?></h1>
+            <h2 id="product-price"><?=$price?></h2>
             <details>
                 <summary>Choose your size</summary>
                 <p>40 - 8.5US</p>
