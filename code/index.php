@@ -9,6 +9,7 @@
 <?php 
 include '../backend/get-data.php';
 include '../backend/display-store-product.php';
+// print_r_with_lines($stores_data);
 ?>
 <!DOCTYPE html>
 <html lang="en" id="full-html">
@@ -152,7 +153,7 @@ include '../backend/display-store-product.php';
                 <h1>Featured Stores</h1>
             </div>
             <div id="scroll" class="feature-container first">
-                <?php 
+            <?php 
                 $feature_count = 0;
                 foreach ($stores_data as $store):
                     if ($store[$field_name_stores["featured"]] == "TRUE") { 
