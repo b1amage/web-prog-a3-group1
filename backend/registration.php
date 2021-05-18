@@ -6,6 +6,7 @@
     $fp = fopen($registration_file, "a"); // Open the registration.csv file
     flock($fp, LOCK_SH); // Set the file in shared mode (reader)
 
+    // The array that is used to convert country code to country name
     $country_codes = [
         "AF" => "Afghanistan",
         "AL" => "Albania",
@@ -62,6 +63,23 @@
         "UK" => "United Kingdom",
         "US" => "United States",
         "VN" => "Vietnam",
+    ];
+
+    // The array that is used to convert store category code to store category name
+    $store_category_code = [
+        "department-stores" => "Department stores",
+        "grocery-stores" => "Grocery stores",
+        "restaurants" => "Restaurants",
+        "clothing-stores" => "Clothing stores",
+        "accessory-stores" => "Accessory stores",
+        "pharmacies" => "Pharmacies",
+        "technology-stores" => "Technology stores",
+        "pet-stores" => "Pet stores",
+        "toy-stores" => "Toy stores",
+        "specialty-stores" => "Specialty stores",
+        "thrift-stores" => "Thrift stores",
+        "services" => "Services",
+        "kiosks" => "Kiosks",
     ];
 
     // A function to check if a field is filled out
@@ -246,16 +264,6 @@
             $new_record[] = $value;
         }
 
-        // Hashing the password and retype - password then save them to the server
-        $new_record[2] = password_hash($_POST['password'], PASSWORD_DEFAULT);
-        $new_record[3] = password_hash($_POST['re-password'], PASSWORD_DEFAULT);
-
-        // Store the address in a double quotes so it can be stored in one cell only in the registration.csv 
-        $new_record[6] = '"'.$_POST['address'].'"';
-
-        // Store the country name based on country code in the registration.csv
-        $new_record[10] = $country_codes[$new_record[10]];
-
         // Use the get_data_from_csv function to get information about previous records in registration.csv
         $previous_records = get_data_from_csv_with_double_quotes($registration_file);
 
@@ -277,6 +285,26 @@
         if ($unique && validate_email('email') && validate_phone('phone') && validate_password('password') && check_length('first-name') && check_length('last-name') && check_length('address') && check_length('city') && validate_zipcode('zipcode') && fill_out('profile-picture') && fill_out('country') && fill_out_account_type()) {
             // Store the phone number without special characters in the registartion.csv
             $new_record[1] = $new_phone_number;
+
+            // Hashing the password and retype - password then save them to the server
+            $new_record[2] = password_hash($_POST['password'], PASSWORD_DEFAULT);
+            $new_record[3] = password_hash($_POST['re-password'], PASSWORD_DEFAULT);
+
+            // Store the address in a double quotes so it can be stored in one cell only in the registration.csv 
+            $new_record[6] = '"'.$_POST['address'].'"';
+
+            // Store the country name based on country code in the registration.csv
+            $new_record[10] = $country_codes[$new_record[10]];
+
+            // Store the store category name based on the store category code in registration.csv
+            $new_record[14] = $store_category_code[$new_record[14]];
+
+            // Store the account type in formatted string in registration.csv
+            if ($new_record[11] === "shopper") {
+                $new_record[11] = "Shopper";
+            } else if ($new_record[11] === "store-owner") {
+                $new_record[11] = "Store owner";
+            }
 
             // Convert the records into a single line 
             $registration = implode(",", $new_record);

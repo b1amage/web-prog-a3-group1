@@ -117,6 +117,18 @@
                     <li><span>Country: </span><?=$matched_account[10]?></li>
                     <!-- display the account type of the account -->
                     <li><span>Account type: </span><?=$matched_account[11]?></li>
+                    <!-- display the business information if the user is a store owner -->
+                    <?php 
+                        if ($matched_account[11] === "Store owner") {
+                            $business_info = <<<"INFO"
+                            <li><span>Business name: </span>{$matched_account[12]}</li>
+                            <li><span>Store name: </span>{$matched_account[13]}</li>
+                            <li><span>Store category: </span>{$matched_account[14]}</li>
+                            INFO;
+
+                            echo $business_info;
+                        }
+                    ?>
                 </ul>
             </div> 
         </div>
