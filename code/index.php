@@ -121,8 +121,8 @@ include '../backend/display_store_by_categories.php';
                         $store_count++; ?>
 
                         <div class="store 1">
-                            <a href="./nike-home.php"><img src="./images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
-                            <h3><a href="./nike-home.php" class="underline"><?= $store[$field_name_stores["name"]]; ?></a></h3>
+                            <a href="./nike-home.php?store_id=<?= $store[$field_name_stores["id"]];?>"><img src="./images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
+                            <h3><a href="./nike-home.php?store_id=<?= $store[$field_name_stores["id"]];?>" class="underline"><?= $store[$field_name_stores["name"]]; ?></a></h3>
                         </div>
                     <?php }; ?>
                 <?php endforeach; ?>
@@ -145,7 +145,7 @@ include '../backend/display_store_by_categories.php';
                         $product_count++; ?>
 
                         <div class="product 1">
-                            <a href="./product-detail.php"><img src="./images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
+                            <a href="./product-detail.php?product_id=<?=$product[$field_name_products["id"]]?>"><img src="./images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
                             <h3><a href="./product-detail.php" class="underline"><?= $product[$field_name_products["name"]]; ?></a></h3>
                         </div>
                     <?php }; ?>
@@ -172,8 +172,8 @@ include '../backend/display_store_by_categories.php';
                             $feature_count++; ?>
 
                             <div class="feature first">
-                                <a href="./tgdd-home.php"><img src="./images/index-img/G _ LAB.jpg" alt="glab-img" width="200" height="200"></a>
-                                <h3><a href="./tgdd-home.php" class="underline"><?= $store[$field_name_stores["name"]]; ?></a></h3>
+                                <a href="./tgdd-home.php?store_id=<?= $store[$field_name_stores["id"]]?>"><img src="./images/index-img/G _ LAB.jpg" alt="glab-img" width="200" height="200"></a>
+                                <h3><a href="./tgdd-home.php?store_id=<?= $store[$field_name_stores["id"]]?>" class="underline"><?= $store[$field_name_stores["name"]]; ?></a></h3>
                             </div>
 
                     <?php    }
@@ -201,8 +201,8 @@ include '../backend/display_store_by_categories.php';
                             $feature_product_count++; ?>
 
                             <div class="feature-last 1">
-                                <a href="./product-detail.php"><img src="./images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
-                                <h3><a href="./product-detail.php" class="underline"><?= $product[$field_name_products["name"]]; ?></a></h3>
+                                <a href="./product-detail.php?product_id=<?=$product[$field_name_products["id"]]?>"><img src="./images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
+                                <h3><a href="./product-detail.php?product_id=<?=$product[$field_name_products["id"]]?>" class="underline"><?= $product[$field_name_products["name"]]; ?></a></h3>
                             </div>
 
                     <?php    }

@@ -3,6 +3,12 @@
     include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>
+<?php
+include '../backend/get-data.php';
+include '../backend/display-store-product.php';
+include '../backend/product_by_store.php';
+include '../backend/display_store_by_categories.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
