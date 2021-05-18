@@ -1,11 +1,8 @@
 <?php
     session_start();
     $matched_account = $_SESSION['matched_account'];
-    if (isset($_SESSION["login"])) {
-        $my_account_link = "./user-information.php";
-    } else {
-        $my_account_link ="./login-box.php";
-    }
+    include('./backend/check_login.php');
+    $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
