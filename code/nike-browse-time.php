@@ -3,6 +3,16 @@
     include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>
+
+<?php
+include '../backend/get-data.php';
+include '../backend/display-store-product.php';
+include '../backend/product_by_store.php';
+include '../backend/display_store_by_categories.php';
+include '../backend/arrray_product_by_store.php';
+
+// print_r_with_lines($product_by_store);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,45 +105,32 @@
         <input type="checkbox" name="details" id="details">
 
         <div class="product-container pd1">
+        <a href="">Previous</a>
+        <?php 
+                // $display_count = 0;
+                // foreach($product_by_store_array as $store):
+                //     echo $display_count;
+                //     if ($display_count == count($)) {
+                //         break;
+                //     } elseif ($display_count > count($store) - 2) {
+                //         $display_count++;
+                //     }
+                //         else {
+                //             $display_count++;
+                        ?>
+
             <div class="product">
-                <!-- <div class="overlay">
-                    <p>180$</p>
-                </div> -->
                 <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/airzoom.jpg" alt="airzoom" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Airzoom</a></h3>
+                <h3><a href="./product-detail.php"><?=$store[$field_name_stores["name"]]; ?></a></h3>
             </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>150$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/vapormax.jpg" alt="vapormax" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Vapormax</a></h3>
-            </div>
-    
-            <div class="product lst">
-                <!-- <div class="overlay">
-                    <p>115$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/tennis1.jpg" alt="tennis shoes" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Tennis shoes</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>185$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/lebron1.jpg" alt="lebron" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Lebron</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>59$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/hoodie1.jpg" alt="hoodie" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Hoodie</a></h3>
-            </div>
+
+                    <?php 
+                    // };
+                    // endforeach;
+                    ?>
+        <a href="">Next</a>
+
+
             
         </div>
 
@@ -142,46 +139,27 @@
         <input type="checkbox" name="details" id="details-5">
 
         <div class="product-container pd5">
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>200$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/aj1.jpg" alt="air jordan" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Air Jordan</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>190$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/aj2.jpg" alt="air jordan" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Air Jordan</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>55$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/hoodie2.jpg" alt="hoodie" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Hoodie</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>39$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/jacket.jpg" alt="jacket" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Jacket</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>50$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/sweater.jpg" alt="sweater" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Sweater</a></h3>
-            </div>
+        <a href="">Previous</a>
+            <?php 
+                $display_count = 0;
+                foreach($product_by_store_array as $store):
+                    if ($display_count == 2) {
+                        break;
+                    } else {
+                        $display_count++; ?>
+
+                <div class="product">
+                    <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/aj1.jpg" alt="air jordan" width="200" height="200"></a>
+                    <h3><a href="./product-detail.php">Air Jordan</a></h3>
+                </div>
+
+                    <?php }
+                    endforeach;
+                    ?>
+        <a href="">Next</a>
         </div>
+
+
     </main>
     <div class="push"></div>
     <footer>
