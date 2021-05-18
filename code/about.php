@@ -1,8 +1,3 @@
-<?php 
-include './backend/get-data.php';
-include './backend/display-store-product.php';
-?>
-
 <?php
     session_start();
     if (isset($_SESSION["login"])) {
@@ -12,20 +7,76 @@ include './backend/display-store-product.php';
     }
 ?>
 <!DOCTYPE html>
-<html lang="en" id="full-html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./code/css/index.css">
+    <title>About</title>
+    <link rel="stylesheet" href="./code/css/about.css">
+    <link rel="stylesheet" href="./code/css/member-info.css">
     <link rel="stylesheet" href="./code/css/header.css">
     <link rel="stylesheet" href="./code/css/footer.css">
     <link rel="stylesheet" href="./code/css/cookies.css">
     <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
 </head>
 <body>
+    <div id="overlay-about" onclick="offOverlay()"></div>
+    <div class="info" id="more-info-duy">
+        <div class="info-header">
+            <div class="info-title">Nguyen Anh Duy</div>
+        </div>
+        <div class="info-image">
+            <img src="./code/images/about-images/duy-img.jpeg" width="200px" height="200px">
+        </div>
+        <div class="info-body">
+            <p><b>Email: </b><a href="#" target="blank">s3878141@rmit.edu.vn</a><br>
+                <b>Phone number: </b><a href="#" target="blank">0124923045</a><br>
+                I am a responsible person. I love playing sports and video games. I would like to become an AI engineer in my future career.</p>
+        </div>
+    </div>
+
+    <div class="info" id="more-info-bao">
+        <div class="info-header">
+            <div class="info-title">Nguyen Luu Quoc Bao</div>
+        </div>
+        <div class="info-image">
+            <img src="./code/images/about-images/bao-img.jpeg" width="200px" height="200px">
+        </div>
+        <div class="info-body">
+            <p><b>Email: </b><a href="#" target="blank">s3877698@rmit.edu.vn</a><br>
+                <b>Phone number: </b><a href="#" target="blank">0362983715</a><br>
+                My name is Bao. I am currently a IT freshman at RMIT Vietnam. I want to be a Web-app developer. My hobbies are leaning code, playing basketball, and making cocktails.</p>
+        </div>
+    </div>
+
+    <div class="info" id="more-info-tuan">
+        <div class="info-header">
+            <div class="info-title">Dao Kha Tuan</div>
+        </div>
+        <div class="info-image">
+            <img src="./code/images/about-images/tuan-image.jpeg" width="200px" height="200px">
+        </div>
+        <div class="info-body">
+            <b>Email: </b><a href="#" target="blank">s3877347@rmit.edu.vn</a><br>
+            <b>Phone number: </b><a href="#" target="blank">0984755961</a><br>
+            My name is Tuan. I am currently studying Bachelor of IT in RMIT University. I have interest in technology, playing sports badminton, basketball, etc.
+        </div>
+    </div>
+
+    <div class="info" id="more-info-long">
+        <div class="info-header">
+            <div class="info-title">Nguyen Trong Minh Long</div>
+        </div>
+        <div class="info-image">
+            <img src="./code/images/about-images/long-image.jpeg" width="200px" height="200px">
+        </div>
+        <div class="info-body">
+            <b>Email: </b><a href="#" target="blank">s3878694@rmit.edu.vn</a><br>
+            <b>Phone number: </b><a href="#" target="blank">0997284556</a><br>
+            My name is Long. I love coding, esspecially Python and Java. I want to be a web-app developer and data analatics. My hobbies are gaming, ping pong, and music.
+        </div>
+    </div>
     <div id="overlay-cookies"></div>
     <div class="cookie-container">
         <h1>I use cookie</h1>
@@ -33,7 +84,6 @@ include './backend/display-store-product.php';
         <button class="cookie-btn">I understand</button>
         <a href="#">Learn more</a>
     </div>
-
     <header>
         <main>
             <nav class="first-nav">
@@ -81,6 +131,7 @@ include './backend/display-store-product.php';
                         <li><a href="./fee.php" class="nav__mobile-link">Fees</a></li>
                         <li>
                             <a class="my-account" href=<?=$my_account_link?>><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
+                        </li>
                         <li>
                             <label for="subnav-mobile-check-browse" class="nav__mobile-link hover-browse">Browse<i class="ti-angle-double-down"></i></label>
                             <input type="checkbox" id="subnav-mobile-check-browse" class="check-subnav-browse">
@@ -98,109 +149,73 @@ include './backend/display-store-product.php';
             </nav>
         </main>
     </header>
+
     <main>
         <div class="container">
-            <!-- New Store -->
-            <div class="title">
-                <h1>New Store</h1>
+            <div class="title">About Us</div>
+            <div class="line"></div>
+            <div class="about">
+                <div class="content">
+                    <h4>Retailez is a online shopping website that is created and developed by the developer team of Retailez. Our vision is to establish an online environment where people can buy or exchange for products/services in an appropriate standard without any problems about the quality of the products/services or scamming. It is our mission to enhance customers' online shopping experience with convenient and secure! </h4>
+                    <h5>For shoppers:</h5>
+                    <ul>
+                        <li>Find the products you want</li>
+                        <li>Create your own account to track your orders</li>
+                        <li>Receive fair price and quality products</li> 
+                    </ul>
+                    <h5>For shop owners:</h5>
+                    <ul>
+                        <li>Host the products or service you want</li>
+                        <li>Create your own account to track your products and services</li>
+                        <li>Use the interface to control your product line</li> 
+                    </ul>
+                </div>
             </div>
-            <div id="scroll" class="store-container">
-
-            <?php $store_count = 0;
-                foreach($stores_data as $store): 
-                    if ($store_count == 10) {
-                        break;
-                    } else {
-                        $store_count++; ?>
-
-                    <div class="store 1">
-                    <a href="./nike-home.php" ><img src="./code/images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline"><?=$store[$field_name_stores["name"]]; ?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-            
-            </div>
-        </div>
-        
-        <div class="container">
-            <!-- New Product -->
-            <div class="title-2">
-                <h1>New Product</h1>
-            </div>
-            <div id="scroll" class="product-container">
-
-            <?php $product_count = 0;
-                foreach($products_data as $product): 
-                    if ($product_count == 10) {
-                        break;
-                    } else {
-                        $product_count++; ?>
-
-                    <div class="product 1">
-                        <a href="./product-detail.php" ><img src="./code/images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
-                        <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-
-            </div>
-        </div>
-        
-        <div class="container">
-            <!-- Featured Store -->
-            <div class="title-2 no-scroll-first">
-                <h1>Featured Stores</h1>
-            </div>
-            <div id="scroll" class="feature-container first">
-                <?php 
-                $feature_count = 0;
-                foreach ($stores_data as $store):
-                    if ($store[$field_name_stores["featured"]] == "TRUE") { 
-                        if ($feature_count == 10) {
-                            break;
-                        } else {
-                        $feature_count++; ?>
-
-                        <div class="feature first">
-                            <a href="./tgdd-home.php" ><img src="./code/images/index-img/G _ LAB.jpg" alt="glab-logo" width="200" height="200"></a>
-                            <h3><a href="./tgdd-home.php" class="underline"><?=$store[$field_name_stores["name"]];?></a></h3>
+            <div class="title">Our Team</div>
+                <div class="team">    
+                    <div class="avatar-box" id="duy-box">
+                        <div class="img-box">
+                            <img src="./code/images/about-images/duy-img.jpeg">
                         </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
+                        <div class="box-content">
+                            <h1>Nguyen Anh Duy<br>
+                            <span>s3878141<br>Website Developer</span>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="avatar-box" id="bao-box">
+                        <div class="img-box">
+                            <img src="./code/images/about-images/bao-img.jpeg">
+                        </div>
+                        <div class="box-content">
+                            <h1>Nguyen Luu Quoc Bao<br>
+                            <span>s3877698<br>Website Developer</span>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="avatar-box" id="tuan-box">
+                        <div class="img-box">
+                            <img src="./code/images/about-images/tuan-image.jpeg">
+                        </div>
+                        <div class="box-content">
+                            <h1>Dao Kha Tuan<br>
+                            <span>s3877347<br>Website Developer</span>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="avatar-box" id="long-box">
+                        <div class="img-box">
+                            <img src="./code/images/about-images/long-image.jpeg">
+                        </div>
+                        <div class="box-content">
+                            <h1>Nguyen Trong Minh Long<br>
+                            <span>s3878694<br>Website Developer</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div class="container">
-            <!-- Featured Product -->
-            <div class="title-2 no-scroll-last">
-                <h1>Featured Products</h1>
-            </div>
-            <div id="scroll" class="feature-container last">
-
-            <?php 
-                $feature_product_count = 0;
-                foreach ($products_data as $product):
-                    if ($product[$field_name_products["featured_in_mall"]] == "TRUE") { 
-                        if ($feature_product_count == 10) {
-                            break;
-                        } else {
-                        $feature_product_count++; ?>
-
-                            <div class="feature-last 1">
-                                <a href="./product-detail.php" ><img src="./code/images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
-                                <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                            </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-
-            </div>
-        </div>
-        
     </main>
     <footer>
         <nav>
@@ -214,7 +229,8 @@ include './backend/display-store-product.php';
         </nav>
     </footer>
     <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/automatic_scroll.js" defer></script>
+    <script src="./code/script/display-member-info.js"></script>
     <script src="./code/script/check_login.js" defer></script>
+
 </body>
 </html>

@@ -1,8 +1,3 @@
-<?php 
-include './backend/get-data.php';
-include './backend/display-store-product.php';
-?>
-
 <?php
     session_start();
     if (isset($_SESSION["login"])) {
@@ -12,16 +7,15 @@ include './backend/display-store-product.php';
     }
 ?>
 <!DOCTYPE html>
-<html lang="en" id="full-html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./code/css/index.css">
+    <title>Browse Created Time-TheGioiDiDong</title>
+    <link rel="stylesheet" href="./code/css/product-browse.css">
     <link rel="stylesheet" href="./code/css/header.css">
     <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
     <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./code/css/cookies.css">
 </head>
@@ -33,7 +27,6 @@ include './backend/display-store-product.php';
         <button class="cookie-btn">I understand</button>
         <a href="#">Learn more</a>
     </div>
-
     <header>
         <main>
             <nav class="first-nav">
@@ -81,6 +74,7 @@ include './backend/display-store-product.php';
                         <li><a href="./fee.php" class="nav__mobile-link">Fees</a></li>
                         <li>
                             <a class="my-account" href=<?=$my_account_link?>><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
+                        </li>
                         <li>
                             <label for="subnav-mobile-check-browse" class="nav__mobile-link hover-browse">Browse<i class="ti-angle-double-down"></i></label>
                             <input type="checkbox" id="subnav-mobile-check-browse" class="check-subnav-browse">
@@ -98,109 +92,99 @@ include './backend/display-store-product.php';
             </nav>
         </main>
     </header>
+
     <main>
-        <div class="container">
-            <!-- New Store -->
-            <div class="title">
-                <h1>New Store</h1>
+        <label for="details" class="category">Newest --> Oldest Products<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details">
+
+        <div class="product-container pd1">
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>$1434.78</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/stores-image/technology_stores/tgdd/iphone12pro.jpg" alt="phone" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">IPhone 12 Pro</a></h3>
             </div>
-            <div id="scroll" class="store-container">
-
-            <?php $store_count = 0;
-                foreach($stores_data as $store): 
-                    if ($store_count == 10) {
-                        break;
-                    } else {
-                        $store_count++; ?>
-
-                    <div class="store 1">
-                    <a href="./nike-home.php" ><img src="./code/images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline"><?=$store[$field_name_stores["name"]]; ?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>$364.78</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/stores-image/technology_stores/tgdd/opporeno5.jpg" alt="phone" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Oppo Reno 5</a></h3>
+            </div>
+    
+            <div class="product lst">
+                <!-- <div class="overlay">
+                    <p>$913.04</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/stores-image/technology_stores/tgdd/xiaomi_mi_11_5G.jpg" alt="phone" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Xiaomi Mi 11 5G</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>$296.55</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/stores-image/technology_stores/tgdd/vivoY12s.jpg" alt="phone" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Chicken Roll</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>$120</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/stores-image/technology_stores/tgdd/nokia5.4.jpg" alt="phone" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Nokia 5.4</a></h3>
+            </div>
             
+        </div>
+
+
+        <label for="details-5" class="category">Oldest --> Newest Products<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-5">
+
+        <div class="product-container pd5">
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>$1980</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/stores-image/technology_stores/tgdd/macbook_pro.jpeg" alt="laptop" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Macbook Pro 13-inch</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>1029$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/stores-image/technology_stores/tgdd/asus_vivobook15.jpg" alt="laptop" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Asus Vivobook 15</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>1828$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/stores-image/technology_stores/tgdd/xps_13_9370.jpg" alt="laptop" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Dell XPS 13 9370</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>975$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/stores-image/technology_stores/tgdd/dell_vostro_3500.jpg" alt="laptop" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Dell Vostro 3500</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>1529$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/stores-image/technology_stores/tgdd/hpenvy.jpg" alt="laptop" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">HP Envy 13</a></h3>
             </div>
         </div>
-        
-        <div class="container">
-            <!-- New Product -->
-            <div class="title-2">
-                <h1>New Product</h1>
-            </div>
-            <div id="scroll" class="product-container">
-
-            <?php $product_count = 0;
-                foreach($products_data as $product): 
-                    if ($product_count == 10) {
-                        break;
-                    } else {
-                        $product_count++; ?>
-
-                    <div class="product 1">
-                        <a href="./product-detail.php" ><img src="./code/images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
-                        <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-
-            </div>
-        </div>
-        
-        <div class="container">
-            <!-- Featured Store -->
-            <div class="title-2 no-scroll-first">
-                <h1>Featured Stores</h1>
-            </div>
-            <div id="scroll" class="feature-container first">
-                <?php 
-                $feature_count = 0;
-                foreach ($stores_data as $store):
-                    if ($store[$field_name_stores["featured"]] == "TRUE") { 
-                        if ($feature_count == 10) {
-                            break;
-                        } else {
-                        $feature_count++; ?>
-
-                        <div class="feature first">
-                            <a href="./tgdd-home.php" ><img src="./code/images/index-img/G _ LAB.jpg" alt="glab-logo" width="200" height="200"></a>
-                            <h3><a href="./tgdd-home.php" class="underline"><?=$store[$field_name_stores["name"]];?></a></h3>
-                        </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-            </div>
-        </div>
-        
-        <div class="container">
-            <!-- Featured Product -->
-            <div class="title-2 no-scroll-last">
-                <h1>Featured Products</h1>
-            </div>
-            <div id="scroll" class="feature-container last">
-
-            <?php 
-                $feature_product_count = 0;
-                foreach ($products_data as $product):
-                    if ($product[$field_name_products["featured_in_mall"]] == "TRUE") { 
-                        if ($feature_product_count == 10) {
-                            break;
-                        } else {
-                        $feature_product_count++; ?>
-
-                            <div class="feature-last 1">
-                                <a href="./product-detail.php" ><img src="./code/images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
-                                <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                            </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-
-            </div>
-        </div>
-        
     </main>
     <footer>
         <nav>
@@ -214,7 +198,6 @@ include './backend/display-store-product.php';
         </nav>
     </footer>
     <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/automatic_scroll.js" defer></script>
     <script src="./code/script/check_login.js" defer></script>
 </body>
 </html>

@@ -1,29 +1,23 @@
-<?php 
-include './backend/get-data.php';
-include './backend/display-store-product.php';
-?>
-
 <?php
     session_start();
     if (isset($_SESSION["login"])) {
         $my_account_link = "./user-information.php";
     } else {
-        $my_account_link ="./login-box.php";
+        $my_account_link = "./login-box.php";
     }
 ?>
 <!DOCTYPE html>
-<html lang="en" id="full-html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./code/css/index.css">
+    <title>Copyright</title>
     <link rel="stylesheet" href="./code/css/header.css">
     <link rel="stylesheet" href="./code/css/footer.css">
     <link rel="stylesheet" href="./code/css/cookies.css">
     <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
+    <link rel="stylesheet" href="./code/css/copyright.css">
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -33,7 +27,6 @@ include './backend/display-store-product.php';
         <button class="cookie-btn">I understand</button>
         <a href="#">Learn more</a>
     </div>
-
     <header>
         <main>
             <nav class="first-nav">
@@ -81,6 +74,7 @@ include './backend/display-store-product.php';
                         <li><a href="./fee.php" class="nav__mobile-link">Fees</a></li>
                         <li>
                             <a class="my-account" href=<?=$my_account_link?>><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
+                        </li>
                         <li>
                             <label for="subnav-mobile-check-browse" class="nav__mobile-link hover-browse">Browse<i class="ti-angle-double-down"></i></label>
                             <input type="checkbox" id="subnav-mobile-check-browse" class="check-subnav-browse">
@@ -98,109 +92,25 @@ include './backend/display-store-product.php';
             </nav>
         </main>
     </header>
+
     <main>
         <div class="container">
-            <!-- New Store -->
-            <div class="title">
-                <h1>New Store</h1>
-            </div>
-            <div id="scroll" class="store-container">
-
-            <?php $store_count = 0;
-                foreach($stores_data as $store): 
-                    if ($store_count == 10) {
-                        break;
-                    } else {
-                        $store_count++; ?>
-
-                    <div class="store 1">
-                    <a href="./nike-home.php" ><img src="./code/images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline"><?=$store[$field_name_stores["name"]]; ?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-            
-            </div>
+            <h1>Copyright</h1>
+            <div class="line"></div>
+            <p>All content included in or made available through any Retailez Service, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software is the property of Retailez or its content suppliers and protected by United States and international copyright laws. The compilation of all content included in or made available through any Retailez Service is the exclusive property of Retailez and protected by U.S. and international copyright laws.</p>
+            <p>Retailez International Limited. All Rights Reserved. Reproduction prohibited other than in accordance with the following copyright notice and limited reproduction permissions.
+            The contents of these pages are © Retailez International Limited, unless otherwise stated, or in some cases of Rampai Niaga Sdn Bhd. Reproduction of part or all of the contents in any form is prohibited other than in accordance with the following permissions:</p>
+            <h2>License To Copy For Personal Use</h2>
+            <p>You may make copies of the Site as necessary incidental acts during your viewing of it, and you may take a print for your personal use of so much of the site as is reasonable for private purposes.</p>
+            <h2>License To Recopy For Limited Purposes</h2>
+            <p>You may recopy the material to individual third parties for their personal information only, but only if the following conditions are met:</p>
+            <ul>
+                <li>You acknowledge the web pages of Retailez as the source of the material. You must include such acknowledgement along with the top-level URL from Retailez website in the copy of the material.</li>
+                <li>You inform the third party that these conditions apply to him or her and that he/she must comply with them.</li>
+                <li>This license to recopy does not permit incorporation of the material or any part of it in any other work or publication, whether in hard copy or electronic or any other form. In particular (but without limitation) no part of a page from the website of Retailez may be distributed or copied for any commercial purpose.</li>
+                <li>No part of the website of The Body Shop may be reproduced on or transmitted to or stored in any other web site or other form of electronic retrieval system.</li>
+            </ul>
         </div>
-        
-        <div class="container">
-            <!-- New Product -->
-            <div class="title-2">
-                <h1>New Product</h1>
-            </div>
-            <div id="scroll" class="product-container">
-
-            <?php $product_count = 0;
-                foreach($products_data as $product): 
-                    if ($product_count == 10) {
-                        break;
-                    } else {
-                        $product_count++; ?>
-
-                    <div class="product 1">
-                        <a href="./product-detail.php" ><img src="./code/images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
-                        <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-
-            </div>
-        </div>
-        
-        <div class="container">
-            <!-- Featured Store -->
-            <div class="title-2 no-scroll-first">
-                <h1>Featured Stores</h1>
-            </div>
-            <div id="scroll" class="feature-container first">
-                <?php 
-                $feature_count = 0;
-                foreach ($stores_data as $store):
-                    if ($store[$field_name_stores["featured"]] == "TRUE") { 
-                        if ($feature_count == 10) {
-                            break;
-                        } else {
-                        $feature_count++; ?>
-
-                        <div class="feature first">
-                            <a href="./tgdd-home.php" ><img src="./code/images/index-img/G _ LAB.jpg" alt="glab-logo" width="200" height="200"></a>
-                            <h3><a href="./tgdd-home.php" class="underline"><?=$store[$field_name_stores["name"]];?></a></h3>
-                        </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-            </div>
-        </div>
-        
-        <div class="container">
-            <!-- Featured Product -->
-            <div class="title-2 no-scroll-last">
-                <h1>Featured Products</h1>
-            </div>
-            <div id="scroll" class="feature-container last">
-
-            <?php 
-                $feature_product_count = 0;
-                foreach ($products_data as $product):
-                    if ($product[$field_name_products["featured_in_mall"]] == "TRUE") { 
-                        if ($feature_product_count == 10) {
-                            break;
-                        } else {
-                        $feature_product_count++; ?>
-
-                            <div class="feature-last 1">
-                                <a href="./product-detail.php" ><img src="./code/images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
-                                <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                            </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-
-            </div>
-        </div>
-        
     </main>
     <footer>
         <nav>
@@ -214,7 +124,6 @@ include './backend/display-store-product.php';
         </nav>
     </footer>
     <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/automatic_scroll.js" defer></script>
     <script src="./code/script/check_login.js" defer></script>
 </body>
 </html>

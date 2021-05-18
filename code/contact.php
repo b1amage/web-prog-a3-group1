@@ -1,29 +1,23 @@
-<?php 
-include './backend/get-data.php';
-include './backend/display-store-product.php';
-?>
-
 <?php
     session_start();
     if (isset($_SESSION["login"])) {
         $my_account_link = "./user-information.php";
     } else {
-        $my_account_link ="./login-box.php";
+        $my_account_link = "./login-box.php";
     }
 ?>
 <!DOCTYPE html>
-<html lang="en" id="full-html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./code/css/index.css">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./code/css/contact.css">
     <link rel="stylesheet" href="./code/css/header.css">
-    <link rel="stylesheet" href="./code/css/footer.css">
     <link rel="stylesheet" href="./code/css/cookies.css">
     <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
+    <link rel="stylesheet" href="./code/css/footer.css">
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -33,7 +27,6 @@ include './backend/display-store-product.php';
         <button class="cookie-btn">I understand</button>
         <a href="#">Learn more</a>
     </div>
-
     <header>
         <main>
             <nav class="first-nav">
@@ -81,6 +74,7 @@ include './backend/display-store-product.php';
                         <li><a href="./fee.php" class="nav__mobile-link">Fees</a></li>
                         <li>
                             <a class="my-account" href=<?=$my_account_link?>><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
+                        </li>
                         <li>
                             <label for="subnav-mobile-check-browse" class="nav__mobile-link hover-browse">Browse<i class="ti-angle-double-down"></i></label>
                             <input type="checkbox" id="subnav-mobile-check-browse" class="check-subnav-browse">
@@ -98,109 +92,62 @@ include './backend/display-store-product.php';
             </nav>
         </main>
     </header>
+
     <main>
+        <h1 class="title">Contact form</h1>
         <div class="container">
-            <!-- New Store -->
-            <div class="title">
-                <h1>New Store</h1>
+            <form method="get" action="#" enctype="text/plain">
+            <div clas="contact_form">
+                <label class="purpose" for="cont_pur">Your purpose of contact</label>
+                <select id="cont_pur">
+                    <option value="Business">Business</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Others">Others</option>
+                </select>
             </div>
-            <div id="scroll" class="store-container">
-
-            <?php $store_count = 0;
-                foreach($stores_data as $store): 
-                    if ($store_count == 10) {
-                        break;
-                    } else {
-                        $store_count++; ?>
-
-                    <div class="store 1">
-                    <a href="./nike-home.php" ><img src="./code/images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline"><?=$store[$field_name_stores["name"]]; ?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-            
+            <div class="contact_form">
+                <p>Please enter your full name:<br><input id="full_name" required type="text" required minlength="3" maxlength="60" name="full name" placeholder="Your full name"></p>
+                <span id="name_alert"></span>
             </div>
+            <div class="contact_form">
+                <p>Enter your email address:<br><input id="email" required type="email" name="email" placeholder="avcd123@email.com"></p>
+                <span id="email_alert"></span>
+            </div>
+            <div class="contact_form">
+                <p>Enter your phone number:<br><input id="phone" required type="tel" name="phone number" placeholder="091 989 5451"></p>
+                <span id="phone_alert"></span>
+            </div>
+            <div class="contact_form">
+                <p>Method of contact</p>
+                <input type="radio" name="contact_method" id="email_method"><label for="email_method">By email</label>
+                <input type="radio" name="contact_method" id="phone_method"><label for="phone_method">By phone</label>
+                <br>
+                <span id="radio_alert"></span>   
+            </div>
+            <div class="contact_form">
+                <p>Contact days:</p>
+                <input type="checkbox" name="contactdays[]" value="monday" id="monday"><label for="monday">Monday</label>
+                <input type="checkbox" name="contactdays[]" value="tuesday" id="tuesday"><label for="tuesday">Tuesday</label>
+                <input type="checkbox" name="contactdays[]" value="wednesday" id="wednesday"><label for="wednesday">Wednesday</label>
+                <input type="checkbox" name="contactdays[]" value="thursday" id="thursday"><label for="thursday">Thursday</label>
+                <input type="checkbox" name="contactdays[]" value="friday" id="friday"><label for="friday">Friday</label>
+                <input type="checkbox" name="contactdays[]" value="saturday" id="saturday"><label for="saturday">Saturday</label>
+                <input type="checkbox" name="contactdays[]" value="sunday" id="sunday"><label for="sunday">Sunday</label>
+                <br>
+                <span id="checkbox_alert"></span>
+            </div>
+            <div class="contact_form">
+                <label class="message" for="msg">Your message:</label>
+                <br>
+                <textarea required id="msg" name="message" rows="15" cols="150" placeholder="Enter your message here!" onkeyup="keyboard_press_count(event)" onkeydown="backspace_count(event)"></textarea>
+                <span id="message_alert"></span>
+            </div>
+            <div class="contact_method">
+                <button type="reset" id="clear">Clear</button>
+                <button type="submit" id="submit">Submit</button>
+            </div>
+            </form>
         </div>
-        
-        <div class="container">
-            <!-- New Product -->
-            <div class="title-2">
-                <h1>New Product</h1>
-            </div>
-            <div id="scroll" class="product-container">
-
-            <?php $product_count = 0;
-                foreach($products_data as $product): 
-                    if ($product_count == 10) {
-                        break;
-                    } else {
-                        $product_count++; ?>
-
-                    <div class="product 1">
-                        <a href="./product-detail.php" ><img src="./code/images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
-                        <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-
-            </div>
-        </div>
-        
-        <div class="container">
-            <!-- Featured Store -->
-            <div class="title-2 no-scroll-first">
-                <h1>Featured Stores</h1>
-            </div>
-            <div id="scroll" class="feature-container first">
-                <?php 
-                $feature_count = 0;
-                foreach ($stores_data as $store):
-                    if ($store[$field_name_stores["featured"]] == "TRUE") { 
-                        if ($feature_count == 10) {
-                            break;
-                        } else {
-                        $feature_count++; ?>
-
-                        <div class="feature first">
-                            <a href="./tgdd-home.php" ><img src="./code/images/index-img/G _ LAB.jpg" alt="glab-logo" width="200" height="200"></a>
-                            <h3><a href="./tgdd-home.php" class="underline"><?=$store[$field_name_stores["name"]];?></a></h3>
-                        </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-            </div>
-        </div>
-        
-        <div class="container">
-            <!-- Featured Product -->
-            <div class="title-2 no-scroll-last">
-                <h1>Featured Products</h1>
-            </div>
-            <div id="scroll" class="feature-container last">
-
-            <?php 
-                $feature_product_count = 0;
-                foreach ($products_data as $product):
-                    if ($product[$field_name_products["featured_in_mall"]] == "TRUE") { 
-                        if ($feature_product_count == 10) {
-                            break;
-                        } else {
-                        $feature_product_count++; ?>
-
-                            <div class="feature-last 1">
-                                <a href="./product-detail.php" ><img src="./code/images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
-                                <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                            </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-
-            </div>
-        </div>
-        
     </main>
     <footer>
         <nav>
@@ -214,7 +161,7 @@ include './backend/display-store-product.php';
         </nav>
     </footer>
     <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/automatic_scroll.js" defer></script>
     <script src="./code/script/check_login.js" defer></script>
+    <script src="./code/script/validation_contact.js"></script>
 </body>
 </html>

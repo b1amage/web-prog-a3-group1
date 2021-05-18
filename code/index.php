@@ -1,8 +1,3 @@
-<?php 
-include './backend/get-data.php';
-include './backend/display-store-product.php';
-?>
-
 <?php
     session_start();
     if (isset($_SESSION["login"])) {
@@ -10,6 +5,10 @@ include './backend/display-store-product.php';
     } else {
         $my_account_link ="./login-box.php";
     }
+?>
+<?php 
+include '../backend/get-data.php';
+include '../backend/display-store-product.php';
 ?>
 <!DOCTYPE html>
 <html lang="en" id="full-html">

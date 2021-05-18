@@ -1,8 +1,3 @@
-<?php 
-include './backend/get-data.php';
-include './backend/display-store-product.php';
-?>
-
 <?php
     session_start();
     if (isset($_SESSION["login"])) {
@@ -12,17 +7,16 @@ include './backend/display-store-product.php';
     }
 ?>
 <!DOCTYPE html>
-<html lang="en" id="full-html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./code/css/index.css">
+    <title>Thank You</title>
     <link rel="stylesheet" href="./code/css/header.css">
-    <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
     <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./code/css/thanks.css">
+    <link rel="stylesheet" href="./code/css/footer.css">
     <link rel="stylesheet" href="./code/css/cookies.css">
 </head>
 <body>
@@ -33,7 +27,6 @@ include './backend/display-store-product.php';
         <button class="cookie-btn">I understand</button>
         <a href="#">Learn more</a>
     </div>
-
     <header>
         <main>
             <nav class="first-nav">
@@ -81,6 +74,7 @@ include './backend/display-store-product.php';
                         <li><a href="./fee.php" class="nav__mobile-link">Fees</a></li>
                         <li>
                             <a class="my-account" href=<?=$my_account_link?>><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
+                        </li>
                         <li>
                             <label for="subnav-mobile-check-browse" class="nav__mobile-link hover-browse">Browse<i class="ti-angle-double-down"></i></label>
                             <input type="checkbox" id="subnav-mobile-check-browse" class="check-subnav-browse">
@@ -98,123 +92,33 @@ include './backend/display-store-product.php';
             </nav>
         </main>
     </header>
-    <main>
-        <div class="container">
-            <!-- New Store -->
-            <div class="title">
-                <h1>New Store</h1>
-            </div>
-            <div id="scroll" class="store-container">
 
-            <?php $store_count = 0;
-                foreach($stores_data as $store): 
-                    if ($store_count == 10) {
-                        break;
-                    } else {
-                        $store_count++; ?>
+<main>
+    <div class="content-tks">
+        <div class="button-container">
+            <img src="./code/images/index-img/check.png" alt="check button" height="180px" width="180px">
+        </div>
 
-                    <div class="store 1">
-                    <a href="./nike-home.php" ><img src="./code/images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline"><?=$store[$field_name_stores["name"]]; ?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
+        <div class="text-tks">
+            <h1>Order number: #123456</h1>
+            <h4>You are all set</h4>
+            <h1>Thank you for choosing us</h1>
             
-            </div>
         </div>
         
-        <div class="container">
-            <!-- New Product -->
-            <div class="title-2">
-                <h1>New Product</h1>
-            </div>
-            <div id="scroll" class="product-container">
-
-            <?php $product_count = 0;
-                foreach($products_data as $product): 
-                    if ($product_count == 10) {
-                        break;
-                    } else {
-                        $product_count++; ?>
-
-                    <div class="product 1">
-                        <a href="./product-detail.php" ><img src="./code/images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
-                        <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-
-            </div>
-        </div>
-        
-        <div class="container">
-            <!-- Featured Store -->
-            <div class="title-2 no-scroll-first">
-                <h1>Featured Stores</h1>
-            </div>
-            <div id="scroll" class="feature-container first">
-                <?php 
-                $feature_count = 0;
-                foreach ($stores_data as $store):
-                    if ($store[$field_name_stores["featured"]] == "TRUE") { 
-                        if ($feature_count == 10) {
-                            break;
-                        } else {
-                        $feature_count++; ?>
-
-                        <div class="feature first">
-                            <a href="./tgdd-home.php" ><img src="./code/images/index-img/G _ LAB.jpg" alt="glab-logo" width="200" height="200"></a>
-                            <h3><a href="./tgdd-home.php" class="underline"><?=$store[$field_name_stores["name"]];?></a></h3>
-                        </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-            </div>
-        </div>
-        
-        <div class="container">
-            <!-- Featured Product -->
-            <div class="title-2 no-scroll-last">
-                <h1>Featured Products</h1>
-            </div>
-            <div id="scroll" class="feature-container last">
-
-            <?php 
-                $feature_product_count = 0;
-                foreach ($products_data as $product):
-                    if ($product[$field_name_products["featured_in_mall"]] == "TRUE") { 
-                        if ($feature_product_count == 10) {
-                            break;
-                        } else {
-                        $feature_product_count++; ?>
-
-                            <div class="feature-last 1">
-                                <a href="./product-detail.php" ><img src="./code/images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
-                                <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                            </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-
-            </div>
-        </div>
-        
-    </main>
-    <footer>
-        <nav>
-            <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>
-            <ul>
-                <li><a href="./copyright.php">Copyright</a></li>
-                <li><a href="./tos.php">ToS</a></li>
-                <li><a href="./policy.php">Privacy Policy</a></li>
-            </ul>
-            <h3 class="right">Design by developer team</h3>
-        </nav>
-    </footer>
-    <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/automatic_scroll.js" defer></script>
-    <script src="./code/script/check_login.js" defer></script>
+    </div>
+</main>
+<footer>
+    <nav>
+        <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>
+        <ul>
+            <li><a href="./copyright.php">Copyright</a></li>
+            <li><a href="./tos.php">ToS</a></li>
+            <li><a href="./policy.php">Privacy Policy</a></li>
+        </ul>
+        <h3 class="right">Design by developer team</h3>
+    </nav>
+</footer>
+<script src="./code/script/cookies.js" defer></script>
+<script src="./code/script/check_login.js" defer></script>
 </body>
-</html>

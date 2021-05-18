@@ -1,10 +1,6 @@
-<?php 
-include './backend/get-data.php';
-include './backend/display-store-product.php';
-?>
-
 <?php
     session_start();
+    $matched_account = $_SESSION['matched_account'];
     if (isset($_SESSION["login"])) {
         $my_account_link = "./user-information.php";
     } else {
@@ -12,19 +8,19 @@ include './backend/display-store-product.php';
     }
 ?>
 <!DOCTYPE html>
-<html lang="en" id="full-html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./code/css/index.css">
+    <title>My Account</title>
     <link rel="stylesheet" href="./code/css/header.css">
+    <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./code/css/user-information.css">
     <link rel="stylesheet" href="./code/css/footer.css">
     <link rel="stylesheet" href="./code/css/cookies.css">
-    <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
 </head>
+
 <body>
     <div id="overlay-cookies"></div>
     <div class="cookie-container">
@@ -33,7 +29,6 @@ include './backend/display-store-product.php';
         <button class="cookie-btn">I understand</button>
         <a href="#">Learn more</a>
     </div>
-
     <header>
         <main>
             <nav class="first-nav">
@@ -81,6 +76,7 @@ include './backend/display-store-product.php';
                         <li><a href="./fee.php" class="nav__mobile-link">Fees</a></li>
                         <li>
                             <a class="my-account" href=<?=$my_account_link?>><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
+                        </li>
                         <li>
                             <label for="subnav-mobile-check-browse" class="nav__mobile-link hover-browse">Browse<i class="ti-angle-double-down"></i></label>
                             <input type="checkbox" id="subnav-mobile-check-browse" class="check-subnav-browse">
@@ -99,108 +95,34 @@ include './backend/display-store-product.php';
         </main>
     </header>
     <main>
-        <div class="container">
-            <!-- New Store -->
-            <div class="title">
-                <h1>New Store</h1>
+        <div id="user-information">
+            <div id="title">
+                <h1>My account</h1>
             </div>
-            <div id="scroll" class="store-container">
-
-            <?php $store_count = 0;
-                foreach($stores_data as $store): 
-                    if ($store_count == 10) {
-                        break;
-                    } else {
-                        $store_count++; ?>
-
-                    <div class="store 1">
-                    <a href="./nike-home.php" ><img src="./code/images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline"><?=$store[$field_name_stores["name"]]; ?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-            
-            </div>
+            <div id="info">
+                <div id="profile-picture">
+                    <img src="./code/images/about-images/tuan-image.jpeg" alt="profile-picture">
+                </div>
+                <ul> 
+                    <!-- display the first and last name of the account -->
+                    <li><span>Full name: </span><?=$matched_account[4]." ".$matched_account[5];?></li>
+                    <!-- display the email of the account -->
+                    <li><span>Email: </span><a id="login-email" href=<?="mailto:{$matched_account[0]}"?>><?=$matched_account[0]?></a></li>
+                    <!-- display the phone number of the account -->                    
+                    <li><span>Phone number: </span><?=$matched_account[1]?></li>
+                    <!-- display the address of the account -->
+                    <li><span>Address: </span><?=$matched_account[6]?></li>
+                    <!-- display the city of the account -->
+                    <li><span>City: </span><?=$matched_account[7]?></li>
+                    <!-- display the zipcode of the account --> 
+                    <li><span>Zip code: </span><?=$matched_account[8]?></li>
+                    <!-- display the country of the account -->
+                    <li><span>Country: </span><?=$matched_account[10]?></li>
+                    <!-- display the account type of the account -->
+                    <li><span>Account type: </span><?=$matched_account[11]?></li>
+                </ul>
+            </div> 
         </div>
-        
-        <div class="container">
-            <!-- New Product -->
-            <div class="title-2">
-                <h1>New Product</h1>
-            </div>
-            <div id="scroll" class="product-container">
-
-            <?php $product_count = 0;
-                foreach($products_data as $product): 
-                    if ($product_count == 10) {
-                        break;
-                    } else {
-                        $product_count++; ?>
-
-                    <div class="product 1">
-                        <a href="./product-detail.php" ><img src="./code/images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
-                        <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-
-            </div>
-        </div>
-        
-        <div class="container">
-            <!-- Featured Store -->
-            <div class="title-2 no-scroll-first">
-                <h1>Featured Stores</h1>
-            </div>
-            <div id="scroll" class="feature-container first">
-                <?php 
-                $feature_count = 0;
-                foreach ($stores_data as $store):
-                    if ($store[$field_name_stores["featured"]] == "TRUE") { 
-                        if ($feature_count == 10) {
-                            break;
-                        } else {
-                        $feature_count++; ?>
-
-                        <div class="feature first">
-                            <a href="./tgdd-home.php" ><img src="./code/images/index-img/G _ LAB.jpg" alt="glab-logo" width="200" height="200"></a>
-                            <h3><a href="./tgdd-home.php" class="underline"><?=$store[$field_name_stores["name"]];?></a></h3>
-                        </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-            </div>
-        </div>
-        
-        <div class="container">
-            <!-- Featured Product -->
-            <div class="title-2 no-scroll-last">
-                <h1>Featured Products</h1>
-            </div>
-            <div id="scroll" class="feature-container last">
-
-            <?php 
-                $feature_product_count = 0;
-                foreach ($products_data as $product):
-                    if ($product[$field_name_products["featured_in_mall"]] == "TRUE") { 
-                        if ($feature_product_count == 10) {
-                            break;
-                        } else {
-                        $feature_product_count++; ?>
-
-                            <div class="feature-last 1">
-                                <a href="./product-detail.php" ><img src="./code/images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
-                                <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                            </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-
-            </div>
-        </div>
-        
     </main>
     <footer>
         <nav>
@@ -214,7 +136,8 @@ include './backend/display-store-product.php';
         </nav>
     </footer>
     <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/automatic_scroll.js" defer></script>
     <script src="./code/script/check_login.js" defer></script>
-</body>
-</html>
+    <script src="./code/script/update_email.js" defer></script>
+    </body>
+
+    

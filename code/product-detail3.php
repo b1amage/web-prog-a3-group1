@@ -1,8 +1,3 @@
-<?php 
-include './backend/get-data.php';
-include './backend/display-store-product.php';
-?>
-
 <?php
     session_start();
     if (isset($_SESSION["login"])) {
@@ -12,16 +7,15 @@ include './backend/display-store-product.php';
     }
 ?>
 <!DOCTYPE html>
-<html lang="en" id="full-html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./code/css/index.css">
-    <link rel="stylesheet" href="./code/css/header.css">
+    <title>Product</title>
+    <link rel="stylesheet" href="./code/css/product-detail3.css">
     <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
+    <link rel="stylesheet" href="./code/css/header.css">
     <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./code/css/cookies.css">
 </head>
@@ -33,7 +27,6 @@ include './backend/display-store-product.php';
         <button class="cookie-btn">I understand</button>
         <a href="#">Learn more</a>
     </div>
-
     <header>
         <main>
             <nav class="first-nav">
@@ -81,6 +74,7 @@ include './backend/display-store-product.php';
                         <li><a href="./fee.php" class="nav__mobile-link">Fees</a></li>
                         <li>
                             <a class="my-account" href=<?=$my_account_link?>><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
+                        </li>
                         <li>
                             <label for="subnav-mobile-check-browse" class="nav__mobile-link hover-browse">Browse<i class="ti-angle-double-down"></i></label>
                             <input type="checkbox" id="subnav-mobile-check-browse" class="check-subnav-browse">
@@ -98,110 +92,63 @@ include './backend/display-store-product.php';
             </nav>
         </main>
     </header>
-    <main>
-        <div class="container">
-            <!-- New Store -->
-            <div class="title">
-                <h1>New Store</h1>
-            </div>
-            <div id="scroll" class="store-container">
 
-            <?php $store_count = 0;
-                foreach($stores_data as $store): 
-                    if ($store_count == 10) {
-                        break;
-                    } else {
-                        $store_count++; ?>
 
-                    <div class="store 1">
-                    <a href="./nike-home.php" ><img src="./code/images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline"><?=$store[$field_name_stores["name"]]; ?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-            
-            </div>
+    <main class="grid-container">
+        <div class="description">
+            <h1 id="product-name">Nike Superfly</h1>
+            <h2 id="product-price">$200</h2>
+            <details>
+                <summary>Choose your size</summary>
+                <p>40 - 8.5US</p>
+                <p>41 - 9US</p>
+                <p>42 - 9.6 US</p>
+                <p>43 - 10US</p>
+                <p>44 - 10.5US</p>
+                <p>45 - 11US</p>
+            </details>
+            <button id="add-btn"><a href="#">Add to my cart</a></button>
+            <button id="buynow-btn"><a href="./order_placement.php">Buy Now</a></button>
         </div>
-        
-        <div class="container">
-            <!-- New Product -->
-            <div class="title-2">
-                <h1>New Product</h1>
-            </div>
-            <div id="scroll" class="product-container">
-
-            <?php $product_count = 0;
-                foreach($products_data as $product): 
-                    if ($product_count == 10) {
-                        break;
-                    } else {
-                        $product_count++; ?>
-
-                    <div class="product 1">
-                        <a href="./product-detail.php" ><img src="./code/images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
-                        <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-
-            </div>
+        <div class="product-img"></div>
+        <div class="related flex-0">
+            <h1>Related products</h1>
         </div>
-        
-        <div class="container">
-            <!-- Featured Store -->
-            <div class="title-2 no-scroll-first">
-                <h1>Featured Stores</h1>
-            </div>
-            <div id="scroll" class="feature-container first">
-                <?php 
-                $feature_count = 0;
-                foreach ($stores_data as $store):
-                    if ($store[$field_name_stores["featured"]] == "TRUE") { 
-                        if ($feature_count == 10) {
-                            break;
-                        } else {
-                        $feature_count++; ?>
 
-                        <div class="feature first">
-                            <a href="./tgdd-home.php" ><img src="./code/images/index-img/G _ LAB.jpg" alt="glab-logo" width="200" height="200"></a>
-                            <h3><a href="./tgdd-home.php" class="underline"><?=$store[$field_name_stores["name"]];?></a></h3>
-                        </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-            </div>
+        <div class="related-product-1 flex">
+            <a href="./product-detail.php"><img src="./code/images/index-img/joyride.jpg" alt="joyride" width="300" height="300"></a>
+            <h3><a href="./product-detail.php">Nike Joyride</a></h3>
         </div>
-        
-        <div class="container">
-            <!-- Featured Product -->
-            <div class="title-2 no-scroll-last">
-                <h1>Featured Products</h1>
-            </div>
-            <div id="scroll" class="feature-container last">
-
-            <?php 
-                $feature_product_count = 0;
-                foreach ($products_data as $product):
-                    if ($product[$field_name_products["featured_in_mall"]] == "TRUE") { 
-                        if ($feature_product_count == 10) {
-                            break;
-                        } else {
-                        $feature_product_count++; ?>
-
-                            <div class="feature-last 1">
-                                <a href="./product-detail.php" ><img src="./code/images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
-                                <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                            </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-
-            </div>
+        <div class="related-product-2 flex">
+            <a href="./product-detail.php"><img src="./code/images/index-img/lebron18.jpg" alt="lebron18" width="300" height="300"></a>
+            <h3><a href="./product-detail.php">Nike Lebron 18</a></h3>
         </div>
+        <div class="related-product-3 flex">
+            <a href="./product-detail.php"><img src="./code/images/index-img/vans-img.jpg" alt="vans" width="300" height="300"></a>
+            <h3><a href="./product-detail.php">Vans Old Skool</a></h3>
+        </div>
+        <div class="related-product-4 flex">
+            <a href="./product-detail.php"><img src="./code/images/index-img/stansmith.jpg" alt="stansmith" width="300" height="300"></a>
+            <h3><a href="./product-detail.php">Stan Smith</a></h3>
+        </div>
+        <div class="related-product-5 flex">
+            <a href="./product-detail.php"><img src="./code/images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
+            <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
+        </div>
+
+        <div class="product-1">
+            <a href="./product-detail.php"><img src="./code/images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
+            <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
+        </div>
+
+        <div class="product-2">
+            <a href="./product-detail.php"><img src="./code/images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
+            <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
+        </div>
+
         
     </main>
+
     <footer>
         <nav>
             <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>
@@ -214,7 +161,7 @@ include './backend/display-store-product.php';
         </nav>
     </footer>
     <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/automatic_scroll.js" defer></script>
     <script src="./code/script/check_login.js" defer></script>
+    <script src="./code/script/add_to_cart_3.js"></script>
 </body>
 </html>

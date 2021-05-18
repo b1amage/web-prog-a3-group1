@@ -1,8 +1,3 @@
-<?php 
-include './backend/get-data.php';
-include './backend/display-store-product.php';
-?>
-
 <?php
     session_start();
     if (isset($_SESSION["login"])) {
@@ -12,16 +7,15 @@ include './backend/display-store-product.php';
     }
 ?>
 <!DOCTYPE html>
-<html lang="en" id="full-html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./code/css/index.css">
+    <title>Browse Time-DonChicken</title>
+    <link rel="stylesheet" href="./code/css/product-browse.css">
     <link rel="stylesheet" href="./code/css/header.css">
     <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
     <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./code/css/cookies.css">
 </head>
@@ -33,7 +27,6 @@ include './backend/display-store-product.php';
         <button class="cookie-btn">I understand</button>
         <a href="#">Learn more</a>
     </div>
-
     <header>
         <main>
             <nav class="first-nav">
@@ -81,6 +74,7 @@ include './backend/display-store-product.php';
                         <li><a href="./fee.php" class="nav__mobile-link">Fees</a></li>
                         <li>
                             <a class="my-account" href=<?=$my_account_link?>><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
+                        </li>
                         <li>
                             <label for="subnav-mobile-check-browse" class="nav__mobile-link hover-browse">Browse<i class="ti-angle-double-down"></i></label>
                             <input type="checkbox" id="subnav-mobile-check-browse" class="check-subnav-browse">
@@ -98,109 +92,135 @@ include './backend/display-store-product.php';
             </nav>
         </main>
     </header>
+
     <main>
-        <div class="container">
-            <!-- New Store -->
-            <div class="title">
-                <h1>New Store</h1>
+        <label for="details" class="category">New arrivals<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details">
+
+        <div class="product-container pd1">
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>20$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/don-chicken/app1.jpg" alt="chicken soup" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Chicken Soup</a></h3>
             </div>
-            <div id="scroll" class="store-container">
-
-            <?php $store_count = 0;
-                foreach($stores_data as $store): 
-                    if ($store_count == 10) {
-                        break;
-                    } else {
-                        $store_count++; ?>
-
-                    <div class="store 1">
-                    <a href="./nike-home.php" ><img src="./code/images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline"><?=$store[$field_name_stores["name"]]; ?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-            
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>12$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/don-chicken/app2.jpg" alt="chicken salad" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Chicken Salad</a></h3>
             </div>
-        </div>
-        
-        <div class="container">
-            <!-- New Product -->
-            <div class="title-2">
-                <h1>New Product</h1>
+    
+            <div class="product lst">
+                <!-- <div class="overlay">
+                    <p>25$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/don-chicken/app3.jpg" alt="boiled shrimp" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Boiled Shirmp</a></h3>
             </div>
-            <div id="scroll" class="product-container">
-
-            <?php $product_count = 0;
-                foreach($products_data as $product): 
-                    if ($product_count == 10) {
-                        break;
-                    } else {
-                        $product_count++; ?>
-
-                    <div class="product 1">
-                        <a href="./product-detail.php" ><img src="./code/images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
-                        <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>17$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/don-chicken/app4.jpg" alt="chicken roll" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Chicken Roll</a></h3>
             </div>
         </div>
-        
-        <div class="container">
-            <!-- Featured Store -->
-            <div class="title-2 no-scroll-first">
-                <h1>Featured Stores</h1>
+
+
+        <label for="details-2" class="category">New 2021<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-2">
+
+        <div class="product-container pd2">
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>35$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/don-chicken/main1.jpg" alt="steak" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Steak</a></h3>
             </div>
-            <div id="scroll" class="feature-container first">
-                <?php 
-                $feature_count = 0;
-                foreach ($stores_data as $store):
-                    if ($store[$field_name_stores["featured"]] == "TRUE") { 
-                        if ($feature_count == 10) {
-                            break;
-                        } else {
-                        $feature_count++; ?>
-
-                        <div class="feature first">
-                            <a href="./tgdd-home.php" ><img src="./code/images/index-img/G _ LAB.jpg" alt="glab-logo" width="200" height="200"></a>
-                            <h3><a href="./tgdd-home.php" class="underline"><?=$store[$field_name_stores["name"]];?></a></h3>
-                        </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>25$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/don-chicken/main2.jpg" alt="grilled chicken" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Grilled Chicken</a></h3>
             </div>
-        </div>
-        
-        <div class="container">
-            <!-- Featured Product -->
-            <div class="title-2 no-scroll-last">
-                <h1>Featured Products</h1>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>18$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/don-chicken/main3.jpg" alt="rice chicken" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Rice Chicken</a></h3>
             </div>
-            <div id="scroll" class="feature-container last">
-
-            <?php 
-                $feature_product_count = 0;
-                foreach ($products_data as $product):
-                    if ($product[$field_name_products["featured_in_mall"]] == "TRUE") { 
-                        if ($feature_product_count == 10) {
-                            break;
-                        } else {
-                        $feature_product_count++; ?>
-
-                            <div class="feature-last 1">
-                                <a href="./product-detail.php" ><img src="./code/images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
-                                <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                            </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>17$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/don-chicken/main4.jpg" alt="steam chicken" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Steamed Chicken</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>19$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/don-chicken/main5.jpg" alt="fried chicken" width="200" height="200"></a>
+                <h3><a href="#">Fried Chicken</a></h3>
             </div>
         </div>
-        
+
+        <label for="details-5" class="category">Classic<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-5">
+
+        <div class="product-container pd5">
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>25$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/don-chicken/class1.jpg" alt="boneless chicken" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Boneless chicken</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>35$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/don-chicken/class2.jpg" alt="beef and cheesy rice" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Beef and cheesy rice</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>28$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./code/images/don-chicken/class3.jpg" alt="cheese chicken" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Cheese chicken</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>20$</p>
+                </div> -->
+                <a href="#" ><img src="./code/images/don-chicken/class4.jpg" alt="french fries" width="200" height="200"></a>
+                <h3><a href="#">French fries</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>16$</p>
+                </div> -->
+                <a href="#" ><img src="./code/images/don-chicken/class5.jpg" alt="pancakes" width="200" height="200"></a>
+                <h3><a href="#">Pancakes</a></h3>
+            </div>
+        </div>
     </main>
     <footer>
         <nav>
@@ -214,7 +234,6 @@ include './backend/display-store-product.php';
         </nav>
     </footer>
     <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/automatic_scroll.js" defer></script>
     <script src="./code/script/check_login.js" defer></script>
 </body>
 </html>

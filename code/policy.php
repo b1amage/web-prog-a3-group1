@@ -1,8 +1,3 @@
-<?php 
-include './backend/get-data.php';
-include './backend/display-store-product.php';
-?>
-
 <?php
     session_start();
     if (isset($_SESSION["login"])) {
@@ -12,16 +7,15 @@ include './backend/display-store-product.php';
     }
 ?>
 <!DOCTYPE html>
-<html lang="en" id="full-html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./code/css/index.css">
+    <title>Privacy Policies</title>
+    <link rel="stylesheet" href="./code/css/policy.css">
     <link rel="stylesheet" href="./code/css/header.css">
     <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
     <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./code/css/cookies.css">
 </head>
@@ -33,7 +27,6 @@ include './backend/display-store-product.php';
         <button class="cookie-btn">I understand</button>
         <a href="#">Learn more</a>
     </div>
-
     <header>
         <main>
             <nav class="first-nav">
@@ -81,6 +74,7 @@ include './backend/display-store-product.php';
                         <li><a href="./fee.php" class="nav__mobile-link">Fees</a></li>
                         <li>
                             <a class="my-account" href=<?=$my_account_link?>><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
+                        </li>
                         <li>
                             <label for="subnav-mobile-check-browse" class="nav__mobile-link hover-browse">Browse<i class="ti-angle-double-down"></i></label>
                             <input type="checkbox" id="subnav-mobile-check-browse" class="check-subnav-browse">
@@ -98,109 +92,80 @@ include './backend/display-store-product.php';
             </nav>
         </main>
     </header>
+
     <main>
         <div class="container">
-            <!-- New Store -->
-            <div class="title">
-                <h1>New Store</h1>
-            </div>
-            <div id="scroll" class="store-container">
-
-            <?php $store_count = 0;
-                foreach($stores_data as $store): 
-                    if ($store_count == 10) {
-                        break;
-                    } else {
-                        $store_count++; ?>
-
-                    <div class="store 1">
-                    <a href="./nike-home.php" ><img src="./code/images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline"><?=$store[$field_name_stores["name"]]; ?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-            
-            </div>
+        <h1>Privacy Policy</h1>
+        <h5>https://retailez.netlify.app/</h5>
+        <div class="line"></div>
+        <p>Protecting your private information is our priority. This Statement of Privacy applies to https://retailez.netlify.app/ and governs data collection and usage. For the purposes of this Privacy Policy, unless otherwise noted, all references to the terms "User", "you" or "your" refer to you, the user, while all references to the terms "we", "us" or "our" refers to https://retailez.netlify.app/. By using the https://retailez.netlify.app/ website, you consent to the data practices described in this statement.
+        <br><br>This policy is effective as of 3/14/2021 and was last updated on 3/14/2021.</p>
+        <h2>Collection of your Personal Information</h2>
+        <h3>Personal Informations</h3>
+        <p>In order to better provide you with products and services offered, we may collect personally identifiable information, such as your:</p>
+        <ul>
+            <li>First and Last Names</li>
+            <li>Mailing Addresses</li>
+            <li>Email Addresses</li>
+            <li>Telephone Numbers</li>
+            <li>Credit Card Number</li>
+        </ul>
+        <p>We do not collect any personal information about you unless you voluntarily provide it to us. However, you may be required to provide certain personal information to us when you elect to use certain products or services. These may include:</p>
+        <ul>
+            <li>Registering for an account</li>
+            <li>Entering a sweepstakes or contest sponsoed by us or one of our partners</li>
+            <li>Signing up for special offers from selected third parties</li>
+            <li>Sending us an email message</li>
+            <li>Submitting your credit card or other payment information when ordering and purchasing products and services</li>
+        </ul>
+        <p>To wit, we will use your information for, but not limited to, communicating with you in relation to services and/or products you have requested from us. We also may gather additional personal or non-personal information in the future.</p>
+        <h3>Demographic Informations</h3>
+        <p>We may also collect anonymous demographic information, which is not unique to you, such as your:</p>
+        <ul>
+            <li>Age</li>
+            <li>Gender</li>
+            <li>Race</li>
+            <li>Religion</li>
+            <li>Political affilation</li>
+        </ul>
+        <h3>Use of your Personal Informations</h3>
+        <p>Any of the personnal informations we collect from you may be used for the following purposes:</p>
+        <ul>
+            <li>To enable you to customise or personalise your experience of our website</li>
+            <li>To fufill orders and deliveries</li>
+            <li>To contact and communicate with you</li>
+            <li>To enable you to access and use our website, associated applications, and associated social media platforms</li>
+            <li>For security and fraud prevention, and to ensure that our sites and apps are safe, secure, and used in line with our terms of use</li>
+            <li>For user account registration</li>
+            <li>For internal record keeping and administrative purposes</li>
+        </ul>
+        <h3>Tracking User Behavior</h3>
+        <p>We may keep track of the websites and pages our users visit within the service, in order to determine which services are the most popular. This data is used to deliver customized content and advertising within the service to customers whose behavior indicates that they are interested in a particular subject area.
+        <br>We may also employ more advanced methods of studying user behavior, such as tracking mouse movements.</p>
+        <h3>Security of your Personal Information</h3>
+        <p>We secure your personal information from unauthorized access, use, or disclosure. We use the following methods for SSL Protocol.
+        <br>When personal information (such as a credit card number) is transmitted to other websites, it is protected through the use of encryption, such as the Secure Sockets Layer (SSL) protocol.</p>
+        <h3>Children Under Thirteen</h3>
+        <p>We do not knowingly collect personally identifiable information from children under the age of thirteen. If you are under the age of thirteen, you must ask your parent or guardian for permission to use this website. If you are a parent and you have questions regarding our data collection practices, please contact us using the information provided at the end of this Statement of Privacy.</p>
+        <h3>E-mail Communications</h3>
+        <p>From time to time, we may contact you via email for the purpose of providing announcements, promotional offers, alerts, confirmations, surveys, and/or other general communication. In order to improve our Services, we may receive a notification when you open an email from us or click on a link therein.</p>
+        <h3>Changes to this Statement</h3>
+        <p>We reserve the right to change this Privacy Policy from time to time. We will notify you about significant changes in the way we treat personal information by sending a notice to the primary email address specified in your account, by placing a prominent notice on our website, and/or by updating any privacy information. Your continued use of the website and/or Services available after such modifications will constitute your:</p>
+        <ul>
+            <li>Acknowledgment of the modified Privacy Policy</li>
+            <li>Agreement to abide and be bound by that Policy</li>
+        </ul>
+        <h3>Contact Information</h3>
+        <p>We welcome your questions or comments regarding this Statement of Privacy. If you believe that we did not adhered to this Statement, please contact us at:</p>
+        <div class="contact">
+            <span><em><b>Email Address:</b></em> retailez@com.vn</span><br>
+            <span><em><b>Telephone number:</b></em> 028-567954961</span>
         </div>
-        
-        <div class="container">
-            <!-- New Product -->
-            <div class="title-2">
-                <h1>New Product</h1>
-            </div>
-            <div id="scroll" class="product-container">
-
-            <?php $product_count = 0;
-                foreach($products_data as $product): 
-                    if ($product_count == 10) {
-                        break;
-                    } else {
-                        $product_count++; ?>
-
-                    <div class="product 1">
-                        <a href="./product-detail.php" ><img src="./code/images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
-                        <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-
-            </div>
+        <h3>References</h3>
+        <p>For more information about the privacy policies, you can visit this link:
+        <br><a href="https://typeful.co/privacy-policy/RW-Z1mfH" class="link" target="blank">Privacy Policy</a>    
+        </p>
         </div>
-        
-        <div class="container">
-            <!-- Featured Store -->
-            <div class="title-2 no-scroll-first">
-                <h1>Featured Stores</h1>
-            </div>
-            <div id="scroll" class="feature-container first">
-                <?php 
-                $feature_count = 0;
-                foreach ($stores_data as $store):
-                    if ($store[$field_name_stores["featured"]] == "TRUE") { 
-                        if ($feature_count == 10) {
-                            break;
-                        } else {
-                        $feature_count++; ?>
-
-                        <div class="feature first">
-                            <a href="./tgdd-home.php" ><img src="./code/images/index-img/G _ LAB.jpg" alt="glab-logo" width="200" height="200"></a>
-                            <h3><a href="./tgdd-home.php" class="underline"><?=$store[$field_name_stores["name"]];?></a></h3>
-                        </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-            </div>
-        </div>
-        
-        <div class="container">
-            <!-- Featured Product -->
-            <div class="title-2 no-scroll-last">
-                <h1>Featured Products</h1>
-            </div>
-            <div id="scroll" class="feature-container last">
-
-            <?php 
-                $feature_product_count = 0;
-                foreach ($products_data as $product):
-                    if ($product[$field_name_products["featured_in_mall"]] == "TRUE") { 
-                        if ($feature_product_count == 10) {
-                            break;
-                        } else {
-                        $feature_product_count++; ?>
-
-                            <div class="feature-last 1">
-                                <a href="./product-detail.php" ><img src="./code/images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
-                                <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                            </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-
-            </div>
-        </div>
-        
     </main>
     <footer>
         <nav>
@@ -214,7 +179,6 @@ include './backend/display-store-product.php';
         </nav>
     </footer>
     <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/automatic_scroll.js" defer></script>
     <script src="./code/script/check_login.js" defer></script>
 </body>
 </html>

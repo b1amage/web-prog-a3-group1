@@ -1,6 +1,13 @@
-<?php 
-include './backend/get-data.php';
-include './backend/display-store-product.php';
+<?php
+    session_start();
+    if(isset($_POST["submit_placement"])){
+        $_SESSION["submit_order_placement"] = true;
+        if(!isset($_SESSION["login"])){
+            header("location: login-box.php");
+        }else {
+            header("location: thanks.php");
+        }
+    }
 ?>
 
 <?php
@@ -12,18 +19,17 @@ include './backend/display-store-product.php';
     }
 ?>
 <!DOCTYPE html>
-<html lang="en" id="full-html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./code/css/index.css">
+    <title>Order Placement</title>
+    <link rel="stylesheet" href="./code/css/order-placement.css">
     <link rel="stylesheet" href="./code/css/header.css">
     <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
     <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./code/css/cookies.css">
+    <link rel="stylesheet" href="./code/css/add-to-cart.css">
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -33,7 +39,6 @@ include './backend/display-store-product.php';
         <button class="cookie-btn">I understand</button>
         <a href="#">Learn more</a>
     </div>
-
     <header>
         <main>
             <nav class="first-nav">
@@ -81,6 +86,7 @@ include './backend/display-store-product.php';
                         <li><a href="./fee.php" class="nav__mobile-link">Fees</a></li>
                         <li>
                             <a class="my-account" href=<?=$my_account_link?>><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
+                        </li>
                         <li>
                             <label for="subnav-mobile-check-browse" class="nav__mobile-link hover-browse">Browse<i class="ti-angle-double-down"></i></label>
                             <input type="checkbox" id="subnav-mobile-check-browse" class="check-subnav-browse">
@@ -98,109 +104,75 @@ include './backend/display-store-product.php';
             </nav>
         </main>
     </header>
-    <main>
-        <div class="container">
-            <!-- New Store -->
-            <div class="title">
-                <h1>New Store</h1>
+
+    <main class="grid-container">
+        <div class="your-cart">
+            <h1>Your Cart</h1>
+        </div>
+        <div class="product-1">
+            <img src="./code/images/index-img/jd1.jpg" alt="product1" width="200" height="200" id="img-1">
+            <div class="info">
+                <h6 id="product-name1">Ultra Boost 5.0</h6>
+                <p id="price1">$200</p>
             </div>
-            <div id="scroll" class="store-container">
-
-            <?php $store_count = 0;
-                foreach($stores_data as $store): 
-                    if ($store_count == 10) {
-                        break;
-                    } else {
-                        $store_count++; ?>
-
-                    <div class="store 1">
-                    <a href="./nike-home.php" ><img src="./code/images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
-                    <h3><a href="./nike-home.php" class="underline"><?=$store[$field_name_stores["name"]]; ?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-            
+            <div class="quantity-box">
+                <label for="quantity">Quantity</label>
+                <input type="number" name="quantity" id="quantity1" min="0" value="0" required>
+            </div>
+        </div>
+        <div class="product-2">
+            <img src="./code/images/stores-image/nike-images/airzoom.jpg" alt="product2" width="200" height="200">
+            <div class="info">
+                <h6 id="product-name2">KFC Fried Chicken</h6>
+                <p id="price2">$10</p>
+            </div>
+            <div class="quantity-box">
+                <label for="quantity">Quantity</label>
+                <input type="number" name="quantity" id="quantity2" min="0" value="0" required>
+            </div>
+        </div>
+        <div class="product-3">
+            <img src="./code/images/stores-image/nike-images/football1.jpg" alt="product3" width="200" height="200">
+            <div class="info">
+                <h6 id="product-name3">Airking Rolex III</h6>
+                <p id="price3">$3100</p>
+            </div>
+            <div class="quantity-box">
+                <label for="quantity">Quantity</label>
+                <input type="number" name="quantity" id="quantity3" min="0" value="0" required>
             </div>
         </div>
         
-        <div class="container">
-            <!-- New Product -->
-            <div class="title-2">
-                <h1>New Product</h1>
+        <div class="ship-cod">
+            <div class="first-line">
+                <h4>Discount code</h4>
+                <input type="text" name="discount" id="discount">
+                <input type="submit" value="Use" id="submit-discount-btn">
             </div>
-            <div id="scroll" class="product-container">
-
-            <?php $product_count = 0;
-                foreach($products_data as $product): 
-                    if ($product_count == 10) {
-                        break;
-                    } else {
-                        $product_count++; ?>
-
-                    <div class="product 1">
-                        <a href="./product-detail.php" ><img src="./code/images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
-                        <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                    </div>
-                    <?php }; ?>
-                    <?php endforeach; ?>
-
-            </div>
+            <h5>Nguyen Luu Quoc Bao  |  0913981323</h5>
+            <p>181/78 Au Duong Lan, ward 2, District 8, Ho Chi Minh city</p>
         </div>
+        <div class="cash">
+            <div class="money">
+                <h3 class="sub-title">Price</h3>
+                <h3 id="product-price">6270$</h3>
+            </div>
+            <div class="ship">
+                <h4 class="sub-title">Ship fee</h4>
+                <h4 id="ship-price">60$</h4>
+            </div>
+            <div class="total">
+                <h2 class="sub-title">Total</h2>
+                <h2 id="total-price">6330$</h2>
+            </div>
+            <div class="button-container">
+                <form method = "post">
+                <button type ="submit" name= "submit_placement" class="push">Check Out</button></a>
+                </form>
+                <a href="./product-detail.php"><button>Continue Shopping</button></a>
+            </div>
         
-        <div class="container">
-            <!-- Featured Store -->
-            <div class="title-2 no-scroll-first">
-                <h1>Featured Stores</h1>
-            </div>
-            <div id="scroll" class="feature-container first">
-                <?php 
-                $feature_count = 0;
-                foreach ($stores_data as $store):
-                    if ($store[$field_name_stores["featured"]] == "TRUE") { 
-                        if ($feature_count == 10) {
-                            break;
-                        } else {
-                        $feature_count++; ?>
-
-                        <div class="feature first">
-                            <a href="./tgdd-home.php" ><img src="./code/images/index-img/G _ LAB.jpg" alt="glab-logo" width="200" height="200"></a>
-                            <h3><a href="./tgdd-home.php" class="underline"><?=$store[$field_name_stores["name"]];?></a></h3>
-                        </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-            </div>
         </div>
-        
-        <div class="container">
-            <!-- Featured Product -->
-            <div class="title-2 no-scroll-last">
-                <h1>Featured Products</h1>
-            </div>
-            <div id="scroll" class="feature-container last">
-
-            <?php 
-                $feature_product_count = 0;
-                foreach ($products_data as $product):
-                    if ($product[$field_name_products["featured_in_mall"]] == "TRUE") { 
-                        if ($feature_product_count == 10) {
-                            break;
-                        } else {
-                        $feature_product_count++; ?>
-
-                            <div class="feature-last 1">
-                                <a href="./product-detail.php" ><img src="./code/images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
-                                <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
-                            </div>
-                        
-                <?php    } };
-                ?>
-                <?php endforeach;?>
-
-            </div>
-        </div>
-        
     </main>
     <footer>
         <nav>
@@ -214,7 +186,7 @@ include './backend/display-store-product.php';
         </nav>
     </footer>
     <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/automatic_scroll.js" defer></script>
     <script src="./code/script/check_login.js" defer></script>
+    <script src="./code/script/calculate_price_and_discount.js"></script>
 </body>
 </html>
