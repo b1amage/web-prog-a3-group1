@@ -170,8 +170,8 @@ include '../backend/display-store-product.php';
                             $feature_count++; ?>
 
                             <div class="feature first">
-                                <a href="./product-detail.php"><img src="./images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
-                                <h3><a href="./product-detail.php" class="underline"><?= $store[$field_name_stores["name"]]; ?></a></h3>
+                                <a href="./tgdd-home.php"><img src="./images/index-img/G _ LAB.jpg" alt="glab-img" width="200" height="200"></a>
+                                <h3><a href="./tgdd-home.php" class="underline"><?= $store[$field_name_stores["name"]]; ?></a></h3>
                             </div>
 
                     <?php    }
