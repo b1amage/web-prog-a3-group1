@@ -9,6 +9,7 @@
 <?php 
 include '../backend/get-data.php';
 include '../backend/display-store-product.php';
+// print_r_with_lines($stores_data);
 ?>
 <!DOCTYPE html>
 <html lang="en" id="full-html">
