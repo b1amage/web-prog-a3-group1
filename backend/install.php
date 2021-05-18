@@ -23,7 +23,7 @@ if (isset($_POST["submit-btn"])) {
     }
 
     // After testing, if there is no error, we will open the data.txt file as write mode
-        $data_file = fopen('data.txt', 'w');
+        $data_file = fopen('../data.txt', 'w');
 
         // Write username and the hashed password in the file
         fwrite($data_file, $_POST["username"]);
