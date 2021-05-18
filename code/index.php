@@ -172,8 +172,8 @@ include '../backend/display_store_by_categories.php';
                             $feature_count++; ?>
 
                             <div class="feature first">
-                                <a href="./tgdd-home.php?store_id=<?= $store[$field_name_stores["id"]]?>"><img src="./images/index-img/G _ LAB.jpg" alt="glab-img" width="200" height="200"></a>
-                                <h3><a href="./tgdd-home.php?store_id=<?= $store[$field_name_stores["id"]]?>" class="underline"><?= $store[$field_name_stores["name"]]; ?></a></h3>
+                                <a href="./nike-home.php?store_id=<?= $store[$field_name_stores["id"]]?>"><img src="./images/index-img/G _ LAB.jpg" alt="glab-img" width="200" height="200"></a>
+                                <h3><a href="./nike-home.php?store_id=<?= $store[$field_name_stores["id"]]?>" class="underline"><?= $store[$field_name_stores["name"]]; ?></a></h3>
                             </div>
 
                     <?php    }

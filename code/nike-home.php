@@ -106,16 +106,18 @@ include '../backend/display_store_by_categories.php';
         <div class="product-container">
         <?php $product_count = 0;
                 foreach ($products_data as $product) :
-                    if ($product_count == 5) {
-                        break;
-                    } else {
-                        $product_count++; ?>
+                    if ($product[$field_name_products["store_id"]] == $_GET["store_id"] ){
+                        $value = $product;
+                        if ($product_count == 5) {
+                            break;
+                        } else {
+                            $product_count++; ?>
             <div class="product">
-                <a href="./product-detail.php?product_id=<?=$product[$field_name_products["id"]]?>" ><img src="./images/stores-image/nike-images/bask1.jpg" alt="lebron" width="200" height="200"></a>
-                <h3><a href="./product-detail.php?product_id=<?=$product[$field_name_products["id"]]?>"><?=$product[$field_name_products["name"]]; ?></a></h3>
+                <a href="./product-detail.php?product_id=<?=$value[$field_name_products["id"]]?>" ><img src="./images/stores-image/nike-images/bask1.jpg" alt="lebron" width="200" height="200"></a>
+                <h3><a href="./product-detail.php?product_id=<?=$value[$field_name_products["id"]]?>"><?=$value[$field_name_products["name"]]; ?></a></h3>
                 
             </div>
-            <?php }; ?>
+            <?php }}; ?>
             <?php endforeach; ?>
         </div>
 
@@ -128,22 +130,24 @@ include '../backend/display_store_by_categories.php';
         <?php
                 $feature_count = 0;
                 foreach ($products_data as $product):
-                    $x = $product[$field_name_products["featured_in_store"]];
-                    if (strpos($x, "TRUE") !== FALSE) {
-                        if ($feature_count == 5) {
-                            break;
-                        } else {
-                            $feature_count++; ?>
+                    if ($product[$field_name_products["store_id"]] == $_GET["store_id"] ){
+                        $value = $product;
+                        $x = $value[$field_name_products["featured_in_store"]];
+                        if (strpos($x, "TRUE") !== FALSE) {
+                            if ($feature_count == 5) {
+                                break;
+                            } else {
+                                $feature_count++; ?>
             <div class="feature">
                 <!-- <div class="overlay">
                     <p>155$</p>
                 </div> -->
-                <a href="./product-detail.php?product_id=<?=$product[$field_name_products["id"]]?>" ><img src="./images/stores-image/nike-images/football_set1.jpg" alt="full football set" width="200" height="200"></a>
-                <h3><a href="./product-detail.php?product_id=<?=$product[$field_name_products["id"]]?>"><?= $product[$field_name_products["name"]]?></a></h3>
+                <a href="./product-detail.php?product_id=<?=$value[$field_name_products["id"]]?>" ><img src="./images/stores-image/nike-images/football_set1.jpg" alt="full football set" width="200" height="200"></a>
+                <h3><a href="./product-detail.php?product_id=<?=$value[$field_name_products["id"]]?>"><?= $value[$field_name_products["name"]]?></a></h3>
             </div>
  
             <?php    }
-                    }
+                    }}
                     ?>
                 <?php endforeach; ?> 
         </div>
