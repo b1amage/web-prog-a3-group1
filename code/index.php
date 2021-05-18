@@ -152,7 +152,7 @@ include '../backend/display-store-product.php';
                 <h1>Featured Stores</h1>
             </div>
             <div id="scroll" class="feature-container first">
-                <?php 
+            <?php 
                 $feature_count = 0;
                 foreach ($stores_data as $store):
                     if ($store[$field_name_stores["featured"]] == "TRUE") { 
@@ -161,14 +161,15 @@ include '../backend/display-store-product.php';
                         } else {
                         $feature_count++; ?>
 
-                        <div class="feature first">
-                            <a href="./tgdd-home.php" ><img src="./images/index-img/G _ LAB.jpg" alt="glab-logo" width="200" height="200"></a>
-                            <h3><a href="./tgdd-home.php" class="underline"><?=$store[$field_name_stores["name"]];?></a></h3>
-                        </div>
+                            <div class="feature first">
+                                <a href="./tgdd-home.php" ><img src="./images/index-img/G_LAB.jpg" alt="freak2-img" width="200" height="200"></a>
+                                <h3><a href="./tgdd-home.php" class="underline"><?=$store[$field_name_stores["name"]];?></a></h3>
+                            </div>
                         
                 <?php    } };
                 ?>
                 <?php endforeach;?>
+
             </div>
         </div>
         

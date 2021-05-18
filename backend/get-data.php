@@ -10,7 +10,7 @@
         "name" => 1,
         "category_id" => 2,
         "created_time" => 3,
-        "featured" =>4
+        "featured" => 4
     ];
 
     $field_name_products = [
