@@ -7,6 +7,7 @@ function created_time_cmp($store_or_product_1, $store_or_product_2) {
 // Get the data by using function from the get-data.php, which will be include in the index.php
 $products_data = get_data_from_csv('./backend/products.csv');
 $stores_data = get_data_from_csv('./backend/stores.csv');
+$categories_data = get_data_from_csv('./backend/categories');
 
 // sort the data by using usort built-in function with the created_time_cmp function 
 usort($stores_data, "created_time_cmp");
