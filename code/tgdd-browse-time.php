@@ -1,11 +1,7 @@
 <?php
     session_start();
-    $matched_account = $_SESSION['matched_account'];
-    if (isset($_SESSION["login"])) {
-        $my_account_link = "./user-information.php";
-    } else {
-        $my_account_link ="./login-box.php";
-    }
+    include('../backend/check_login.php');
+    $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,14 +9,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Account</title>
+    <title>Browse Created Time-TheGioiDiDong</title>
+    <link rel="stylesheet" href="./css/product-browse.css">
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./css/user-information.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./css/cookies.css">
 </head>
-
 <body>
     <div id="overlay-cookies"></div>
     <div class="cookie-container">
@@ -94,34 +89,98 @@
             </nav>
         </main>
     </header>
+
     <main>
-        <div id="user-information">
-            <div id="title">
-                <h1>My account</h1>
+        <label for="details" class="category">Newest --> Oldest Products<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details">
+
+        <div class="product-container pd1">
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>$1434.78</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/iphone12pro.jpg" alt="phone" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">IPhone 12 Pro</a></h3>
             </div>
-            <div id="info">
-                <div id="profile-picture">
-                    <img src="./images/about-images/tuan-image.jpeg" alt="profile-picture">
-                </div>
-                <ul> 
-                    <!-- display the first and last name of the account -->
-                    <li><span>Full name: </span><?=$matched_account[4]." ".$matched_account[5];?></li>
-                    <!-- display the email of the account -->
-                    <li><span>Email: </span><a id="login-email" href=<?="mailto:{$matched_account[0]}"?>><?=$matched_account[0]?></a></li>
-                    <!-- display the phone number of the account -->                    
-                    <li><span>Phone number: </span><?=$matched_account[1]?></li>
-                    <!-- display the address of the account -->
-                    <li><span>Address: </span><?=$matched_account[6]?></li>
-                    <!-- display the city of the account -->
-                    <li><span>City: </span><?=$matched_account[7]?></li>
-                    <!-- display the zipcode of the account --> 
-                    <li><span>Zip code: </span><?=$matched_account[8]?></li>
-                    <!-- display the country of the account -->
-                    <li><span>Country: </span><?=$matched_account[10]?></li>
-                    <!-- display the account type of the account -->
-                    <li><span>Account type: </span><?=$matched_account[11]?></li>
-                </ul>
-            </div> 
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>$364.78</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/opporeno5.jpg" alt="phone" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Oppo Reno 5</a></h3>
+            </div>
+    
+            <div class="product lst">
+                <!-- <div class="overlay">
+                    <p>$913.04</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/xiaomi_mi_11_5G.jpg" alt="phone" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Xiaomi Mi 11 5G</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>$296.55</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/vivoY12s.jpg" alt="phone" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Chicken Roll</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>$120</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/nokia5.4.jpg" alt="phone" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Nokia 5.4</a></h3>
+            </div>
+            
+        </div>
+
+
+        <label for="details-5" class="category">Oldest --> Newest Products<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-5">
+
+        <div class="product-container pd5">
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>$1980</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/macbook_pro.jpeg" alt="laptop" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Macbook Pro 13-inch</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>1029$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/asus_vivobook15.jpg" alt="laptop" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Asus Vivobook 15</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>1828$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/xps_13_9370.jpg" alt="laptop" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Dell XPS 13 9370</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>975$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/dell_vostro_3500.jpg" alt="laptop" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Dell Vostro 3500</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>1529$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/hpenvy.jpg" alt="laptop" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">HP Envy 13</a></h3>
+            </div>
         </div>
     </main>
     <footer>
@@ -137,7 +196,5 @@
     </footer>
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
-    <script src="./script/update_email.js" defer></script>
-    </body>
-
-    
+</body>
+</html>

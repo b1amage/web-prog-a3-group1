@@ -1,10 +1,7 @@
 <?php
     session_start();
-    if (isset($_SESSION["login"])) {
-        $my_account_link = "./user-information.php";
-    } else {
-        $my_account_link ="./login-box.php";
-    }
+    include('../backend/check_login.php');
+    $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browse Category-Nike</title>
+    <title>Browse Created Time-Nike</title>
     <link rel="stylesheet" href="./css/product-browse.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -94,7 +91,7 @@
     </header>
 
     <main>
-        <label for="details" class="category">Running<i class="ti-angle-double-down"></i></label>
+        <label for="details" class="category">Newest Products<i class="ti-angle-double-down"></i></label>
         <input type="checkbox" name="details" id="details">
 
         <div class="product-container pd1">
@@ -108,43 +105,13 @@
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>120$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/airmax.jpg" alt="airmax" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Airmax</a></h3>
-            </div>
-    
-            <div class="product lst">
-                <!-- <div class="overlay">
                     <p>150$</p>
                 </div> -->
                 <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/vapormax.jpg" alt="vapormax" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Vapormax</a></h3>
             </div>
     
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>170$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/pegasus.jpg" alt="pegasus" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Pegasus</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>100$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/run2.jpg" alt="airmax" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Airmax</a></h3>
-            </div>
-        </div>
-
-
-        <label for="details-2" class="category">Tennis<i class="ti-angle-double-down"></i></label>
-        <input type="checkbox" name="details" id="details-2">
-
-        <div class="product-container pd2">
-            <div class="product">
+            <div class="product lst">
                 <!-- <div class="overlay">
                     <p>115$</p>
                 </div> -->
@@ -154,41 +121,27 @@
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>80$</p>
+                    <p>185$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/tennis racket.jpg" alt="tennis racket" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Tennis racket</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/lebron1.jpg" alt="lebron" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Lebron</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>180$</p>
+                    <p>59$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/full_set_tennis.jpg" alt="full set" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Full set tennis</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/hoodie1.jpg" alt="hoodie" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Hoodie</a></h3>
             </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>55$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/tennis_ball.jpg" alt="ball" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Tennis ball</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>56$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/tennis racket 2.jpg" alt="tennis racket" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Tennis racket</a></h3>
-            </div>
+            
         </div>
 
-        <label for="details-3" class="category">Basketball<i class="ti-angle-double-down"></i></label>
-        <input type="checkbox" name="details" id="details-3">
 
-        <div class="product-container pd3">
+        <label for="details-5" class="category">Oldest Products<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-5">
+
+        <div class="product-container pd5">
             <div class="product">
                 <!-- <div class="overlay">
                     <p>200$</p>
@@ -207,90 +160,6 @@
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>185$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/lebron1.jpg" alt="lebron" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Lebron</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>680$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/full_set_basketball.jpg" alt="full set" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">full set</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>62$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/basketball1.jpg" alt="basketball" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Basketball</a></h3>
-            </div>
-        </div>
-
-
-        <label for="details-4" class="category">Casual<i class="ti-angle-double-down"></i></label>
-        <input type="checkbox" name="details" id="details-4">
-
-        <div class="product-container pd4">
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>26$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/pants.jpg" alt="pants" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Pants</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>27$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/shorts.jpg" alt="shorts" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Shorts</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>35$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/tshirt1.jpg" alt="t-shirt" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">T-shirt</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>45$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/tshirt2.jpg" alt="t-shirt" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">T-shirt</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>12$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/socks.jpg" alt="socks" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Socks</a></h3>
-            </div>
-        </div>
-
-
-        <label for="details-5" class="category">Clothing<i class="ti-angle-double-down"></i></label>
-        <input type="checkbox" name="details" id="details-5">
-
-        <div class="product-container pd5">
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>59$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/hoodie1.jpg" alt="hoodie" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Hoodie</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
                     <p>55$</p>
                 </div> -->
                 <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/hoodie2.jpg" alt="hoodie" width="200" height="200"></a>
@@ -302,14 +171,6 @@
                     <p>39$</p>
                 </div> -->
                 <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/jacket.jpg" alt="jacket" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Jacket</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>46$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/jacket2.jpg" alt="jacket" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Jacket</a></h3>
             </div>
     

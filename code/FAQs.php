@@ -1,10 +1,7 @@
 <?php
     session_start();
-    if (isset($_SESSION["login"])) {
-        $my_account_link = "./user-information.php";
-    } else {
-        $my_account_link ="./login-box.php";
-    }
+    include('../backend/check_login.php');
+    $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,10 +9,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
-    <link rel="stylesheet" href="./css/product-detail2.css">
-    <link rel="stylesheet" href="./css/footer.css">
+    <title>FAQs</title>
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/faqs.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./css/cookies.css">
 </head>
@@ -93,62 +90,68 @@
         </main>
     </header>
 
-
-    <main class="grid-container">
-        <div class="description">
-            <h1 id="product-name">Nike Airzoom</h1>
-            <h2 id="product-price">$150</h2>
-            <details>
-                <summary>Choose your size</summary>
-                <p>40 - 8.5US</p>
-                <p>41 - 9US</p>
-                <p>42 - 9.6 US</p>
-                <p>43 - 10US</p>
-                <p>44 - 10.5US</p>
-                <p>45 - 11US</p>
-            </details>
-            <button id="add-btn"><a href="#">Add to my cart</a></button>
-            <button id="buynow-btn"><a href="./order_placement.php">Buy Now</a></button>
+    <main>
+        <div class="box">
+            <h2 class="title">FAQs</h1>
+            <div class="FAQs">
+                <details>
+                    <summary>How to sign in to our website?</summary>
+                    <p>First you would need to register our account in the account setting, all you need to do is to fill in the contact form and click register andthen you can have our accont.</p>
+                </details>
+            </div>
+            <div class="FAQs">
+                <details>
+                    <summary>Do you need an account to be able to buy our product?</summary>
+                    <p>Well actually it depends on many aspects, if you are going directly to our stores, then you don't need an account.</p>
+                    <p>However, if you've decided to buy our product online, then you would need an account so that we can keep track of the customers' orders. If the customers do not have any account, they only can view our products.</p>
+                </details>
+            </div>
+            <div class="FAQs">
+                <details>
+                    <summary>Where is your store located?</summary>
+                    <p>Our store located at Le Thanh Ton street distrct 1, near Nguyen Hue walking street, our stores is very hard to miss.</p>
+                </details>
+            </div>
+            <div class="FAQs">
+                <details>
+                    <summary>Are there any ways for me to send feedback?</summary>
+                    <p>Yes, in that case, our website provided a contact page for every customers, for them to send feedback and to find assistance during shopping online.</p>
+                </details>
+            </div>
+            <div class="FAQs">
+                <details>
+                    <summary>Does your store have any branches?</summary>
+                    <p>No,  we do not have any branches yet, but we have plan to open more stores around HCMc and Hanoi.</p>
+                </details>
+            </div>
+            <div class="FAQs">
+                <details>
+                    <summary>How do I order my stuff via this website?</summary>
+                    <p>You can click the product, and then choose to add to the cart, and from order placement UI, you can check all the information such as ship fees, from on you just buy the product.</p>
+                </details>
+            </div>
+            <div class="FAQs">
+                <details>
+                    <summary>What is our mall content?</summary>
+                    <p>We have many variety of products, but mainly, we are focusing on clothing such as shoes, t-shirt, jeans, and watches.</p>
+                    <p>However, we also have a foodcourt and some other restaurants in our mall.</p>
+                </details>
+            </div>
+            <div class="FAQs">
+                <details>
+                    <summary>Can the customers return the products they didn't satisfy?</summary>
+                    <p>It depends on the shop you buy at our mall, but usually, you can return within 5 to 14 days (with the bill).</p>
+                </details>
+            </div>
+            <div class="FAQs">
+                <details>
+                    <summary>Discount policy</summary>
+                    <p>We would have many discounts through out the years such as blackfriday or special events.</p>
+                    <p>Long term customers can have a member card which can discount up to 15%.</p>
+                </details>
+            </div>
         </div>
-        <div class="product-img"></div>
-        <div class="related flex-0">
-            <h1>Related products</h1>
-        </div>
-
-        <div class="related-product-1 flex">
-            <a href="./product-detail.php"><img src="./images/index-img/joyride.jpg" alt="joyride" width="300" height="300"></a>
-            <h3><a href="./product-detail.php">Nike Joyride</a></h3>
-        </div>
-        <div class="related-product-2 flex">
-            <a href="./product-detail.php"><img src="./images/index-img/lebron18.jpg" alt="lebron18" width="300" height="300"></a>
-            <h3><a href="./product-detail.php">Nike Lebron 18</a></h3>
-        </div>
-        <div class="related-product-3 flex">
-            <a href="./product-detail.php"><img src="./images/index-img/vans-img.jpg" alt="vans" width="300" height="300"></a>
-            <h3><a href="./product-detail.php">Vans Old Skool</a></h3>
-        </div>
-        <div class="related-product-4 flex">
-            <a href="./product-detail.php"><img src="./images/index-img/stansmith.jpg" alt="stansmith" width="300" height="300"></a>
-            <h3><a href="./product-detail.php">Stan Smith</a></h3>
-        </div>
-        <div class="related-product-5 flex">
-            <a href="./product-detail.php"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
-            <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
-        </div>
-
-        <div class="product-1">
-            <a href="./product-detail.php"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
-            <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
-        </div>
-
-        <div class="product-2">
-            <a href="./product-detail.php"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
-            <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
-        </div>
-
-        
     </main>
-
     <footer>
         <nav>
             <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>
@@ -162,6 +165,5 @@
     </footer>
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
-    <script src="./script/add_to_cart_2.js"></script>
 </body>
 </html>

@@ -1,10 +1,7 @@
 <?php
     session_start();
-    if (isset($_SESSION["login"])) {
-        $my_account_link = "./user-information.php";
-    } else {
-        $my_account_link ="./login-box.php";
-    }
+    include('../backend/check_login.php');
+    $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,10 +9,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in/Sign up</title>
+    <title>Forgot Password</title>
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./css/login-box.css">
+    <link rel="stylesheet" href="./css/forgot-password.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/cookies.css">
 </head>
@@ -96,31 +93,15 @@
 
     <main>
         <div id="login-box">
-            <form action="./backend/authentication.php" method="POST" onsubmit="return checkPassword()">
-                <input required type="text" id="email/phone" name="email/phone" autocomplete="off" placeholder="Email or phone number">  
-                <input required type="password" id="password" name="password" placeholder="Password">
-                <div id="error">Invalid password</div>
-                <h5 style="color:red;text-align:center">
-                    <?php 
-                        if (isset($_GET['error_message'])) {
-                            echo base64_decode($_GET['error_message']);
-                        }
-                    ?>
-                </h5>
-                <input type="submit" name="button-submit" value="Login">
-                <div id="forgot-password">
-                    <a href="forgot-password.php">Forgot password?</a>
-                </div>
-                <div id="line">
-                    <hr>
-                </div>
-                <div id="register">
-                    <a href="./register.php" name="button-register">Register</a>
-                </div>
+            <form action="#" method="get">
+                <h1>Find your account</h1>
+                <hr>
+                <h3>Please enter your email to search for your account</h3>
+                <input required type="email" name="email" autocomplete="off" placeholder="Enter your email">  
+                <input type="submit" name="button-submit" value="Send">
             </form>
-        </div>   
+        </div>
     </main>
-    
     <footer>
         <nav>
             <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>
@@ -133,9 +114,8 @@
         </nav>
     </footer>
     <script src="./script/cookies.js" defer></script>
-    <!-- <script src="./script/check_password.js" defer></script> -->
-    <!-- <script src="./script/check_login.js" defer></script> -->
+    <script src="./script/check_login.js" defer></script>
     </body>
-    
+
 
     

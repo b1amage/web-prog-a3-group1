@@ -1,10 +1,7 @@
 <?php
     session_start();
-    if (isset($_SESSION["login"])) {
-        $my_account_link = "./user-information.php";
-    } else {
-        $my_account_link ="./login-box.php";
-    }
+    include('../backend/check_login.php');
+    $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,14 +9,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forgot Password</title>
+    <title>Don Chicken</title>
+    <link rel="stylesheet" href="./css/store-home.css">
+    <link rel="stylesheet" href="./css/store-container.css">
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./css/forgot-password.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./css/cookies.css">
+    <!-- <link rel="stylesheet" href="./header.css"> -->
 </head>
-
 <body>
     <div id="overlay-cookies"></div>
     <div class="cookie-container">
@@ -95,16 +93,99 @@
     </header>
 
     <main>
-        <div id="login-box">
-            <form action="#" method="get">
-                <h1>Find your account</h1>
-                <hr>
-                <h3>Please enter your email to search for your account</h3>
-                <input required type="email" name="email" autocomplete="off" placeholder="Enter your email">  
-                <input type="submit" name="button-submit" value="Send">
-            </form>
+        <!-- New Product -->
+        <div class="title">
+            <h1>New Product</h1>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <!-- <div class="overlay">
+                    <a href="#"><p>30$</p></a>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/main1.jpg" alt="steak" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Steak</a></h3>
+            </div>
+
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>25$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/des1.jpg" alt="chocolate cake" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Chocolate Cake</a></h3>
+            </div>
+
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>18$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/app1.jpg" alt="chik=cken soup" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Chicken Soup</a></h3>
+            </div>
+
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>15$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/app2.jpg" alt="chicken salad" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Chicken Salad</a></h3>
+            </div>
+
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>12$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/des2.jpg" alt="strawbery cake" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Strawberry Cake</a></h3>
+            </div>
+        </div>
+
+        <!-- Featured Product -->
+        <div class="title-2">
+            <h1>Featured Products</h1>
+        </div>
+        <div class="feature-container ft2">
+            <div class="feature">
+                <!-- <div class="overlay">
+                    <p>15$</p>
+                </div> -->
+                <a href="#" ><img src="./images/don-chicken/des3.jpg" alt="cream brulee" width="200" height="200"></a>
+                <h3><a href="#">Cream Brulee</a></h3>
+            </div>
+
+            <div class="feature">
+                <!-- <div class="overlay">
+                    <p>14$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/app4.jpg" alt="chicken roll" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Chicken Roll</a></h3>
+            </div>
+
+            <div class="feature">
+                <!-- <div class="overlay">
+                    <p>19$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/des4.jpg" alt="donut" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Donut</a></h3>
+            </div>
+
+            <div class="feature">
+                <!-- <div class="overlay">
+                    <p>21$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/main5.jpg" alt="fried chicken" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Fried Chicken</a></h3>
+            </div>
+
+            <div class="feature">
+                <!-- <div class="overlay">
+                    <p>13$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/app5.jpg" alt="pumpkin soup" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Pumpkin Soup</a></h3>
+            </div>
         </div>
     </main>
+    <div class="push"></div>
     <footer>
         <nav>
             <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>
@@ -116,9 +197,8 @@
             <h3 class="right">Design by developer team</h3>
         </nav>
     </footer>
+
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
-    </body>
-
-
-    
+</body>
+</html>

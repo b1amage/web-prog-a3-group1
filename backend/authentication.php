@@ -78,7 +78,7 @@
             } else {
                 // If invalid, send an error message and redirect back to login-box.php page
                 $error_message = base64_encode("Incorrect username or password. Try again");
-                header("Location: ../login-box.php?error_message=$error_message");        
+                header("Location: ../code/login-box.php?error_message=$error_message");        
             } 
         }
 
@@ -87,11 +87,11 @@
             $_SESSION["login"] = true ;
             // If valid, redirect to user-information.php page
             $_SESSION['matched_account'] = $matched_account; //++++
-            header("Location: ../user-information.php");
+            header("Location: ../code/user-information.php");
         } else {
             // If invalid, send an error message and redirect back to login-box.php page
             $error_message = base64_encode("Incorrect username or password. Try again");
-            header("Location: ../login-box.php?error_message=$error_message");        
+            header("Location: ../code/login-box.php?error_message=$error_message");        
         }
     }
 

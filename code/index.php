@@ -6,20 +6,23 @@
         $my_account_link ="./login-box.php";
     }
 ?>
+<?php 
+include '../backend/get-data.php';
+include '../backend/display-store-product.php';
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="full-html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Don Chicken</title>
-    <link rel="stylesheet" href="./css/store-home.css">
-    <link rel="stylesheet" href="./css/store-container.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/cookies.css">
     <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./css/cookies.css">
-    <!-- <link rel="stylesheet" href="./header.css"> -->
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -29,6 +32,7 @@
         <button class="cookie-btn">I understand</button>
         <a href="#">Learn more</a>
     </div>
+
     <header>
         <main>
             <nav class="first-nav">
@@ -76,7 +80,6 @@
                         <li><a href="./fee.php" class="nav__mobile-link">Fees</a></li>
                         <li>
                             <a class="my-account" href=<?=$my_account_link?>><label for="subnav-mobile-check-account" class="nav__mobile-link hover-account">My Account</label></a>
-                        </li>
                         <li>
                             <label for="subnav-mobile-check-browse" class="nav__mobile-link hover-browse">Browse<i class="ti-angle-double-down"></i></label>
                             <input type="checkbox" id="subnav-mobile-check-browse" class="check-subnav-browse">
@@ -94,101 +97,110 @@
             </nav>
         </main>
     </header>
-
     <main>
-        <!-- New Product -->
-        <div class="title">
-            <h1>New Product</h1>
-        </div>
-        <div class="product-container">
-            <div class="product">
-                <!-- <div class="overlay">
-                    <a href="#"><p>30$</p></a>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/don-chicken/main1.jpg" alt="steak" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Steak</a></h3>
+        <div class="container">
+            <!-- New Store -->
+            <div class="title">
+                <h1>New Store</h1>
             </div>
+            <div id="scroll" class="store-container">
 
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>25$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/don-chicken/des1.jpg" alt="chocolate cake" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Chocolate Cake</a></h3>
-            </div>
+            <?php $store_count = 0;
+                foreach($stores_data as $store): 
+                    if ($store_count == 10) {
+                        break;
+                    } else {
+                        $store_count++; ?>
 
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>18$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/don-chicken/app1.jpg" alt="chik=cken soup" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Chicken Soup</a></h3>
-            </div>
-
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>15$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/don-chicken/app2.jpg" alt="chicken salad" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Chicken Salad</a></h3>
-            </div>
-
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>12$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/don-chicken/des2.jpg" alt="strawbery cake" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Strawberry Cake</a></h3>
+                    <div class="store 1">
+                    <a href="./nike-home.php" ><img src="./images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
+                    <h3><a href="./nike-home.php" class="underline"><?=$store[$field_name_stores["name"]]; ?></a></h3>
+                    </div>
+                    <?php }; ?>
+                    <?php endforeach; ?>
+            
             </div>
         </div>
-
-        <!-- Featured Product -->
-        <div class="title-2">
-            <h1>Featured Products</h1>
-        </div>
-        <div class="feature-container ft2">
-            <div class="feature">
-                <!-- <div class="overlay">
-                    <p>15$</p>
-                </div> -->
-                <a href="#" ><img src="./images/don-chicken/des3.jpg" alt="cream brulee" width="200" height="200"></a>
-                <h3><a href="#">Cream Brulee</a></h3>
+        
+        <div class="container">
+            <!-- New Product -->
+            <div class="title-2">
+                <h1>New Product</h1>
             </div>
+            <div id="scroll" class="product-container">
 
-            <div class="feature">
-                <!-- <div class="overlay">
-                    <p>14$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/don-chicken/app4.jpg" alt="chicken roll" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Chicken Roll</a></h3>
-            </div>
+            <?php $product_count = 0;
+                foreach($products_data as $product): 
+                    if ($product_count == 10) {
+                        break;
+                    } else {
+                        $product_count++; ?>
 
-            <div class="feature">
-                <!-- <div class="overlay">
-                    <p>19$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/don-chicken/des4.jpg" alt="donut" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Donut</a></h3>
-            </div>
+                    <div class="product 1">
+                        <a href="./product-detail.php" ><img src="./images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
+                        <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
+                    </div>
+                    <?php }; ?>
+                    <?php endforeach; ?>
 
-            <div class="feature">
-                <!-- <div class="overlay">
-                    <p>21$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/don-chicken/main5.jpg" alt="fried chicken" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Fried Chicken</a></h3>
-            </div>
-
-            <div class="feature">
-                <!-- <div class="overlay">
-                    <p>13$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/don-chicken/app5.jpg" alt="pumpkin soup" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Pumpkin Soup</a></h3>
             </div>
         </div>
+        
+        <div class="container">
+            <!-- Featured Store -->
+            <div class="title-2 no-scroll-first">
+                <h1>Featured Stores</h1>
+            </div>
+            <div id="scroll" class="feature-container first">
+                <?php 
+                $feature_count = 0;
+                foreach ($stores_data as $store):
+                    if ($store[$field_name_stores["featured"]] == "TRUE") { 
+                        if ($feature_count == 10) {
+                            break;
+                        } else {
+                        $feature_count++; ?>
+
+                        <div class="feature first">
+                            <a href="./tgdd-home.php" ><img src="./images/index-img/G _ LAB.jpg" alt="glab-logo" width="200" height="200"></a>
+                            <h3><a href="./tgdd-home.php" class="underline"><?=$store[$field_name_stores["name"]];?></a></h3>
+                        </div>
+                        
+                <?php    } };
+                ?>
+                <?php endforeach;?>
+            </div>
+        </div>
+        
+        <div class="container">
+            <!-- Featured Product -->
+            <div class="title-2 no-scroll-last">
+                <h1>Featured Products</h1>
+            </div>
+            <div id="scroll" class="feature-container last">
+
+            <?php 
+                $feature_product_count = 0;
+                foreach ($products_data as $product):
+                    if ($product[$field_name_products["featured_in_mall"]] == "TRUE") { 
+                        if ($feature_product_count == 10) {
+                            break;
+                        } else {
+                        $feature_product_count++; ?>
+
+                            <div class="feature-last 1">
+                                <a href="./product-detail.php" ><img src="./images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
+                                <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
+                            </div>
+                        
+                <?php    } };
+                ?>
+                <?php endforeach;?>
+
+            </div>
+        </div>
+        
     </main>
-    <div class="push"></div>
     <footer>
         <nav>
             <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>
@@ -200,8 +212,8 @@
             <h3 class="right">Design by developer team</h3>
         </nav>
     </footer>
-
     <script src="./script/cookies.js" defer></script>
+    <script src="./script/automatic_scroll.js" defer></script>
     <script src="./script/check_login.js" defer></script>
 </body>
 </html>

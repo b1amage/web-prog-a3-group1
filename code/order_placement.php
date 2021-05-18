@@ -1,23 +1,32 @@
 <?php
     session_start();
-    if (isset($_SESSION["login"])) {
-        $my_account_link = "./user-information.php";
-    } else {
-        $my_account_link = "./login-box.php";
+    if(isset($_POST["submit_placement"])){
+        $_SESSION["submit_order_placement"] = true;
+        if(!isset($_SESSION["login"])){
+            header("location: login-box.php");
+        }else {
+            header("location: thanks.php");
+        }
     }
+?>
+
+<?php
+    session_start();
+    include('../backend/check_login.php');
+    $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="./css/contact.css">
+    <title>Order Placement</title>
+    <link rel="stylesheet" href="./css/order-placement.css">
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/cookies.css">
-    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/cookies.css">
+    <link rel="stylesheet" href="./css/add-to-cart.css">
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -93,60 +102,73 @@
         </main>
     </header>
 
-    <main>
-        <h1 class="title">Contact form</h1>
-        <div class="container">
-            <form method="get" action="#" enctype="text/plain">
-            <div clas="contact_form">
-                <label class="purpose" for="cont_pur">Your purpose of contact</label>
-                <select id="cont_pur">
-                    <option value="Business">Business</option>
-                    <option value="Feedback">Feedback</option>
-                    <option value="Others">Others</option>
-                </select>
+    <main class="grid-container">
+        <div class="your-cart">
+            <h1>Your Cart</h1>
+        </div>
+        <div class="product-1">
+            <img src="./images/index-img/jd1.jpg" alt="product1" width="200" height="200" id="img-1">
+            <div class="info">
+                <h6 id="product-name1">Ultra Boost 5.0</h6>
+                <p id="price1">$200</p>
             </div>
-            <div class="contact_form">
-                <p>Please enter your full name:<br><input id="full_name" required type="text" required minlength="3" maxlength="60" name="full name" placeholder="Your full name"></p>
-                <span id="name_alert"></span>
+            <div class="quantity-box">
+                <label for="quantity">Quantity</label>
+                <input type="number" name="quantity" id="quantity1" min="0" value="0" required>
             </div>
-            <div class="contact_form">
-                <p>Enter your email address:<br><input id="email" required type="email" name="email" placeholder="avcd123@email.com"></p>
-                <span id="email_alert"></span>
+        </div>
+        <div class="product-2">
+            <img src="./images/stores-image/nike-images/airzoom.jpg" alt="product2" width="200" height="200">
+            <div class="info">
+                <h6 id="product-name2">KFC Fried Chicken</h6>
+                <p id="price2">$10</p>
             </div>
-            <div class="contact_form">
-                <p>Enter your phone number:<br><input id="phone" required type="tel" name="phone number" placeholder="091 989 5451"></p>
-                <span id="phone_alert"></span>
+            <div class="quantity-box">
+                <label for="quantity">Quantity</label>
+                <input type="number" name="quantity" id="quantity2" min="0" value="0" required>
             </div>
-            <div class="contact_form">
-                <p>Method of contact</p>
-                <input type="radio" name="contact_method" id="email_method"><label for="email_method">By email</label>
-                <input type="radio" name="contact_method" id="phone_method"><label for="phone_method">By phone</label>
-                <br>
-                <span id="radio_alert"></span>   
+        </div>
+        <div class="product-3">
+            <img src="./images/stores-image/nike-images/football1.jpg" alt="product3" width="200" height="200">
+            <div class="info">
+                <h6 id="product-name3">Airking Rolex III</h6>
+                <p id="price3">$3100</p>
             </div>
-            <div class="contact_form">
-                <p>Contact days:</p>
-                <input type="checkbox" name="contactdays[]" value="monday" id="monday"><label for="monday">Monday</label>
-                <input type="checkbox" name="contactdays[]" value="tuesday" id="tuesday"><label for="tuesday">Tuesday</label>
-                <input type="checkbox" name="contactdays[]" value="wednesday" id="wednesday"><label for="wednesday">Wednesday</label>
-                <input type="checkbox" name="contactdays[]" value="thursday" id="thursday"><label for="thursday">Thursday</label>
-                <input type="checkbox" name="contactdays[]" value="friday" id="friday"><label for="friday">Friday</label>
-                <input type="checkbox" name="contactdays[]" value="saturday" id="saturday"><label for="saturday">Saturday</label>
-                <input type="checkbox" name="contactdays[]" value="sunday" id="sunday"><label for="sunday">Sunday</label>
-                <br>
-                <span id="checkbox_alert"></span>
+            <div class="quantity-box">
+                <label for="quantity">Quantity</label>
+                <input type="number" name="quantity" id="quantity3" min="0" value="0" required>
             </div>
-            <div class="contact_form">
-                <label class="message" for="msg">Your message:</label>
-                <br>
-                <textarea required id="msg" name="message" rows="15" cols="150" placeholder="Enter your message here!" onkeyup="keyboard_press_count(event)" onkeydown="backspace_count(event)"></textarea>
-                <span id="message_alert"></span>
+        </div>
+        
+        <div class="ship-cod">
+            <div class="first-line">
+                <h4>Discount code</h4>
+                <input type="text" name="discount" id="discount">
+                <input type="submit" value="Use" id="submit-discount-btn">
             </div>
-            <div class="contact_method">
-                <button type="reset" id="clear">Clear</button>
-                <button type="submit" id="submit">Submit</button>
+            <h5>Nguyen Luu Quoc Bao  |  0913981323</h5>
+            <p>181/78 Au Duong Lan, ward 2, District 8, Ho Chi Minh city</p>
+        </div>
+        <div class="cash">
+            <div class="money">
+                <h3 class="sub-title">Price</h3>
+                <h3 id="product-price">6270$</h3>
             </div>
-            </form>
+            <div class="ship">
+                <h4 class="sub-title">Ship fee</h4>
+                <h4 id="ship-price">60$</h4>
+            </div>
+            <div class="total">
+                <h2 class="sub-title">Total</h2>
+                <h2 id="total-price">6330$</h2>
+            </div>
+            <div class="button-container">
+                <form method = "post">
+                <button type ="submit" name= "submit_placement" class="push">Check Out</button></a>
+                </form>
+                <a href="./product-detail.php"><button>Continue Shopping</button></a>
+            </div>
+        
         </div>
     </main>
     <footer>
@@ -162,6 +184,6 @@
     </footer>
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
-    <script src="./script/validation_contact.js"></script>
+    <script src="./script/calculate_price_and_discount.js"></script>
 </body>
 </html>

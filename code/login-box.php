@@ -1,10 +1,7 @@
 <?php
     session_start();
-    if (isset($_SESSION["login"])) {
-        $my_account_link = "./user-information.php";
-    } else {
-        $my_account_link ="./login-box.php";
-    }
+    include('../backend/check_login.php');
+    $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,13 +9,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browse Created Time-Nike</title>
-    <link rel="stylesheet" href="./css/product-browse.css">
+    <title>Log in/Sign up</title>
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/login-box.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/cookies.css">
 </head>
+
 <body>
     <div id="overlay-cookies"></div>
     <div class="cookie-container">
@@ -94,99 +92,32 @@
     </header>
 
     <main>
-        <label for="details" class="category">Newest Products<i class="ti-angle-double-down"></i></label>
-        <input type="checkbox" name="details" id="details">
-
-        <div class="product-container pd1">
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>180$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/airzoom.jpg" alt="airzoom" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Airzoom</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>150$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/vapormax.jpg" alt="vapormax" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Vapormax</a></h3>
-            </div>
-    
-            <div class="product lst">
-                <!-- <div class="overlay">
-                    <p>115$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/tennis1.jpg" alt="tennis shoes" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Tennis shoes</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>185$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/lebron1.jpg" alt="lebron" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Lebron</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>59$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/hoodie1.jpg" alt="hoodie" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Hoodie</a></h3>
-            </div>
-            
-        </div>
-
-
-        <label for="details-5" class="category">Oldest Products<i class="ti-angle-double-down"></i></label>
-        <input type="checkbox" name="details" id="details-5">
-
-        <div class="product-container pd5">
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>200$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/aj1.jpg" alt="air jordan" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Air Jordan</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>190$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/aj2.jpg" alt="air jordan" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Air Jordan</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>55$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/hoodie2.jpg" alt="hoodie" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Hoodie</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>39$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/jacket.jpg" alt="jacket" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Jacket</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>50$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/sweater.jpg" alt="sweater" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Sweater</a></h3>
-            </div>
-        </div>
+        <div id="login-box">
+            <form action="../backend/authentication.php" method="POST" onsubmit="return checkPassword()">
+                <input required type="text" id="email/phone" name="email/phone" autocomplete="off" placeholder="Email or phone number">  
+                <input required type="password" id="password" name="password" placeholder="Password">
+                <div id="error">Invalid password</div>
+                <h5 style="color:red;text-align:center">
+                    <?php 
+                        if (isset($_GET['error_message'])) {
+                            echo base64_decode($_GET['error_message']);
+                        }
+                    ?>
+                </h5>
+                <input type="submit" name="button-submit" value="Login">
+                <div id="forgot-password">
+                    <a href="forgot-password.php">Forgot password?</a>
+                </div>
+                <div id="line">
+                    <hr>
+                </div>
+                <div id="register">
+                    <a href="./register.php" name="button-register">Register</a>
+                </div>
+            </form>
+        </div>   
     </main>
-    <div class="push"></div>
+    
     <footer>
         <nav>
             <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>
@@ -199,6 +130,9 @@
         </nav>
     </footer>
     <script src="./script/cookies.js" defer></script>
-    <script src="./script/check_login.js" defer></script>
-</body>
-</html>
+    <!-- <script src="./script/check_password.js" defer></script> -->
+    <!-- <script src="./script/check_login.js" defer></script> -->
+    </body>
+    
+
+    

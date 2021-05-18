@@ -1,10 +1,7 @@
 <?php
     session_start();
-    if (isset($_SESSION["login"])) {
-        $my_account_link = "./user-information.php";
-    } else {
-        $my_account_link ="./login-box.php";
-    }
+    include('../backend/check_login.php');
+    $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browse Category-TheGioiDiDong</title>
+    <title>Browse Category-Nike</title>
     <link rel="stylesheet" href="./css/product-browse.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -94,233 +91,235 @@
     </header>
 
     <main>
-        <label for="details" class="category">Phones<i class="ti-angle-double-down"></i></label>
+        <label for="details" class="category">Running<i class="ti-angle-double-down"></i></label>
         <input type="checkbox" name="details" id="details">
 
         <div class="product-container pd1">
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>$1434.78</p>
+                    <p>180$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/iphone12pro.jpg" alt="IPhone 12 Pro" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">IPhone 12 Pro</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/airzoom.jpg" alt="airzoom" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Airzoom</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>$364.78</p>
+                    <p>120$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/opporeno5.jpg" alt="Oppo Reno 5" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Oppo Reno 5</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/airmax.jpg" alt="airmax" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Airmax</a></h3>
             </div>
     
             <div class="product lst">
                 <!-- <div class="overlay">
-                    <p>$913.04</p>
+                    <p>150$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/xiaomi_mi_11_5G.jpg" alt="Xiaomi Mi 11 5G" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Xiaomi Mi 11 5G</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/vapormax.jpg" alt="vapormax" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Vapormax</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>$296.55</p>
+                    <p>170$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/vivoY12s.jpg" alt="Vivo Y12s" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Vivo Y12s</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/pegasus.jpg" alt="pegasus" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Pegasus</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>$120</p>
+                    <p>100$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/nokia5.4.jpg" alt="Nokia 5.4" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Nokia 5.4</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/run2.jpg" alt="airmax" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Airmax</a></h3>
             </div>
-            
         </div>
 
 
-        <label for="details-2" class="category">Laptops<i class="ti-angle-double-down"></i></label>
+        <label for="details-2" class="category">Tennis<i class="ti-angle-double-down"></i></label>
         <input type="checkbox" name="details" id="details-2">
 
         <div class="product-container pd2">
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>$1980</p>
+                    <p>115$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/macbook_pro.jpeg" alt="Macbook Pro" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Macbook Pro 13-inch</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/tennis1.jpg" alt="tennis shoes" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Tennis shoes</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>1029$</p>
+                    <p>80$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/asus_vivobook15.jpg" alt="Asus Vivobook 15" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Asus Vivobook 15</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/tennis racket.jpg" alt="tennis racket" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Tennis racket</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>1828$</p>
+                    <p>180$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/xps_13_9370.jpg" alt="Dell XPS 13" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Dell XPS 13 9370</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/full_set_tennis.jpg" alt="full set" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Full set tennis</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>975$</p>
+                    <p>55$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/dell_vostro_3500.jpg" alt="Dell Vostro 3500" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Dell Vostro 3500</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/tennis_ball.jpg" alt="ball" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Tennis ball</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>1529$</p>
+                    <p>56$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/hpenvy.jpg" alt="HP Envy 13" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">HP Envy 13</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/tennis racket 2.jpg" alt="tennis racket" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Tennis racket</a></h3>
             </div>
         </div>
 
-        <label for="details-3" class="category">Tablets<i class="ti-angle-double-down"></i></label>
+        <label for="details-3" class="category">Basketball<i class="ti-angle-double-down"></i></label>
         <input type="checkbox" name="details" id="details-3">
 
         <div class="product-container pd3">
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>120$</p>
+                    <p>200$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/galaxy_tab_A.jpg" alt="Samsung Galaxy Tab A10" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Samsung Galaxy Tab A10</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/aj1.jpg" alt="air jordan" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Air Jordan</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>679$</p>
+                    <p>190$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/ipad-pro-2018.jpg" alt="Ipad Pro 2018" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Ipad Pro 2018</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/aj2.jpg" alt="air jordan" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Air Jordan</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>468$</p>
+                    <p>185$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/ipad_air_4.jpg" alt="Ipad Air 4" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Ipad Air 4</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/lebron1.jpg" alt="lebron" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Lebron</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>298$</p>
+                    <p>680$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/lenovo_tab.jpg" alt="Lenovo Tab" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Lenovo Tab</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/full_set_basketball.jpg" alt="full set" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">full set</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>312$</p>
+                    <p>62$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/huawei_mate.jpg" alt="Huawei Mate" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Huawei Mate</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/basketball1.jpg" alt="basketball" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Basketball</a></h3>
             </div>
         </div>
 
-        <label for="details-4" class="category">Accessories<i class="ti-angle-double-down"></i></label>
+
+        <label for="details-4" class="category">Casual<i class="ti-angle-double-down"></i></label>
         <input type="checkbox" name="details" id="details-4">
 
         <div class="product-container pd4">
             <div class="product">
                 <!-- <div class="overlay">
+                    <p>26$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/pants.jpg" alt="pants" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Pants</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>27$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/shorts.jpg" alt="shorts" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Shorts</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>35$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/tshirt1.jpg" alt="t-shirt" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">T-shirt</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>45$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/tshirt2.jpg" alt="t-shirt" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">T-shirt</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
                     <p>12$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/usb_type_c.jpg" alt="Usb Type C Wire" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Usb Type C Wire</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>$450</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/airpod_pro.jpg" alt="Airpod Pro" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Airpod Pro</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>$89</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/anker_powercore.jpg" alt="Anker Powercore Battery" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Anker Powercore Battery</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>25$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/sandisk_microsd_128gb.jpg" alt="Micro Usb 128GB Sandisk" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Micro Usb 128GB Sandisk</a></h3>
-            </div>
-    
-            <div class="product">
-                <!-- <div class="overlay">
-                    <p>9$</p>
-                </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/iphone_case.jpg" alt="Iphone Case" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Iphone Case</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/socks.jpg" alt="socks" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Socks</a></h3>
             </div>
         </div>
-        
-        <label for="details-5" class="category">Others<i class="ti-angle-double-down"></i></label>
+
+
+        <label for="details-5" class="category">Clothing<i class="ti-angle-double-down"></i></label>
         <input type="checkbox" name="details" id="details-5">
 
         <div class="product-container pd5">
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>18$</p>
+                    <p>59$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/jetflash_300_8GB.jpg" alt="Jet Flash 300 8GB" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Jet Flash 300 8GB</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/hoodie1.jpg" alt="hoodie" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Hoodie</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>489$</p>
+                    <p>55$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/xiaomi_bud.jpg" alt="Xiaomi Bud True Wireless" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Xiaomi Bud True Wireless</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/hoodie2.jpg" alt="hoodie" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Hoodie</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>218$</p>
+                    <p>39$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/router_wifi_mesh_3.jpg" alt="Router Wifi Mesh 3" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Router Wifi Mesh 3</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/jacket.jpg" alt="jacket" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Jacket</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>715$</p>
+                    <p>46$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/galaxy_watch_active.jpg" alt="Samsung Galaxy Watch Active" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Samsung Galaxy Watch Active</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/jacket2.jpg" alt="jacket" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Jacket</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>124$</p>
+                    <p>50$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/nokia5.4.jpg" alt="Nokia 5.4" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Nokia 5.4</a></h3>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/sweater.jpg" alt="sweater" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Sweater</a></h3>
             </div>
         </div>
     </main>
+    <div class="push"></div>
     <footer>
         <nav>
             <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>

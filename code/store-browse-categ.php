@@ -1,10 +1,7 @@
 <?php
     session_start();
-    if (isset($_SESSION["login"])) {
-        $my_account_link = "./user-information.php";
-    } else {
-        $my_account_link ="./login-box.php";
-    }
+    include('../backend/check_login.php');
+    $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browse Stores By Categories</title>
-    <link rel="stylesheet" href="./css/store-browse-name.css">
+    <link rel="stylesheet" href="./css/store-browse-categ.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
@@ -94,37 +91,10 @@
     </header>
 
     <main>
-        <div class="title">Browse Store By Name</div>
-        <div class="categ-container">
-            <select class="name-categ" name="name-categ">
-                <option disabled selected>Select the starting letter</option>
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
-                <option value="E">E</option>
-                <option value="F">F</option>
-                <option value="G">G</option>
-                <option value="H">H</option>
-                <option value="I">I</option>
-                <option value="J">J</option>
-                <option value="K">K</option>
-                <option value="L">L</option>
-                <option value="M">M</option>
-                <option value="N">N</option>
-                <option value="O">O</option>
-                <option value="P">P</option>
-                <option value="Q">Q</option>
-                <option value="R">R</option>
-                <option value="S">S</option>
-                <option value="T">T</option>
-                <option value="U">U</option>
-                <option value="V">V</option>
-                <option value="W">W</option>
-                <option value="X">Y</option>
-                <option value="Y">Z</option>
-            </select>
-        </div>
+        <div class="title">Browse Store By Categories</div>
+        <label for="details" class="category">Department Stores<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details">
+
         <div class="store-container s1">
             <div class="store">
                 <!-- <div class="overlay">
@@ -165,7 +135,13 @@
                 <a href="./donchicken-home.php" ><img src="./images/stores-image/department_stores/familymart.jpg" alt="department store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">FamilyMart</a></h3>
             </div>
-            
+        </div>
+
+
+        <label for="details-2" class="category">Grocery Stores<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-2">
+
+        <div class="store-container s2">
             <div class="store">
                 <!-- <div class="overlay">
                     <p>Grocery Store</p>
@@ -205,7 +181,12 @@
                 <a href="./donchicken-home.php" ><img src="./images/stores-image/grocery_stores/vinmart.jpg" alt="grocery store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">VinMart</a></h3>
             </div>
+        </div>
 
+        <label for="details-3" class="category">Restaurants<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-3">
+
+        <div class="store-container s3">
             <div class="store">
                 <!-- <div class="overlay">
                     <p>Chickens & Fast Food</p>
@@ -245,7 +226,11 @@
                 <a href="./donchicken-home.php" ><img src="./images/stores-image/restaurants/wrap&roll.jpg" alt="Restaurant" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Wrap & Roll</a></h3>
             </div>
+        </div>
+        <label for="details-4" class="category">Clothing Stores<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-4">
 
+        <div class="store-container s4">
             <div class="store">
                 <!-- <div class="overlay">
                     <p>Clothes</p>
@@ -285,6 +270,11 @@
                 <a href="./donchicken-home.php" ><img src="./images/stores-image/clothing_stores/calvin.jpg" alt="clothing store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Calvin Klein</a></h3>
             </div>
+        </div>
+        <label for="details-5" class="category">Accessory Stores<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-5">
+
+        <div class="store-container s5">
             <div class="store">
                 <!-- <div class="overlay">
                     <p>Vintage & Recycled Accessories</p>
@@ -324,6 +314,12 @@
                 <a href="./donchicken-home.php" ><img src="./images/stores-image/accessory_stores/adler.jpg" alt="accessory store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Adler</a></h3>
             </div>
+
+        </div>
+        <label for="details-6" class="category">Pharmacies Stores<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-6">
+
+        <div class="store-container s6">
             <div class="store">
                 <!-- <div class="overlay">
                     <p>Pharmacies</p>
@@ -363,6 +359,11 @@
                 <a href="./donchicken-home.php" ><img src="./images/stores-image/pharmacies/terrywhite.jpg" alt="pharmacies" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">TerryWhite Chenmart</a></h3>
             </div>
+        </div>
+        <label for="details-7" class="category">Technology Stores<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-7">
+
+        <div class="store-container s7">
             <div class="store">
                 <!-- <div class="overlay">
                     <p>Phones, Tablets & Laptop</p>
@@ -402,6 +403,11 @@
                 <a href="./donchicken-home.php" ><img src="./images/stores-image/technology_stores/cellphones.jpg" alt="technology store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">CellphoneS</a></h3>
             </div>
+        </div>
+        <label for="details-8" class="category">Pet Stores<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-8">
+
+        <div class="store-container s8">
             <div class="store">
                 <!-- <div class="overlay">
                     <p>Pets</p>
@@ -441,6 +447,11 @@
                 <a href="./donchicken-home.php" ><img src="./images/stores-image/pet_stores/petsmart.jpg" alt="pet storetoy store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Petsmart</a></h3>
             </div>
+        </div>
+        <label for="details-9" class="category">Toy Stores<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-9">
+
+        <div class="store-container s9">
             <div class="store">
                 <!-- <div class="overlay">
                     <p>Kid Toys</p>
@@ -480,6 +491,11 @@
                 <a href="./donchicken-home.php" ><img src="./images/stores-image/toy_stores/disney.jpg" alt="toy store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Disney</a></h3>
             </div>
+        </div>
+        <label for="details-10" class="category">Specialty Stores<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-10">
+
+        <div class="store-container s10">
             <div class="store">
                 <!-- <div class="overlay">
                     <p>Specialties</p>
@@ -487,12 +503,94 @@
                 <a href="./donchicken-home.php" ><img src="./images/stores-image/specialty_stores/annam.jpg" alt="specialty storethrift store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">An Nam Gourmet</a></h3>
             </div>
+        </div>
+        <label for="details-11" class="category">Thrift Stores<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-11">
 
+        <div class="store-container s11">
+            <div class="store">
+                <!-- <div class="overlay">
+                    <p>Thrift store</p>
+                </div> -->
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/thrift_stores/deerus.jpg" alt="thrift store" width="200" height="200"></a>
+                <h3><a href="./donchicken-home.php">Deerus</a></h3>
+            </div>
+    
+            <div class="store">
+                <!-- <div class="overlay">
+                    <p>Thrift store</p>
+                </div> -->
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/thrift_stores/flyp.jpg" alt="thrift store" width="200" height="200"></a>
+                <h3><a href="./donchicken-home.php">FlyP</a></h3>
+            </div>
+    
+            <div class="store">
+                <!-- <div class="overlay">
+                    <p>Thrift store</p>
+                </div> -->
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/thrift_stores/impact.jpg" alt="thrift store" width="200" height="200"></a>
+                <h3><a href="./donchicken-home.php">Impact Thrift Store</a></h3>
+            </div>
+            </div>
+        </div>
+        <label for="details-12" class="category">Service<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-12">
+
+        <div class="store-container s12">
+            <div class="store">
+                <!-- <div class="overlay">
+                    <p>Thrift store</p>
+                </div> -->
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/thrift_stores/deerus.jpg" alt="service" width="200" height="200"></a>
+                <h3><a href="./donchicken-home.php">Deerus</a></h3>
+            </div>
+    
+            <div class="store">
+                <!-- <div class="overlay">
+                    <p>Thrift store</p>
+                </div> -->
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/thrift_stores/flyp.jpg" alt="service" width="200" height="200"></a>
+                <h3><a href="./donchicken-home.php">FlyP</a></h3>
+            </div>
+    
+            <div class="store">
+                <!-- <div class="overlay">
+                    <p>Thrift store</p>
+                </div> -->
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/thrift_stores/impact.jpg" alt="service" width="200" height="200"></a>
+                <h3><a href="./donchicken-home.php">Impact Thrift Store</a></h3>
+            </div>
+        </div>
+        <label for="details-26" class="category">Kiosks<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-26">
+
+        <div class="store-container s26">
+            <div class="store">
+                <!-- <div class="overlay">
+                    <p>Thrift store</p>
+                </div> -->
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/thrift_stores/deerus.jpg" alt="Kiosks" width="200" height="200"></a>
+                <h3><a href="./donchicken-home.php">Deerus</a></h3>
+            </div>
+    
+            <div class="store">
+                <!-- <div class="overlay">
+                    <p>Thrift store</p>
+                </div> -->
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/thrift_stores/flyp.jpg" alt="Kiosks" width="200" height="200"></a>
+                <h3><a href="./donchicken-home.php">FlyP</a></h3>
+            </div>
+
+            <div class="store">
+                <!-- <div class="overlay">
+                    <p>Thrift store</p>
+                </div> -->
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/thrift_stores/impact.jpg" alt="service" width="200" height="200"></a>
+                <h3><a href="./donchicken-home.php">Impact Thrift Store</a></h3>
+            </div>
 
         </div>
-       
     </main>
-
     <footer>
         <nav>
             <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>
@@ -507,5 +605,4 @@
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
 </body>
-</html>
 </html>

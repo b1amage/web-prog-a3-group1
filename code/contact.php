@@ -1,10 +1,7 @@
 <?php
     session_start();
-    if (isset($_SESSION["login"])) {
-        $my_account_link = "./user-information.php";
-    } else {
-        $my_account_link ="./login-box.php";
-    }
+    include('../backend/check_login.php');
+    $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,12 +9,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs</title>
+    <title>Contact</title>
+    <link rel="stylesheet" href="./css/contact.css">
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/faqs.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./css/cookies.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/footer.css">
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -94,65 +91,59 @@
     </header>
 
     <main>
-        <div class="box">
-            <h2 class="title">FAQs</h1>
-            <div class="FAQs">
-                <details>
-                    <summary>How to sign in to our website?</summary>
-                    <p>First you would need to register our account in the account setting, all you need to do is to fill in the contact form and click register andthen you can have our accont.</p>
-                </details>
+        <h1 class="title">Contact form</h1>
+        <div class="container">
+            <form method="get" action="#" enctype="text/plain">
+            <div clas="contact_form">
+                <label class="purpose" for="cont_pur">Your purpose of contact</label>
+                <select id="cont_pur">
+                    <option value="Business">Business</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Others">Others</option>
+                </select>
             </div>
-            <div class="FAQs">
-                <details>
-                    <summary>Do you need an account to be able to buy our product?</summary>
-                    <p>Well actually it depends on many aspects, if you are going directly to our stores, then you don't need an account.</p>
-                    <p>However, if you've decided to buy our product online, then you would need an account so that we can keep track of the customers' orders. If the customers do not have any account, they only can view our products.</p>
-                </details>
+            <div class="contact_form">
+                <p>Please enter your full name:<br><input id="full_name" required type="text" required minlength="3" maxlength="60" name="full name" placeholder="Your full name"></p>
+                <span id="name_alert"></span>
             </div>
-            <div class="FAQs">
-                <details>
-                    <summary>Where is your store located?</summary>
-                    <p>Our store located at Le Thanh Ton street distrct 1, near Nguyen Hue walking street, our stores is very hard to miss.</p>
-                </details>
+            <div class="contact_form">
+                <p>Enter your email address:<br><input id="email" required type="email" name="email" placeholder="avcd123@email.com"></p>
+                <span id="email_alert"></span>
             </div>
-            <div class="FAQs">
-                <details>
-                    <summary>Are there any ways for me to send feedback?</summary>
-                    <p>Yes, in that case, our website provided a contact page for every customers, for them to send feedback and to find assistance during shopping online.</p>
-                </details>
+            <div class="contact_form">
+                <p>Enter your phone number:<br><input id="phone" required type="tel" name="phone number" placeholder="091 989 5451"></p>
+                <span id="phone_alert"></span>
             </div>
-            <div class="FAQs">
-                <details>
-                    <summary>Does your store have any branches?</summary>
-                    <p>No,  we do not have any branches yet, but we have plan to open more stores around HCMc and Hanoi.</p>
-                </details>
+            <div class="contact_form">
+                <p>Method of contact</p>
+                <input type="radio" name="contact_method" id="email_method"><label for="email_method">By email</label>
+                <input type="radio" name="contact_method" id="phone_method"><label for="phone_method">By phone</label>
+                <br>
+                <span id="radio_alert"></span>   
             </div>
-            <div class="FAQs">
-                <details>
-                    <summary>How do I order my stuff via this website?</summary>
-                    <p>You can click the product, and then choose to add to the cart, and from order placement UI, you can check all the information such as ship fees, from on you just buy the product.</p>
-                </details>
+            <div class="contact_form">
+                <p>Contact days:</p>
+                <input type="checkbox" name="contactdays[]" value="monday" id="monday"><label for="monday">Monday</label>
+                <input type="checkbox" name="contactdays[]" value="tuesday" id="tuesday"><label for="tuesday">Tuesday</label>
+                <input type="checkbox" name="contactdays[]" value="wednesday" id="wednesday"><label for="wednesday">Wednesday</label>
+                <input type="checkbox" name="contactdays[]" value="thursday" id="thursday"><label for="thursday">Thursday</label>
+                <input type="checkbox" name="contactdays[]" value="friday" id="friday"><label for="friday">Friday</label>
+                <input type="checkbox" name="contactdays[]" value="saturday" id="saturday"><label for="saturday">Saturday</label>
+                <input type="checkbox" name="contactdays[]" value="sunday" id="sunday"><label for="sunday">Sunday</label>
+                <br>
+                <span id="checkbox_alert"></span>
             </div>
-            <div class="FAQs">
-                <details>
-                    <summary>What is our mall content?</summary>
-                    <p>We have many variety of products, but mainly, we are focusing on clothing such as shoes, t-shirt, jeans, and watches.</p>
-                    <p>However, we also have a foodcourt and some other restaurants in our mall.</p>
-                </details>
+            <div class="contact_form">
+                <label class="message" for="msg">Your message:</label>
+                <br>
+                <textarea required id="msg" name="message" rows="15" cols="150" placeholder="Enter your message here!" onkeyup="keyboard_press_count(event)" onkeydown="backspace_count(event)"></textarea>
+                <span id="message_alert"></span>
             </div>
-            <div class="FAQs">
-                <details>
-                    <summary>Can the customers return the products they didn't satisfy?</summary>
-                    <p>It depends on the shop you buy at our mall, but usually, you can return within 5 to 14 days (with the bill).</p>
-                </details>
+            <div class="contact_method">
+                <button type="reset" id="clear">Clear</button>
+                <button type="submit" id="submit">Submit</button>
             </div>
-            <div class="FAQs">
-                <details>
-                    <summary>Discount policy</summary>
-                    <p>We would have many discounts through out the years such as blackfriday or special events.</p>
-                    <p>Long term customers can have a member card which can discount up to 15%.</p>
-                </details>
-            </div>
+            </form>
         </div>
     </main>
     <footer>
@@ -168,5 +159,6 @@
     </footer>
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
+    <script src="./script/validation_contact.js"></script>
 </body>
 </html>

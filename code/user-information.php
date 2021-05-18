@@ -1,10 +1,8 @@
 <?php
     session_start();
-    if (isset($_SESSION["login"])) {
-        $my_account_link = "./user-information.php";
-    } else {
-        $my_account_link = "./login-box.php";
-    }
+    $matched_account = $_SESSION['matched_account'];
+    include('../backend/check_login.php');
+    $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,13 +10,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copyright</title>
+    <title>My Account</title>
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/user-information.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/cookies.css">
-    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./css/copyright.css">
 </head>
+
 <body>
     <div id="overlay-cookies"></div>
     <div class="cookie-container">
@@ -92,24 +91,34 @@
             </nav>
         </main>
     </header>
-
     <main>
-        <div class="container">
-            <h1>Copyright</h1>
-            <div class="line"></div>
-            <p>All content included in or made available through any Retailez Service, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software is the property of Retailez or its content suppliers and protected by United States and international copyright laws. The compilation of all content included in or made available through any Retailez Service is the exclusive property of Retailez and protected by U.S. and international copyright laws.</p>
-            <p>Retailez International Limited. All Rights Reserved. Reproduction prohibited other than in accordance with the following copyright notice and limited reproduction permissions.
-            The contents of these pages are © Retailez International Limited, unless otherwise stated, or in some cases of Rampai Niaga Sdn Bhd. Reproduction of part or all of the contents in any form is prohibited other than in accordance with the following permissions:</p>
-            <h2>License To Copy For Personal Use</h2>
-            <p>You may make copies of the Site as necessary incidental acts during your viewing of it, and you may take a print for your personal use of so much of the site as is reasonable for private purposes.</p>
-            <h2>License To Recopy For Limited Purposes</h2>
-            <p>You may recopy the material to individual third parties for their personal information only, but only if the following conditions are met:</p>
-            <ul>
-                <li>You acknowledge the web pages of Retailez as the source of the material. You must include such acknowledgement along with the top-level URL from Retailez website in the copy of the material.</li>
-                <li>You inform the third party that these conditions apply to him or her and that he/she must comply with them.</li>
-                <li>This license to recopy does not permit incorporation of the material or any part of it in any other work or publication, whether in hard copy or electronic or any other form. In particular (but without limitation) no part of a page from the website of Retailez may be distributed or copied for any commercial purpose.</li>
-                <li>No part of the website of The Body Shop may be reproduced on or transmitted to or stored in any other web site or other form of electronic retrieval system.</li>
-            </ul>
+        <div id="user-information">
+            <div id="title">
+                <h1>My account</h1>
+            </div>
+            <div id="info">
+                <div id="profile-picture">
+                    <img src="./images/about-images/tuan-image.jpeg" alt="profile-picture">
+                </div>
+                <ul> 
+                    <!-- display the first and last name of the account -->
+                    <li><span>Full name: </span><?=$matched_account[4]." ".$matched_account[5];?></li>
+                    <!-- display the email of the account -->
+                    <li><span>Email: </span><a id="login-email" href=<?="mailto:{$matched_account[0]}"?>><?=$matched_account[0]?></a></li>
+                    <!-- display the phone number of the account -->                    
+                    <li><span>Phone number: </span><?=$matched_account[1]?></li>
+                    <!-- display the address of the account -->
+                    <li><span>Address: </span><?=$matched_account[6]?></li>
+                    <!-- display the city of the account -->
+                    <li><span>City: </span><?=$matched_account[7]?></li>
+                    <!-- display the zipcode of the account --> 
+                    <li><span>Zip code: </span><?=$matched_account[8]?></li>
+                    <!-- display the country of the account -->
+                    <li><span>Country: </span><?=$matched_account[10]?></li>
+                    <!-- display the account type of the account -->
+                    <li><span>Account type: </span><?=$matched_account[11]?></li>
+                </ul>
+            </div> 
         </div>
     </main>
     <footer>
@@ -125,5 +134,7 @@
     </footer>
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
-</body>
-</html>
+    <script src="./script/update_email.js" defer></script>
+    </body>
+
+    

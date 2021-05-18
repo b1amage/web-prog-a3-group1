@@ -1,10 +1,7 @@
 <?php
     session_start();
-    if (isset($_SESSION["login"])) {
-        $my_account_link = "./user-information.php";
-    } else {
-        $my_account_link ="./login-box.php";
-    }
+    include('../backend/check_login.php');
+    $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,12 +9,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You</title>
+    <title>Copyright</title>
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./css/thanks.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/cookies.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/copyright.css">
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -93,32 +90,37 @@
         </main>
     </header>
 
-<main>
-    <div class="content-tks">
-        <div class="button-container">
-            <img src="./images/index-img/check.png" alt="check button" height="180px" width="180px">
+    <main>
+        <div class="container">
+            <h1>Copyright</h1>
+            <div class="line"></div>
+            <p>All content included in or made available through any Retailez Service, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software is the property of Retailez or its content suppliers and protected by United States and international copyright laws. The compilation of all content included in or made available through any Retailez Service is the exclusive property of Retailez and protected by U.S. and international copyright laws.</p>
+            <p>Retailez International Limited. All Rights Reserved. Reproduction prohibited other than in accordance with the following copyright notice and limited reproduction permissions.
+            The contents of these pages are © Retailez International Limited, unless otherwise stated, or in some cases of Rampai Niaga Sdn Bhd. Reproduction of part or all of the contents in any form is prohibited other than in accordance with the following permissions:</p>
+            <h2>License To Copy For Personal Use</h2>
+            <p>You may make copies of the Site as necessary incidental acts during your viewing of it, and you may take a print for your personal use of so much of the site as is reasonable for private purposes.</p>
+            <h2>License To Recopy For Limited Purposes</h2>
+            <p>You may recopy the material to individual third parties for their personal information only, but only if the following conditions are met:</p>
+            <ul>
+                <li>You acknowledge the web pages of Retailez as the source of the material. You must include such acknowledgement along with the top-level URL from Retailez website in the copy of the material.</li>
+                <li>You inform the third party that these conditions apply to him or her and that he/she must comply with them.</li>
+                <li>This license to recopy does not permit incorporation of the material or any part of it in any other work or publication, whether in hard copy or electronic or any other form. In particular (but without limitation) no part of a page from the website of Retailez may be distributed or copied for any commercial purpose.</li>
+                <li>No part of the website of The Body Shop may be reproduced on or transmitted to or stored in any other web site or other form of electronic retrieval system.</li>
+            </ul>
         </div>
-
-        <div class="text-tks">
-            <h1>Order number: #123456</h1>
-            <h4>You are all set</h4>
-            <h1>Thank you for choosing us</h1>
-            
-        </div>
-        
-    </div>
-</main>
-<footer>
-    <nav>
-        <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>
-        <ul>
-            <li><a href="./copyright.php">Copyright</a></li>
-            <li><a href="./tos.php">ToS</a></li>
-            <li><a href="./policy.php">Privacy Policy</a></li>
-        </ul>
-        <h3 class="right">Design by developer team</h3>
-    </nav>
-</footer>
-<script src="./script/cookies.js" defer></script>
-<script src="./script/check_login.js" defer></script>
+    </main>
+    <footer>
+        <nav>
+            <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>
+            <ul>
+                <li><a href="./copyright.php">Copyright</a></li>
+                <li><a href="./tos.php">ToS</a></li>
+                <li><a href="./policy.php">Privacy Policy</a></li>
+            </ul>
+            <h3 class="right">Design by developer team</h3>
+        </nav>
+    </footer>
+    <script src="./script/cookies.js" defer></script>
+    <script src="./script/check_login.js" defer></script>
 </body>
+</html>

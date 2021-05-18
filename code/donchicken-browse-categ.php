@@ -1,10 +1,7 @@
 <?php
     session_start();
-    if (isset($_SESSION["login"])) {
-        $my_account_link = "./user-information.php";
-    } else {
-        $my_account_link ="./login-box.php";
-    }
+    include('../backend/check_login.php');
+    $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browse Time-DonChicken</title>
+    <title>Browse Categories-DonChicken</title>
     <link rel="stylesheet" href="./css/product-browse.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -94,7 +91,7 @@
     </header>
 
     <main>
-        <label for="details" class="category">New arrivals<i class="ti-angle-double-down"></i></label>
+        <label for="details" class="category">Appetizer<i class="ti-angle-double-down"></i></label>
         <input type="checkbox" name="details" id="details">
 
         <div class="product-container pd1">
@@ -129,10 +126,18 @@
                 <a href="./product-detail.php" ><img src="./images/don-chicken/app4.jpg" alt="chicken roll" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Chicken Roll</a></h3>
             </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>10$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/app5.jpg" alt="pumpkin soup" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Pumkims Soup</a></h3>
+            </div>
         </div>
 
 
-        <label for="details-2" class="category">New 2021<i class="ti-angle-double-down"></i></label>
+        <label for="details-2" class="category">Main<i class="ti-angle-double-down"></i></label>
         <input type="checkbox" name="details" id="details-2">
 
         <div class="product-container pd2">
@@ -164,7 +169,7 @@
                 <!-- <div class="overlay">
                     <p>17$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/don-chicken/main4.jpg" alt="steam chicken" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/main4.jpg" alt="steamed chicken" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Steamed Chicken</a></h3>
             </div>
     
@@ -173,54 +178,145 @@
                     <p>19$</p>
                 </div> -->
                 <a href="./product-detail.php" ><img src="./images/don-chicken/main5.jpg" alt="fried chicken" width="200" height="200"></a>
-                <h3><a href="#">Fried Chicken</a></h3>
+                <h3><a href="./product-detail.php">Fried Chicken</a></h3>
             </div>
         </div>
 
-        <label for="details-5" class="category">Classic<i class="ti-angle-double-down"></i></label>
+        <label for="details-3" class="category">Dessert<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-3">
+
+        <div class="product-container pd3">
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>20$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/des1.jpg" alt="chocolate cake" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Chocolate Cake</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>15$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/des2.jpg" alt="strawber cream" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Strawberry Cream</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>18$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/des3.jpg" alt="cream brulee" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Cream Brulee</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>15$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/des4.jpg" alt="donut" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Donut-</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>12$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/des5.jpg" alt="mango cream" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Mango Cream</a></h3>
+            </div>
+        </div>
+        <label for="details-4" class="category">Drinks<i class="ti-angle-double-down"></i></label>
+        <input type="checkbox" name="details" id="details-4">
+
+        <div class="product-container pd4">
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>6$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/dri1.jpg" alt="pepsi" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Pepsi</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>7$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/dri2.jpg" alt="7up" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">7UP</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>3$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/dri3.jpg" alt="water" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Water</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>5$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/dri4.jpg" alt="yogurt" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Yogurt</a></h3>
+            </div>
+    
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>2$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/don-chicken/dri5.jpg" alt="ice-tea" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Ice-tea</a></h3>
+            </div>
+        </div>
+
+
+        <label for="details-5" class="category">Beverages<i class="ti-angle-double-down"></i></label>
         <input type="checkbox" name="details" id="details-5">
 
         <div class="product-container pd5">
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>25$</p>
+                    <p>5$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/don-chicken/class1.jpg" alt="boneless chicken" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Boneless chicken</a></h3>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/bev.jpg" alt="soju chumchurum" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Soju Chumchurum</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>35$</p>
+                    <p>5$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/don-chicken/class2.jpg" alt="beef and cheesy rice" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Beef and cheesy rice</a></h3>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/bev2.jpg" alt="soju chamisul" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Soju Chamisul</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>28$</p>
+                    <p>3$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./images/don-chicken/class3.jpg" alt="cheese chicken" width="200" height="200"></a>
-                <h3><a href="./product-detail.php">Cheese chicken</a></h3>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/bev3.jpg" alt="heniken" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Heniken</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>20$</p>
+                    <p>3-5$</p>
                 </div> -->
-                <a href="#" ><img src="./images/don-chicken/class4.jpg" alt="french fries" width="200" height="200"></a>
-                <h3><a href="#">French fries</a></h3>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/bev4.jpg" alt="tiger beer" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Tiger</a></h3>
             </div>
     
             <div class="product">
                 <!-- <div class="overlay">
-                    <p>16$</p>
+                    <p>2.5$</p>
                 </div> -->
-                <a href="#" ><img src="./images/don-chicken/class5.jpg" alt="pancakes" width="200" height="200"></a>
-                <h3><a href="#">Pancakes</a></h3>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/bev5.jpg" alt="strong bow" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Strong Bow</a></h3>
             </div>
         </div>
+    </main>
     </main>
     <footer>
         <nav>

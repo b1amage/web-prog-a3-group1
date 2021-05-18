@@ -1,35 +1,20 @@
 <?php
     session_start();
-    if(isset($_POST["submit_placement"])){
-        $_SESSION["submit_order_placement"] = true;
-        if(!isset($_SESSION["login"])){
-            header("location: login-box.php");
-        }else {
-            header("location: thanks.php");
-        }
-    }
-?>
-
-<?php
-    session_start();
-    if (isset($_SESSION["login"])) {
-        $my_account_link = "./user-information.php";
-    } else {
-        $my_account_link ="./login-box.php";
-    }
+    include('../backend/check_login.php');
+    $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Placement</title>
-    <link rel="stylesheet" href="./css/order-placement.css">
-    <link rel="stylesheet" href="./css/header.css">
+    <title>Product</title>
+    <link rel="stylesheet" href="./css/product-detail3.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./css/cookies.css">
-    <link rel="stylesheet" href="./css/add-to-cart.css">
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -105,75 +90,62 @@
         </main>
     </header>
 
+
     <main class="grid-container">
-        <div class="your-cart">
-            <h1>Your Cart</h1>
+        <div class="description">
+            <h1 id="product-name">Nike Superfly</h1>
+            <h2 id="product-price">$200</h2>
+            <details>
+                <summary>Choose your size</summary>
+                <p>40 - 8.5US</p>
+                <p>41 - 9US</p>
+                <p>42 - 9.6 US</p>
+                <p>43 - 10US</p>
+                <p>44 - 10.5US</p>
+                <p>45 - 11US</p>
+            </details>
+            <button id="add-btn"><a href="#">Add to my cart</a></button>
+            <button id="buynow-btn"><a href="./order_placement.php">Buy Now</a></button>
         </div>
+        <div class="product-img"></div>
+        <div class="related flex-0">
+            <h1>Related products</h1>
+        </div>
+
+        <div class="related-product-1 flex">
+            <a href="./product-detail.php"><img src="./images/index-img/joyride.jpg" alt="joyride" width="300" height="300"></a>
+            <h3><a href="./product-detail.php">Nike Joyride</a></h3>
+        </div>
+        <div class="related-product-2 flex">
+            <a href="./product-detail.php"><img src="./images/index-img/lebron18.jpg" alt="lebron18" width="300" height="300"></a>
+            <h3><a href="./product-detail.php">Nike Lebron 18</a></h3>
+        </div>
+        <div class="related-product-3 flex">
+            <a href="./product-detail.php"><img src="./images/index-img/vans-img.jpg" alt="vans" width="300" height="300"></a>
+            <h3><a href="./product-detail.php">Vans Old Skool</a></h3>
+        </div>
+        <div class="related-product-4 flex">
+            <a href="./product-detail.php"><img src="./images/index-img/stansmith.jpg" alt="stansmith" width="300" height="300"></a>
+            <h3><a href="./product-detail.php">Stan Smith</a></h3>
+        </div>
+        <div class="related-product-5 flex">
+            <a href="./product-detail.php"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
+            <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
+        </div>
+
         <div class="product-1">
-            <img src="./images/index-img/jd1.jpg" alt="product1" width="200" height="200" id="img-1">
-            <div class="info">
-                <h6 id="product-name1">Ultra Boost 5.0</h6>
-                <p id="price1">$200</p>
-            </div>
-            <div class="quantity-box">
-                <label for="quantity">Quantity</label>
-                <input type="number" name="quantity" id="quantity1" min="0" value="0" required>
-            </div>
+            <a href="./product-detail.php"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
+            <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
         </div>
+
         <div class="product-2">
-            <img src="./images/stores-image/nike-images/airzoom.jpg" alt="product2" width="200" height="200">
-            <div class="info">
-                <h6 id="product-name2">KFC Fried Chicken</h6>
-                <p id="price2">$10</p>
-            </div>
-            <div class="quantity-box">
-                <label for="quantity">Quantity</label>
-                <input type="number" name="quantity" id="quantity2" min="0" value="0" required>
-            </div>
+            <a href="./product-detail.php"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
+            <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
         </div>
-        <div class="product-3">
-            <img src="./images/stores-image/nike-images/football1.jpg" alt="product3" width="200" height="200">
-            <div class="info">
-                <h6 id="product-name3">Airking Rolex III</h6>
-                <p id="price3">$3100</p>
-            </div>
-            <div class="quantity-box">
-                <label for="quantity">Quantity</label>
-                <input type="number" name="quantity" id="quantity3" min="0" value="0" required>
-            </div>
-        </div>
+
         
-        <div class="ship-cod">
-            <div class="first-line">
-                <h4>Discount code</h4>
-                <input type="text" name="discount" id="discount">
-                <input type="submit" value="Use" id="submit-discount-btn">
-            </div>
-            <h5>Nguyen Luu Quoc Bao  |  0913981323</h5>
-            <p>181/78 Au Duong Lan, ward 2, District 8, Ho Chi Minh city</p>
-        </div>
-        <div class="cash">
-            <div class="money">
-                <h3 class="sub-title">Price</h3>
-                <h3 id="product-price">6270$</h3>
-            </div>
-            <div class="ship">
-                <h4 class="sub-title">Ship fee</h4>
-                <h4 id="ship-price">60$</h4>
-            </div>
-            <div class="total">
-                <h2 class="sub-title">Total</h2>
-                <h2 id="total-price">6330$</h2>
-            </div>
-            <div class="button-container">
-                <form method = "post">
-                <button type ="submit" name= "submit_placement" class="push">Check Out</button></a>
-                </form>
-                <a href="./product-detail.php"><button>Continue Shopping</button></a>
-            </div>
-        
-        </div>
     </main>
+
     <footer>
         <nav>
             <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>
@@ -187,6 +159,6 @@
     </footer>
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
-    <script src="./script/calculate_price_and_discount.js"></script>
+    <script src="./script/add_to_cart_3.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php 
-include './get-data.php';
+include '../backend/get-data.php';
 $stores_data = get_data_from_csv("./stores.csv");
 $products_data = get_data_from_csv("./products.csv");
 

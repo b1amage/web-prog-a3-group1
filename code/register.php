@@ -1,10 +1,7 @@
 <?php
     session_start();
-    if (isset($_SESSION["login"])) {
-        $my_account_link = "./user-information.php";
-    } else {
-        $my_account_link ="./login-box.php";
-    }
+    include('../backend/check_login.php');
+    $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en" id="full-html">
@@ -96,7 +93,7 @@
 
     <main>
         <div class="login-box">
-            <form action="./backend/registration.php" method="POST" autocomplete="off">
+            <form action="../backend/registration.php" method="POST" autocomplete="off">
                 <h1>Create your new account</h1>
                 <h5 style="color:red;text-align:center">
                     <?php 

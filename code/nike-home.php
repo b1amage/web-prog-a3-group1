@@ -1,10 +1,7 @@
 <?php
     session_start();
-    if (isset($_SESSION["login"])) {
-        $my_account_link = "./user-information.php";
-    } else {
-        $my_account_link ="./login-box.php";
-    }
+    include('../backend/check_login.php');
+    $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,12 +9,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
-    <link rel="stylesheet" href="./css/product-detail3.css">
-    <link rel="stylesheet" href="./css/footer.css">
+    <title>Home-Nike</title>
+    <link rel="stylesheet" href="./css/store-home.css">
+    <link rel="stylesheet" href="./css/store-container.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./css/cookies.css">
+    <!-- <link rel="stylesheet" href="./header.css"> -->
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -93,62 +92,100 @@
         </main>
     </header>
 
+    <main>
+        <!-- New Product -->
+        <div class="title">
+            <h1>New Product</h1>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>350$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/bask1.jpg" alt="lebron" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Lebron</a></h3>
+            </div>
 
-    <main class="grid-container">
-        <div class="description">
-            <h1 id="product-name">Nike Superfly</h1>
-            <h2 id="product-price">$200</h2>
-            <details>
-                <summary>Choose your size</summary>
-                <p>40 - 8.5US</p>
-                <p>41 - 9US</p>
-                <p>42 - 9.6 US</p>
-                <p>43 - 10US</p>
-                <p>44 - 10.5US</p>
-                <p>45 - 11US</p>
-            </details>
-            <button id="add-btn"><a href="#">Add to my cart</a></button>
-            <button id="buynow-btn"><a href="./order_placement.php">Buy Now</a></button>
-        </div>
-        <div class="product-img"></div>
-        <div class="related flex-0">
-            <h1>Related products</h1>
-        </div>
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>250$</p>
+                </div> -->
+                <a href="./product-detail2.php" ><img src="./images/stores-image/nike-images/bask2.jpg" alt="lebron" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Lebron</a></h3>
+            </div>
 
-        <div class="related-product-1 flex">
-            <a href="./product-detail.php"><img src="./images/index-img/joyride.jpg" alt="joyride" width="300" height="300"></a>
-            <h3><a href="./product-detail.php">Nike Joyride</a></h3>
-        </div>
-        <div class="related-product-2 flex">
-            <a href="./product-detail.php"><img src="./images/index-img/lebron18.jpg" alt="lebron18" width="300" height="300"></a>
-            <h3><a href="./product-detail.php">Nike Lebron 18</a></h3>
-        </div>
-        <div class="related-product-3 flex">
-            <a href="./product-detail.php"><img src="./images/index-img/vans-img.jpg" alt="vans" width="300" height="300"></a>
-            <h3><a href="./product-detail.php">Vans Old Skool</a></h3>
-        </div>
-        <div class="related-product-4 flex">
-            <a href="./product-detail.php"><img src="./images/index-img/stansmith.jpg" alt="stansmith" width="300" height="300"></a>
-            <h3><a href="./product-detail.php">Stan Smith</a></h3>
-        </div>
-        <div class="related-product-5 flex">
-            <a href="./product-detail.php"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
-            <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
-        </div>
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>180$</p>
+                </div> -->
+                <a href="./product-detail3.php" ><img src="./images/stores-image/nike-images/run1.jpg" alt="airmax" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Airmax</a></h3>
+            </div>
 
-        <div class="product-1">
-            <a href="./product-detail.php"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
-            <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
-        </div>
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>150$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/run2.jpg" alt="airmax" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Airmax</a></h3>
+            </div>
 
-        <div class="product-2">
-            <a href="./product-detail.php"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
-            <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
+            <div class="product">
+                <!-- <div class="overlay">
+                    <p>160$</p>
+                </div> -->
+                <a href="./product-detail2.php" ><img src="./images/stores-image/nike-images/football1.jpg" alt="football" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Football</a></h3>
+            </div>
         </div>
 
-        
+        <!-- Featured Product -->
+        <div class="title-2">
+            <h1>Featured Products</h1>
+        </div>
+        <div class="feature-container ft2">
+            <div class="feature">
+                <!-- <div class="overlay">
+                    <p>155$</p>
+                </div> -->
+                <a href="./product-detail3.php" ><img src="./images/stores-image/nike-images/football_set1.jpg" alt="full football set" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Football set</a></h3>
+            </div>
+
+            <div class="feature">
+                <!-- <div class="overlay">
+                    <p>160$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/football_set2.jpg" alt="full football set" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Football set</a></h3>
+            </div>
+
+            <div class="feature">
+                <!-- <div class="overlay">
+                    <p>89$</p>
+                </div> -->
+                <a href="./product-detail2.php" ><img src="./images/stores-image/nike-images/hoodie1.jpg" alt="nike hoodie" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Nike Hoodie</a></h3>
+            </div>
+
+            <div class="feature">
+                <!-- <div class="overlay">
+                    <p>60$</p>
+                </div> -->
+                <a href="./product-detail3.php" ><img src="./images/stores-image/nike-images/basketball1.jpg" alt="basketball" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Basketball</a></h3>
+            </div>
+
+            <div class="feature">
+                <!-- <div class="overlay">
+                    <p>60$</p>
+                </div> -->
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/soccerball1.jpg" alt="soccer ball" width="200" height="200"></a>
+                <h3><a href="./product-detail.php">Soccer ball</a></h3>
+            </div>
+        </div>
     </main>
-
+    <div class="push"></div>
     <footer>
         <nav>
             <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>
@@ -162,6 +199,5 @@
     </footer>
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
-    <script src="./script/add_to_cart_3.js"></script>
 </body>
 </html>
