@@ -12,7 +12,7 @@
 
 <?php
     session_start();
-    include('./backend/check_login.php');
+    include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
@@ -21,12 +21,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Placement</title>
-    <link rel="stylesheet" href="./code/css/order-placement.css">
-    <link rel="stylesheet" href="./code/css/header.css">
-    <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
-    <link rel="stylesheet" href="./code/css/add-to-cart.css">
+    <link rel="stylesheet" href="./css/order-placement.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/cookies.css">
+    <link rel="stylesheet" href="./css/add-to-cart.css">
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -107,7 +107,7 @@
             <h1>Your Cart</h1>
         </div>
         <div class="product-1">
-            <img src="./code/images/index-img/jd1.jpg" alt="product1" width="200" height="200" id="img-1">
+            <img src="./images/index-img/jd1.jpg" alt="product1" width="200" height="200" id="img-1">
             <div class="info">
                 <h6 id="product-name1">Ultra Boost 5.0</h6>
                 <p id="price1">$200</p>
@@ -118,7 +118,7 @@
             </div>
         </div>
         <div class="product-2">
-            <img src="./code/images/stores-image/nike-images/airzoom.jpg" alt="product2" width="200" height="200">
+            <img src="./images/stores-image/nike-images/airzoom.jpg" alt="product2" width="200" height="200">
             <div class="info">
                 <h6 id="product-name2">KFC Fried Chicken</h6>
                 <p id="price2">$10</p>
@@ -129,7 +129,7 @@
             </div>
         </div>
         <div class="product-3">
-            <img src="./code/images/stores-image/nike-images/football1.jpg" alt="product3" width="200" height="200">
+            <img src="./images/stores-image/nike-images/football1.jpg" alt="product3" width="200" height="200">
             <div class="info">
                 <h6 id="product-name3">Airking Rolex III</h6>
                 <p id="price3">$3100</p>
@@ -182,8 +182,8 @@
             <h3 class="right">Design by developer team</h3>
         </nav>
     </footer>
-    <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/check_login.js" defer></script>
-    <script src="./code/script/calculate_price_and_discount.js"></script>
+    <script src="./script/cookies.js" defer></script>
+    <script src="./script/check_login.js" defer></script>
+    <script src="./script/calculate_price_and_discount.js"></script>
 </body>
 </html>

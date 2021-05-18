@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('./backend/check_login.php');
+    include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
@@ -10,11 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browse Categories-DonChicken</title>
-    <link rel="stylesheet" href="./code/css/product-browse.css">
-    <link rel="stylesheet" href="./code/css/header.css">
-    <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
+    <link rel="stylesheet" href="./css/product-browse.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/cookies.css">
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -99,7 +99,7 @@
                 <!-- <div class="overlay">
                     <p>20$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/app1.jpg" alt="chicken soup" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/app1.jpg" alt="chicken soup" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Chicken Soup</a></h3>
             </div>
     
@@ -107,7 +107,7 @@
                 <!-- <div class="overlay">
                     <p>12$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/app2.jpg" alt="chicken salad" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/app2.jpg" alt="chicken salad" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Chicken Salad</a></h3>
             </div>
     
@@ -115,7 +115,7 @@
                 <!-- <div class="overlay">
                     <p>25$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/app3.jpg" alt="boiled shrimp" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/app3.jpg" alt="boiled shrimp" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Boiled Shirmp</a></h3>
             </div>
     
@@ -123,7 +123,7 @@
                 <!-- <div class="overlay">
                     <p>17$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/app4.jpg" alt="chicken roll" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/app4.jpg" alt="chicken roll" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Chicken Roll</a></h3>
             </div>
     
@@ -131,7 +131,7 @@
                 <!-- <div class="overlay">
                     <p>10$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/app5.jpg" alt="pumpkin soup" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/app5.jpg" alt="pumpkin soup" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Pumkims Soup</a></h3>
             </div>
         </div>
@@ -145,7 +145,7 @@
                 <!-- <div class="overlay">
                     <p>35$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/main1.jpg" alt="steak" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/main1.jpg" alt="steak" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Steak</a></h3>
             </div>
     
@@ -153,7 +153,7 @@
                 <!-- <div class="overlay">
                     <p>25$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/main2.jpg" alt="grilled chicken" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/main2.jpg" alt="grilled chicken" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Grilled Chicken</a></h3>
             </div>
     
@@ -161,7 +161,7 @@
                 <!-- <div class="overlay">
                     <p>18$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/main3.jpg" alt="rice chicken" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/main3.jpg" alt="rice chicken" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Rice Chicken</a></h3>
             </div>
     
@@ -169,7 +169,7 @@
                 <!-- <div class="overlay">
                     <p>17$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/main4.jpg" alt="steamed chicken" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/main4.jpg" alt="steamed chicken" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Steamed Chicken</a></h3>
             </div>
     
@@ -177,7 +177,7 @@
                 <!-- <div class="overlay">
                     <p>19$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/main5.jpg" alt="fried chicken" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/main5.jpg" alt="fried chicken" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Fried Chicken</a></h3>
             </div>
         </div>
@@ -190,7 +190,7 @@
                 <!-- <div class="overlay">
                     <p>20$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/des1.jpg" alt="chocolate cake" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/des1.jpg" alt="chocolate cake" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Chocolate Cake</a></h3>
             </div>
     
@@ -198,7 +198,7 @@
                 <!-- <div class="overlay">
                     <p>15$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/des2.jpg" alt="strawber cream" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/des2.jpg" alt="strawber cream" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Strawberry Cream</a></h3>
             </div>
     
@@ -206,7 +206,7 @@
                 <!-- <div class="overlay">
                     <p>18$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/des3.jpg" alt="cream brulee" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/des3.jpg" alt="cream brulee" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Cream Brulee</a></h3>
             </div>
     
@@ -214,7 +214,7 @@
                 <!-- <div class="overlay">
                     <p>15$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/des4.jpg" alt="donut" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/des4.jpg" alt="donut" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Donut-</a></h3>
             </div>
     
@@ -222,7 +222,7 @@
                 <!-- <div class="overlay">
                     <p>12$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/des5.jpg" alt="mango cream" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/des5.jpg" alt="mango cream" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Mango Cream</a></h3>
             </div>
         </div>
@@ -234,7 +234,7 @@
                 <!-- <div class="overlay">
                     <p>6$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/dri1.jpg" alt="pepsi" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/dri1.jpg" alt="pepsi" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Pepsi</a></h3>
             </div>
     
@@ -242,7 +242,7 @@
                 <!-- <div class="overlay">
                     <p>7$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/dri2.jpg" alt="7up" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/dri2.jpg" alt="7up" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">7UP</a></h3>
             </div>
     
@@ -250,7 +250,7 @@
                 <!-- <div class="overlay">
                     <p>3$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/dri3.jpg" alt="water" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/dri3.jpg" alt="water" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Water</a></h3>
             </div>
     
@@ -258,7 +258,7 @@
                 <!-- <div class="overlay">
                     <p>5$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/dri4.jpg" alt="yogurt" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/dri4.jpg" alt="yogurt" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Yogurt</a></h3>
             </div>
     
@@ -266,7 +266,7 @@
                 <!-- <div class="overlay">
                     <p>2$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/dri5.jpg" alt="ice-tea" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/dri5.jpg" alt="ice-tea" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Ice-tea</a></h3>
             </div>
         </div>
@@ -280,7 +280,7 @@
                 <!-- <div class="overlay">
                     <p>5$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/bev.jpg" alt="soju chumchurum" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/bev.jpg" alt="soju chumchurum" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Soju Chumchurum</a></h3>
             </div>
     
@@ -288,7 +288,7 @@
                 <!-- <div class="overlay">
                     <p>5$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/bev2.jpg" alt="soju chamisul" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/bev2.jpg" alt="soju chamisul" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Soju Chamisul</a></h3>
             </div>
     
@@ -296,7 +296,7 @@
                 <!-- <div class="overlay">
                     <p>3$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/bev3.jpg" alt="heniken" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/bev3.jpg" alt="heniken" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Heniken</a></h3>
             </div>
     
@@ -304,7 +304,7 @@
                 <!-- <div class="overlay">
                     <p>3-5$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/bev4.jpg" alt="tiger beer" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/bev4.jpg" alt="tiger beer" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Tiger</a></h3>
             </div>
     
@@ -312,7 +312,7 @@
                 <!-- <div class="overlay">
                     <p>2.5$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/don-chicken/bev5.jpg" alt="strong bow" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/don-chicken/bev5.jpg" alt="strong bow" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Strong Bow</a></h3>
             </div>
         </div>
@@ -329,7 +329,7 @@
             <h3 class="right">Design by developer team</h3>
         </nav>
     </footer>
-    <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/check_login.js" defer></script>
+    <script src="./script/cookies.js" defer></script>
+    <script src="./script/check_login.js" defer></script>
 </body>
 </html>

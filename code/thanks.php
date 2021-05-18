@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('./backend/check_login.php');
+    include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
@@ -10,11 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You</title>
-    <link rel="stylesheet" href="./code/css/header.css">
-    <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./code/css/thanks.css">
-    <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/thanks.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/cookies.css">
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -93,7 +93,7 @@
 <main>
     <div class="content-tks">
         <div class="button-container">
-            <img src="./code/images/index-img/check.png" alt="check button" height="180px" width="180px">
+            <img src="./images/index-img/check.png" alt="check button" height="180px" width="180px">
         </div>
 
         <div class="text-tks">
@@ -116,6 +116,6 @@
         <h3 class="right">Design by developer team</h3>
     </nav>
 </footer>
-<script src="./code/script/cookies.js" defer></script>
-<script src="./code/script/check_login.js" defer></script>
+<script src="./script/cookies.js" defer></script>
+<script src="./script/check_login.js" defer></script>
 </body>

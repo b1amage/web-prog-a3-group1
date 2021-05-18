@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('./backend/check_login.php');
+    include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
@@ -10,11 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browse Stores By Categories</title>
-    <link rel="stylesheet" href="./code/css/store-browse-name.css">
-    <link rel="stylesheet" href="./code/css/header.css">
-    <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
+    <link rel="stylesheet" href="./css/store-browse-name.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/cookies.css">
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -127,7 +127,7 @@
                 <!-- <div class="overlay">
                     <p>Convenience Store</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/department_stores/bibomart.jpg" alt="department store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/department_stores/bibomart.jpg" alt="department store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">BiBoMart</a></h3>
             </div>
     
@@ -135,7 +135,7 @@
                 <!-- <div class="overlay">
                     <p>Convenience Store</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/department_stores/bsmart.jpg" alt="department store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/department_stores/bsmart.jpg" alt="department store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">B'sMart</a></h3>
             </div>
     
@@ -143,7 +143,7 @@
                 <!-- <div class="overlay">
                     <p>Convenience Store</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/department_stores/ministop.jpg" alt="department store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/department_stores/ministop.jpg" alt="department store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Ministop</a></h3>
             </div>
     
@@ -151,7 +151,7 @@
                 <!-- <div class="overlay">
                     <p>Convenience Store</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/department_stores/circlek.jpg" alt="department store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/department_stores/circlek.jpg" alt="department store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">CircleK</a></h3>
             </div>
     
@@ -159,7 +159,7 @@
                 <!-- <div class="overlay">
                     <p>Convenience Store</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/department_stores/familymart.jpg" alt="department store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/department_stores/familymart.jpg" alt="department store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">FamilyMart</a></h3>
             </div>
             
@@ -167,7 +167,7 @@
                 <!-- <div class="overlay">
                     <p>Grocery Store</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/grocery_stores/coopmart.jpg" alt="grocery store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/grocery_stores/coopmart.jpg" alt="grocery store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">coopmart</a></h3>
             </div>
     
@@ -175,7 +175,7 @@
                 <!-- <div class="overlay">
                     <p>Grocery Store</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/grocery_stores/speedL.jpg" alt="grocery store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/grocery_stores/speedL.jpg" alt="grocery store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">SpeedL</a></h3>
             </div>
     
@@ -183,7 +183,7 @@
                 <!-- <div class="overlay">
                     <p>Grocery Store</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/grocery_stores/choppvn.jpg" alt="grocery store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/grocery_stores/choppvn.jpg" alt="grocery store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Chopp.vn</a></h3>
             </div>
     
@@ -191,7 +191,7 @@
                 <!-- <div class="overlay">
                     <p>Grocery Store</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/grocery_stores/bachhoaxanh.jpg" alt="grocery store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/grocery_stores/bachhoaxanh.jpg" alt="grocery store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Bach Hoa Xanh</a></h3>
             </div>
     
@@ -199,7 +199,7 @@
                 <!-- <div class="overlay">
                     <p>Grocery Store</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/grocery_stores/vinmart.jpg" alt="grocery store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/grocery_stores/vinmart.jpg" alt="grocery store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">VinMart</a></h3>
             </div>
 
@@ -207,7 +207,7 @@
                 <!-- <div class="overlay">
                     <p>Chickens & Fast Food</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/restaurants/donchicken.jpg" alt="Restaurant" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/restaurants/donchicken.jpg" alt="Restaurant" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Don Chicken</a></h3>
             </div>
     
@@ -215,7 +215,7 @@
                 <!-- <div class="overlay">
                     <p>Pizza Restaurant</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/restaurants/pizzahut.jpg" alt="Restaurant" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/restaurants/pizzahut.jpg" alt="Restaurant" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Pizza Hut</a></h3>
             </div>
     
@@ -223,7 +223,7 @@
                 <!-- <div class="overlay">
                     <p>BBQ buffet</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/restaurants/gogi.jpg" alt="Restaurant" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/restaurants/gogi.jpg" alt="Restaurant" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Gogi House</a></h3>
             </div>
     
@@ -231,7 +231,7 @@
                 <!-- <div class="overlay">
                     <p>Hotpot buffet</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/restaurants/kichikichi.jpg" alt="Restaurant" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/restaurants/kichikichi.jpg" alt="Restaurant" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">KichiKichi</a></h3>
             </div>
     
@@ -239,7 +239,7 @@
                 <!-- <div class="overlay">
                     <p>Vietnamese Cusine</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/restaurants/wrap&roll.jpg" alt="Restaurant" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/restaurants/wrap&roll.jpg" alt="Restaurant" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Wrap & Roll</a></h3>
             </div>
 
@@ -247,7 +247,7 @@
                 <!-- <div class="overlay">
                     <p>Clothes</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/clothing_stores/tommy.jpg" alt="clothing store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/clothing_stores/tommy.jpg" alt="clothing store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Chicken Soup</a></h3>
             </div>
     
@@ -255,7 +255,7 @@
                 <!-- <div class="overlay">
                     <p>Clothes</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/clothing_stores/h&m.jpg" alt="clothing store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/clothing_stores/h&m.jpg" alt="clothing store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">H&M</a></h3>
             </div>
     
@@ -263,7 +263,7 @@
                 <!-- <div class="overlay">
                     <p>Clothes</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/clothing_stores/gap.jpg" alt="clothing store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/clothing_stores/gap.jpg" alt="clothing store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">GAP</a></h3>
             </div>
     
@@ -271,7 +271,7 @@
                 <!-- <div class="overlay">
                     <p>Clothes</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/clothing_stores/g2000.jpg" alt="clothing store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/clothing_stores/g2000.jpg" alt="clothing store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">G2000</a></h3>
             </div>
     
@@ -279,14 +279,14 @@
                 <!-- <div class="overlay">
                     <p>Clothes</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/clothing_stores/calvin.jpg" alt="clothing store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/clothing_stores/calvin.jpg" alt="clothing store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Calvin Klein</a></h3>
             </div>
             <div class="store">
                 <!-- <div class="overlay">
                     <p>Vintage & Recycled Accessories</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/accessory_stores/anice.jpg" alt="accessory store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/accessory_stores/anice.jpg" alt="accessory store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Anice Jewellery</a></h3>
             </div>
 
@@ -294,7 +294,7 @@
                 <!-- <div class="overlay">
                     <p>Medium Accessories</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/accessory_stores/little_devil.jpg" alt="accessory store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/accessory_stores/little_devil.jpg" alt="accessory store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Little Devil</a></h3>
             </div>
     
@@ -302,7 +302,7 @@
                 <!-- <div class="overlay">
                     <p>Fashion & Cool Accessories</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/accessory_stores/moji.jpg" alt="accessory store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/accessory_stores/moji.jpg" alt="accessory store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Moji</a></h3>
             </div>
 
@@ -310,7 +310,7 @@
                 <!-- <div class="overlay">
                     <p>Cute Accessories</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/accessory_stores/bcorner.jpg" alt="accessory store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/accessory_stores/bcorner.jpg" alt="accessory store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">BCorner</a></h3>
             </div>
     
@@ -318,14 +318,14 @@
                 <!-- <div class="overlay">
                     <p>Fashion & Small Accessories</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/accessory_stores/adler.jpg" alt="accessory store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/accessory_stores/adler.jpg" alt="accessory store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Adler</a></h3>
             </div>
             <div class="store">
                 <!-- <div class="overlay">
                     <p>Pharmacies</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/pharmacies/apoteket.jpg" alt="pharmacies" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/pharmacies/apoteket.jpg" alt="pharmacies" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Apoteket</a></h3>
             </div>
     
@@ -333,7 +333,7 @@
                 <!-- <div class="overlay">
                     <p>Pharmacies</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/pharmacies/eco_pharmaceutical.jpg" alt="pharmacies" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/pharmacies/eco_pharmaceutical.jpg" alt="pharmacies" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Eco Pharmaceutical</a></h3>
             </div>
     
@@ -341,7 +341,7 @@
                 <!-- <div class="overlay">
                     <p>Pharmacies</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/pharmacies/nhs.jpg" alt="pharmacies" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/pharmacies/nhs.jpg" alt="pharmacies" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">NHS</a></h3>
             </div>
     
@@ -349,7 +349,7 @@
                 <!-- <div class="overlay">
                     <p>Pharmacies</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/pharmacies/pharmacity.jpg" alt="pharmacies" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/pharmacies/pharmacity.jpg" alt="pharmacies" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Pharmacity</a></h3>
             </div>
     
@@ -357,14 +357,14 @@
                 <!-- <div class="overlay">
                     <p>Pharmacies</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/pharmacies/terrywhite.jpg" alt="pharmacies" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/pharmacies/terrywhite.jpg" alt="pharmacies" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">TerryWhite Chenmart</a></h3>
             </div>
             <div class="store">
                 <!-- <div class="overlay">
                     <p>Phones, Tablets & Laptop</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/technology_stores/tgdd/tgdd-logo.jpg" alt="technology store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/technology_stores/tgdd/tgdd-logo.jpg" alt="technology store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">The Gioi Di Dong</a></h3>
             </div>
     
@@ -372,7 +372,7 @@
                 <!-- <div class="overlay">
                     <p>Phones, Tablets & Laptop</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/technology_stores/fpt/fpt.jpg" alt="technology store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/technology_stores/fpt/fpt.jpg" alt="technology store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">FPT Shop</a></h3>
             </div>
     
@@ -380,7 +380,7 @@
                 <!-- <div class="overlay">
                     <p>Gaming & Entertainment</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/technology_stores/halo/halo.jpg" alt="technology store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/technology_stores/halo/halo.jpg" alt="technology store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Halo Shop</a></h3>
             </div>
     
@@ -388,7 +388,7 @@
                 <!-- <div class="overlay">
                     <p>Gaming Technologies</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/technology_stores/gearvn.jpg" alt="technology store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/technology_stores/gearvn.jpg" alt="technology store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">GearVn</a></h3>
             </div>
     
@@ -396,14 +396,14 @@
                 <!-- <div class="overlay">
                     <p>Phones, Tablets & Laptop</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/technology_stores/cellphones.jpg" alt="technology store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/technology_stores/cellphones.jpg" alt="technology store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">CellphoneS</a></h3>
             </div>
             <div class="store">
                 <!-- <div class="overlay">
                     <p>Pets</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/pet_stores/chewy.jpg" alt="pet storetoy store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/pet_stores/chewy.jpg" alt="pet storetoy store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Chewy</a></h3>
             </div>
 
@@ -411,7 +411,7 @@
                 <!-- <div class="overlay">
                     <p>Pets</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/pet_stores/petmart.jpg" alt="pet storetoy store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/pet_stores/petmart.jpg" alt="pet storetoy store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Petmart</a></h3>
             </div>
     
@@ -419,7 +419,7 @@
                 <!-- <div class="overlay">
                     <p>Pets</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/pet_stores/coupaw.jpg" alt="pet storetoy store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/pet_stores/coupaw.jpg" alt="pet storetoy store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Coupaw</a></h3>
             </div>
     
@@ -427,7 +427,7 @@
                 <!-- <div class="overlay">
                     <p>Pets</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/pet_stores/dogcom.jpg" alt="pet storetoy store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/pet_stores/dogcom.jpg" alt="pet storetoy store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Dog.com</a></h3>
             </div>
     
@@ -435,14 +435,14 @@
                 <!-- <div class="overlay">
                     <p>Pets</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/pet_stores/petsmart.jpg" alt="pet storetoy store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/pet_stores/petsmart.jpg" alt="pet storetoy store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Petsmart</a></h3>
             </div>
             <div class="store">
                 <!-- <div class="overlay">
                     <p>Kid Toys</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/toy_stores/babimart.jpg" alt="toy store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/toy_stores/babimart.jpg" alt="toy store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Bobimart</a></h3>
             </div>
     
@@ -450,7 +450,7 @@
                 <!-- <div class="overlay">
                     <p>Kid Toys</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/toy_stores/funnyland.jpg" alt="toy store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/toy_stores/funnyland.jpg" alt="toy store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Funnyland</a></h3>
             </div>
     
@@ -458,7 +458,7 @@
                 <!-- <div class="overlay">
                     <p>Kid Toys</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/toy_stores/mykingdom.jpg" alt="toy store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/toy_stores/mykingdom.jpg" alt="toy store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">My Kingdom</a></h3>
             </div>
     
@@ -466,7 +466,7 @@
                 <!-- <div class="overlay">
                     <p>Kid Toys</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/toy_stores/fat_brain.jpg" alt="toy store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/toy_stores/fat_brain.jpg" alt="toy store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Fat Brain Toy</a></h3>
             </div>
     
@@ -474,14 +474,14 @@
                 <!-- <div class="overlay">
                     <p>Kid Toys</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/toy_stores/disney.jpg" alt="toy store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/toy_stores/disney.jpg" alt="toy store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">Disney</a></h3>
             </div>
             <div class="store">
                 <!-- <div class="overlay">
                     <p>Specialties</p>
                 </div> -->
-                <a href="./donchicken-home.php" ><img src="./code/images/stores-image/specialty_stores/annam.jpg" alt="specialty storethrift store" width="200" height="200"></a>
+                <a href="./donchicken-home.php" ><img src="./images/stores-image/specialty_stores/annam.jpg" alt="specialty storethrift store" width="200" height="200"></a>
                 <h3><a href="./donchicken-home.php">An Nam Gourmet</a></h3>
             </div>
 
@@ -501,8 +501,8 @@
             <h3 class="right">Design by developer team</h3>
         </nav>
     </footer>
-    <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/check_login.js" defer></script>
+    <script src="./script/cookies.js" defer></script>
+    <script src="./script/check_login.js" defer></script>
 </body>
 </html>
 </html>

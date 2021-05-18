@@ -25,7 +25,7 @@ html {
     /* background-color: blue; */
     grid-row: 2 / span 4;
     grid-column: 2 / span 4;
-    background-image: url(../code/images/stores-image/nike-images/football1.jpg);
+    background-image: url(../images/stores-image/nike-images/football1.jpg);
     background-repeat: no-repeat;
     background-size: contain;
 }

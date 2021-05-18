@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('./backend/check_login.php');
+    include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
@@ -10,11 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Account</title>
-    <link rel="stylesheet" href="./code/css/header.css">
-    <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./code/css/register.css">
-    <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/cookies.css">
 </head>
 
 <body>
@@ -93,7 +93,7 @@
 
     <main>
         <div class="login-box">
-            <form action="./backend/registration.php" method="POST" autocomplete="off">
+            <form action="../backend/registration.php" method="POST" autocomplete="off">
                 <h1>Create your new account</h1>
                 <h5 style="color:red;text-align:center">
                     <?php 
@@ -257,10 +257,10 @@
             <h3 class="right">Design by developer team</h3>
         </nav>
     </footer>
-    <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/check_login.js" defer></script>
-    <script src="./code/script/validate_form.js" defer></script>
-    <script src="./code/script/show_hide.js" defer></script>
+    <script src="./script/cookies.js" defer></script>
+    <script src="./script/check_login.js" defer></script>
+    <script src="./script/validate_form.js" defer></script>
+    <script src="./script/show_hide.js" defer></script>
     </body>
 
     

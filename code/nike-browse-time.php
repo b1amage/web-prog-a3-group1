@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('./backend/check_login.php');
+    include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
@@ -10,11 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browse Created Time-Nike</title>
-    <link rel="stylesheet" href="./code/css/product-browse.css">
-    <link rel="stylesheet" href="./code/css/header.css">
-    <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
+    <link rel="stylesheet" href="./css/product-browse.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/cookies.css">
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -99,7 +99,7 @@
                 <!-- <div class="overlay">
                     <p>180$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/stores-image/nike-images/airzoom.jpg" alt="airzoom" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/airzoom.jpg" alt="airzoom" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Airzoom</a></h3>
             </div>
     
@@ -107,7 +107,7 @@
                 <!-- <div class="overlay">
                     <p>150$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/stores-image/nike-images/vapormax.jpg" alt="vapormax" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/vapormax.jpg" alt="vapormax" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Vapormax</a></h3>
             </div>
     
@@ -115,7 +115,7 @@
                 <!-- <div class="overlay">
                     <p>115$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/stores-image/nike-images/tennis1.jpg" alt="tennis shoes" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/tennis1.jpg" alt="tennis shoes" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Tennis shoes</a></h3>
             </div>
     
@@ -123,7 +123,7 @@
                 <!-- <div class="overlay">
                     <p>185$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/stores-image/nike-images/lebron1.jpg" alt="lebron" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/lebron1.jpg" alt="lebron" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Lebron</a></h3>
             </div>
     
@@ -131,7 +131,7 @@
                 <!-- <div class="overlay">
                     <p>59$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/stores-image/nike-images/hoodie1.jpg" alt="hoodie" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/hoodie1.jpg" alt="hoodie" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Hoodie</a></h3>
             </div>
             
@@ -146,7 +146,7 @@
                 <!-- <div class="overlay">
                     <p>200$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/stores-image/nike-images/aj1.jpg" alt="air jordan" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/aj1.jpg" alt="air jordan" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Air Jordan</a></h3>
             </div>
     
@@ -154,7 +154,7 @@
                 <!-- <div class="overlay">
                     <p>190$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/stores-image/nike-images/aj2.jpg" alt="air jordan" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/aj2.jpg" alt="air jordan" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Air Jordan</a></h3>
             </div>
     
@@ -162,7 +162,7 @@
                 <!-- <div class="overlay">
                     <p>55$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/stores-image/nike-images/hoodie2.jpg" alt="hoodie" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/hoodie2.jpg" alt="hoodie" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Hoodie</a></h3>
             </div>
     
@@ -170,7 +170,7 @@
                 <!-- <div class="overlay">
                     <p>39$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/stores-image/nike-images/jacket.jpg" alt="jacket" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/jacket.jpg" alt="jacket" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Jacket</a></h3>
             </div>
     
@@ -178,7 +178,7 @@
                 <!-- <div class="overlay">
                     <p>50$</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/stores-image/nike-images/sweater.jpg" alt="sweater" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/sweater.jpg" alt="sweater" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Sweater</a></h3>
             </div>
         </div>
@@ -195,7 +195,7 @@
             <h3 class="right">Design by developer team</h3>
         </nav>
     </footer>
-    <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/check_login.js" defer></script>
+    <script src="./script/cookies.js" defer></script>
+    <script src="./script/check_login.js" defer></script>
 </body>
 </html>

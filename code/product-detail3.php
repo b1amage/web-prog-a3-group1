@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('./backend/check_login.php');
+    include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
@@ -10,11 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
-    <link rel="stylesheet" href="./code/css/product-detail3.css">
-    <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/header.css">
-    <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
+    <link rel="stylesheet" href="./css/product-detail3.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/cookies.css">
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -113,33 +113,33 @@
         </div>
 
         <div class="related-product-1 flex">
-            <a href="./product-detail.php"><img src="./code/images/index-img/joyride.jpg" alt="joyride" width="300" height="300"></a>
+            <a href="./product-detail.php"><img src="./images/index-img/joyride.jpg" alt="joyride" width="300" height="300"></a>
             <h3><a href="./product-detail.php">Nike Joyride</a></h3>
         </div>
         <div class="related-product-2 flex">
-            <a href="./product-detail.php"><img src="./code/images/index-img/lebron18.jpg" alt="lebron18" width="300" height="300"></a>
+            <a href="./product-detail.php"><img src="./images/index-img/lebron18.jpg" alt="lebron18" width="300" height="300"></a>
             <h3><a href="./product-detail.php">Nike Lebron 18</a></h3>
         </div>
         <div class="related-product-3 flex">
-            <a href="./product-detail.php"><img src="./code/images/index-img/vans-img.jpg" alt="vans" width="300" height="300"></a>
+            <a href="./product-detail.php"><img src="./images/index-img/vans-img.jpg" alt="vans" width="300" height="300"></a>
             <h3><a href="./product-detail.php">Vans Old Skool</a></h3>
         </div>
         <div class="related-product-4 flex">
-            <a href="./product-detail.php"><img src="./code/images/index-img/stansmith.jpg" alt="stansmith" width="300" height="300"></a>
+            <a href="./product-detail.php"><img src="./images/index-img/stansmith.jpg" alt="stansmith" width="300" height="300"></a>
             <h3><a href="./product-detail.php">Stan Smith</a></h3>
         </div>
         <div class="related-product-5 flex">
-            <a href="./product-detail.php"><img src="./code/images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
+            <a href="./product-detail.php"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
             <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
         </div>
 
         <div class="product-1">
-            <a href="./product-detail.php"><img src="./code/images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
+            <a href="./product-detail.php"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
             <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
         </div>
 
         <div class="product-2">
-            <a href="./product-detail.php"><img src="./code/images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
+            <a href="./product-detail.php"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
             <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
         </div>
 
@@ -157,8 +157,8 @@
             <h3 class="right">Design by developer team</h3>
         </nav>
     </footer>
-    <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/check_login.js" defer></script>
-    <script src="./code/script/add_to_cart_3.js"></script>
+    <script src="./script/cookies.js" defer></script>
+    <script src="./script/check_login.js" defer></script>
+    <script src="./script/add_to_cart_3.js"></script>
 </body>
 </html>

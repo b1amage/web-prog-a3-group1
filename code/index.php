@@ -17,12 +17,12 @@ include '../backend/display-store-product.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="./code/css/index.css">
-    <link rel="stylesheet" href="./code/css/header.css">
-    <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
-    <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/cookies.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/cookies.css">
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -113,7 +113,7 @@ include '../backend/display-store-product.php';
                         $store_count++; ?>
 
                     <div class="store 1">
-                    <a href="./nike-home.php" ><img src="./code/images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
+                    <a href="./nike-home.php" ><img src="./images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
                     <h3><a href="./nike-home.php" class="underline"><?=$store[$field_name_stores["name"]]; ?></a></h3>
                     </div>
                     <?php }; ?>
@@ -137,7 +137,7 @@ include '../backend/display-store-product.php';
                         $product_count++; ?>
 
                     <div class="product 1">
-                        <a href="./product-detail.php" ><img src="./code/images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
+                        <a href="./product-detail.php" ><img src="./images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
                         <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
                     </div>
                     <?php }; ?>
@@ -162,7 +162,7 @@ include '../backend/display-store-product.php';
                         $feature_count++; ?>
 
                         <div class="feature first">
-                            <a href="./tgdd-home.php" ><img src="./code/images/index-img/G _ LAB.jpg" alt="glab-logo" width="200" height="200"></a>
+                            <a href="./tgdd-home.php" ><img src="./images/index-img/G _ LAB.jpg" alt="glab-logo" width="200" height="200"></a>
                             <h3><a href="./tgdd-home.php" class="underline"><?=$store[$field_name_stores["name"]];?></a></h3>
                         </div>
                         
@@ -189,7 +189,7 @@ include '../backend/display-store-product.php';
                         $feature_product_count++; ?>
 
                             <div class="feature-last 1">
-                                <a href="./product-detail.php" ><img src="./code/images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
+                                <a href="./product-detail.php" ><img src="./images/index-img/freak2.jpg" alt="freak2-img" width="200" height="200"></a>
                                 <h3><a href="./product-detail.php" class="underline"><?=$product[$field_name_products["name"]];?></a></h3>
                             </div>
                         
@@ -212,8 +212,8 @@ include '../backend/display-store-product.php';
             <h3 class="right">Design by developer team</h3>
         </nav>
     </footer>
-    <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/automatic_scroll.js" defer></script>
-    <script src="./code/script/check_login.js" defer></script>
+    <script src="./script/cookies.js" defer></script>
+    <script src="./script/automatic_scroll.js" defer></script>
+    <script src="./script/check_login.js" defer></script>
 </body>
 </html>

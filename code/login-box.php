@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('./backend/check_login.php');
+    include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
@@ -10,11 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in/Sign up</title>
-    <link rel="stylesheet" href="./code/css/header.css">
-    <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./code/css/login-box.css">
-    <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/login-box.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/cookies.css">
 </head>
 
 <body>
@@ -93,7 +93,7 @@
 
     <main>
         <div id="login-box">
-            <form action="./backend/authentication.php" method="POST" onsubmit="return checkPassword()">
+            <form action="../backend/authentication.php" method="POST" onsubmit="return checkPassword()">
                 <input required type="text" id="email/phone" name="email/phone" autocomplete="off" placeholder="Email or phone number">  
                 <input required type="password" id="password" name="password" placeholder="Password">
                 <div id="error">Invalid password</div>
@@ -129,9 +129,9 @@
             <h3 class="right">Design by developer team</h3>
         </nav>
     </footer>
-    <script src="./code/script/cookies.js" defer></script>
-    <!-- <script src="./code/script/check_password.js" defer></script> -->
-    <!-- <script src="./code/script/check_login.js" defer></script> -->
+    <script src="./script/cookies.js" defer></script>
+    <!-- <script src="./script/check_password.js" defer></script> -->
+    <!-- <script src="./script/check_login.js" defer></script> -->
     </body>
     
 

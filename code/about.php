@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('./backend/check_login.php');
+    include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
@@ -10,12 +10,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="./code/css/about.css">
-    <link rel="stylesheet" href="./code/css/member-info.css">
-    <link rel="stylesheet" href="./code/css/header.css">
-    <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
-    <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/member-info.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/cookies.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
 </head>
 <body>
     <div id="overlay-about" onclick="offOverlay()"></div>
@@ -24,7 +24,7 @@
             <div class="info-title">Nguyen Anh Duy</div>
         </div>
         <div class="info-image">
-            <img src="./code/images/about-images/duy-img.jpeg" width="200px" height="200px">
+            <img src="./images/about-images/duy-img.jpeg" width="200px" height="200px">
         </div>
         <div class="info-body">
             <p><b>Email: </b><a href="#" target="blank">s3878141@rmit.edu.vn</a><br>
@@ -38,7 +38,7 @@
             <div class="info-title">Nguyen Luu Quoc Bao</div>
         </div>
         <div class="info-image">
-            <img src="./code/images/about-images/bao-img.jpeg" width="200px" height="200px">
+            <img src="./images/about-images/bao-img.jpeg" width="200px" height="200px">
         </div>
         <div class="info-body">
             <p><b>Email: </b><a href="#" target="blank">s3877698@rmit.edu.vn</a><br>
@@ -52,7 +52,7 @@
             <div class="info-title">Dao Kha Tuan</div>
         </div>
         <div class="info-image">
-            <img src="./code/images/about-images/tuan-image.jpeg" width="200px" height="200px">
+            <img src="./images/about-images/tuan-image.jpeg" width="200px" height="200px">
         </div>
         <div class="info-body">
             <b>Email: </b><a href="#" target="blank">s3877347@rmit.edu.vn</a><br>
@@ -66,7 +66,7 @@
             <div class="info-title">Nguyen Trong Minh Long</div>
         </div>
         <div class="info-image">
-            <img src="./code/images/about-images/long-image.jpeg" width="200px" height="200px">
+            <img src="./images/about-images/long-image.jpeg" width="200px" height="200px">
         </div>
         <div class="info-body">
             <b>Email: </b><a href="#" target="blank">s3878694@rmit.edu.vn</a><br>
@@ -172,7 +172,7 @@
                 <div class="team">    
                     <div class="avatar-box" id="duy-box">
                         <div class="img-box">
-                            <img src="./code/images/about-images/duy-img.jpeg">
+                            <img src="./images/about-images/duy-img.jpeg">
                         </div>
                         <div class="box-content">
                             <h1>Nguyen Anh Duy<br>
@@ -182,7 +182,7 @@
                     </div>
                     <div class="avatar-box" id="bao-box">
                         <div class="img-box">
-                            <img src="./code/images/about-images/bao-img.jpeg">
+                            <img src="./images/about-images/bao-img.jpeg">
                         </div>
                         <div class="box-content">
                             <h1>Nguyen Luu Quoc Bao<br>
@@ -192,7 +192,7 @@
                     </div>
                     <div class="avatar-box" id="tuan-box">
                         <div class="img-box">
-                            <img src="./code/images/about-images/tuan-image.jpeg">
+                            <img src="./images/about-images/tuan-image.jpeg">
                         </div>
                         <div class="box-content">
                             <h1>Dao Kha Tuan<br>
@@ -202,7 +202,7 @@
                     </div>
                     <div class="avatar-box" id="long-box">
                         <div class="img-box">
-                            <img src="./code/images/about-images/long-image.jpeg">
+                            <img src="./images/about-images/long-image.jpeg">
                         </div>
                         <div class="box-content">
                             <h1>Nguyen Trong Minh Long<br>
@@ -225,9 +225,9 @@
             <h3 class="right">Design by developer team</h3>
         </nav>
     </footer>
-    <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/display-member-info.js"></script>
-    <script src="./code/script/check_login.js" defer></script>
+    <script src="./script/cookies.js" defer></script>
+    <script src="./script/display-member-info.js"></script>
+    <script src="./script/check_login.js" defer></script>
 
 </body>
 </html>

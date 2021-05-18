@@ -1,7 +1,7 @@
 <?php
     session_start();
     $matched_account = $_SESSION['matched_account'];
-    include('./backend/check_login.php');
+    include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
@@ -11,11 +11,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Account</title>
-    <link rel="stylesheet" href="./code/css/header.css">
-    <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./code/css/user-information.css">
-    <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/user-information.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/cookies.css">
 </head>
 
 <body>
@@ -98,7 +98,7 @@
             </div>
             <div id="info">
                 <div id="profile-picture">
-                    <img src="./code/images/about-images/tuan-image.jpeg" alt="profile-picture">
+                    <img src="./images/about-images/tuan-image.jpeg" alt="profile-picture">
                 </div>
                 <ul> 
                     <!-- display the first and last name of the account -->
@@ -132,9 +132,9 @@
             <h3 class="right">Design by developer team</h3>
         </nav>
     </footer>
-    <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/check_login.js" defer></script>
-    <script src="./code/script/update_email.js" defer></script>
+    <script src="./script/cookies.js" defer></script>
+    <script src="./script/check_login.js" defer></script>
+    <script src="./script/update_email.js" defer></script>
     </body>
 
     

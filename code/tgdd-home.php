@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('./backend/check_login.php');
+    include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
@@ -10,12 +10,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home-TheGioiDiDong</title>'
-    <link rel="stylesheet" href="./code/css/store-home.css">
-    <link rel="stylesheet" href="./code/css/store-container.css">
-    <link rel="stylesheet" href="./code/css/header.css">
-    <link rel="stylesheet" href="./code/css/footer.css">
-    <link rel="stylesheet" href="./code/css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./code/css/cookies.css">
+    <link rel="stylesheet" href="./css/store-home.css">
+    <link rel="stylesheet" href="./css/store-container.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/cookies.css">
     <!-- <link rel="stylesheet" href="./header.css"> -->
 </head>
 <body>
@@ -102,7 +102,7 @@
                 <!-- <div class="overlay">
                     <p>$296.55</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/stores-image/technology_stores/tgdd/vivoY12s.jpg" alt="Vivo Y12S" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/vivoY12s.jpg" alt="Vivo Y12S" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Vivo Y12S</a></h3>
             </div>
 
@@ -110,7 +110,7 @@
                 <!-- <div class="overlay">
                     <p>$125.65</p>
                 </div> -->
-                <a href="./product-detail2.php" ><img src="./code/images/stores-image/technology_stores/tgdd/vsmartstar5.jpg" alt="VSmart Star 5" width="200" height="200"></a>
+                <a href="./product-detail2.php" ><img src="./images/stores-image/technology_stores/tgdd/vsmartstar5.jpg" alt="VSmart Star 5" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">VSmart Star 5</a></h3>
             </div>
 
@@ -118,7 +118,7 @@
                 <!-- <div class="overlay">
                     <p>$478.26</p>
                 </div> -->
-                <a href="./product-detail3.php" ><img src="./code/images/stores-image/technology_stores/tgdd/samsung_galaxy_m51.jpg" alt="Samsung Galaxy M51" width="200" height="200"></a>
+                <a href="./product-detail3.php" ><img src="./images/stores-image/technology_stores/tgdd/samsung_galaxy_m51.jpg" alt="Samsung Galaxy M51" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Samsung Galaxy M51</a></h3>
             </div>
 
@@ -126,7 +126,7 @@
                 <!-- <div class="overlay">
                     <p>$364.78</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/stores-image/technology_stores/tgdd/opporeno5.jpg" alt="Oppo Reno5" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/opporeno5.jpg" alt="Oppo Reno5" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Oppo Reno5</a></h3>
             </div>
 
@@ -134,7 +134,7 @@
                 <!-- <div class="overlay">
                     <p>$956.52</p>
                 </div> -->
-                <a href="./product-detail2.php" ><img src="./code/images/stores-image/technology_stores/tgdd/oneplus8pro.jpg" alt="Oneplus 8 Pro 5G" width="200" height="200"></a>
+                <a href="./product-detail2.php" ><img src="./images/stores-image/technology_stores/tgdd/oneplus8pro.jpg" alt="Oneplus 8 Pro 5G" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Oneplus 8 Pro 5G</a></h3>
             </div>
         </div>
@@ -148,7 +148,7 @@
                 <!-- <div class="overlay">
                     <p>$1434.78</p>
                 </div> -->
-                <a href="./product-detail3.php" ><img src="./code/images/stores-image/technology_stores/tgdd/iphone12pro.jpg" alt="Iphone 12 Pro" width="200" height="200"></a>
+                <a href="./product-detail3.php" ><img src="./images/stores-image/technology_stores/tgdd/iphone12pro.jpg" alt="Iphone 12 Pro" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Iphone 12 Pro</a></h3>
             </div>
 
@@ -156,7 +156,7 @@
                 <!-- <div class="overlay">
                     <p>$1130</p>
                 </div> -->
-                <a href="./product-detail2.php" ><img src="./code/images/stores-image/technology_stores/tgdd/samsung_galaxy_s21.jpg" alt="Samsung Galaxy S21" width="200" height="200"></a>
+                <a href="./product-detail2.php" ><img src="./images/stores-image/technology_stores/tgdd/samsung_galaxy_s21.jpg" alt="Samsung Galaxy S21" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Samsung Galaxy S21</a></h3>
             </div>
 
@@ -164,7 +164,7 @@
                 <!-- <div class="overlay">
                     <p>$325.65</p>
                 </div> -->
-                <a href="./product-detail3.php" ><img src="./code/images/stores-image/technology_stores/tgdd/opporeno4.jpg" alt="Oppo Reno 4" width="200" height="200"></a>
+                <a href="./product-detail3.php" ><img src="./images/stores-image/technology_stores/tgdd/opporeno4.jpg" alt="Oppo Reno 4" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Oppo Reno 4</a></h3>
             </div>
 
@@ -172,7 +172,7 @@
                 <!-- <div class="overlay">
                     <p>$913.04</p>
                 </div> -->
-                <a href="./product-detail.php" ><img src="./code/images/stores-image/technology_stores/tgdd/xiaomi_mi_11_5G.jpg" alt="Xiaomi Mi 11 5G" width="200" height="200"></a>
+                <a href="./product-detail.php" ><img src="./images/stores-image/technology_stores/tgdd/xiaomi_mi_11_5G.jpg" alt="Xiaomi Mi 11 5G" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Xiaomi Mi 11 5G</a></h3>
             </div>
 
@@ -180,7 +180,7 @@
                 <!-- <div class="overlay">
                     <p>$450.65</p>
                 </div> -->
-                <a href="./product-detail2.php" ><img src="./code/images/stores-image/technology_stores/tgdd/vivov20_2021.jpg" alt="Vivo 20 (2021)" width="200" height="200"></a>
+                <a href="./product-detail2.php" ><img src="./images/stores-image/technology_stores/tgdd/vivov20_2021.jpg" alt="Vivo 20 (2021)" width="200" height="200"></a>
                 <h3><a href="./product-detail.php">Vivo 20 (2021)</a></h3>
             </div>
         </div>
@@ -198,7 +198,7 @@
         </nav>
     </footer>
 
-    <script src="./code/script/cookies.js" defer></script>
-    <script src="./code/script/check_login.js" defer></script>
+    <script src="./script/cookies.js" defer></script>
+    <script src="./script/check_login.js" defer></script>
 </body>
 </html>
