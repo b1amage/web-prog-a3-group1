@@ -156,7 +156,12 @@ include '../backend/display-store-product.php';
             <?php 
                 $feature_count = 0;
                 foreach ($stores_data as $store):
-                    if ($store[$field_name_stores["featured"]] == "TRUE") { 
+                    $value = $store[$field_name_stores["featured"]];
+                    $value = substr($value, 0, strlen($value));
+                    for($x = 0; $x < strlen($value); $x++) {
+                        print_r(ord($value[$x]));
+                    }
+                    if ($value == "TRUE") { 
                         if ($feature_count == 10) {
                             break;
                         } else {
