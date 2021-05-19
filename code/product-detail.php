@@ -22,7 +22,6 @@ include '../backend/display_store_by_categories.php';
     <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./css/cookies.css">
     <link rel="stylesheet" href="./css/add-to-cart.css">
-    
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -131,6 +130,8 @@ include '../backend/display_store_by_categories.php';
         <div class="related flex-0">
             <h1>Related products</h1>
         </div>
+
+
 
         <?php
                 $feature_count = 0;
