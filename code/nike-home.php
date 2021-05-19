@@ -47,14 +47,8 @@ include '../backend/arrray_product_by_store.php';
                         <li>
                             <a href="#" class="nav__link">Browse<i class="ti-angle-double-down"></i></a>
                             <ul class="subnav">
-                            <?php 
-                                    foreach ($stores_data as $store) :
-                                    if ($store[$field_name_products["id"]] == $_GET["store_id"]){
-                                            $value = $store; 
-                                        }
-                            endforeach;?>
-                                <li><a href="./nike-browse-time.php?store_id=<?=$value[$field_name_stores["id"]];?>">Product by created time</a></li>
-                                <li><a href="./store-browse-categ.php">Product by category</a></li>
+                                <li><a href="./nike-browse-time.php?store_id=<?=$_GET["store_id"];?>">Product by created time</a></li>
+                                <li><a href="./store-browse-categ.php?store_id=<?=$_GET["store_id"];?>">Product by category</a></li>
                             </ul>
                         </li>
                         <li><a href="./faqs.php" class="nav__link">FAQs</a></li>
@@ -91,8 +85,8 @@ include '../backend/arrray_product_by_store.php';
                             <label for="subnav-mobile-check-browse" class="nav__mobile-link hover-browse">Browse<i class="ti-angle-double-down"></i></label>
                             <input type="checkbox" id="subnav-mobile-check-browse" class="check-subnav-browse">
                                 <ul class="subnav-mobile-browse">
-                                    <li><a href="./nike-browse-time.php?store_id=<?=$value[$field_name_stores["id"]];?>">Product by created time</a></li>
-                                    <li><a href="./store-browse-categ.php">Product by category</a></li>
+                                    <li><a href="./nike-browse-time.php?store_id=<?=$_GET["store_id"]?>">Product by created time</a></li>
+                                    <li><a href="./store-browse-categ.php?store_id=<?=$_GET["store_id"]?>">Product by category</a></li>
                                 </ul>
                         </li>
                         <li><a href="./faqs.php" class="nav__mobile-link">FAQs</a></li>
