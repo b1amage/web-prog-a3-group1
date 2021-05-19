@@ -126,10 +126,6 @@
         </form>    
         </div>
         <div class="store-container s1">
-            <!-- <div class="store">
-                <a href="./donchicken-home.php" ><img src="./images/stores-image/department_stores/bibomart.jpg" alt="department store" width="200" height="200"></a>
-                <h3><a href="./donchicken-home.php">BiBoMart</a></h3>
-            </div> -->
             <?php 
                 include_once('../backend/browse-by-name.php');
                 if (isset($_GET['matched_stores'])) {
