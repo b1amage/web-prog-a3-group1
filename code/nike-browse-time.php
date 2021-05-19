@@ -11,7 +11,7 @@ include '../backend/product_by_store.php';
 include '../backend/display_store_by_categories.php';
 include '../backend/arrray_product_by_store.php';
 
-// print_r_with_lines($product_by_store);
+// print_r_with_lines($product_by_store_array);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -101,27 +101,15 @@ include '../backend/arrray_product_by_store.php';
     </header>
 
     <main>
-        <label for="details" class="category">Newest Products<i class="ti-angle-double-down"></i></label>
+        <!-- <label for="details" class="category">Newest Products<i class="ti-angle-double-down"></i></label>
         <input type="checkbox" name="details" id="details">
 
         <div class="product-container pd1">
         <a href="">Previous</a>
-        <?php 
-                // $display_count = 0;
-                // foreach($product_by_store_array as $store):
-                //     echo $display_count;
-                //     if ($display_count == count($)) {
-                //         break;
-                //     } elseif ($display_count > count($store) - 2) {
-                //         $display_count++;
-                //     }
-                //         else {
-                //             $display_count++;
-                        ?>
 
             <div class="product">
                 <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/airzoom.jpg" alt="airzoom" width="200" height="200"></a>
-                <h3><a href="./product-detail.php"><?=$store[$field_name_stores["name"]]; ?></a></h3>
+                <h3><a href="./product-detail.php">/a></h3>
             </div>
 
                     <?php 
@@ -132,31 +120,32 @@ include '../backend/arrray_product_by_store.php';
 
 
             
-        </div>
+        </div> -->
 
 
-        <label for="details-5" class="category">Oldest Products<i class="ti-angle-double-down"></i></label>
+        <label for="details-5" class="category">Newest products<i class="ti-angle-double-down"></i></label>
         <input type="checkbox" name="details" id="details-5">
 
         <div class="product-container pd5">
-        <a href="">Previous</a>
+        <a href="#">Previous</a>
             <?php 
                 $display_count = 0;
-                foreach($product_by_store_array as $store):
+                foreach($product_by_store_array[$_GET["store_id"]] as $product):
                     if ($display_count == 2) {
                         break;
                     } else {
-                        $display_count++; ?>
+                        $display_count++;
+                        // print_r_with_lines($product); ?>
 
                 <div class="product">
-                    <a href="./product-detail.php" ><img src="./images/stores-image/nike-images/aj1.jpg" alt="air jordan" width="200" height="200"></a>
-                    <h3><a href="./product-detail.php">Air Jordan</a></h3>
+                    <a href="./product-detail.php?product_id=<?=$product[$field_name_products["id"]];?>" ><img src="./images/stores-image/nike-images/aj1.jpg" alt="air jordan" width="200" height="200"></a>
+                    <h3><a href="./product-detail.php?product_id=<?=$product[$field_name_products["id"]];?>"><?= $product[$field_name_products["name"]]; ?></a></h3>
                 </div>
 
                     <?php }
                     endforeach;
                     ?>
-        <a href="">Next</a>
+        <a href="#">Next</a>
         </div>
 
 

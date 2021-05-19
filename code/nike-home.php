@@ -8,7 +8,7 @@ include '../backend/get-data.php';
 include '../backend/display-store-product.php';
 include '../backend/product_by_store.php';
 include '../backend/display_store_by_categories.php';
-include '../backend/arrray_product_by_store.php'
+include '../backend/arrray_product_by_store.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
