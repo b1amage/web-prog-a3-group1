@@ -123,8 +123,11 @@ include '../backend/display_store_by_categories.php';
                 <p>44 - 10.5US</p>
                 <p>45 - 11US</p>
             </details>
-            <button id="add-btn"><a href="#">Add to my cart</a></button>
-            <button id="buynow-btn"><a href="./order_placement.php">Buy Now</a></button>
+            <form method="POST">
+                <button name="add-btn" value="true" id="add-btn"><a>Add to my cart</a></button>
+                <!-- <button name="add-btn" value="true" id="add-btn">Add to my cart</button> -->
+                <button id="buynow-btn"><a href="./order_placement.php">Buy Now</a></button>    
+            </form>
         </div>
         <div class="product-img"></div>
         <div class="related flex-0">
@@ -168,6 +171,29 @@ include '../backend/display_store_by_categories.php';
     </footer>
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
-    <script src="./script/add_to_cart.js" defer></script>
+    <!-- <script src="./script/add_to_cart.js" defer></script> -->
+    <?php
+        if (isset($_POST['add-btn'])) {
+            if ($_SESSION['login']) {
+                $script = <<<"SCRIPT"
+                var addButton = document.getElementById('add-btn');
+                var buyNowButton = document.getElementById('buynow-btn');
+                var productName1 = document.getElementById('product-name').innerHTML;
+                var price1 = parseInt(document.getElementById('product-price').innerHTML.slice(1));
+                var quantity1 = 0;
+    
+                quantity1++;
+                alert(`{$name} has been added!`);
+                localStorage.setItem('price1', price1);
+                localStorage.setItem('quantity1', quantity1);
+                localStorage.setItem('productName1', productName1);
+                SCRIPT;
+    
+                echo "<script>$script</script>";
+            } else {
+                echo "<script>window.alert('Please log in first');</script>";
+            }
+        }
+    ?>
 </body>
 </html>

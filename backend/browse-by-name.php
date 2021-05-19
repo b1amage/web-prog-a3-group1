@@ -28,9 +28,9 @@
 
             if (count($matched_stores) !== 0) {
                 $matched_stores = base64_encode(serialize($matched_stores));
-                header("Location: ../code/store-browse-name.php?matched_stores={$matched_stores}");
+                header("Location: ../code/store-browse-name.php?matched_stores={$matched_stores}&matched_letter={$first_letter}");
             } else {
-                $no_matched_message = base64_encode("There is no item starts with letter {$first_letter}");
+                $no_matched_message = base64_encode("There is no store starts with letter {$first_letter}");
                 header("Location: ../code/store-browse-name.php?no_matched_message={$no_matched_message}");
             }
         } else if ($_POST['name-categ'] === "all") {

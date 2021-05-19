@@ -1,6 +1,8 @@
 <?php
     session_start();
     include('../backend/check_login.php');
+    include_once('../backend/browse-by-name.php');
+    include_once('../backend/get-data.php');
     $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
@@ -126,16 +128,24 @@
             </select>
         </form>    
         </div>
+        <?php 
+            if (isset($_GET['matched_letter'])) {
+                echo "<h2 style='text-align: center';>Stores start with letter {$_GET['matched_letter']}</h2>";
+            } 
+
+            if (isset($_GET['matched_stores']) && $_GET['matched_stores']=== "all") {
+                echo "<h2 style='text-align: center';>All stores in the mall</h2>";
+            }
+        ?>
         <div class="store-container s1">
             <?php 
-                include_once('../backend/browse-by-name.php');
-                include_once('../backend/get-data.php');
-            
                 if (isset($_GET['matched_stores'])) {
                     if ($_GET['matched_stores'] === "all") {
                         $stores = get_data_from_csv('../backend/stores.csv');
                         foreach($stores as $store) {
-                            display_store($store);
+                            if ($store[$field_name_stores['name']] !=="name") {
+                                display_store($store);
+                            }
                         }                           
                     } else {
                         $matched_stores = unserialize(base64_decode($_GET['matched_stores']));
@@ -147,7 +157,7 @@
 
                 if (isset($_GET['no_matched_message'])) {
                     $no_matched_message = base64_decode($_GET['no_matched_message']);
-                    echo "<h1>{$no_matched_message}</h1>";
+                    echo "<h2>{$no_matched_message}</h2>";
                 } 
 
             ?>
