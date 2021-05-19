@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $_SESSION["page"] = -1;
     include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>
@@ -48,7 +49,7 @@ include '../backend/arrray_product_by_store.php';
                             <ul class="subnav">
                             <?php 
                                     foreach ($stores_data as $store) :
-                                    if ($store[$field_name_products["id"]] == $_GET["store_id"] ){
+                                    if ($store[$field_name_products["id"]] == $_GET["store_id"]){
                                             $value = $store; 
                                         }
                             endforeach;?>

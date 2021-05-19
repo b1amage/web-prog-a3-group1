@@ -1,5 +1,11 @@
 <?php
     session_start();
+    // if (!isset($_SESSION["page"])) {
+    //     $_SESSION["page"] = 0;
+    // }
+
+    $temp_page = $_SESSION["page"];
+    // echo $_SESSION["page"];
     include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>
@@ -12,6 +18,13 @@ include '../backend/display_store_by_categories.php';
 include '../backend/arrray_product_by_store.php';
 
 // print_r_with_lines($product_by_store_array);
+// echo $_SESSION["page"];
+?>
+
+<?php 
+
+$product_count = 0;
+$id_store = $_GET["store_id"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -127,26 +140,67 @@ include '../backend/arrray_product_by_store.php';
         <input type="checkbox" name="details" id="details-5">
 
         <div class="product-container pd5">
-        <a href="#">Previous</a>
+
+        <?php 
+                     if ($temp_page === -1) { ?>
+                            <form action="../backend/page-create.php?store_id=<?=$id_store;?>" method="post">
+                                <input type="submit" value="< Previous" name="previous-btn" disabled class="php-btn">
+                            </form>
+                     <?php 
+                     } else { ?>
+                            <form action="../backend/page-create.php?store_id=<?=$id_store;?>" method="post">
+                                <input type="submit" value="< Previous" name="previous-btn" class="php-btn">
+                            </form>
+                     <?php }
+                     ?>
+        </form>
             <?php 
+                // echo $temp_page;
+                // print_r_with_lines($product_by_store_array[$_GET["store_id"]]);
+                
+                $length = count($product_by_store_array[$_GET["store_id"]]);
                 $display_count = 0;
                 foreach($product_by_store_array[$_GET["store_id"]] as $product):
+
+                    if ($temp_page === $length - 1) {
+                        break;
+                    }
+
                     if ($display_count == 2) {
                         break;
                     } else {
                         $display_count++;
-                        // print_r_with_lines($product); ?>
+                        // print_r_with_lines($product_by_store_array[$_GET["store_id"]][$temp_page][$field_name_products["name"]]);
+                        // echo $temp_page;
+                        $temp_page++;
+                        // echo $temp_page;
+                        ?>
 
                 <div class="product">
                     <a href="./product-detail.php?product_id=<?=$product[$field_name_products["id"]];?>" ><img src="./images/stores-image/nike-images/aj1.jpg" alt="air jordan" width="200" height="200"></a>
-                    <h3><a href="./product-detail.php?product_id=<?=$product[$field_name_products["id"]];?>"><?= $product[$field_name_products["name"]]; ?></a></h3>
+                    <h3><a href="./product-detail.php?product_id=<?=$product[$field_name_products["id"]];?>"><?=$product_by_store_array[$_GET["store_id"]][$temp_page][$field_name_products["name"]]; ?></a></h3>
                 </div>
 
-                    <?php }
+                    <?php 
+
+                    }
                     endforeach;
                     ?>
-        <a href="#">Next</a>
+                     <?php 
+                     if ($temp_page >= count($product_by_store_array[$_GET["store_id"]]) - 1) { ?>
+                            <form action="../backend/page-create.php?store_id=<?=$id_store;?>" method="post">
+                                <input type="submit" value="Next >" name="next-btn" disabled class="php-btn">
+                            </form>
+                     <?php 
+                     } else { ?>
+                            <form action="../backend/page-create.php?store_id=<?=$id_store;?>" method="post">
+                                <input type="submit" value="Next >" name="next-btn" class="php-btn">
+                            </form>
+                     <?php }
+                     ?>
+
         </div>
+
 
 
     </main>

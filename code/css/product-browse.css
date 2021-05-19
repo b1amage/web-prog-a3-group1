@@ -91,8 +91,7 @@ body main {
 .pd1,
 .pd2,
 .pd3,
-.pd4,
-.pd5 {
+.pd4 {
     display: none;
 }
 .pd5 {
@@ -156,4 +155,20 @@ body main {
     .pd5 {
         margin-bottom: 1250px;
     }
+}
+
+.php-btn {
+    background-color: #c7bdb1;
+    min-width: 100px;
+    min-height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    opacity: 1;
+    transition: all 0.6s ease-in-out;
+}
+
+.php-btn:hover {
+    cursor: pointer;
+    opacity: 0.7;
 }
