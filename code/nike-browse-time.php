@@ -159,6 +159,7 @@ $id_store = $_GET["store_id"];
                 // print_r_with_lines($product_by_store_array[$_GET["store_id"]]);
                 
                 $length = count($product_by_store_array[$_GET["store_id"]]);
+                $display_count = 0;
                 foreach($product_by_store_array[$_GET["store_id"]] as $product):
 
                     if ($temp_page === $length - 1) {
