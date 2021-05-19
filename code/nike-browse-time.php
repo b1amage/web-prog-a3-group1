@@ -144,12 +144,12 @@ $id_store = $_GET["store_id"];
         <?php 
                      if ($temp_page === -1) { ?>
                             <form action="../backend/page-create.php?store_id=<?=$id_store;?>" method="post">
-                                <input type="submit" value="Previous" name="previous-btn" disabled>
+                                <input type="submit" value="< Previous" name="previous-btn" disabled class="php-btn">
                             </form>
                      <?php 
                      } else { ?>
                             <form action="../backend/page-create.php?store_id=<?=$id_store;?>" method="post">
-                                <input type="submit" value="Previous" name="previous-btn">
+                                <input type="submit" value="< Previous" name="previous-btn" class="php-btn">
                             </form>
                      <?php }
                      ?>
@@ -189,12 +189,12 @@ $id_store = $_GET["store_id"];
                      <?php 
                      if ($temp_page >= count($product_by_store_array[$_GET["store_id"]]) - 1) { ?>
                             <form action="../backend/page-create.php?store_id=<?=$id_store;?>" method="post">
-                                <input type="submit" value="Next" name="next-btn" disabled>
+                                <input type="submit" value="Next >" name="next-btn" disabled class="php-btn">
                             </form>
                      <?php 
                      } else { ?>
                             <form action="../backend/page-create.php?store_id=<?=$id_store;?>" method="post">
-                                <input type="submit" value="Next" name="next-btn">
+                                <input type="submit" value="Next >" name="next-btn" class="php-btn">
                             </form>
                      <?php }
                      ?>
