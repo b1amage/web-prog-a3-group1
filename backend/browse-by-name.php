@@ -1,14 +1,16 @@
 <?php 
     include_once('get-data.php');
-    function display_store($store_name) {
-        $store = <<<"STORE"
+    function display_store($store) {
+        $store_id = $store[0];
+        $store_name = $store[1];
+        $display = <<<"STORE"
         <div class="store">
-            <a href="./donchicken-home.php" ><img src="./images/stores-image/department_stores/bibomart.jpg" alt="department store" width="200" height="200"></a>
-            <h3><a href="./donchicken-home.php">{$store_name}</a></h3>
+            <a href="./nike-home.php?store_id=$store_id"><img src="./images/index-img/nike.jpeg" alt="nike-logo" width="200" height="200"></a>
+            <h3><a href="./nike-home.php?store_id=$store_id" class="underline">$store_name</a></h3>
         </div>
         STORE;
 
-        echo $store;
+        echo $display;
     }
     if (isset($_POST['name-categ'])) {
         $first_letter = $_POST['name-categ'];
@@ -18,7 +20,7 @@
 
         foreach($stores_data as $store) {
             if (strpos($store[$field_name_stores['name']], $first_letter) === 0 && $store[$field_name_stores['name']] !== "name") {
-                $matched_stores[] = $store[$field_name_stores['name']];
+                $matched_stores[] = $store;
             }
         }
 
@@ -28,7 +30,7 @@
 
         if (count($matched_stores) !== 0) {
             $matched_stores = base64_encode(serialize($matched_stores));
-            header("Location: ../code/store-browse-name.php?matched_stores={$matched_stores}");
+            header("Location: ../code/store-browse-name.php?matched_stores={$matched_stores}?first_letter={$first_letter}");
         } else {
             header("Location: ../code/store-browse-name.php?no_matched_message={$no_matched_message}");
         }
