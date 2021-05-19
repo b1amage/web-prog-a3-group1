@@ -132,8 +132,6 @@ include '../backend/display_store_by_categories.php';
             <h1>Related products</h1>
         </div>
 
-
-
         <?php
                 $feature_count = 0;
                 foreach ($products_data as $product):
