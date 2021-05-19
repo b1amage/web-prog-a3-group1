@@ -13,8 +13,6 @@
         echo $display;
     }
 
-
-
     if (isset($_POST['name-categ'])) {
         if ($_POST['name-categ'] !== "all") {
             $first_letter = $_POST['name-categ'];
