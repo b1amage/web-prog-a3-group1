@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $_SESSION["page"] = 0;
     include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>

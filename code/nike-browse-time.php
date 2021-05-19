@@ -141,18 +141,28 @@ $id_store = $_GET["store_id"];
 
         <div class="product-container pd5">
 
-        <form action="../backend/page-create.php?store_id=<?=$id_store;?>" method="post">
-            <input type="submit" value="Previous" name="previous-btn">
+        <?php 
+                     if ($temp_page === 0) { ?>
+                            <form action="../backend/page-create.php?store_id=<?=$id_store;?>" method="post">
+                                <input type="submit" value="Previous" name="previous-btn" disabled>
+                            </form>
+                     <?php 
+                     } else { ?>
+                            <form action="../backend/page-create.php?store_id=<?=$id_store;?>" method="post">
+                                <input type="submit" value="Previous" name="previous-btn">
+                            </form>
+                     <?php }
+                     ?>
         </form>
             <?php 
-                $display_count = 0;
+                // print_r_with_lines($product_by_store_array[$_GET["store_id"]]);
                 foreach($product_by_store_array[$_GET["store_id"]] as $product):
                     if ($display_count == 2) {
                         break;
                     } else {
                         $display_count++;
-                        print_r_with_lines($product_by_store_array[$_GET["store_id"]][$temp_page][$field_name_products["name"]]);
-                        echo $temp_page;
+                        // print_r_with_lines($product_by_store_array[$_GET["store_id"]][$temp_page][$field_name_products["name"]]);
+                        // echo $temp_page;
                         $temp_page++;
                         ?>
 
@@ -166,9 +176,19 @@ $id_store = $_GET["store_id"];
                     }
                     endforeach;
                     ?>
-        <form action="../backend/page-create.php?store_id=<?=$id_store;?>" method="post">
-            <input type="submit" value="Next" name="next-btn">
-        </form>
+                     <?php 
+                     if ($temp_page >= count($product_by_store_array[$_GET["store_id"]]) - 2) { ?>
+                            <form action="../backend/page-create.php?store_id=<?=$id_store;?>" method="post">
+                                <input type="submit" value="Next" name="next-btn" disabled>
+                            </form>
+                     <?php 
+                     } else { ?>
+                            <form action="../backend/page-create.php?store_id=<?=$id_store;?>" method="post">
+                                <input type="submit" value="Next" name="next-btn">
+                            </form>
+                     <?php }
+                     ?>
+
         </div>
 
 
