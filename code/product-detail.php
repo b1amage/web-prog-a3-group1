@@ -132,33 +132,33 @@ include '../backend/display_store_by_categories.php';
         </div>
 
         <div class="related-product-1 flex">
-            <a href="./product-detail.php"><img src="./images/index-img/joyride.jpg" alt="joyride" width="300" height="300"></a>
+            <a href="#"><img src="./images/index-img/joyride.jpg" alt="joyride" width="300" height="300"></a>
             <h3><a href="./product-detail.php">Nike Joyride</a></h3>
         </div>
         <div class="related-product-2 flex">
-            <a href="./product-detail.php"><img src="./images/index-img/lebron18.jpg" alt="lebron18" width="300" height="300"></a>
+            <a href="#"><img src="./images/index-img/lebron18.jpg" alt="lebron18" width="300" height="300"></a>
             <h3><a href="./product-detail.php">Nike Lebron 18</a></h3>
         </div>
         <div class="related-product-3 flex">
-            <a href="./product-detail.php"><img src="./images/index-img/vans-img.jpg" alt="vans" width="300" height="300"></a>
+            <a href="#"><img src="./images/index-img/vans-img.jpg" alt="vans" width="300" height="300"></a>
             <h3><a href="./product-detail.php">Vans Old Skool</a></h3>
         </div>
         <div class="related-product-4 flex">
-            <a href="./product-detail.php"><img src="./images/index-img/stansmith.jpg" alt="stansmith" width="300" height="300"></a>
+            <a href="#"><img src="./images/index-img/stansmith.jpg" alt="stansmith" width="300" height="300"></a>
             <h3><a href="./product-detail.php">Stan Smith</a></h3>
         </div>
         <div class="related-product-5 flex">
-            <a href="./product-detail.php"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
+            <a href="#"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
             <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
         </div>
 
         <div class="product-1">
-            <a href="./product-detail.php"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
+            <a href="#"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
             <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
         </div>
 
         <div class="product-2">
-            <a href="./product-detail.php"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
+            <a href="#"><img src="./images/index-img/airmax97.jpg" alt="airmax97" width="300" height="300"></a>
             <h3><a href="./product-detail.php">Nike Airmax 97</a></h3>
         </div>
 
