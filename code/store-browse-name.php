@@ -95,7 +95,8 @@
         <form method="POST" action="../backend/browse-by-name.php">
         <div class="categ-container">
             <select class="name-categ" name="name-categ" onchange="form.submit()">
-                <option value="" selected disabled selected>Select the starting letter</option>
+                <option value="" selected disabled hidden>Select the starting letter</option>
+                <option value="all">Display all</option>
                 <option value="A">A</option>
                 <option value="B">B</option>
                 <option value="C">C</option>
@@ -128,16 +129,28 @@
         <div class="store-container s1">
             <?php 
                 include_once('../backend/browse-by-name.php');
+                include_once('../backend/get-data.php');
+            
                 if (isset($_GET['matched_stores'])) {
-                    $matched_stores = unserialize(base64_decode($_GET['matched_stores']));
-                    foreach($matched_stores as $store) {
-                        display_store($store);
+                    if ($_GET['matched_stores'] === "all") {
+                        $stores = get_data_from_csv('../backend/stores.csv');
+                        foreach($stores as $store) {
+                            display_store($store);
+                        }                           
+                    } else {
+                        $matched_stores = unserialize(base64_decode($_GET['matched_stores']));
+                        foreach($matched_stores as $store) {
+                            display_store($store);
+                        }
                     }
-                }
+                } 
 
                 if (isset($_GET['no_matched_message'])) {
-                    echo "<h1>{$_GET['no_matched_message']}</h1>";
-                }
+                    $no_matched_message = base64_decode($_GET['no_matched_message']);
+                    echo "<h1>{$no_matched_message}</h1>";
+                } 
+
+
             ?>
         </div>
        
