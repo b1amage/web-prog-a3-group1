@@ -62,7 +62,7 @@ $id_store = $_GET["store_id"];
                             <a href="#" class="nav__link">Browse<i class="ti-angle-double-down"></i></a>
                             <ul class="subnav">
                                 <li><a href="./nike-browse-time.php?store_id=<?=$_GET["store_id"]?>">Product by created time</a></li>
-                                <li><a href="./store-browse-categ.php?store_id=<?=$_GET["store_id"]?>">Product by category</a></li>
+                                <li><a href="./nike-browse-categ.php?store_id=<?=$_GET["store_id"]?>">Product by category</a></li>
                             </ul>
                         </li>
                         <li><a href="./faqs.php" class="nav__link">FAQs</a></li>
@@ -100,7 +100,7 @@ $id_store = $_GET["store_id"];
                             <input type="checkbox" id="subnav-mobile-check-browse" class="check-subnav-browse">
                                 <ul class="subnav-mobile-browse">
                                     <li><a href="./nike-browse-time.php?store_id=<?=$_GET["store_id"]?>">Product by created time</a></li>
-                                    <li><a href="./store-browse-categ.php?store_id=<?=$_GET["store_id"]?>">Product by category</a></li>
+                                    <li><a href="./nike-browse-categ.php?store_id=<?=$_GET["store_id"]?>">Product by category</a></li>
                                 </ul>
                         </li>
                         <li><a href="./faqs.php" class="nav__mobile-link">FAQs</a></li>
