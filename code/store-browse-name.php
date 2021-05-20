@@ -1,7 +1,7 @@
 <?php
     session_start();
-    include('../backend/check_login.php');
-    include_once('../backend/browse-by-name.php');
+    include_once('../backend/check_login.php');
+    include_once('../backend/browse-store-by-name.php');
     include_once('../backend/get-data.php');
     $my_account_link = check_login();
 ?>
@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browse Stores By Categories</title>
+    <title>Browse Stores By Name</title>
     <link rel="stylesheet" href="./css/store-browse-name.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -94,7 +94,7 @@
 
     <main>
         <div class="title">Browse Store By Name</div>
-        <form method="POST" action="../backend/browse-by-name.php">
+        <form method="POST" action="../backend/browse-store-by-name.php">
         <div class="categ-container">
             <select class="name-categ" name="name-categ" onchange="form.submit()">
                 <option value="" selected disabled hidden>Select the starting letter</option>
