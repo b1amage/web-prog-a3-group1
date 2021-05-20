@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    margin-top: 100px;
+}
+
+.product-added-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+#product-order {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 5vh;
+}
+
+#product-order, th, td {
+    border: 2px solid black;
+}
+
+td {
+    text-align:  center;
+}
+
+.expand {
+    width: 30%;
+}
+
+#quantity {
+    text-align: center;
+    width: 40%;
+    height: 20%;
+}
+
+.discount-container {
+    margin-top: 10vh;
+    min-height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #5a473a;
+}
+
+#discount-code {
+    width: 20%;
+    min-height: 40px;
+}
+
+#submit-btn {
+    min-height: 40px;
+    width: 10%;
+    outline: none;
+    background-color: #ddd9d6;
+    border: none;
+    opacity: 1;
+    transition: all 0.6s ease-in-out;
+}
+
+#submit-btn:hover {
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.code-title {
+    color: #ddd9d6;
+}
+
+.checkout-info-container {
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+
+    width: 100%;
+}
+
+
+.checkout-info-container h1,
+.checkout-info-container h2,
+.checkout-info-container .btn-ctn {
+    margin-top: 3vh;
+}
+
+.btn-ctn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: #5a473a;
+    width: 15%;
+    min-height: 40px;
+    color: #ddd9d6;
+    border-radius: 20px;
+    opacity: 1;
+    transition: all 0.6s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+#checkout {
+    margin-right: 5vh;
+}
+
+@media only screen and (max-width: 414px) {
+    button {
+        width: 30%;
+        font-size: 12px;
+    }
+
+    th {
+        font-size: 12px;
+    }
+}

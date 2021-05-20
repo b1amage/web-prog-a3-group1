@@ -1,7 +1,6 @@
 <?php 
         session_start();
         $id_store = $_GET["store_id"];
-        // echo $id_store;
         
         if (isset($_POST["next-btn"])) {
             $_SESSION["page"] += 2;
