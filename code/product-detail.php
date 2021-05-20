@@ -99,7 +99,6 @@ include '../backend/display_store_by_categories.php';
         </main>
     </header>
 
-
     <main class="grid-container">
         <div class="description">
             <?php $id=$_GET["product_id"];
@@ -129,13 +128,22 @@ include '../backend/display_store_by_categories.php';
                 <!-- <button name="add-btn" value="true" id="add-btn">Add to my cart</button> -->
                 <button id="buynow-btn"><a href="./order_placement_2.php">Buy Now</a></button>    
             </form>
+
+            <?php
+            if (isset($_SESSION['order'])) {
+                foreach($_SESSION['order'] as $order) {
+                    if ($name === $order["name"]) {
+                        echo "<h3 style='text-align: center; font-size: 20px; color: red'>{$order['name']} is added to the shopping cart</h3>";
+                        break;
+                    }
+                }
+            }
+            ?>
         </div>
         <div class="product-img"></div>
         <div class="related flex-0">
             <h1>Related products</h1>
         </div>
-
-
 
         <?php
                 $feature_count = 0;
@@ -173,28 +181,6 @@ include '../backend/display_store_by_categories.php';
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
     <!-- <script src="./script/add_to_cart.js" defer></script> -->
-    <?php
-    //     if (isset($_POST['add-btn'])) {
-    //         if ($_SESSION['login']) {
-    //             $script = <<<"SCRIPT"
-    //             var addButton = document.getElementById('add-btn');
-    //             var buyNowButton = document.getElementById('buynow-btn');
-    //             var productName1 = document.getElementById('product-name').innerHTML;
-    //             var price1 = parseInt(document.getElementById('product-price').innerHTML.slice(1));
-    //             var quantity1 = 0;
-    
-    //             quantity1++;
-    //             alert(`{$name} has been added!`);
-    //             localStorage.setItem('price1', price1);
-    //             localStorage.setItem('quantity1', quantity1);
-    //             localStorage.setItem('productName1', productName1);
-    //             SCRIPT;
-    
-    //             echo "<script>$script</script>";
-    //         } else {
-    //             echo "<script>window.alert('Please log in first');</script>";
-    //         }
-    //     }
-    // ?>
+  
 </body>
 </html>
