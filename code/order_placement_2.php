@@ -113,13 +113,23 @@
                         <th class="expand">Price</th>
                         <th>Quantity</th>
                     </thead>
+
+                    <?php 
+                    $index = 0;
+                    $all_order = $_SESSION["order"];
+                    foreach($all_order as $order):
+                        $index++;
+                    ?>
+
                     <tr>
-                        <td>1</td>
-                        <td>Name</td>
+                        <td><?=$index; ?></td>
+                        <td><?=$order["name"]; ?></td>
                         <td><img src="./images/index-img/stansmith.jpg" alt="product-img" width="100px" height="100px"></td>
-                        <td>Price</td>
-                        <td><input type="number" name="quantity" id="quantity" min="1"></td>
+                        <td><?=$order["price"]; ?></td>
+                        <td><input type="number" name="quantity" id="quantity" min="1" value="<?=$order["quantity"];?>"></td>
                     </tr>
+
+                    <?php endforeach; ?>
                 </table>
         </div>
 

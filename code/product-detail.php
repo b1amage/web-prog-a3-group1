@@ -110,7 +110,7 @@ include '../backend/display_store_by_categories.php';
                     $store_id=$product[$field_name_products["store_id"]];
                 }
                 endforeach;
-                print_r_with_lines($_SESSION["order"]);
+                // print_r_with_lines($_SESSION["order"]);
             
             ?>
             <h1 id="product-name"><?=$name?></h1>
