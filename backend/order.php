@@ -15,32 +15,21 @@
             $orderplacement["name"] = $product[$field_name_products["name"]];
             $orderplacement["price"] = $product[$field_name_products["price"]];
             $orderplacement["quantity"] = 1;
-
-
-  
-
-            // print_r_with_lines($_SESSION["order"]);
-
-            // echo var_dump($_SESSION["order"]);
-
-            // foreach ($_SESSION["order"] as $ordered_product){
-            //     if ($ordered_product == $id){
-            //         $_SESSION["order"][$id]["quantity"]++;
-            //     }
-            //     else {
-            //         $_SESSION["order"][$id][]=$orderplacement;
-            //     }
-            // }
-            // print_r_with_lines($orderplacement);
-
-
-        
         }
 
 
 
     };
-    $_SESSION["order"] = $orderplacement;
+    $ordered[] = $orderplacement;
+    foreach ($ordered as $ordered_product){
+        if ($ordered_product["id"] == $id){
+            $ordered_product["quantity"] ++;
+            $value = $ordered_product;
+        }
+    }
+
+
+    $_SESSION["order"][$id] = $value;
     // print_r_with_lines($_SESSION["order"]);
   
 
