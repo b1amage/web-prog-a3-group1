@@ -126,12 +126,14 @@
                         <td><?=$index; ?></td>
                         <td><?=$order["name"]; ?></td>
                         <td><img src="./images/index-img/stansmith.jpg" alt="product-img" width="100px" height="100px"></td>
-                        <td><?=$order["price"]; ?></td>
-                        <td><input type="number" name="quantity" id="quantity" min="1" value="<?=$order["quantity"];?>"></td>
+                        <td id="price-<?=$index;?>"><?=$order["price"]; ?></td>
+                        <td><input type="number" name="quantity" id="quantity-<?=$index;?>" min="1" value="<?=$order["quantity"];?>" class="quantity"></td>
                     </tr>
 
-                    <?php endforeach; }?>
+                    <?php endforeach; } ?>
                 </table>
+
+                <h1 style="display: none;" id="product-number"><?=$index; ?></h1>
         </div>
 
         <div class="discount-container">
@@ -142,10 +144,10 @@
 
         <div class="checkout-info-container">
             <h1 class="total-title">Total price</h1>
-            <h2>Price</h2>
+            <h2 id="total">Price</h2>
             <div class="btn-ctn">
-                <button id="checkout">Checkout</button>
-                <button id="continue">Continue shopping</button>
+                <button id="checkout"><a href="./thanks.php">Checkout</a></button>
+                <button id="continue"><a href="./index.php">Continue shopping</a></button>
             </div>
 
         </div>
@@ -164,6 +166,6 @@
     </footer>
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
-    <script src="./script/calculate_price_and_discount.js"></script>
+    <script src="./script/calculate.js" defer></script>
 </body>
 </html>
