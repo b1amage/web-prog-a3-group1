@@ -3,6 +3,7 @@
     include_once('../backend/check_login.php');
     include_once('../backend/browse-store-by-name.php');
     include_once('../backend/get-data.php');
+    include_once('../backend/display-store.php');
     $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
@@ -96,7 +97,7 @@
         <div class="title">Browse Store By Name</div>
         <form method="POST" action="../backend/browse-store-by-name.php">
         <div class="categ-container">
-            <select class="name-categ" name="name-categ" onchange="form.submit()">
+            <select class="name-categ" name="name_categ" onchange="form.submit()">
                 <option value="" selected disabled hidden>Select the starting letter</option>
                 <option value="all">Display all</option>
                 <option value="A">A</option>
