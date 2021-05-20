@@ -16,9 +16,6 @@
             $orderplacement["price"] = $product[$field_name_products["price"]];
             $orderplacement["quantity"] = 1;
         }
-
-
-
     };
     $ordered[] = $orderplacement;
     foreach ($ordered as $ordered_product){
