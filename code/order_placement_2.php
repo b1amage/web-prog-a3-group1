@@ -117,6 +117,7 @@
                     <?php 
                     $index = 0;
                     $all_order = $_SESSION["order"];
+                    if (!is_null($all_order)) {
                     foreach($all_order as $order):
                         $index++;
                     ?>
@@ -129,7 +130,7 @@
                         <td><input type="number" name="quantity" id="quantity" min="1" value="<?=$order["quantity"];?>"></td>
                     </tr>
 
-                    <?php endforeach; ?>
+                    <?php endforeach; }?>
                 </table>
         </div>
 
