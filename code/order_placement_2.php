@@ -118,10 +118,10 @@
 
 
                     if (isset($all_order)) {
-                    $index = 0;
-                    $all_order = $_SESSION["order"];
-                    foreach($all_order as $order):
-                        $index++;
+                        $index = 0;
+                        $all_order = $_SESSION["order"];
+                        foreach($all_order as $order):
+                            $index++;
                     ?>
 
                     <tr>
