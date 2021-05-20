@@ -23,7 +23,7 @@
                 header("Location: ../code/store-browse-name.php?no_matched_message={$no_matched_message}");
             }
 
-        } else if ($_POST['name-categ'] === "all") {
+        } else if ($_POST['name_categ'] === "all") {
             header("Location: ../code/store-browse-name.php?matched_stores=all");
         }
     }
