@@ -1,8 +1,9 @@
 <?php
     session_start();
-    include('../backend/check_login.php');
-    include_once('../backend/browse-by-name.php');
+    include_once('../backend/check_login.php');
+    include_once('../backend/browse-store-by-category.php');
     include_once('../backend/get-data.php');
+    include_once('../backend/display-store.php');
     $my_account_link = check_login();
 ?>
 <!DOCTYPE html>
@@ -93,47 +94,34 @@
     </header>
 
     <main>
-        <div class="title">Browse Store By Name</div>
-        <form method="POST" action="../backend/browse-by-name.php">
+        <div class="title">Browse Store By Category</div>
+        <form method="POST" action="../backend/browse-store-by-category.php">
         <div class="categ-container">
-            <select class="name-categ" name="name-categ" onchange="form.submit()">
-                <option value="" selected disabled hidden>Select the starting letter</option>
-                <option value="all">Display all</option>
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
-                <option value="E">E</option>
-                <option value="F">F</option>
-                <option value="G">G</option>
-                <option value="H">H</option>
-                <option value="I">I</option>
-                <option value="J">J</option>
-                <option value="K">K</option>
-                <option value="L">L</option>
-                <option value="M">M</option>
-                <option value="N">N</option>
-                <option value="O">O</option>
-                <option value="P">P</option>
-                <option value="Q">Q</option>
-                <option value="R">R</option>
-                <option value="S">S</option>
-                <option value="T">T</option>
-                <option value="U">U</option>
-                <option value="V">V</option>
-                <option value="W">W</option>
-                <option value="X">X</option>
-                <option value="Y">Y</option>
-                <option value="Z">Z</option>
+            <select class="name-categ" name="store_categ_id" onchange="form.submit()">
+            <option value="" selected disabled hidden>Select a store category</option>   
+                <option value="all">Display all</option> 
+                <option value="1">Department stores</option>
+                <option value="2">Grocery stores</option>
+                <option value="3">Restaurants</option>
+                <option value="4">Clothing stores</option>
+                <option value="5">Accessory stores</option>
+                <option value="6">Pharmacies</option>
+                <option value="7">Technology stores</option>
+                <option value="8">Pet stores</option>
+                <option value="9">Toy stores</option>
+                <option value="10">Specialty stores</option>
+                <option value="11">Thrift stores</option>
+                <option value="12">Services</option>
+                <option value="13">Kiosks</option>
             </select>
         </form>    
         </div>
         <?php 
-            if (isset($_GET['matched_letter'])) {
-                echo "<h2 style='text-align: center';>Stores start with letter {$_GET['matched_letter']}</h2>";
+            if (isset($_GET['matched_categ'])) {
+                echo "<h2 style='text-align: center';>Stores in the category {$_GET['matched_categ']}</h2>";
             } 
 
-            if (isset($_GET['matched_stores']) && $_GET['matched_stores']=== "all") {
+            if (isset($_GET['matched_stores']) && $_GET['matched_stores'] === "all") {
                 echo "<h2 style='text-align: center';>All stores in the mall</h2>";
             }
         ?>
