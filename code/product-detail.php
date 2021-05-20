@@ -53,7 +53,7 @@ include '../backend/display_store_by_categories.php';
                         </li>
                         <li><a href="./faqs.php" class="nav__link">FAQs</a></li>
                         <li><a href="./contact.php" class="nav__link">Contact</a></li>
-                        <li><a href="./order_placement.php" class="nav__link"><i class="ti-shopping-cart"></i></a></li>
+                        <li><a href="./order_placement_2.php" class="nav__link"><i class="ti-shopping-cart"></i></a></li>
                     </ul>
                 </nav>
     
@@ -91,7 +91,7 @@ include '../backend/display_store_by_categories.php';
                         </li>
                         <li><a href="./faqs.php" class="nav__mobile-link">FAQs</a></li>
                         <li><a href="./contact.php" class="nav__mobile-link">Contact</a></li>
-                        <li><a href="./order_placement.php" class="nav__mobile-link"><i class="ti-shopping-cart"></i></a></li>
+                        <li><a href="./order_placement_2.php" class="nav__mobile-link"><i class="ti-shopping-cart"></i></a></li>
                     </ul>
                 </nav>
                 
@@ -127,7 +127,7 @@ include '../backend/display_store_by_categories.php';
             <form method="POST" action="../backend/order.php?product_id=<?=$id?>">
                 <button type="submit" name="add-btn" value="true" id="add-btn"><a>Add to my cart</a></button>
                 <!-- <button name="add-btn" value="true" id="add-btn">Add to my cart</button> -->
-                <button id="buynow-btn"><a href="./order_placement.php">Buy Now</a></button>    
+                <button id="buynow-btn"><a href="./order_placement_2.php">Buy Now</a></button>    
             </form>
         </div>
         <div class="product-img"></div>

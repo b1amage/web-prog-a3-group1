@@ -44,7 +44,7 @@
                         </li>
                         <li><a href="./faqs.php" class="nav__link">FAQs</a></li>
                         <li><a href="./contact.php" class="nav__link">Contact</a></li>
-                        <li><a href="./order_placement.php" class="nav__link"><i class="ti-shopping-cart"></i></a></li>
+                        <li><a href="./order_placement_2.php" class="nav__link"><i class="ti-shopping-cart"></i></a></li>
                     </ul>
                 </nav>
     
@@ -82,7 +82,7 @@
                         </li>
                         <li><a href="./faqs.php" class="nav__mobile-link">FAQs</a></li>
                         <li><a href="./contact.php" class="nav__mobile-link">Contact</a></li>
-                        <li><a href="./order_placement.php" class="nav__mobile-link"><i class="ti-shopping-cart"></i></a></li>
+                        <li><a href="./order_placement_2.php" class="nav__mobile-link"><i class="ti-shopping-cart"></i></a></li>
                     </ul>
                 </nav>
                 
@@ -105,7 +105,7 @@
                 <p>45 - 11US</p>
             </details>
             <button id="add-btn"><a href="#">Add to my cart</a></button>
-            <button id="buynow-btn"><a href="./order_placement.php">Buy Now</a></button>
+            <button id="buynow-btn"><a href="./order_placement_2.php">Buy Now</a></button>
         </div>
         <div class="product-img"></div>
         <div class="related flex-0">
