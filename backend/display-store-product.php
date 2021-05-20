@@ -15,6 +15,3 @@ usort($products_data, "created_time_cmp");
 // print_r_with_lines($products_data);
 
 ?>
-
-
-
