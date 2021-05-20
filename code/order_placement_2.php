@@ -117,7 +117,7 @@
                     <?php 
                     $index = 0;
                     $all_order = $_SESSION["order"];
-                    if (!is_null($all_order)) {
+                    if (isset($all_order)) {
                     foreach($all_order as $order):
                         $index++;
                     ?>
