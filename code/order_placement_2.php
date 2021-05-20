@@ -11,7 +11,7 @@
 ?>
 
 <?php
-    session_start();
+    // session_start();
     include('../backend/check_login.php');
     $my_account_link = check_login();
 ?>
