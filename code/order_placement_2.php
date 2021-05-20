@@ -117,11 +117,19 @@
                     <?php 
 
 
+<<<<<<< HEAD
                     if (isset($all_order)) {
                         $index = 0;
                         $all_order = $_SESSION["order"];
                         foreach($all_order as $order):
                             $index++;
+=======
+                    if (isset($_SESSION["order"])) {
+                    $index = 0;
+                    $all_order = $_SESSION["order"];
+                    foreach($all_order as $order):
+                        $index++;
+>>>>>>> 96f23c6e98e1537c8197c42b24edc295b146def7
                     ?>
 
                     <tr>
