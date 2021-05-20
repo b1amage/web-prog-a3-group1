@@ -1,9 +1,5 @@
 <?php
     session_start();
-    // if (!isset($_SESSION["page"])) {
-    //     $_SESSION["page"] = 0;
-    // }
-
     $temp_page = $_SESSION["page"];
     // echo $_SESSION["page"];
     include('../backend/check_login.php');
@@ -59,7 +55,7 @@ $id_store = $_GET["store_id"];
                         <li><a href="./fee.php" class="nav__link" id="underline">Fees</a></li>
                         <li><a href=<?=$my_account_link?> class="nav__link my-account">My Account</a></li>
                         <li>
-                            <a href="#" class="nav__link">Browse<i class="ti-angle-double-down"></i></a>
+                            <a class="nav__link">Browse<i class="ti-angle-double-down"></i></a>
                             <ul class="subnav">
                                 <li><a href="./nike-browse-time.php?store_id=<?=$_GET["store_id"]?>">Product by created time</a></li>
                                 <li><a href="./nike-browse-categ.php?store_id=<?=$_GET["store_id"]?>">Product by category</a></li>
