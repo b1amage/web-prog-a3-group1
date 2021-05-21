@@ -2,6 +2,12 @@
 // Set error count = 0 to know if there is any error while testing
 $error_count = 0;
 
+// Set those empty variable for avoid warning of null value
+$mess_username = '';
+$mess_password = '';
+$mess_retype = '';
+
+
 // If the user click on the submit button
 if (isset($_POST["submit-btn"])) {
     // Check if the username is empty
