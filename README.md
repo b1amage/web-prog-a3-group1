@@ -4,11 +4,12 @@ Assignment 3 of web programming course
 # Description
 This is the Retailez mall in which sell a myriad of product from different brands. It is just like Van Hanh Mall or Crescent Mall
 
-# Link to our website:
-
-
 # Github
 https://github.com/s3877698/web_programmming_asm3_group1
+
+# Running on localhost
+- You should start from web_programmming_asm3_group1/code/index.php
+- All logic file of php is in the web_programmming_asm3_group1/backend/ folder
 
 ## Group Members
 
@@ -22,16 +23,16 @@ Nguyen Trong Minh Long - s3878694
 
 ## Contributions:
 
-Nguyen Anh Duy (25%): 
+Nguyen Anh Duy (25%): Problem 3
 
 
-Nguyen Luu Quoc Bao (25%): Problem 0, 1, 2
+Nguyen Luu Quoc Bao (25%): Problem 0, 1, 2, 8, 9
 
 
-Dao Kha Tuan (25%): 
+Dao Kha Tuan (25%): Problem 4, 5, 6
 
  
-Nguyen Trong Minh Long (25%): 
+Nguyen Trong Minh Long (25%): Problem 7, 8, 9
 
 
 ## Responsive Devices-Configuration
