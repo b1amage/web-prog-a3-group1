@@ -132,12 +132,14 @@
                         foreach($stores as $store) {
                             if ($store[$field_name_stores['name']] !=="name") {
                                 display_store($store);
+                                session_unset();
                             }
                         }                           
                     } else {
                         $matched_stores = unserialize(base64_decode($_SESSION['matched_stores']));
                         foreach($matched_stores as $store) {
                             display_store($store);
+                            session_unset();
                         }
                     }
                 } 

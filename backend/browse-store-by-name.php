@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     include_once('get-data.php');
 
     if (isset($_POST['name_categ'])) {
@@ -16,15 +17,19 @@
             }
 
             if (count($matched_stores) !== 0) {
-                $matched_stores = base64_encode(serialize($matched_stores));
-                header("Location: ../code/store-browse-name.php?matched_stores={$matched_stores}&matched_letter={$first_letter}");
+                // $matched_stores = base64_encode(serialize($matched_stores));
+                $_SESSION['matched_stores'] = base64_encode(serialize($matched_stores));
+                // header("Location: ../code/store-browse-name.php?matched_stores={$matched_stores}&matched_letter={$first_letter}");
+                header("Location: ../code/store-browse-name.php?matched_letter={$first_letter}");
             } else {
                 $no_matched_message = base64_encode("There is no store starts with letter {$first_letter}");
                 header("Location: ../code/store-browse-name.php?no_matched_message={$no_matched_message}");
             }
 
         } else if ($_POST['name_categ'] === "all") {
-            header("Location: ../code/store-browse-name.php?matched_stores=all");
+            $_SESSION['matched_stores'] = "all";
+            // header("Location: ../code/store-browse-name.php?matched_stores=all");
+            header("Location: ../code/store-browse-name.php");
         }
     }
 ?>
