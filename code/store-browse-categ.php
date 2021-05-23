@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include_once('../backend/check_login.php');
     include_once('../backend/browse-store-by-category.php');
     include_once('../backend/get-data.php');
@@ -121,14 +120,14 @@
                 echo "<h2 style='text-align: center';>Stores in the category {$_GET['matched_categ']}</h2>";
             } 
 
-            if (isset($_GET['matched_stores']) && $_GET['matched_stores'] === "all") {
+            if (isset($_SESSION['matched_stores']) && $_SESSION['matched_stores'] === "all") {
                 echo "<h2 style='text-align: center';>All stores in the mall</h2>";
             }
         ?>
         <div class="store-container s1">
             <?php 
-                if (isset($_GET['matched_stores'])) {
-                    if ($_GET['matched_stores'] === "all") {
+                if (isset($_SESSION['matched_stores'])) {
+                    if ($_SESSION['matched_stores'] === "all") {
                         $stores = get_data_from_csv('../backend/stores.csv');
                         foreach($stores as $store) {
                             if ($store[$field_name_stores['name']] !=="name") {
@@ -136,7 +135,7 @@
                             }
                         }                           
                     } else {
-                        $matched_stores = unserialize(base64_decode($_GET['matched_stores']));
+                        $matched_stores = unserialize(base64_decode($_SESSION['matched_stores']));
                         foreach($matched_stores as $store) {
                             display_store($store);
                         }
