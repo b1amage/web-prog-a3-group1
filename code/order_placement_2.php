@@ -147,8 +147,8 @@
             <h1 class="total-title">Total price</h1>
             <h2 id="total">Price</h2>
             <div class="btn-ctn">
-                <button id="checkout"><a href="./thanks.php">Checkout</a></button>
-                <button id="continue"><a href="./index.php">Continue shopping</a></button>
+            <button id="checkout"><a href="./thanks.php">Checkout</a></button>
+            <button id="continue"><a href="./index.php">Continue shopping</a></button>
             </div>
 
         </div>

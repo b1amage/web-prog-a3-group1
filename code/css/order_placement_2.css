@@ -125,6 +125,9 @@ button:hover {
 button a {
     text-decoration: none;
     color: #ddd9d6;
+    /* padding: 20px; */
+    display: inline-block;
+    width: 100%;
 }
 
 #checkout {
