@@ -128,11 +128,11 @@
                         <td><?=$order["name"]; ?></td>
                         <td><img src="./images/index-img/stansmith.jpg" alt="product-img" width="100px" height="100px"></td>
                         <td id="price-<?=$index;?>"><?=$order["price"]; ?></td>
-                        <td><input type="number" name="quantity" id="quantity-<?=$index;?>" min="1" value="<?=$order["quantity"];?>" class="quantity"></td>
+                        <td><input type="number" name="quantity-<?=$index;?>" id="quantity-<?=$index;?>" min="1" value="<?=$order["quantity"];?>" class="quantity"></td>
                     </tr>
 
                     <?php 
-                    $_SESSION["price"] = $_SESSION["price"] + ($order["price"] * $order["name"]);
+                    $_SESSION["price"] = $_SESSION["price"] + ($order["price"] * $order["quantity"]);
                     endforeach; } ?>
                 </table>
 
@@ -143,11 +143,11 @@
             <h1 class="code-title">Code</h1>
             <input type="text" name="discount-code" id="discount-code">
             <input type="submit" value="Use" name="submit-btn" id="submit-btn">
-            <p><?php
+            <?php
                 if(isset($_SESSION["error_message"])){
-                    echo $_SESSION["error_message"];
+                    echo "<p>" . $_SESSION["error_message"] ."</p>";
                 };
-                ?></p>
+                ?>
         </div>
         </form>
 
