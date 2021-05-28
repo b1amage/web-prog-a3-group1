@@ -107,8 +107,9 @@ td {
 
 .btn-ctn a {
     margin: 0 40px;
-    display: inline-block;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
 }
 
 button {
