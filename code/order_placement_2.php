@@ -158,13 +158,8 @@
                 };?></p>
             <h2 id="total">Price</h2>
             <div class="btn-ctn">
-<<<<<<< HEAD
                 <a href="../backend/validate-checkout.php"><button id="checkout">Checkout</button></a>
                 <a href="./index.php"><button id="continue">Continue shopping</button></a>
-=======
-            <button id="checkout"><a href="./thanks.php">Checkout</a></button>
-            <button id="continue"><a href="./index.php">Continue shopping</a></button>
->>>>>>> fefac8efe64e317e6c32104ac61a67865420b5b4
             </div>
 
         </div>
