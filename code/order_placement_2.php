@@ -178,6 +178,6 @@
     </footer>
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
-    <script src="./script/calculate.js" defer></script>
+    <!-- <script src="./script/calculate.js" defer></script> -->
 </body>
 </html>
