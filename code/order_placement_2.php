@@ -159,7 +159,8 @@
 
         <div class="checkout-info-container">
             <h1 class="total-title">Total price</h1>
-            <h2 id="total"><?php if(isset($_SESSION["price"])){if(isset($_SESSION["discount"])){
+            <h2 id="total"><?php if(isset($_SESSION["price"]))
+                {if(isset($_SESSION["discount"])){
                     echo $_SESSION["price"] * $_SESSION["discount"];
                     }else{
                         echo $_SESSION["price"];
