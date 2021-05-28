@@ -159,12 +159,11 @@
 
         <div class="checkout-info-container">
             <h1 class="total-title">Total price</h1>
-            <p><?php if(isset($_SESSION["price"])){if(isset($_SESSION["discount"])){
+            <h2 id="total"><?php if(isset($_SESSION["price"])){if(isset($_SESSION["discount"])){
                     echo $_SESSION["price"] * $_SESSION["discount"];
                     }else{
                         echo $_SESSION["price"];
-                    }};?></p>
-            <h2 id="total">Price</h2>
+                    }};?></h2>
             <div class="btn-ctn">
                 <a href="../backend/validate-checkout.php"><button id="checkout">Checkout</button></a>
                 <a href="./index.php"><button id="continue">Continue shopping</button></a>
