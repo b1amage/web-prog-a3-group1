@@ -107,13 +107,15 @@ td {
 
 .btn-ctn a {
     margin: 0 40px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
 }
 
 button {
     outline: none;
     border: none;
     background-color: #5a473a;
-    width: 200px;
     padding: 5px;
     min-height: 40px;
     color: #ddd9d6;
