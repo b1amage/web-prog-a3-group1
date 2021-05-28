@@ -102,6 +102,7 @@
     </header>
 
     <main class="wrapper">
+    <form action="../backend/coupon.php" method="GET">
         <div class="product-added-container">
             <h1>Your cart</h1>
                 <table id="product-order"> 
@@ -133,30 +134,35 @@
                     </tr>
 
                     <?php 
-                    $_SESSION["price"] = $_SESSION["price"] + ($order["price"] * $order["quantity"]);
+                    $_SESSION["index"] = $index;
+                    $_SESSION["price"] = $_SESSION["price"] + ($order["price"]*$order["quantity"]);
                     endforeach; } ?>
                 </table>
 
                 <h1 style="display: none;" id="product-number"><?=$index; ?></h1>
         </div>
-        <form action="../backend/coupon.php" method="GET">
+        
         <div class="discount-container">
             <h1 class="code-title">Code</h1>
             <input type="text" name="discount-code" id="discount-code">
-            <input type="submit" value="Use" name="submit-btn" id="submit-btn">
+            <input type="submit" value="Update cart" name="submit-btn" id="submit-btn">
+        </div>
+        <p style="display: flex; justify-content: center;">
             <?php
                 if(isset($_SESSION["error_message"])){
-                    echo "<p>" . $_SESSION["error_message"] ."</p>";
+                    echo $_SESSION["error_message"]; 
                 };
                 ?>
-        </div>
+            </p>
         </form>
 
         <div class="checkout-info-container">
             <h1 class="total-title">Total price</h1>
-            <p><?php if(isset($_SESSION["price"])){
-                    echo $_SESSION["price"];
-                };?></p>
+            <p><?php if(isset($_SESSION["new_price"])){
+                    echo $_SESSION["new_price"];
+                    }else{
+                        echo $_SESSION["price"];
+                    };?></p>
             <h2 id="total">Price</h2>
             <div class="btn-ctn">
                 <a href="../backend/validate-checkout.php"><button id="checkout">Checkout</button></a>
