@@ -105,12 +105,17 @@ td {
     align-items: center;
 }
 
+.btn-ctn a {
+    margin: 0 40px;
+}
+
 button {
     outline: none;
     border: none;
     background-color: #5a473a;
-    width: 15%;
-    min-height: 30px;
+    width: 200px;
+    padding: 5px;
+    min-height: 40px;
     color: #ddd9d6;
     border-radius: 20px;
     opacity: 1;
@@ -120,18 +125,6 @@ button {
 button:hover {
     cursor: pointer;
     opacity: 0.75;
-}
-
-button a {
-    text-decoration: none;
-    color: #ddd9d6;
-    /* padding: 20px; */
-    display: inline-block;
-    width: 100%;
-}
-
-#checkout {
-    margin-right: 5vh;
 }
 
 @media only screen and (max-width: 414px) {

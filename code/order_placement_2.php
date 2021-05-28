@@ -102,6 +102,7 @@
     </header>
 
     <main class="wrapper">
+    <form action="../backend/coupon.php" method="GET">
         <div class="product-added-container">
             <h1>Your cart</h1>
                 <table id="product-order"> 
@@ -119,6 +120,7 @@
                     if (isset($_SESSION["order"])) {
                     $index = 0;
                     $all_order = $_SESSION["order"];
+                    $_SESSION["price"] = 0;
                     foreach($all_order as $order):
                         $index++;
                     ?>
@@ -128,27 +130,43 @@
                         <td><?=$order["name"]; ?></td>
                         <td><img src="./images/index-img/stansmith.jpg" alt="product-img" width="100px" height="100px"></td>
                         <td id="price-<?=$index;?>"><?=$order["price"]; ?></td>
-                        <td><input type="number" name="quantity" id="quantity-<?=$index;?>" min="1" value="<?=$order["quantity"];?>" class="quantity"></td>
+                        <td><input type="number" name="quantity-<?=$index;?>" id="quantity-<?=$index;?>" min="1" value="<?=$order["quantity"];?>" class="quantity"></td>
                     </tr>
 
-                    <?php endforeach; } ?>
+                    <?php 
+                    $_SESSION["index"] = $index;
+                    $_SESSION["price"] = $_SESSION["price"] + ($order["price"]*$order["quantity"]);
+                    endforeach; } ?>
                 </table>
 
                 <h1 style="display: none;" id="product-number"><?=$index; ?></h1>
         </div>
-
+        
         <div class="discount-container">
             <h1 class="code-title">Code</h1>
             <input type="text" name="discount-code" id="discount-code">
-            <input type="submit" value="Use" name="submit-btn" id="submit-btn">
+            <input type="submit" value="Update cart" name="submit-btn" id="submit-btn">
         </div>
+        <p style="display: flex; justify-content: center;">
+            <?php
+                if(isset($_SESSION["error_message"])){
+                    echo $_SESSION["error_message"]; 
+                };
+                ?>
+            </p>
+        </form>
 
         <div class="checkout-info-container">
             <h1 class="total-title">Total price</h1>
+            <p><?php if(isset($_SESSION["new_price"])){
+                    echo $_SESSION["new_price"];
+                    }else{
+                        echo $_SESSION["price"];
+                    };?></p>
             <h2 id="total">Price</h2>
             <div class="btn-ctn">
-            <button id="checkout"><a href="./thanks.php">Checkout</a></button>
-            <button id="continue"><a href="./index.php">Continue shopping</a></button>
+                <a href="../backend/validate-checkout.php"><button id="checkout">Checkout</button></a>
+                <a href="./index.php"><button id="continue">Continue shopping</button></a>
             </div>
 
         </div>
@@ -167,6 +185,6 @@
     </footer>
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
-    <script src="./script/calculate.js" defer></script>
+    <!-- <script src="./script/calculate.js" defer></script> -->
 </body>
 </html>
