@@ -3,6 +3,7 @@ session_start();
 header("Location: ../code/order_placement_2.php");
 
 // $all_order = $_SESSION["order"];
+
 $i = 1;
 foreach($_SESSION["order"] as $order){
     

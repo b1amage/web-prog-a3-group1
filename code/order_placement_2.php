@@ -131,7 +131,7 @@
                         <td><?=$order["name"]; ?></td>
                         <td><img src="./images/index-img/stansmith.jpg" alt="product-img" width="100px" height="100px"></td>
                         <td id="price-<?=$index;?>"><?=$order["price"]; ?></td>
-                        <td><input type="number" name="quantity-<?=$index;?>" id="quantity-<?=$index;?>" min="1" value="<?=$order["quantity"];?>" class="quantity"></td>
+                        <td><input type="number" name="quantity-<?=$index;?>" id="quantity-<?=$index;?>" min="1" value="<?=$order["quantity"];?>" class="quantity" onclick="document.getElementsByTagName('form')[0].submit()"></td>
                     </tr>
 
                     <?php 
