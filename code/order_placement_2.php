@@ -119,6 +119,7 @@
                     if (isset($_SESSION["order"])) {
                     $index = 0;
                     $all_order = $_SESSION["order"];
+                    $_SESSION["price"] = 0;
                     foreach($all_order as $order):
                         $index++;
                     ?>

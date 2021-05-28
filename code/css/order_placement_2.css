@@ -127,21 +127,6 @@ button:hover {
     opacity: 0.75;
 }
 
-<<<<<<< HEAD
-=======
-button a {
-    text-decoration: none;
-    color: #ddd9d6;
-    /* padding: 20px; */
-    display: inline-block;
-    width: 100%;
-}
-
-#checkout {
-    margin-right: 5vh;
-}
-
->>>>>>> fefac8efe64e317e6c32104ac61a67865420b5b4
 @media only screen and (max-width: 414px) {
     button {
         width: 30%;
