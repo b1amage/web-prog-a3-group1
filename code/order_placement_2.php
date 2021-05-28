@@ -153,17 +153,15 @@
                 if(isset($_SESSION["error_message"])){
                     echo $_SESSION["error_message"]; 
                 };
-                echo $_SESSION["price"];
-                echo $_SESSION["new_price"];
                 ?>
             </p>
         </form>
 
         <div class="checkout-info-container">
             <h1 class="total-title">Total price</h1>
-            <p><?php if(isset($_SESSION["new_price"])){
-                    echo $_SESSION["new_price"];
-                    }elseif(isset($_SESSION["price"])){
+            <p><?php if(isset($_SESSION["discount"])){
+                    echo $_SESSION["price"] * $_SESSION["discount"];
+                    }else{
                         echo $_SESSION["price"];
                     };?></p>
             <h2 id="total">Price</h2>

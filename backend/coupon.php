@@ -14,19 +14,20 @@ foreach($_SESSION["order"] as $order){
     
 }
 
-$_SESSION["new_price"] = $_SESSION["price"];
+
 
 if (isset($_GET["discount-code"])){
     if ($_GET["discount-code"] == "COSC2430-HD"){
-        $_SESSION["new_price"] = $_SESSION["price"]* 80/100;
+        $_SESSION["discount"] = 0.8;
         $_SESSION["error_message"] = "Applied";
     } elseif($_GET["discount-code"] == "COSC2430-DI"){
-        $_SESSION["new_price"] = $_SESSION["price"] * 90/100;
+        $_SESSION["discount"] = 0.9;
         $_SESSION["error_message"] = "Applied";
     } elseif($_GET["discount-code"] == ""){
-        $_SESSION["new_price"] = $_SESSION["price"];
+        $_SESSION["discount"] = 1;
         $_SESSION["error_message"] = "No code applied";
     } else{
+        $_SESSION["discount"] = 1;
         $_SESSION["error_message"] = "Invalid code";
     }
 }
