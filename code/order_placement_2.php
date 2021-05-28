@@ -128,27 +128,43 @@
                         <td><?=$order["name"]; ?></td>
                         <td><img src="./images/index-img/stansmith.jpg" alt="product-img" width="100px" height="100px"></td>
                         <td id="price-<?=$index;?>"><?=$order["price"]; ?></td>
-                        <td><input type="number" name="quantity" id="quantity-<?=$index;?>" min="1" value="<?=$order["quantity"];?>" class="quantity"></td>
+                        <td><input type="number" name="quantity-<?=$index;?>" id="quantity-<?=$index;?>" min="1" value="<?=$order["quantity"];?>" class="quantity"></td>
                     </tr>
 
-                    <?php endforeach; } ?>
+                    <?php 
+                    $_SESSION["price"] = $_SESSION["price"] + ($order["price"] * $order["quantity"]);
+                    endforeach; } ?>
                 </table>
 
                 <h1 style="display: none;" id="product-number"><?=$index; ?></h1>
         </div>
-
+        <form action="../backend/coupon.php" method="GET">
         <div class="discount-container">
             <h1 class="code-title">Code</h1>
             <input type="text" name="discount-code" id="discount-code">
             <input type="submit" value="Use" name="submit-btn" id="submit-btn">
+            <?php
+                if(isset($_SESSION["error_message"])){
+                    echo "<p>" . $_SESSION["error_message"] ."</p>";
+                };
+                ?>
         </div>
+        </form>
 
         <div class="checkout-info-container">
             <h1 class="total-title">Total price</h1>
+            <p><?php if(isset($_SESSION["price"])){
+                    echo $_SESSION["price"];
+                };?></p>
             <h2 id="total">Price</h2>
             <div class="btn-ctn">
+<<<<<<< HEAD
                 <a href="../backend/validate-checkout.php"><button id="checkout">Checkout</button></a>
                 <a href="./index.php"><button id="continue">Continue shopping</button></a>
+=======
+            <button id="checkout"><a href="./thanks.php">Checkout</a></button>
+            <button id="continue"><a href="./index.php">Continue shopping</a></button>
+>>>>>>> fefac8efe64e317e6c32104ac61a67865420b5b4
             </div>
 
         </div>
@@ -167,6 +183,6 @@
     </footer>
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
-    <script src="./script/calculate.js" defer></script>
+    <!-- <script src="./script/calculate.js" defer></script> -->
 </body>
 </html>
