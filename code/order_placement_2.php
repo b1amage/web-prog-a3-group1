@@ -127,6 +127,7 @@
 
                     <tr>
                         <td><?=$index; ?></td>
+                        <input type="hidden" name="<?=$index?>" value="<?=$order["id"]?>">
                         <td><?=$order["name"]; ?></td>
                         <td><img src="./images/index-img/stansmith.jpg" alt="product-img" width="100px" height="100px"></td>
                         <td id="price-<?=$index;?>"><?=$order["price"]; ?></td>
@@ -160,7 +161,7 @@
             <h1 class="total-title">Total price</h1>
             <p><?php if(isset($_SESSION["new_price"])){
                     echo $_SESSION["new_price"];
-                    }else{
+                    }elseif(isset($_SESSION["price"])){
                         echo $_SESSION["price"];
                     };?></p>
             <h2 id="total">Price</h2>
