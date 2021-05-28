@@ -153,6 +153,8 @@
                 if(isset($_SESSION["error_message"])){
                     echo $_SESSION["error_message"]; 
                 };
+                echo $_SESSION["price"];
+                echo $_SESSION["new_price"];
                 ?>
             </p>
         </form>
