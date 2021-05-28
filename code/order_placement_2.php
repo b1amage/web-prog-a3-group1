@@ -131,20 +131,31 @@
                         <td><input type="number" name="quantity" id="quantity-<?=$index;?>" min="1" value="<?=$order["quantity"];?>" class="quantity"></td>
                     </tr>
 
-                    <?php endforeach; } ?>
+                    <?php 
+                    $_SESSION["price"] = $_SESSION["price"] + ($order["price"] * $order["name"]);
+                    endforeach; } ?>
                 </table>
 
                 <h1 style="display: none;" id="product-number"><?=$index; ?></h1>
         </div>
-
+        <form action="../backend/coupon.php" method="GET">
         <div class="discount-container">
             <h1 class="code-title">Code</h1>
             <input type="text" name="discount-code" id="discount-code">
             <input type="submit" value="Use" name="submit-btn" id="submit-btn">
+            <p><?php
+                if(isset($_SESSION["error_message"])){
+                    echo $_SESSION["error_message"];
+                };
+                ?></p>
         </div>
+        </form>
 
         <div class="checkout-info-container">
             <h1 class="total-title">Total price</h1>
+            <p><?php if(isset($_SESSION["price"])){
+                    echo $_SESSION["price"];
+                };?></p>
             <h2 id="total">Price</h2>
             <div class="btn-ctn">
             <button id="checkout"><a href="./thanks.php">Checkout</a></button>
