@@ -23,8 +23,10 @@ if (isset($_GET["discount-code"])){
     } elseif($_GET["discount-code"] == "COSC2430-DI"){
         $_SESSION["new_price"] = $_SESSION["price"] * 90/100;
         $_SESSION["error_message"] = "Applied";
-    } else{
+    } elseif($_GET["discount-code"] == ""){
         $_SESSION["new_price"] = $_SESSION["price"];
+        $_SESSION["error_message"] = "No code applied";
+    } else{
         $_SESSION["error_message"] = "Invalid code";
     }
 }
