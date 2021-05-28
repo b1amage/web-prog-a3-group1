@@ -20,7 +20,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Placement</title>
-    <link rel="stylesheet" href="./css/order_placement_2.css">
+    <link rel="stylesheet" href="./css/order_placement_new.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
@@ -154,17 +154,11 @@
 
         <div class="checkout-info-container">
             <h1 class="total-title">Total price</h1>
-<<<<<<< HEAD
-            <p><?php if(isset($_SESSION["price"])){
-                    echo $_SESSION["price"];
-                };?></p>
-=======
             <p><?php if(isset($_SESSION["discount"])){
                     echo $_SESSION["price"] * $_SESSION["discount"];
                     }else{
                         echo $_SESSION["price"];
                     };?></p>
->>>>>>> 5a5e34717edf9166106fb8680acac5a63b2e8831
             <h2 id="total">Price</h2>
             <div class="btn-ctn">
                 <a href="../backend/validate-checkout.php"><button id="checkout">Checkout</button></a>
