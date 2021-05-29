@@ -1,0 +1,15 @@
+Used font:
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+Color palete:
+#161412
+
+#5a473a
+
+#c7bdb1
+
+#ddd9d6
+
+#ffffff
+
+#000000

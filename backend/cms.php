@@ -27,15 +27,18 @@ if (file_exists("install.php")) {
     <link rel="stylesheet" href="../code/css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../code/css/cookies.css">
     <link rel="stylesheet" href="../code/css/cms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<div id="overlay-cookies"></div>
+    <div id="overlay-cookies"></div>
     <div class="cookie-container">
         <h1>I use cookie</h1>
         <p>My website uses cookies necessary for its basic functioning. By continue browsing, you consent to my use of cookies and other technologies.</p>
         <button class="cookie-btn">I understand</button>
         <a href="#">Learn more</a>
     </div>
+    <div class="cms-icon"><a href="../backend/cms.php"><i class="fa fa-address-card-o fa-3x" aria-hidden="true"></i></a></div>
+    <div class="cms-icon-responsive"><a href="../backend/cms.php"><i class="fa fa-address-card-o fa-2x" aria-hidden="true"></i></a></div>
     <header>
         <main>
             <nav class="first-nav">
@@ -103,26 +106,28 @@ if (file_exists("install.php")) {
     </header>
     <main>
         <div class="cms-container">
-            <p>Welcome to the dashboard <?= $_SESSION['admin-username'] ?></p>
+            <p>Welcome to the dashboard <b> <?= $_SESSION['admin-username'] ?> </b> </p>
             <br>
             <h3>Change content of a page</h3>
             <form name="content-editor" method="post" action="cms.php">
                 <label for="file">Choose the page you want to edit:</label>
-                <select name="file" id="files">
-                    <option value="default" disabled="disabled" selected="true">Select a file</option>
-                    <option value="copyright">Copyright</option>
-                    <option value="tos">TOS</option>
-                    <option value="privacy">Privacy</option>
-                </select>
-                <br><br>
-                <fieldset>
+                <div class="responsive-area">
+                    <select name="file" id="files">
+                        <option value="default" disabled="disabled" selected="true">Select a file</option>
+                        <option value="copyright">Copyright</option>
+                        <option value="tos">TOS</option>
+                        <option value="privacy">Privacy</option>
+                    </select>
+                </div>
+                <fieldset> 
                     <legend>Content Editor</legend>
-                    <br>
-                    <textarea name="content" cols="150" rows="18" ></textarea>
-                    <br>
-                    <input type="submit" name="submit-append" value="Append Content">
-                    <input type="submit" name="submit-overwrite" value="Overwrite Content">
-                    <br><br>
+                    <div class="content-box">
+                        <textarea name="content"></textarea>
+                    </div>
+                    <div class="btn-area">
+                        <input type="submit" class="button" name="submit-append" value="Append Content">
+                        <input type="submit" class="button" name="submit-overwrite" value="Overwrite Content">
+                    </div>
                 </fieldset>
                 <?php 
                     if (isset($_POST)) {
@@ -153,14 +158,15 @@ if (file_exists("install.php")) {
             <h3>Check content of a page</h3>
             <form name="read-file" method="post" action="cms.php">
                 <label for="file-name">Choose the page you want to view:</label>
-                    <select name="file-name" id="file-name">
-                        <option value="default" disabled="disabled" selected="true">Select a file</option>
-                        <option value="copyright">Copyright</option>
-                        <option value="tos">TOS</option>
-                        <option value="privacy">Privacy</option>
-                        <input type="submit" name="submit-open" value="View Content">
-                    </select>
-                    <br><br>
+                    <div class="responsive-area">
+                        <select name="file-name" id="file-name">
+                            <option value="default" disabled="disabled" selected="true">Select a file</option>
+                            <option value="copyright">Copyright</option>
+                            <option value="tos">TOS</option>
+                            <option value="privacy">Privacy</option>
+                            <input type="submit" class="button" name="submit-open" value="View Content">
+                        </select>
+                    </div>
                     <fieldset>
                         <legend>Content Reader</legend>
                         <br>
