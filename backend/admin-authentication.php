@@ -65,4 +65,5 @@ if (file_exists("install.php")) {
 
     // Close the data.txt file
     fclose($admin_file);
+}
 ?>
