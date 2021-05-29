@@ -127,9 +127,8 @@ include '../backend/display_store_by_categories.php';
                 <p>45 - 11US</p>
             </details>
             <form method="POST" action="../backend/order.php?product_id=<?=$id?>">
-                <button type="submit" name="add-btn" value="true" id="add-btn"><a>Add to my cart</a></button>
-                <!-- <button name="add-btn" value="true" id="add-btn">Add to my cart</button> -->
-                <button id="buynow-btn"><a href="./order_placement_2.php">Buy Now</a></button>    
+                <a><button type="submit" name="add-btn" value="true" id="add-btn">Add to my cart</button></a>
+                <a href="./order_placement_2.php"><button type="button" id="buynow-btn">Buy Now</button></a>   
             </form>
 
             <?php
