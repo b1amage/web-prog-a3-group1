@@ -107,6 +107,23 @@
                 <li>This license to recopy does not permit incorporation of the material or any part of it in any other work or publication, whether in hard copy or electronic or any other form. In particular (but without limitation) no part of a page from the website of Retailez may be distributed or copied for any commercial purpose.</li>
                 <li>No part of the website of The Body Shop may be reproduced on or transmitted to or stored in any other web site or other form of electronic retrieval system.</li>
             </ul>
+            <br>
+            <!-- Place to store the changed content -->
+            <div class="changed-content">
+                <h2>This place is for changing the content:</h2>
+                <br>
+                <?php
+                    if(!file_exists("../backend/copyright.txt")) {
+                        echo "Error: This file does not exist.";
+                    } else {
+                        $file = fopen("../backend/copyright.txt", "r");
+                        while(!feof($file)) {
+                            echo fgets($file). "<br>";
+                        }
+                        fclose($file);
+                    }
+                 ?>   
+            </div>
         </div>
     </main>
     <footer>

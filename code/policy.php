@@ -162,6 +162,23 @@
         <p>For more information about the privacy policies, you can visit this link:
         <br><a href="https://typeful.co/privacy-policy/RW-Z1mfH" class="link" target="blank">Privacy Policy</a>    
         </p>
+        <br>
+        <!-- Place to store the changed content -->
+        <div class="changed-content">
+            <h2>This place is for changing the content:</h2>
+            <br>
+            <?php
+                if(!file_exists("../backend/policy.txt")){
+                    echo "Error: This file is not exist. The content cannot be loaded!";
+                } else {
+                    $file = fopen("../backend/policy.txt", "r");
+                    while(!feof($file)) {
+                        echo fgets($file). "<br>";
+                    }
+                    fclose($file);
+                }
+                ?>   
+        </div>
         </div>
     </main>
     <footer>

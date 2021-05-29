@@ -39,6 +39,13 @@ if (isset($_POST["submit-btn"])) {
         fclose($data_file);
     }
 
+// Clear the content of data.txt file 
+if (isset($_POST["clear-btn"])) {
+    $data_file = fopen('../data.txt', 'w');
+    fwrite($data_file,'');
+    fclose($data_file);
+}
+
 // Kiem tra xem file nay co ton tai hay ko (de vao tat ca file php khac)
 // if (file_exists("install.php")) {
 //     exit("The install.php file is exit");
@@ -82,6 +89,7 @@ if (isset($_POST["submit-btn"])) {
         <br>
 
         <input type="submit" value="Choose" name="submit-btn">
+        <input type="submit" value="Clear data" name="clear-btn">
 
 
     </form>

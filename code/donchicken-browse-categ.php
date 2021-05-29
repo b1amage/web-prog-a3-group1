@@ -317,7 +317,6 @@
             </div>
         </div>
     </main>
-    </main>
     <footer>
         <nav>
             <h3 class="left">All Rights Reserved. © 2021 RETAILEZ.</h3>

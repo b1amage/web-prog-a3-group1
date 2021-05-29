@@ -152,6 +152,23 @@
             <p>If you think someone is infringing your intellectual property rights, you can send us notice of the infringement and we’ll take appropriate action. For example, we suspend or close the Retailerz Accounts of repeat copyright infringers as described in our Copyright Help Center.</p>
             <h3>Retailez content</h3>
             <p>Some of our services include content that belongs to Retailez, for example: website service, logo, website interface. You may use Retailerz’s content as allowed by these terms and any service-specific additional terms, but we retain any intellectual property rights that we have in our content. Don’t remove, obscure, or alter any of our branding, logos, or legal notices. If you want to use our branding or logos, please contact to us.</p>
+            <br>
+            <!-- Place to store the changed content -->
+            <div class="changed-content">
+                <h2>This place is for changing the content:</h2>
+                <br>
+                <?php
+                    if(!file_exists("../backend/tos.txt")){
+                        echo "Error: This file is not exist. The content cannot be loaded!";
+                    } else {
+                        $file = fopen("../backend/tos.txt", "r");
+                        while(!feof($file)) {
+                            echo fgets($file). "<br>";
+                        }
+                        fclose($file);
+                    }
+                ?>   
+            </div>
         </div>
     </main>
     <footer>

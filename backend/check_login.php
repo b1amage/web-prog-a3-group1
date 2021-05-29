@@ -6,4 +6,11 @@
             return "./login-box.php";
         }
     }
+    function check_admin_login() {
+        if (isset($_SESSION["admin-login"])) {
+            return "../backend/cms.php";
+        } else {
+            return "../code/admin-login.php";
+        }
+    }
 ?>
