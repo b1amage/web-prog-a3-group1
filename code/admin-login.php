@@ -95,8 +95,8 @@
     <main>
         <div id="login-box">
             <form action="../backend/admin-authentication.php" method="POST"> <!-- onsubmit="return checkPassword()" -->
-                <input required type="text" id="admin-username" name="email/phone" autocomplete="off" placeholder="Admin Username">  
-                <input required type="password" id="admin-password" name="password" placeholder="Admin Password">
+                <input required type="text" name="admin-username" autocomplete="off" placeholder="Admin Username">  
+                <input required type="password" name="admin-password" placeholder="Admin Password">
                 <div id="error">Invalid password</div>
                 <h5 style="color:red;text-align:center">
                     <?php 
