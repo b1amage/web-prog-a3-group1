@@ -5,7 +5,7 @@ if (file_exists("install.php")) {
     // Include the "get-data.php" file to use the get_data_from_csv function
     include_once('get-data.php');
 
-    $registration_file = 'registration.csv';
+    $registration_file = './registration.csv';
     $fp = fopen($registration_file, "a"); // Open the registration.csv file
     flock($fp, LOCK_SH); // Set the file in shared mode (reader)
 
