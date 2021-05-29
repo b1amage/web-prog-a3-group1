@@ -1,26 +1,20 @@
 <?php 
-if (file_exists("install.php")) {
-    exit("The install.php file is exit");
-} else {
-    // Write code here
-
     session_start();
     
-    // Create an array to store admin data from data.txt
-    $admin_array = [];
-    $admin_file = fopen('../data.txt', "r"); // Open the data.txt file
-    flock($admin_file, LOCK_SH); // Set the file in shared mode (reader)
-    while (!feof($admin_file)) {
-        array_push($admin_array, fgets($admin_file) ) ;
-        // print_r(fgets($admin_file));
-    }
-    print_r($admin_array);
-    $data_username = $admin_array[0];
-    $data_hashed_password = $admin_array[1];
-
     // Check if users submit the form
-    if (isset($_POST['submit-btn']) && $_POST['submit-btn'] !== "") {
+    if (isset($_POST['submit-btn']) && $_POST['submit-btn'] !== "" || true) {
 
+        // Create an array to store admin data from data.txt
+        $admin_array = [];
+        $admin_file = fopen('../data.txt', "r"); // Open the data.txt file
+        flock($admin_file, LOCK_SH); // Set the file in shared mode (reader)
+        while (!feof($admin_file)) {
+            array_push($admin_array, fgets($admin_file) ) ;
+            // print_r(fgets($admin_file));
+        }
+        $data_username = $admin_array[0];
+        $data_hashed_password = $admin_array[1];
+        
         // Store the email or phone submitted in a variable
         $admin_username = $_POST['admin-username'];
 
@@ -36,7 +30,7 @@ if (file_exists("install.php")) {
         // A variable to store the error message
         $error_message = base64_encode("Incorrect username or password. Try again");
         
-        if ($admin_username === $data_username) {
+        if ($admin_username == substr($data_username, 0, -1)) {
             $valid_admin = true;
         } else {
             $valid_admin = false;
@@ -55,15 +49,17 @@ if (file_exists("install.php")) {
             // If valid, redirect to CMS page
             header("Location: ./cms.php");
         } else {
+            
             // If invalid, send an error message and redirect back to admin-login.php page
             header("Location: ../code/admin-login.php?error_message=$error_message");        
         }
+
+        
+        // Release the lock of the registration.csv
+        flock($admin_file, LOCK_UN);
+
+        // Close the registartion.csv file
+        fclose($admin_file);
     }
 
-    // Release the lock of the registration.csv
-    flock($admin_file, LOCK_UN);
-
-    // Close the data.txt file
-    fclose($admin_file);
-}
 ?>

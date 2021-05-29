@@ -10,8 +10,8 @@ if (file_exists("install.php")) {
     include_once('registration.php');
 
     $registration_file = 'registration.csv';
-    $fp = fopen($registration_file, "a"); // Open the registration.csv file
-    flock($fp, LOCK_SH); // Set the file in shared mode (reader)
+    // $fp = fopen($registration_file, "a"); // Open the registration.csv file
+    // flock($fp, LOCK_SH); // Set the file in shared mode (reader)
 
     // Check if users submit the form
     if (isset($_POST['button-submit']) && $_POST['button-submit'] !== "") {
@@ -97,9 +97,9 @@ if (file_exists("install.php")) {
     }
 
     // Release the lock of the registration.csv
-    flock($fp, LOCK_UN);
+    // flock($fp, LOCK_UN);
 
     // Close the registartion.csv file
-    fclose($fp);
+    // fclose($fp);
 }
 ?>

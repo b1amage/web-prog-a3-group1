@@ -64,7 +64,7 @@ if (isset($_POST["clear-btn"])) {
     <title>Install</title>
 </head>
 <body>
-    <form action="install.php" method="post">
+    <form action="install2.php" method="post">
         <label for="username">Username</label>
         <br>
         <input type="text" name="username" id="username">

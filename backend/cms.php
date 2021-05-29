@@ -6,7 +6,7 @@ if (file_exists("install.php")) {
     if (!isset($_SESSION["admin-login"])) {
         header("location: ../code/admin-login.php");
         } else {
-            header("location: ./cms.php");
+            // header("location: ./cms.php");
         }
 
     include('./check_login.php');
