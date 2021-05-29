@@ -1,4 +1,7 @@
 <?php
+if (file_exists("install.php")) {
+    exit("The install.php file is exit");
+} else {
     // Include the "get-data.php" file to use the get_data_from_csv function
     include_once('get-data.php');
 
@@ -334,4 +337,5 @@
 
     // Close the registartion.csv file
     fclose($fp);
+}
 ?>

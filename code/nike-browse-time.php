@@ -1,4 +1,7 @@
 <?php
+if (file_exists("../backend/install.php")) {
+    exit("The install.php file is exit");
+} else {
     session_start();
     $temp_page = $_SESSION["page"];
     // echo $_SESSION["page"];
@@ -216,3 +219,4 @@ $id_store = $_GET["store_id"];
     <script src="./script/check_login.js" defer></script>
 </body>
 </html>
+<?php } ?>

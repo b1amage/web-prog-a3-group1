@@ -1,4 +1,7 @@
 <?php
+if (file_exists("../backend/install.php")) {
+    exit("The install.php file is exit");
+} else {
     session_start();
     if(isset($_POST["submit_placement"])){
         $_SESSION["submit_order_placement"] = true;
@@ -187,3 +190,4 @@
     <script src="./script/calculate_price_and_discount.js"></script>
 </body>
 </html>
+<?php } ?>

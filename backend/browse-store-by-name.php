@@ -1,4 +1,7 @@
 <?php 
+if (file_exists("install.php")) {
+    exit("The install.php file is exit");
+} else {
     session_start();
     include_once('get-data.php');
 
@@ -32,4 +35,5 @@
             header("Location: ../code/store-browse-name.php");
         }
     }
+}
 ?>

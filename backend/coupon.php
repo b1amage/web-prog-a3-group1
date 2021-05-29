@@ -1,4 +1,7 @@
 <?php
+if (file_exists("install.php")) {
+    exit("The install.php file is exit");
+} else {
 session_start();
 header("Location: ../code/order_placement_2.php");
 
@@ -31,9 +34,6 @@ if (isset($_GET["discount-code"])){
         $_SESSION["discount"] = 1;
         $_SESSION["error_message"] = "Invalid code";
     }
+} 
 }
-
-
-
-
 ?>

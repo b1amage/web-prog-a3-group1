@@ -1,4 +1,7 @@
 <?php
+if (file_exists("install.php")) {
+    exit("The install.php file is exit");
+} else {
     session_start();
     if (!isset($_SESSION["admin-login"])) {
         header("location: ../code/admin-login.php");
@@ -357,3 +360,4 @@
 </body>
 </body>
 </html>
+<?php } ?>

@@ -1,5 +1,7 @@
 <?php 
-
+if (file_exists("install.php")) {
+    exit("The install.php file is exit");
+} else {
 
 // print_r_with_lines($stores_data);
 // print_r_with_lines($products_data);
@@ -13,6 +15,6 @@ foreach($categories_data as $categ) {
         }
     }
 }
-
+}
 
 ?>

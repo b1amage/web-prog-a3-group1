@@ -1,4 +1,7 @@
 <?php 
+if (file_exists("install.php")) {
+    exit("The install.php file is exit");
+} else {
     // Create the field name base on index for easier access
     $field_name_categories = [
         "id" => 0,
@@ -64,5 +67,5 @@
     // echo get_data_from_csv("./categories.csv")[1][$field_name_categories["name"]];
     // echo get_data_from_csv("./stores.csv")[1][$field_name_stores["name"]];
     // echo get_data_from_csv("./products.csv")[1][$field_name_products["name"]];
-
+}
  ?>

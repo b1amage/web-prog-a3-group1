@@ -1,4 +1,9 @@
 <?php 
+if (file_exists("install.php")) {
+    exit("The install.php file is exit");
+} else {
+    // Write code here
+
     session_start();
     
     // Create an array to store admin data from data.txt
@@ -59,4 +64,5 @@
 
     // Close the registartion.csv file
     fclose($fp);
+}
 ?>
