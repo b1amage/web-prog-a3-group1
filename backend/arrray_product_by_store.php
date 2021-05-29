@@ -5,6 +5,9 @@
 // print_r_with_lines($stores_data);
 // print_r_with_lines($products_data);
 
+if (file_exists("install.php")) {
+    exit("The install.php file is exit");
+} else {
 $product_by_store = [];
 
 foreach($stores_data as $store) {
@@ -16,5 +19,5 @@ foreach($stores_data as $store) {
 }
 
 // print_r_with_lines($product_by_store);
-
+}
 ?>

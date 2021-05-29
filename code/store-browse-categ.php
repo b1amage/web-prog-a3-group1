@@ -1,4 +1,7 @@
 <?php
+if (file_exists("../backend/install.php")) {
+    exit("The install.php file is exit");
+} else {
     include_once('../backend/check_login.php');
     include_once('../backend/browse-store-by-category.php');
     include_once('../backend/get-data.php');
@@ -170,3 +173,4 @@
 </body>
 </html>
 </html>
+<?php } ?>

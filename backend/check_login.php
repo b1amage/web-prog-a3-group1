@@ -1,4 +1,7 @@
 <?php 
+if (file_exists("install.php")) {
+    exit("The install.php file is exit");
+} else {
     function check_login() {
         if (isset($_SESSION["login"])) {
             return "./user-information.php";
@@ -13,4 +16,5 @@
             return "../code/admin-login.php";
         }
     }
+}
 ?>

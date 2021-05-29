@@ -1,4 +1,7 @@
 <?php
+if (file_exists("../backend/install.php")) {
+    exit("The install.php file is exit");
+} else {
     session_start();
     $matched_account = $_SESSION['matched_account'];
     include('../backend/check_login.php');
@@ -148,5 +151,8 @@
     <script src="./script/check_login.js" defer></script>
     <script src="./script/update_email.js" defer></script>
     </body>
+    </html>
+    <?php } ?>
+ 
 
     

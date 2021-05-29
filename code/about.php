@@ -1,4 +1,7 @@
 <?php
+if (file_exists("../backend/install.php")) {
+    exit("The install.php file is exit");
+} else {
     session_start();
     include('../backend/check_login.php');
     $my_account_link = check_login();
@@ -231,3 +234,4 @@
 
 </body>
 </html>
+<?php } ?>

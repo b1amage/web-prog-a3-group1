@@ -1,4 +1,7 @@
 <?php
+if (file_exists("../backend/install.php")) {
+    exit("The install.php file is exit");
+} else {
 session_start();
 if (isset($_SESSION["login"])) {
     $my_account_link = "./user-information.php";
@@ -231,3 +234,4 @@ include '../backend/display_store_by_categories.php';
 </body>
 
 </html>
+<?php } ?>

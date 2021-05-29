@@ -1,4 +1,7 @@
 <?php
+if (file_exists("../backend/install.php")) {
+    exit("The install.php file is exit");
+} else {
     session_start();
     include('../backend/check_login.php');
     $my_account_link = check_login();
@@ -162,3 +165,4 @@
     <script src="./script/add_to_cart_3.js"></script>
 </body>
 </html>
+<?php } ?>

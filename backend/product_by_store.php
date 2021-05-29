@@ -1,4 +1,7 @@
 <?php 
+if (file_exists("install.php")) {
+    exit("The install.php file is exit");
+} else {
 $product_by_store_array = [];
 
 foreach($stores_data as $store) {
@@ -8,5 +11,5 @@ foreach($stores_data as $store) {
         }
     }
 }
-
+}
 ?>
