@@ -43,8 +43,17 @@ td {
 .quantity {
     text-align: center;
     width: 40%;
-    height: 30%;
+    height: 40px;
 }
+
+.quantity::-webkit-inner-spin-button {
+    height: 35px;
+    opacity: 1;
+}
+
+/* input[type="number"]::-webkit-inner-spin-button {
+    height: 30%; 
+} */
 
 .discount-container {
     margin-top: 10vh;
