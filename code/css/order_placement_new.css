@@ -51,10 +51,6 @@ td {
     opacity: 1;
 }
 
-/* input[type="number"]::-webkit-inner-spin-button {
-    height: 30%; 
-} */
-
 .discount-container {
     margin-top: 10vh;
     min-height: 20vh;
