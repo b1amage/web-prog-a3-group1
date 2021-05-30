@@ -216,7 +216,7 @@ if (file_exists("install.php")) {
                     $new_location = '../code/images/about-images/duy-img.jpeg';    
                     // store new image in the image folder location (replace the current image)
                     move_uploaded_file($_FILES['duy_image']['tmp_name'], $new_location);
-                    $duy_random_id = rand(10000000,99999999); // random id to get the new image
+                    $duy_random_id = rand(1,99999999); // random id to get the new image
                     echo "<p>The image has been uploaded, close and restart the browser to update the file!</p>";
                     }
                 }
@@ -228,7 +228,7 @@ if (file_exists("install.php")) {
                     $new_location = '../code/images/about-images/bao-img.jpeg';    
                     // store new image in the image folder location (replace the current image)
                     move_uploaded_file($_FILES['bao_image']['tmp_name'], $new_location);
-                    $bao_random_id = rand(10000000,99999999); // random id to get the new image
+                    $bao_random_id = rand(1,99999999); // random id to get the new image
                     echo "<p>The image has been uploaded, close and restart the browser to update the file!</p>";
                     }
                 }
@@ -240,7 +240,7 @@ if (file_exists("install.php")) {
                     $new_location = '../code/images/about-images/tuan-image.jpeg';    
                     // store new image in the image folder location (replace the current image)
                     move_uploaded_file($_FILES['tuan_image']['tmp_name'], $new_location);
-                    $tuan_random_id = rand(10000000,99999999); // random id to get the new image
+                    $tuan_random_id = rand(1,99999999); // random id to get the new image
                     echo "<p>The image has been uploaded, close and restart the browser to update the file!</p>";
                     }
                 }    
@@ -252,7 +252,7 @@ if (file_exists("install.php")) {
                     $new_location = '../code/images/about-images/long-image.jpeg';
                     // store new image in the image folder (replace the current image)    
                     move_uploaded_file($_FILES['tuan_image']['tmp_name'], $new_location);
-                    $long_random_id = rand(10000000,99999999); // random id to get the new image
+                    $long_random_id = rand(1,99999999); // random id to get the new image
                     echo "<p>The image has been uploaded, close and restart the browser to update the file!</p>";
                     }
                 }
