@@ -216,7 +216,6 @@ if (file_exists("install.php")) {
                     $new_location = '../code/images/about-images/duy-img.jpeg';    
                     // store new image in the image folder location (replace the current image)
                     move_uploaded_file($_FILES['duy_image']['tmp_name'], $new_location);
-                    $duy_random_id = rand(1,99999999); // random id to get the new image
                     echo "<p>The image has been uploaded, close and restart the browser to update the file!</p>";
                     }
                 }
@@ -228,7 +227,6 @@ if (file_exists("install.php")) {
                     $new_location = '../code/images/about-images/bao-img.jpeg';    
                     // store new image in the image folder location (replace the current image)
                     move_uploaded_file($_FILES['bao_image']['tmp_name'], $new_location);
-                    $bao_random_id = rand(1,99999999); // random id to get the new image
                     echo "<p>The image has been uploaded, close and restart the browser to update the file!</p>";
                     }
                 }
@@ -240,7 +238,6 @@ if (file_exists("install.php")) {
                     $new_location = '../code/images/about-images/tuan-image.jpeg';    
                     // store new image in the image folder location (replace the current image)
                     move_uploaded_file($_FILES['tuan_image']['tmp_name'], $new_location);
-                    $tuan_random_id = rand(1,99999999); // random id to get the new image
                     echo "<p>The image has been uploaded, close and restart the browser to update the file!</p>";
                     }
                 }    
@@ -252,7 +249,6 @@ if (file_exists("install.php")) {
                     $new_location = '../code/images/about-images/long-image.jpeg';
                     // store new image in the image folder (replace the current image)    
                     move_uploaded_file($_FILES['long_image']['tmp_name'], $new_location);
-                    $long_random_id = rand(1,99999999); // random id to get the new image
                     echo "<p>The image has been uploaded, close and restart the browser to update the file!</p>";
                     }
                 }
@@ -260,7 +256,7 @@ if (file_exists("install.php")) {
             <div class="team">
                 <div class="avatar-box" id="duy-box">
                     <div class="img-box">
-                        <img src="../code/images/about-images/duy-img.jpeg?<? $duy_random_id?>">
+                        <img src="../code/images/about-images/duy-img.jpeg?id=<?=rand(1,999999999)?>">
                     </div>
                     <div class="box-content">
                         <h1>Nguyen Anh Duy<br>
@@ -270,7 +266,7 @@ if (file_exists("install.php")) {
                 </div>
                 <div class="avatar-box" id="bao-box">
                     <div class="img-box">
-                        <img src="../code/images/about-images/bao-img.jpeg?<? $bao_random_id?>">
+                        <img src="../code/images/about-images/bao-img.jpeg?id=<?=rand(1,999999999)?>">
                     </div>
                     <div class="box-content">
                         <h1>Nguyen Luu Quoc Bao<br>
@@ -280,7 +276,7 @@ if (file_exists("install.php")) {
                 </div>
                 <div class="avatar-box" id="tuan-box">
                     <div class="img-box">
-                        <img src="../code/images/about-images/tuan-image.jpeg?<? $tuan_random_id?>">
+                        <img src="../code/images/about-images/tuan-image.jpeg?id=<?=rand(1,999999999)?>">
                     </div>
                     <div class="box-content">
                         <h1>Dao Kha Tuan<br>
@@ -290,7 +286,7 @@ if (file_exists("install.php")) {
                 </div>
                 <div class="avatar-box" id="long-box">
                     <div class="img-box">
-                        <img src="../code/images/about-images/long-image.jpeg?<? $long_random_id?>">
+                        <img src="../code/images/about-images/long-image.jpeg?id=<?=rand(1,999999999)?>">
                     </div>
                     <div class="box-content">
                         <h1>Nguyen Trong Minh Long<br>
