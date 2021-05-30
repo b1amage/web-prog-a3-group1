@@ -1,15 +1,13 @@
 <?php 
-// include '../backend/get-data.php';
-// include '../backend/display-store-product.php';
 
-// print_r_with_lines($stores_data);
-// print_r_with_lines($products_data);
-
+// Check if the file is exist
 if (file_exists("install.php")) {
     exit("The install.php file is exit");
 } else {
+// Create empty array for product by store
 $product_by_store = [];
 
+// Iterate through the store data for getting product by id in each store
 foreach($stores_data as $store) {
     foreach($products_data as $product) {
         if($store[$field_name_stores["id"]] == $product[$field_name_products["store_id"]]) {
@@ -17,7 +15,5 @@ foreach($stores_data as $store) {
         }
     }
 }
-
-// print_r_with_lines($product_by_store);
 }
 ?>

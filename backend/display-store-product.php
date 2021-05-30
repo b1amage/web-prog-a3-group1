@@ -15,6 +15,5 @@ $categories_data = get_data_from_csv('../backend/categories.csv');
 usort($stores_data, "created_time_cmp");
 usort($products_data, "created_time_cmp");
 
-// print_r_with_lines($products_data);
 }
 ?>

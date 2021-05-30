@@ -5,8 +5,7 @@ if (file_exists("install.php")) {
 session_start();
 header("Location: ../code/order_placement_2.php");
 
-// $all_order = $_SESSION["order"];
-
+// Set i = 1 for indexing and calculatings
 $i = 1;
 foreach($_SESSION["order"] as $order){
     
