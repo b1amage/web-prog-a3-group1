@@ -138,10 +138,12 @@ if (file_exists("../backend/install.php")) {
         </form>    
         </div>
         <?php 
+            // Display the first letter users chose to display matched stores
             if (isset($_GET['matched_letter'])) {
                 echo "<h2 style='text-align: center';>Stores start with letter {$_GET['matched_letter']}</h2>";
             } 
 
+            // Inform users that they chose to display all the stores
             if (isset($_SESSION['matched_stores']) && $_SESSION['matched_stores']=== "all") {
                 echo "<h2 style='text-align: center';>All stores in the mall</h2>";
             }
@@ -149,15 +151,16 @@ if (file_exists("../backend/install.php")) {
         <div class="store-container s1">
             <?php 
                 if (isset($_SESSION['matched_stores'])) {
-                    if ($_SESSION['matched_stores'] === "all") {
+                    if ($_SESSION['matched_stores'] === "all") { // Display all the stores when users chose "Display all"
                         $stores = get_data_from_csv('../backend/stores.csv');
                         foreach($stores as $store) {
                             if ($store[$field_name_stores['name']] !=="name") {
-                                display_store($store);
+                                display_store($store); // A function to display the stores 
                                 session_unset();
                             }
                         }                           
                     } else {
+                        // If users chose to display the stores matched to a first letter, display them
                         $matched_stores = unserialize(base64_decode($_SESSION['matched_stores']));
                         foreach($matched_stores as $store) {
                             display_store($store);
@@ -166,6 +169,7 @@ if (file_exists("../backend/install.php")) {
                     }
                 } 
 
+                // If there is no matched store to the first letter users chose, let users know that
                 if (isset($_GET['no_matched_message'])) {
                     $no_matched_message = base64_decode($_GET['no_matched_message']);
                     echo "<h2>{$no_matched_message}</h2>";

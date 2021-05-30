@@ -54,18 +54,5 @@ if (file_exists("install.php")) {
         print_r($arr);
         echo '</pre>';
     }
-
-    // Test full mảng
-    // print_r_with_lines(get_data_from_csv("./products.csv"));
-    // print_r_with_lines(get_data_from_csv("./stores.csv"));
-    // print_r_with_lines(get_data_from_csv("./categories.csv"));
-
-    // Cú pháp: <Tên mảng>[hàng thứ n][$field_name_<tên mảng>["tên trường]]
-    // Dùng để truy cập mảng theo tên của cột, không cần dùng id
-
-    // Test gọi trường bất kỳ
-    // echo get_data_from_csv("./categories.csv")[1][$field_name_categories["name"]];
-    // echo get_data_from_csv("./stores.csv")[1][$field_name_stores["name"]];
-    // echo get_data_from_csv("./products.csv")[1][$field_name_products["name"]];
 }
  ?>
