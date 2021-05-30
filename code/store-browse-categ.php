@@ -125,34 +125,38 @@ if (file_exists("../backend/install.php")) {
         </form>    
         </div>
         <?php 
+            // Display the name of the category that they chose to display matched stores
             if (isset($_GET['matched_categ'])) {
                 echo "<h2 style='text-align: center';>Stores in the category {$_GET['matched_categ']}</h2>";
             } 
 
+            // Inform users that they chose to display all the stores
             if (isset($_SESSION['matched_stores']) && $_SESSION['matched_stores'] === "all") {
                 echo "<h2 style='text-align: center';>All stores in the mall</h2>";
             }
         ?>
         <div class="store-container s1">
             <?php 
-                if (isset($_SESSION['matched_stores'])) {
-                    if ($_SESSION['matched_stores'] === "all") {
+                if (isset($_SESSION['matched_stores'])) { 
+                    if ($_SESSION['matched_stores'] === "all") { // Display all the stores when users chose "Display all"
                         $stores = get_data_from_csv('../backend/stores.csv');
                         foreach($stores as $store) {
                             if ($store[$field_name_stores['name']] !=="name") {
-                                display_store($store);
+                                display_store($store); // A function to display the stores 
                                 session_unset();
                             }
                         }                           
                     } else {
+                        // If users chose to see only one category, display all the stores belong to that category
                         $matched_stores = unserialize(base64_decode($_SESSION['matched_stores']));
                         foreach($matched_stores as $store) {
-                            display_store($store);
+                            display_store($store); 
                             session_unset();
                         }
                     }
                 } 
 
+                // If there is no matched store to the category users chose, let users know that
                 if (isset($_GET['no_matched_message'])) {
                     $no_matched_message = base64_decode($_GET['no_matched_message']);
                     echo "<h2>{$no_matched_message}</h2>";

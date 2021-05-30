@@ -3,11 +3,11 @@ if (file_exists("install.php")) {
     exit("The install.php file is exit");
 } else {
     session_start();
-    // Include the "get-data.php" file to use the get_data_from_csv function
-    include_once('get-data.php');
+    // Include the "get-data.php" file to use the get_data_from_csv_with_double_quotes function
+    include_once('./get-data.php');
 
     // Include the "registration.php" file to use validation functions
-    include_once('registration.php');
+    include_once('./registration.php');
 
     $registration_file = './registration.csv';
 
