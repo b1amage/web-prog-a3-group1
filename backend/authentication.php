@@ -9,7 +9,7 @@ if (file_exists("install.php")) {
     // Include the "registration.php" file to use validation functions
     include_once('registration.php');
 
-    $registration_file = 'registration.csv';
+    $registration_file = './registration.csv';
 
     // Check if users submit the form
     if (isset($_POST['button-submit']) && $_POST['button-submit'] !== "") {
