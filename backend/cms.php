@@ -216,7 +216,6 @@ if (file_exists("install.php")) {
                     $new_location = '../code/images/about-images/duy-img.jpeg';    
                     // store new image in the image folder location (replace the current image)
                     move_uploaded_file($_FILES['duy_image']['tmp_name'], $new_location);
-                    $duy_random_id = rand(1,99999999); // random id to get the new image
                     echo "<p>The image has been uploaded, close and restart the browser to update the file!</p>";
                     }
                 }
@@ -228,7 +227,6 @@ if (file_exists("install.php")) {
                     $new_location = '../code/images/about-images/bao-img.jpeg';    
                     // store new image in the image folder location (replace the current image)
                     move_uploaded_file($_FILES['bao_image']['tmp_name'], $new_location);
-                    $bao_random_id = rand(1,99999999); // random id to get the new image
                     echo "<p>The image has been uploaded, close and restart the browser to update the file!</p>";
                     }
                 }
@@ -240,7 +238,6 @@ if (file_exists("install.php")) {
                     $new_location = '../code/images/about-images/tuan-image.jpeg';    
                     // store new image in the image folder location (replace the current image)
                     move_uploaded_file($_FILES['tuan_image']['tmp_name'], $new_location);
-                    $tuan_random_id = rand(1,99999999); // random id to get the new image
                     echo "<p>The image has been uploaded, close and restart the browser to update the file!</p>";
                     }
                 }    
@@ -252,7 +249,6 @@ if (file_exists("install.php")) {
                     $new_location = '../code/images/about-images/long-image.jpeg';
                     // store new image in the image folder (replace the current image)    
                     move_uploaded_file($_FILES['long_image']['tmp_name'], $new_location);
-                    $long_random_id = rand(1,99999999); // random id to get the new image
                     echo "<p>The image has been uploaded, close and restart the browser to update the file!</p>";
                     }
                 }
@@ -260,7 +256,8 @@ if (file_exists("install.php")) {
             <div class="team">
                 <div class="avatar-box" id="duy-box">
                     <div class="img-box">
-                        <img src="../code/images/about-images/duy-img.jpeg?<? $duy_random_id?>">
+                        <?php $duy_id = rand(1,999999999)?>
+                        <img src="../code/images/about-images/duy-img.jpeg?id=<?=$duy_id?>">
                     </div>
                     <div class="box-content">
                         <h1>Nguyen Anh Duy<br>
@@ -270,7 +267,8 @@ if (file_exists("install.php")) {
                 </div>
                 <div class="avatar-box" id="bao-box">
                     <div class="img-box">
-                        <img src="../code/images/about-images/bao-img.jpeg?<? $bao_random_id?>">
+                        <?php $bao_id = rand(1,999999999)?>
+                        <img src="../code/images/about-images/bao-img.jpeg?id=<?=$bao_id?>">
                     </div>
                     <div class="box-content">
                         <h1>Nguyen Luu Quoc Bao<br>
@@ -280,7 +278,8 @@ if (file_exists("install.php")) {
                 </div>
                 <div class="avatar-box" id="tuan-box">
                     <div class="img-box">
-                        <img src="../code/images/about-images/tuan-image.jpeg?<? $tuan_random_id?>">
+                        <?php $tuan_id = rand(1,999999999)?>
+                        <img src="../code/images/about-images/tuan-image.jpeg?id=<?=$tuan_id?>">
                     </div>
                     <div class="box-content">
                         <h1>Dao Kha Tuan<br>
@@ -290,7 +289,8 @@ if (file_exists("install.php")) {
                 </div>
                 <div class="avatar-box" id="long-box">
                     <div class="img-box">
-                        <img src="../code/images/about-images/long-image.jpeg?<? $long_random_id?>">
+                        <?php $long_id = rand(1,999999999)?>
+                        <img src="../code/images/about-images/long-image.jpeg?id=<?=$long_id?>">
                     </div>
                     <div class="box-content">
                         <h1>Nguyen Trong Minh Long<br>
@@ -306,7 +306,7 @@ if (file_exists("install.php")) {
                     <div class="info-title">Nguyen Anh Duy</div>
                 </div>
                 <div class="info-image">
-                    <img src="../code/images/about-images/duy-img.jpeg" width="200px" height="200px">
+                    <img src="../code/images/about-images/duy-img.jpeg?id=<?=$duy_id?>" width="200px" height="200px">
                 </div>
                 <div class="info-body">
                     <form name="duy-img-editor" method="post" enctype="multipart/form-data" action="cms.php"> 
@@ -325,7 +325,7 @@ if (file_exists("install.php")) {
                     <div class="info-title">Nguyen Luu Quoc Bao</div>
                 </div>
                 <div class="info-image">
-                    <img src="../code/images/about-images/bao-img.jpeg" width="200px" height="200px">
+                    <img src="../code/images/about-images/bao-img.jpeg?id=<?=$bao_id?>" width="200px" height="200px">
                 </div>
                 <div class="info-body">
                     <form name="bao-img-editor" method="post" enctype="multipart/form-data" action="cms.php"> 
@@ -344,7 +344,7 @@ if (file_exists("install.php")) {
                     <div class="info-title">Dao Kha Tuan</div>
                 </div>
                 <div class="info-image">
-                    <img src="../code/images/about-images/tuan-image.jpeg" width="200px" height="200px">
+                    <img src="../code/images/about-images/tuan-image.jpeg?id=<?=$tuan_id?>" width="200px" height="200px">
                 </div>
                 <div class="info-body">
                     <form name="tuan-img-editor" method="post" enctype="multipart/form-data" action="cms.php"> 
@@ -363,7 +363,7 @@ if (file_exists("install.php")) {
                     <div class="info-title">Nguyen Trong Minh Long</div>
                 </div>
                 <div class="info-image">
-                    <img src="../code/images/about-images/long-image.jpeg" width="200px" height="200px">
+                    <img src="../code/images/about-images/long-image.jpeg?id=<?=$long_id?>" width="200px" height="200px">
                 </div>
                 <div class="info-body">
                     <form name="long-img-editor" method="post" enctype="multipart/form-data" action="cms.php"> 
