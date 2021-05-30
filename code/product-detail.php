@@ -25,6 +25,8 @@ include '../backend/display_store_by_categories.php';
     <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./css/cookies.css">
     <link rel="stylesheet" href="./css/add-to-cart.css">
+    <link rel="stylesheet" href="../code/css/cms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -34,8 +36,10 @@ include '../backend/display_store_by_categories.php';
         <button class="cookie-btn">I understand</button>
         <a href="#">Learn more</a>
     </div>
-
-
+    <!-- CMS icon for PC-->
+    <div class="cms-icon"><a href="../backend/cms.php"><i class="fa fa-address-card-o fa-3x" aria-hidden="true"></i></a></div>
+    <!-- CMS icon for ipad and iphone X -->
+    <div class="cms-icon-responsive"><a href="../backend/cms.php"><i class="fa fa-address-card-o fa-2x" aria-hidden="true"></i></a></div>
     <header>
         <main>
             <nav class="first-nav">

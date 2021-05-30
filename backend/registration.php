@@ -293,9 +293,6 @@ if (file_exists("install.php")) {
             $new_record[2] = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $new_record[3] = password_hash($_POST['re-password'], PASSWORD_DEFAULT);
 
-            // Store the address in a double quotes so it can be stored in one cell only in the registration.csv 
-            $new_record[6] = '"'.$_POST['address'].'"';
-
             // Store the country name based on country code in the registration.csv
             $new_record[10] = $country_codes[$new_record[10]];
 
@@ -307,6 +304,11 @@ if (file_exists("install.php")) {
                 $new_record[11] = "Shopper";
             } else if ($new_record[11] === "store-owner") {
                 $new_record[11] = "Store owner";
+            }
+
+            // Store the personal record in a double quotes so it can be stored in one cell only in the registration.csv 
+            foreach($new_record as &$record) {
+                $record = "\"$record\"";
             }
 
             // Convert the records into a single line 

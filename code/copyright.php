@@ -5,6 +5,7 @@ if (file_exists("../backend/install.php")) {
     session_start();
     include('../backend/check_login.php');
     $my_account_link = check_login();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +19,8 @@ if (file_exists("../backend/install.php")) {
     <link rel="stylesheet" href="./css/cookies.css">
     <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./css/copyright.css">
+    <link rel="stylesheet" href="../code/css/cms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
 </head>
 <body>
     <div id="overlay-cookies"></div>
@@ -27,6 +30,10 @@ if (file_exists("../backend/install.php")) {
         <button class="cookie-btn">I understand</button>
         <a href="#">Learn more</a>
     </div>
+    <!-- CMS icon for PC-->
+    <div class="cms-icon"><a href="../backend/cms.php"><i class="fa fa-address-card-o fa-3x" aria-hidden="true"></i></a></div>
+    <!-- CMS icon for ipad and iphone X -->
+    <div class="cms-icon-responsive"><a href="../backend/cms.php"><i class="fa fa-address-card-o fa-2x" aria-hidden="true"></i></a></div>
     <header>
         <main>
             <nav class="first-nav">
@@ -97,36 +104,25 @@ if (file_exists("../backend/install.php")) {
         <div class="container">
             <h1>Copyright</h1>
             <div class="line"></div>
-            <p>All content included in or made available through any Retailez Service, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software is the property of Retailez or its content suppliers and protected by United States and international copyright laws. The compilation of all content included in or made available through any Retailez Service is the exclusive property of Retailez and protected by U.S. and international copyright laws.</p>
-            <p>Retailez International Limited. All Rights Reserved. Reproduction prohibited other than in accordance with the following copyright notice and limited reproduction permissions.
-            The contents of these pages are © Retailez International Limited, unless otherwise stated, or in some cases of Rampai Niaga Sdn Bhd. Reproduction of part or all of the contents in any form is prohibited other than in accordance with the following permissions:</p>
-            <h2>License To Copy For Personal Use</h2>
-            <p>You may make copies of the Site as necessary incidental acts during your viewing of it, and you may take a print for your personal use of so much of the site as is reasonable for private purposes.</p>
-            <h2>License To Recopy For Limited Purposes</h2>
-            <p>You may recopy the material to individual third parties for their personal information only, but only if the following conditions are met:</p>
-            <ul>
-                <li>You acknowledge the web pages of Retailez as the source of the material. You must include such acknowledgement along with the top-level URL from Retailez website in the copy of the material.</li>
-                <li>You inform the third party that these conditions apply to him or her and that he/she must comply with them.</li>
-                <li>This license to recopy does not permit incorporation of the material or any part of it in any other work or publication, whether in hard copy or electronic or any other form. In particular (but without limitation) no part of a page from the website of Retailez may be distributed or copied for any commercial purpose.</li>
-                <li>No part of the website of The Body Shop may be reproduced on or transmitted to or stored in any other web site or other form of electronic retrieval system.</li>
-            </ul>
-            <br>
-            <!-- Place to store the changed content -->
-            <div class="changed-content">
-                <h2>This place is for changing the content:</h2>
-                <br>
-                <?php
-                    if(!file_exists("../backend/copyright.txt")) {
-                        echo "Error: This file does not exist.";
-                    } else {
-                        $file = fopen("../backend/copyright.txt", "r");
-                        while(!feof($file)) {
-                            echo fgets($file). "<br>";
-                        }
-                        fclose($file);
+            <!-- Place to store the content -->
+            <?php
+                // Check if the new copyright content is exist or not
+                if(!file_exists("../backend/copyright.txt")) {
+                    // If not, load the old content of the copyright page
+                    $file = fopen("../backend/current-files/old-copyright.txt", "r");
+                    while(!feof($file)) {
+                        echo fgets($file);
                     }
-                 ?>   
-            </div>
+                    fclose($file);
+                } else {
+                    // If yes, load the new content to overwrite the copyright page
+                    $file = fopen("../backend/copyright.txt", "r");
+                    while(!feof($file)) {
+                        echo fgets($file). "<br>";
+                    }
+                    fclose($file);
+                }
+            ?>   
         </div>
     </main>
     <footer>
@@ -144,4 +140,3 @@ if (file_exists("../backend/install.php")) {
     <script src="./script/check_login.js" defer></script>
 </body>
 </html>
-<?php } ?>

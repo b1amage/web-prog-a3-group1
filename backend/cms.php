@@ -35,7 +35,9 @@ if (file_exists("install.php")) {
         <button class="cookie-btn">I understand</button>
         <a href="#">Learn more</a>
     </div>
+    <!-- CMS icon for PC -->
     <div class="cms-icon"><a href="../backend/cms.php"><i class="fa fa-address-card-o fa-3x" aria-hidden="true"></i></a></div>
+    <!-- CMS icon for ipad and iphone X -->
     <div class="cms-icon-responsive"><a href="../backend/cms.php"><i class="fa fa-address-card-o fa-2x" aria-hidden="true"></i></a></div>
     <header>
         <main>
@@ -106,6 +108,7 @@ if (file_exists("install.php")) {
         <div class="cms-container">
             <p>Welcome to the dashboard <b> <?= $_SESSION['admin-username'] ?> </b> </p>
             <br>
+            <!-- Place to change content in the copyright.php, tos.php, policy.php pages -->
             <h3>Change content of a page</h3>
             <form name="content-editor" method="post" action="cms.php">
                 <label for="file">Choose the page you want to edit:</label>
@@ -128,24 +131,34 @@ if (file_exists("install.php")) {
                     </div>
                 </fieldset>
                 <?php 
+                    // Check if all the information has been submitted to the server
                     if (isset($_POST)) {
+                        // Check if user has clicked on append button:
                         if (isset($_POST['submit-append']) && !empty($_POST['file'])) {
+                            // Check file existence, if not then output an error message
                             if (!file_exists($_POST['file'] . ".txt")){
                                 echo "Error: This file does not exist";
                             } else {
+                                // Open the selected file in append mode
                                 $file = fopen($_POST['file'] . ".txt","a+");
+                                // Empty string to store the current contents
                                 $curr_content = "";
+                                // Get every lines in the textfile to the $curr_content:
                                 while(!feof($file)){
                                     $curr_content = $curr_content . fgets($file). "<br>";
                                 }
                                 $new_content = $_POST["content"];
+                                // Input new content into the selected file
                                 file_put_contents($_POST['file'] . ".txt", $curr_content . $new_content);
                                 fclose($file);
                             }
                         }
+                        // Check if user has clicked on overwrite button:
                         if (isset($_POST['submit-overwrite']) && !empty($_POST['file'])) {
+                            // Open the selected file in write mode
                             $file = fopen($_POST['file'] . ".txt","w");
                             $content = $_POST["content"];
+                            // Overwrite new content into the selected file
                             file_put_contents($_POST['file'] . ".txt", $content);
                             fclose($file);
                         }
@@ -153,6 +166,7 @@ if (file_exists("install.php")) {
                 ?>
             </form>   
             <br> 
+            <!-- Place to check the new content in the copyright.php, tos.php, policy.php pages -->
             <h3>Check content of a page</h3>
             <form name="read-file" method="post" action="cms.php">
                 <label for="file-name">Choose the page you want to view:</label>
@@ -162,18 +176,21 @@ if (file_exists("install.php")) {
                             <option value="copyright">Copyright</option>
                             <option value="tos">TOS</option>
                             <option value="privacy">Privacy</option>
-                            <input type="submit" class="button" name="submit-open" value="View Content">
+                            <input type="submit" class="button" name="submit-open" value="View New Content">
                         </select>
                     </div>
                     <fieldset>
                         <legend>Content Reader</legend>
                         <br>
                         <?php
+                            // Check if the user has clicked on the open button
                             if (isset($_POST['submit-open'])) {
+                                // Check if the textfile exist
                                 if(!file_exists($_POST['file-name'] . ".txt")){
                                     echo "Error: This file does not exist.";
                                 } else {
                                     $file = fopen($_POST['file-name'] . ".txt", "r");
+                                    // Get every lines in the textfile
                                     while(!feof($file)){
                                         echo fgets($file). "<br>";
                                     }
@@ -185,6 +202,7 @@ if (file_exists("install.php")) {
                     </fieldset>    
             </form>
             <br>    
+            <!-- Place to upload new avatars for the team members -->
             <h3>Change team avatars</h3>
             <br>
             <p>Click on the member you want to change avatar:</p>
@@ -192,7 +210,7 @@ if (file_exists("install.php")) {
             <div class="team">
                 <div class="avatar-box" id="duy-box">
                     <div class="img-box">
-                        <img src="../code/images/about-images/duy-img.jpeg">
+                        <img src="../code/images/about-images/duy-img.jpeg?<$duy_random_id>">
                     </div>
                     <div class="box-content">
                         <h1>Nguyen Anh Duy<br>
@@ -202,7 +220,7 @@ if (file_exists("install.php")) {
                 </div>
                 <div class="avatar-box" id="bao-box">
                     <div class="img-box">
-                        <img src="../code/images/about-images/bao-img.jpeg">
+                        <img src="../code/images/about-images/bao-img.jpeg?<$bao_random_id>">
                     </div>
                     <div class="box-content">
                         <h1>Nguyen Luu Quoc Bao<br>
@@ -212,7 +230,7 @@ if (file_exists("install.php")) {
                 </div>
                 <div class="avatar-box" id="tuan-box">
                     <div class="img-box">
-                        <img src="../code/images/about-images/tuan-image.jpeg">
+                        <img src="../code/images/about-images/tuan-image.jpeg?<$tuan_random_id>">
                     </div>
                     <div class="box-content">
                         <h1>Dao Kha Tuan<br>
@@ -222,7 +240,7 @@ if (file_exists("install.php")) {
                 </div>
                 <div class="avatar-box" id="long-box">
                     <div class="img-box">
-                        <img src="../code/images/about-images/long-image.jpeg">
+                        <img src="../code/images/about-images/long-image.jpeg?<$long_random_id>">
                     </div>
                     <div class="box-content">
                         <h1>Nguyen Trong Minh Long<br>
@@ -243,17 +261,21 @@ if (file_exists("install.php")) {
                 <div class="info-body">
                     <form name="duy-img-editor" method="post" enctype="multipart/form-data" action="cms.php"> 
                         <!-- Profile image -->
-                        <label for="duy_image">Select a new image</label>
-                            <input type="file" name="duy_image">
-                            <input type="submit" name="duy-submit-btn" value="Upload Image">
-                            <br>
+                        <label for="duy_image">Select a new image: </label>
+                        <input type="file" name="duy_image">
+                        <br>
+                        <input type="submit" class="button" name="duy-submit-btn" value="Upload Image">
+                        <br>
                         <?php
                             if (isset($_POST['duy-submit-btn'])) {
+                                // Check if there is no error in the uploaded file 
                                 if ($_FILES["duy_image"]["error"] == UPLOAD_ERR_OK) {
-                                // store new image as duy.jpeg (replace the current image)
+                                // Input the current image folder location
                                 $new_location = '../code/images/about-images/duy-img.jpeg';    
+                                // store new image in the image folder location (replace the current image)
                                 move_uploaded_file($_FILES['duy_image']['tmp_name'], $new_location);
-                                echo "<p>The image has been uploaded, restart the browser to update the file!</p>";
+                                $duy_random_id = uniqid(); // random id to get the new image
+                                echo "<p>The image has been uploaded, close and restart the browser to update the file!</p>";
                                 }
                             }
                         ?>
@@ -269,19 +291,23 @@ if (file_exists("install.php")) {
                     <img src="../code/images/about-images/bao-img.jpeg" width="200px" height="200px">
                 </div>
                 <div class="info-body">
-                    <form name="bao-img-editor" method="post" enctype="multipart/form-data" action="cms.php"> 
+                <form name="bao-img-editor" method="post" enctype="multipart/form-data" action="cms.php"> 
                         <!-- Profile image -->
-                        <label for="bao_image">Select a new image</label>
-                            <input type="file" name="bao_image">
-                            <input type="submit" name="bao-submit-btn" value="Upload Image">
-                            <br>
+                        <label for="bao_image">Select a new image: </label>
+                        <input type="file" name="bao_image">
+                        <br>
+                        <input type="submit" class="button" name="bao-submit-btn" value="Upload Image">
+                        <br>
                         <?php
                             if (isset($_POST['bao-submit-btn'])) {
+                                // Check if there is no error in the uploaded file 
                                 if ($_FILES["bao_image"]["error"] == UPLOAD_ERR_OK) {
-                                // store new image as duy.jpeg (replace the current image)
+                                // Input the current image folder location
                                 $new_location = '../code/images/about-images/bao-img.jpeg';    
+                                // store new image in the image folder location (replace the current image)
                                 move_uploaded_file($_FILES['bao_image']['tmp_name'], $new_location);
-                                echo "<p>The image has been uploaded, restart the browser to update the file!</p>";
+                                $bao_random_id = uniqid(); // random id to get the new image
+                                echo "<p>The image has been uploaded, close and restart the browser to update the file!</p>";
                                 }
                             }
                         ?>
@@ -299,17 +325,21 @@ if (file_exists("install.php")) {
                 <div class="info-body">
                     <form name="tuan-img-editor" method="post" enctype="multipart/form-data" action="cms.php"> 
                         <!-- Profile image -->
-                        <label for="tuan_image">Select a new image</label>
-                            <input type="file" name="tuan_image">
-                            <input type="submit" name="tuan-submit-btn" value="Upload Image">
-                            <br>
+                        <label for="tuan_image">Select a new image: </label>
+                        <input type="file" name="tuan_image">
+                        <br>
+                        <input type="submit" class="button" name="tuan-submit-btn" value="Upload Image">
+                        <br>
                         <?php
                             if (isset($_POST['tuan-submit-btn'])) {
+                                // Check if there is no error in the uploaded file 
                                 if ($_FILES["tuan_image"]["error"] == UPLOAD_ERR_OK) {
-                                // store new image as duy.jpeg (replace the current image)
+                                // Input the current image folder location
                                 $new_location = '../code/images/about-images/tuan-image.jpeg';    
+                                // store new image in the image folder location (replace the current image)
                                 move_uploaded_file($_FILES['tuan_image']['tmp_name'], $new_location);
-                                echo "<p>The image has been uploaded, restart the browser to update the file!</p>";
+                                $tuan_random_id = uniqid(); // random id to get the new image
+                                echo "<p>The image has been uploaded, close and restart the browser to update the file!</p>";
                                 }
                             }
                         ?>
@@ -325,19 +355,23 @@ if (file_exists("install.php")) {
                     <img src="../code/images/about-images/long-image.jpeg" width="200px" height="200px">
                 </div>
                 <div class="info-body">
-                    <form name="long-img-editor" method="post" enctype="multipart/form-data" action="cms.php"> 
+                <form name="long-img-editor" method="post" enctype="multipart/form-data" action="cms.php"> 
                         <!-- Profile image -->
-                        <label for="long_image">Select a new image</label>
-                            <input type="file" name="long_image">
-                            <input type="submit" name="long-submit-btn" value="Upload Image">
-                            <br>
+                        <label for="long_image">Select a new image: </label>
+                        <input type="file" name="tuan_image">
+                        <br>
+                        <input type="submit" class="button" name="long-submit-btn" value="Upload Image">
+                        <br>
                         <?php
                             if (isset($_POST['long-submit-btn'])) {
+                                // Check if there is no error in the uploaded file 
                                 if ($_FILES["long_image"]["error"] == UPLOAD_ERR_OK) {
-                                // store new image as duy.jpeg (replace the current image)
-                                $new_location = '../code/images/about-images/long-image.jpeg';    
-                                move_uploaded_file($_FILES['long_image']['tmp_name'], $new_location);
-                                echo "<p>The image has been uploaded, restart the browser to update the file!</p>";
+                                // Input the current image folder location
+                                $new_location = '../code/images/about-images/long-image.jpeg';
+                                // store new image in the image folder (replace the current image)    
+                                move_uploaded_file($_FILES['tuan_image']['tmp_name'], $new_location);
+                                $long_random_id = uniqid(); // random id to get the new image
+                                echo "<p>The image has been uploaded, close and restart the browser to update the file!</p>";
                                 }
                             }
                         ?>

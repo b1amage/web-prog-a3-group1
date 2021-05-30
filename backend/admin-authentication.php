@@ -30,35 +30,37 @@
         // A variable to store the error message
         $error_message = base64_encode("Incorrect username or password. Try again");
         
+        // Verify admin username
         if ($admin_username == substr($data_username, 0, -1)) {
             $valid_admin = true;
         } else {
             $valid_admin = false;
         }
 
+        // Verify admin password
         if (password_verify($admin_password, $data_hashed_password)) {
             $valid_password = true;
         } else {
             $valid_password = false;
         }
 
-        // Check if the account is valid with the right username and password
+        // Check if the admin is valid with the right username and password
         if ($valid_admin && $valid_password) {
+            // Create a session to validate and use admin info in cms.php
             $_SESSION['admin-login'] = true;
             $_SESSION['admin-username'] = $_POST['admin-username'];
             // If valid, redirect to CMS page
             header("Location: ./cms.php");
         } else {
-            
             // If invalid, send an error message and redirect back to admin-login.php page
             header("Location: ../code/admin-login.php?error_message=$error_message");        
         }
 
         
-        // Release the lock of the registration.csv
+        // Release the lock of the admin file
         flock($admin_file, LOCK_UN);
 
-        // Close the registartion.csv file
+        // Close the admin file
         fclose($admin_file);
     }
 
