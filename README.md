@@ -11,6 +11,12 @@ https://github.com/s3877698/web_programmming_asm3_group1
 - You should start from web_programmming_asm3_group1/code/index.php
 - All logic file of php is in the web_programmming_asm3_group1/backend/ folder
 
+# Note
+- The icon in the right is to use the cms
+- Icon from fontawsome
+
+# Admin account
+
 ## Group Members
 
 Nguyen Anh Duy - s3878141
