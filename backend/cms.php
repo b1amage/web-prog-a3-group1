@@ -202,7 +202,10 @@ if (file_exists("install.php")) {
             <div class="team">
                 <div class="avatar-box" id="duy-box">
                     <div class="img-box">
-                        <?php $duy_id = rand(1,999999999)?>
+                        <?php 
+                            $duy_id = rand(1,999999999);
+                            $_SESSION['duy_id'] = $duy_id;
+                        ?>
                         <img src="../code/images/about-images/duy-img.jpeg?id=<?=$duy_id?>">
                     </div>
                     <div class="box-content">
@@ -213,7 +216,10 @@ if (file_exists("install.php")) {
                 </div>
                 <div class="avatar-box" id="bao-box">
                     <div class="img-box">
-                        <?php $bao_id = rand(1,999999999)?>
+                        <?php 
+                            $bao_id = rand(1,999999999);
+                            $_SESSION['bao_id'] = $bao_id; 
+                        ?>
                         <img src="../code/images/about-images/bao-img.jpeg?id=<?=$bao_id?>">
                     </div>
                     <div class="box-content">
@@ -224,7 +230,10 @@ if (file_exists("install.php")) {
                 </div>
                 <div class="avatar-box" id="tuan-box">
                     <div class="img-box">
-                        <?php $tuan_id = rand(1,999999999)?>
+                        <?php 
+                            $tuan_id = rand(1,999999999);
+                            $_SESSION['tuan_id'] = $tuan_id;
+                        ?>
                         <img src="../code/images/about-images/tuan-image.jpeg?id=<?=$tuan_id?>">
                     </div>
                     <div class="box-content">
@@ -235,7 +244,10 @@ if (file_exists("install.php")) {
                 </div>
                 <div class="avatar-box" id="long-box">
                     <div class="img-box">
-                        <?php $long_id = rand(1,999999999)?>
+                        <?php 
+                            $long_id = rand(1,999999999);
+                            $_SESSION['long_id'] = $long_id;
+                        ?>
                         <img src="../code/images/about-images/long-image.jpeg?id=<?=$long_id?>">
                     </div>
                     <div class="box-content">

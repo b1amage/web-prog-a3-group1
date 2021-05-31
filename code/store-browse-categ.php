@@ -143,7 +143,6 @@ if (file_exists("../backend/install.php")) {
                         foreach($stores as $store) {
                             if ($store[$field_name_stores['name']] !=="name") {
                                 display_store($store); // A function to display the stores 
-                                session_unset();
                             }
                         }                           
                     } else {
@@ -151,7 +150,6 @@ if (file_exists("../backend/install.php")) {
                         $matched_stores = unserialize(base64_decode($_SESSION['matched_stores']));
                         foreach($matched_stores as $store) {
                             display_store($store); 
-                            session_unset();
                         }
                     }
                 } 

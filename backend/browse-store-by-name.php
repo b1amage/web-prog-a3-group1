@@ -29,6 +29,9 @@ if (file_exists("install.php")) {
                 $_SESSION['matched_stores'] = base64_encode(serialize($matched_stores));
                 header("Location: ../code/store-browse-name.php?matched_letter={$first_letter}");
             } else {
+                // Delete the previous matched stores
+                unset($_SESSION['matched_stores']);
+                
                 // If there is no matched store, send the message to users
                 $no_matched_message = base64_encode("There is no store starts with letter {$first_letter}");
                 header("Location: ../code/store-browse-name.php?no_matched_message={$no_matched_message}");

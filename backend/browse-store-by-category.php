@@ -32,6 +32,9 @@ if (file_exists("install.php")) {
                 $matched_categ = $categories_data[$store_categ_id][$field_name_categories['name']];
                 header("Location: ../code/store-browse-categ.php?matched_categ={$matched_categ}");
             } else {
+                // Delete the previous matched stores
+                unset($_SESSION['matched_stores']);
+                
                 // If there is no matched store, send the message to users
                 $no_matched_message = base64_encode("There is no store in category {$store_categ}");
                 header("Location: ../code/store-browse-categ.php?no_matched_message={$no_matched_message}");

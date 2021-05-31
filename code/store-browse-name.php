@@ -156,7 +156,6 @@ if (file_exists("../backend/install.php")) {
                         foreach($stores as $store) {
                             if ($store[$field_name_stores['name']] !=="name") {
                                 display_store($store); // A function to display the stores 
-                                session_unset();
                             }
                         }                           
                     } else {
@@ -164,7 +163,6 @@ if (file_exists("../backend/install.php")) {
                         $matched_stores = unserialize(base64_decode($_SESSION['matched_stores']));
                         foreach($matched_stores as $store) {
                             display_store($store);
-                            session_unset();
                         }
                     }
                 } 
@@ -193,6 +191,9 @@ if (file_exists("../backend/install.php")) {
     </footer>
     <script src="./script/cookies.js" defer></script>
     <script src="./script/check_login.js" defer></script>
+    <script>
+        // document.onload = document.getElementsByTagName('form')[0].submit();
+    </script>
 </body>
 </html>
 </html>
