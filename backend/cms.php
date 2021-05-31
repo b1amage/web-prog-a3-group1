@@ -6,7 +6,7 @@ if (file_exists("install.php")) {
     if (!isset($_SESSION["admin-login"])) {
         header("location: ../code/admin-login.php");
     } 
-
+}
     include('./check_login.php');
     $my_account_link = check_login();
     $check_admin = check_admin_login();
@@ -115,7 +115,7 @@ if (file_exists("install.php")) {
                 <div class="responsive-area">
                     <select name="file" id="files">
                         <option value="default" disabled="disabled" selected="true">Select a file</option>
-                        <option value="copywright">Copywright</option>
+                        <option value="copyright">Copyright</option>
                         <option value="tos">TOS</option>
                         <option value="privacy">Privacy</option>
                     </select>
@@ -139,7 +139,7 @@ if (file_exists("install.php")) {
                 <div class="responsive-area">
                     <select name="file-name" id="file-name">
                         <option value="default" disabled="disabled" selected="true">Select a file</option>
-                        <option value="copywright">Copywright</option>
+                        <option value="copyright">Copyright</option>
                         <option value="tos">TOS</option>
                         <option value="privacy">Privacy</option>
                         <input type="submit" class="button" name="submit-open" value="View New Content">
@@ -152,8 +152,8 @@ if (file_exists("install.php")) {
                             if (isset($_GET['file_name'])) {
                                 
                                 switch($_GET['file_name']) {
-                                    case "copywright":
-                                        $file_name = "Copywright";
+                                    case "copyright":
+                                        $file_name = "Copyright";
                                         break;
                                     case "tos":
                                         $file_name = "Terms of Services";
@@ -352,6 +352,4 @@ if (file_exists("install.php")) {
     <script src="../code/script/display-member-info.js"></script>
     <script src="../code/script/check_login.js" defer></script>
 </body>
-</body>
 </html>
-<?php } ?>
