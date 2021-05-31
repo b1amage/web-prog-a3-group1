@@ -4,7 +4,7 @@ if (file_exists("install.php")) {
 } else {
 
 $store_by_categ = [];
-
+// idsplay array that contain array of store in categories
 foreach($categories_data as $categ) {
     foreach($stores_data as $store) {
         if($categ[$field_name_categories["id"]] == $store[$field_name_stores["category_id"]]) {
