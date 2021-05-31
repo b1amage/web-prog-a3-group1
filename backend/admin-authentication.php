@@ -2,7 +2,7 @@
     session_start();
     
     // Check if users submit the form
-    if (isset($_POST['submit-btn']) && $_POST['submit-btn'] !== "" || true) {
+    if (isset($_POST["submit-btn"]) && $_POST["submit-btn"] !== "") {
 
         // Create an array to store admin data from data.txt
         $admin_array = [];
@@ -16,10 +16,10 @@
         $data_hashed_password = $admin_array[1];
         
         // Store the email or phone submitted in a variable
-        $admin_username = $_POST['admin-username'];
+        $admin_username = $_POST["admin-username"];
 
         // Store the password submitted in a variable
-        $admin_password = $_POST['admin-password'];
+        $admin_password = $_POST["admin-password"];
 
         // A variable to check if the username is in data.txt
         $valid_admin = false;
@@ -47,8 +47,8 @@
         // Check if the admin is valid with the right username and password
         if ($valid_admin && $valid_password) {
             // Create a session to validate and use admin info in cms.php
-            $_SESSION['admin-login'] = true;
-            $_SESSION['admin-username'] = $_POST['admin-username'];
+            $_SESSION["admin-login"] = true;
+            $_SESSION["admin-username"] = $_POST["admin-username"];
             // If valid, redirect to CMS page
             header("Location: ./cms.php");
         } else {
