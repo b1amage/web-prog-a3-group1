@@ -136,9 +136,12 @@ include '../backend/display_store_by_categories.php';
             </form>
 
             <?php
+            // Check if the order is exist
             if (isset($_SESSION['order'])) {
+                // Iterate through order
                 foreach($_SESSION['order'] as $order) {
                     if ($name === $order["name"]) {
+                        // Display the message of succesfully added
                         echo "<h3 style='text-align: center; font-size: 20px; color: red'>{$order['name']} is added to the shopping cart</h3>";
                         break;
                     }
@@ -158,8 +161,10 @@ include '../backend/display_store_by_categories.php';
                     if ($product[$field_name_products["store_id"]] == $store_id && $product[$field_name_products["id"]] != $id){
                         $value = $product;
                             if ($feature_count == 5) {
+                                // Break the loop if there are 5 feature products
                                 break;
                             } else {
+                                // Increase the count by one
                                 $feature_count++; ?>       
         <div class="related-product-<?=$feature_count?> flex">
             <a href="./product-detail.php?product_id=<?=$value[$field_name_products["id"]]?>"><img src="./images/index-img/joyride.jpg" alt="joyride" width="300" height="300"></a>

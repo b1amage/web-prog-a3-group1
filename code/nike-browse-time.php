@@ -147,6 +147,7 @@ $id_store = $_GET["store_id"];
         <div class="product-container pd5">
 
         <?php 
+                    // Check the disable button when the page is min
                      if ($temp_page === -1) { ?>
                             <form action="../backend/page-create.php?store_id=<?=$id_store;?>" method="post">
                                 <input type="submit" value="< Previous" name="previous-btn" disabled class="php-btn">
@@ -160,25 +161,27 @@ $id_store = $_GET["store_id"];
                      ?>
         </form>
             <?php 
-                // echo $temp_page;
-                // print_r_with_lines($product_by_store_array[$_GET["store_id"]]);
-                
+                // Get length of the array
                 $length = count($product_by_store_array[$_GET["store_id"]]);
+                // Set count = 0 for displaying count 
                 $display_count = 0;
+                // Iterate through the product array by store
                 foreach($product_by_store_array[$_GET["store_id"]] as $product):
 
                     if ($temp_page === $length - 1) {
+                        // Reach the stop condition when having 1 product left
                         break;
                     }
 
                     if ($display_count == 2) {
+                        // Maximum two per page
                         break;
                     } else {
+                        //Increase the count
                         $display_count++;
-                        // print_r_with_lines($product_by_store_array[$_GET["store_id"]][$temp_page][$field_name_products["name"]]);
-                        // echo $temp_page;
+                        // Increase the page number
                         $temp_page++;
-                        // echo $temp_page;
+
                         ?>
 
                 <div class="product">
@@ -192,6 +195,7 @@ $id_store = $_GET["store_id"];
                     endforeach;
                     ?>
                      <?php 
+                     // Check the disable button if the page is max
                      if ($temp_page >= count($product_by_store_array[$_GET["store_id"]]) - 1) { ?>
                             <form action="../backend/page-create.php?store_id=<?=$id_store;?>" method="post">
                                 <input type="submit" value="Next >" name="next-btn" disabled class="php-btn">

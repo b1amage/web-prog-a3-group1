@@ -125,12 +125,17 @@ if (file_exists("../backend/install.php")) {
 
                     <?php 
 
-
+                    // Check if the order exist
                     if (isset($_SESSION["order"])) {
+                        // Set index equal to 0
                     $index = 0;
+                    // Bring order to super globaL variable $_SESSION
                     $all_order = $_SESSION["order"];
+                    // Set price in the session = 0 for further usage
                     $_SESSION["price"] = 0;
+                    // Iterate through the order
                     foreach($all_order as $order):
+                        // Increase the index by one
                         $index++;
                     ?>
 
@@ -144,6 +149,7 @@ if (file_exists("../backend/install.php")) {
                     </tr>
 
                     <?php 
+                    // Get the data from the $_SESSION
                     $_SESSION["index"] = $index;
                     $_SESSION["price"] = $_SESSION["price"] + ($order["price"]*$order["quantity"]);
                     endforeach; } ?>
@@ -159,6 +165,7 @@ if (file_exists("../backend/install.php")) {
         </div>
         <p style="display: flex; justify-content: center;">
             <?php
+                // Check if the error message exist and print out that message if exist
                 if(isset($_SESSION["error_message"])){
                     echo $_SESSION["error_message"]; 
                 };
@@ -170,8 +177,10 @@ if (file_exists("../backend/install.php")) {
             <h1 class="total-title">Total price</h1>
             <h2 id="total"><?php if(isset($_SESSION["price"]))
                 {if(isset($_SESSION["discount"])){
+                    // print out the price with discount
                     echo $_SESSION["price"] * $_SESSION["discount"];
                     }else{
+                        // Print the current price
                         echo $_SESSION["price"];
                     }};?></h2>
             <div class="btn-ctn">

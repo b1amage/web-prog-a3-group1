@@ -1,4 +1,5 @@
 <?php
+// Check if the install file is exist
 if (file_exists("../backend/install.php")) {
     exit("The install.php file is exit");
 } else {
@@ -120,12 +121,16 @@ include '../backend/display_store_by_categories.php';
                 <h1>New Store</h1>
             </div>
             <div id="scroll" class="store-container">
-                <?php $store_count = 0;
-                // display the new stores
+                <?php 
+                // Set count variable equal to 0 for counting
+                $store_count = 0;
+                // Display the new stores
                 foreach ($stores_data as $store) :
                     if ($store_count == 10) {
+                        // Break the loop when there are 10 store
                         break;
                     } else {
+                        // Increase the store count by one and display the div
                         $store_count++; ?>
 
                         <div class="store 1">
@@ -145,12 +150,16 @@ include '../backend/display_store_by_categories.php';
             </div>
             <div id="scroll" class="product-container">
 
-                <?php $product_count = 0;
+                <?php 
+                // Set product count equal to 0 for counting
+                $product_count = 0;
                 // Display the new products
                 foreach ($products_data as $product) :
                     if ($product_count == 10) {
+                        // Break the loop if there is 10 product displayed
                         break;
                     } else {
+                        // Increase the count by one
                         $product_count++; ?>
 
                         <div class="product 1">
@@ -175,10 +184,13 @@ include '../backend/display_store_by_categories.php';
                 // Display the feature stores
                 foreach ($stores_data as $store):
                     $x = $store[$field_name_stores["featured"]];
+                    // Check if the position of True is not false
                     if (strpos($x, "TRUE") !== FALSE) {
                         if ($feature_count == 10) {
+                            // Break the loop if there is 10 stores
                             break;
                         } else {
+                            // Increase the count
                             $feature_count++; ?>
 
                             <div class="feature first">
@@ -202,13 +214,17 @@ include '../backend/display_store_by_categories.php';
             <div id="scroll" class="feature-container last">
 
                 <?php
+                // Set count equal to 0 for calculating
                 $feature_product_count = 0;
                 // Display the feature products
                 foreach ($products_data as $product) :
+                    // Check if the product is feature in mall
                     if ($product[$field_name_products["featured_in_mall"]] == "TRUE") {
                         if ($feature_product_count == 10) {
+                            // Break the loop if there are 10 products
                             break;
                         } else {
+                            // Increase the count
                             $feature_product_count++; ?>
 
                             <div class="feature-last 1">
