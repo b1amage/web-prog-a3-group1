@@ -26,12 +26,14 @@ if (file_exists("install.php")) {
 
             if (count($matched_stores) !== 0) {// Check if there are matched stores
                 // Send the information of the stores matched with the first letter users chose
-                $_SESSION['matched_stores'] = base64_encode(serialize($matched_stores));
-                header("Location: ../code/store-browse-name.php?matched_letter={$first_letter}");
+                $_SESSION['matched_stores_with_letter'] = base64_encode(serialize($matched_stores));
+                $_SESSION['matched_letter'] = $first_letter;
+                header("Location: ../code/store-browse-name.php");
             } else {
                 // Delete the previous matched stores
-                unset($_SESSION['matched_stores']);
-                
+                unset($_SESSION['matched_stores_with_letter']);
+                unset($_SESSION['matched_letter']);
+
                 // If there is no matched store, send the message to users
                 $no_matched_message = base64_encode("There is no store starts with letter {$first_letter}");
                 header("Location: ../code/store-browse-name.php?no_matched_message={$no_matched_message}");
@@ -39,7 +41,8 @@ if (file_exists("install.php")) {
 
         } else if ($_POST['name_categ'] === "all") { // If users choose to display all of the stores
             // Redirect user back to the store-browse-categ.php page and display all of the stores
-            $_SESSION['matched_stores'] = "all";
+            $_SESSION['matched_stores_with_letter'] = "all";
+            unset($_SESSION['matched_letter']);
             header("Location: ../code/store-browse-name.php");
         }
     }

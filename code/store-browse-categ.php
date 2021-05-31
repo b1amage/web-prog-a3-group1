@@ -126,8 +126,8 @@ if (file_exists("../backend/install.php")) {
         </div>
         <?php 
             // Display the name of the category that they chose to display matched stores
-            if (isset($_GET['matched_categ'])) {
-                echo "<h2 style='text-align: center';>Stores in the category {$_GET['matched_categ']}</h2>";
+            if (isset($_SESSION['matched_categ'])) {
+                echo "<h2 style='text-align: center';>Stores in the category {$_SESSION['matched_categ']}</h2>";
             } 
 
             // Inform users that they chose to display all the stores

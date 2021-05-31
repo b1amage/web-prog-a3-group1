@@ -139,19 +139,19 @@ if (file_exists("../backend/install.php")) {
         </div>
         <?php 
             // Display the first letter users chose to display matched stores
-            if (isset($_GET['matched_letter'])) {
-                echo "<h2 style='text-align: center';>Stores start with letter {$_GET['matched_letter']}</h2>";
+            if (isset($_SESSION['matched_letter'])) {
+                echo "<h2 style='text-align: center';>Stores start with letter {$_SESSION['matched_letter']}</h2>";
             } 
 
             // Inform users that they chose to display all the stores
-            if (isset($_SESSION['matched_stores']) && $_SESSION['matched_stores']=== "all") {
+            if (isset($_SESSION['matched_stores_with_letter']) && $_SESSION['matched_stores_with_letter']=== "all") {
                 echo "<h2 style='text-align: center';>All stores in the mall</h2>";
             }
         ?>
         <div class="store-container s1">
             <?php 
-                if (isset($_SESSION['matched_stores'])) {
-                    if ($_SESSION['matched_stores'] === "all") { // Display all the stores when users chose "Display all"
+                if (isset($_SESSION['matched_stores_with_letter'])) {
+                    if ($_SESSION['matched_stores_with_letter'] === "all") { // Display all the stores when users chose "Display all"
                         $stores = get_data_from_csv('../backend/stores.csv');
                         foreach($stores as $store) {
                             if ($store[$field_name_stores['name']] !=="name") {
@@ -160,7 +160,7 @@ if (file_exists("../backend/install.php")) {
                         }                           
                     } else {
                         // If users chose to display the stores matched to a first letter, display them
-                        $matched_stores = unserialize(base64_decode($_SESSION['matched_stores']));
+                        $matched_stores = unserialize(base64_decode($_SESSION['matched_stores_with_letter']));
                         foreach($matched_stores as $store) {
                             display_store($store);
                         }
