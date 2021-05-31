@@ -107,18 +107,18 @@ if (file_exists("../backend/install.php")) {
             <!-- Place to store the changed content -->
             <?php
             // Check if the new policy content is exist or not
-                if(!file_exists("../backend/policy.txt")) {
+                if(!file_exists("../backend/privacy.txt") || filesize("../backend/privacy.txt") === 0) {
                     // If not, load the old content of the policy page
-                    $file = fopen("../backend/current-files/old-policy.txt", "r");
+                    $file = fopen("../backend/current-files/old-privacy.txt", "r");
                     while(!feof($file)) {
                         echo fgets($file);
                     }
                     fclose($file);
                 } else {
                     // If yes, load the new content to overwrite the policy page
-                    $file = fopen("../backend/policy.txt", "r");
+                    $file = fopen("../backend/privacy.txt", "r");
                     while(!feof($file)) {
-                        echo fgets($file). "<br>";
+                        echo fgets($file);
                     }
                     fclose($file);
                 }

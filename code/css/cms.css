@@ -21,10 +21,17 @@ i {
     margin-bottom: 200px;
     margin-left: 20px;
 }
+
 fieldset {
     width: 100%;
     margin-right: 20px;
+    padding: 5px;
 }
+
+fieldset ul li{
+    margin: 0 2.5%;
+}
+
 legend {
     margin: 0px 10px;
     padding: 5px 10px;

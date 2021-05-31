@@ -18,7 +18,7 @@ if (file_exists("../backend/install.php")) {
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/cookies.css">
     <link rel="stylesheet" href="./css/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./css/copyright.css">
+    <link rel="stylesheet" href="./css/copywright.css">
     <link rel="stylesheet" href="../code/css/cms.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
 </head>
@@ -106,19 +106,19 @@ if (file_exists("../backend/install.php")) {
             <div class="line"></div>
             <!-- Place to store the content -->
             <?php
-                // Check if the new copyright content is exist or not
-                if(!file_exists("../backend/copyright.txt")) {
+                // Check if the new copywright content is exist or not
+                if(!file_exists("../backend/copywright.txt") || filesize("../backend/copywright.txt") === 0) {
                     // If not, load the old content of the copyright page
-                    $file = fopen("../backend/current-files/old-copyright.txt", "r");
+                    $file = fopen("../backend/current-files/old-copywright.txt", "r");
                     while(!feof($file)) {
                         echo fgets($file);
                     }
                     fclose($file);
                 } else {
                     // If yes, load the new content to overwrite the copyright page
-                    $file = fopen("../backend/copyright.txt", "r");
+                    $file = fopen("../backend/copywright.txt", "r");
                     while(!feof($file)) {
-                        echo fgets($file). "<br>";
+                        echo fgets($file);
                     }
                     fclose($file);
                 }

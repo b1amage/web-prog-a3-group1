@@ -108,7 +108,7 @@ if (file_exists("../backend/install.php")) {
             <!-- Place to store the changed content -->
             <?php
             // Check if the new tos content is exist or not
-                if(!file_exists("../backend/tos.txt")) {
+                if(!file_exists("../backend/tos.txt") || filesize("../backend/tos.txt") === 0) {
                     // If not, load the old content of the tos page
                     $file = fopen("../backend/current-files/old-tos.txt", "r");
                     while(!feof($file)) {
@@ -119,7 +119,7 @@ if (file_exists("../backend/install.php")) {
                     // If yes, load the new content to overwrite the tos page
                     $file = fopen("../backend/tos.txt", "r");
                     while(!feof($file)) {
-                        echo fgets($file). "<br>";
+                        echo fgets($file);
                     }
                     fclose($file);
                 }

@@ -115,7 +115,7 @@ if (file_exists("install.php")) {
                 <div class="responsive-area">
                     <select name="file" id="files">
                         <option value="default" disabled="disabled" selected="true">Select a file</option>
-                        <option value="copyright">Copyright</option>
+                        <option value="copywright">Copywright</option>
                         <option value="tos">TOS</option>
                         <option value="privacy">Privacy</option>
                     </select>
@@ -139,29 +139,55 @@ if (file_exists("install.php")) {
                 <div class="responsive-area">
                     <select name="file-name" id="file-name">
                         <option value="default" disabled="disabled" selected="true">Select a file</option>
-                        <option value="copyright">Copyright</option>
+                        <option value="copywright">Copywright</option>
                         <option value="tos">TOS</option>
                         <option value="privacy">Privacy</option>
                         <input type="submit" class="button" name="submit-open" value="View New Content">
                     </select>
                 </div>
+                <div>
+                    <h1>
+                        <?php
+                            // Show the name of the file user want to view
+                            if (isset($_GET['file_name'])) {
+                                
+                                switch($_GET['file_name']) {
+                                    case "copywright":
+                                        $file_name = "Copywright";
+                                        break;
+                                    case "tos":
+                                        $file_name = "Terms of Services";
+                                        break;
+                                    case "privacy":
+                                        $file_name = "Privacy Policy";
+                                        break;
+                                    default:
+                                        break;
+                                }
+
+                                echo "The content of $file_name: "; 
+                            }
+                        ?>
+                    </h1>
+                </div>
                 <fieldset>
                     <legend>Content Reader</legend>
                     <br>
                     <?php
-                    // Check if the user has clicked on the open button
-                    if (isset($_POST['submit-open'])) {
-                        // Check if the textfile exist
-                        if(!file_exists($_POST['file-name'] . ".txt")){
-                            echo "Error: This file does not exist.";
-                        } else {
-                            $file = fopen($_POST['file-name'] . ".txt", "r");
-                            // Get every lines in the textfile
-                            while(!feof($file)){
-                                echo fgets($file). "<br>";
-                            }
-                            fclose($file);
+
+                    // Get the content users want to display and display it
+                    if (isset($_SESSION['content-display'])) {
+                        $display = $_SESSION['content-display'];
+                        foreach($display as $line) {
+                            echo $line;
                         }
+                        unset($_SESSION['content-display']);
+                    } 
+
+                    // Get the error message when file does not exist and display it
+                    if (isset($_GET['error'])) {
+                        $error = base64_decode($_GET['error']);
+                        echo $error;
                     }
                     ?>
                     <br><br>

@@ -1,5 +1,3 @@
-<h1>Copyright</h1>
-<div class="line"></div>
 <p>All content included in or made available through any Retailez Service, such as text, graphics, logos, button icons, images, audio clips, digital downloads, data compilations, and software is the property of Retailez or its content suppliers and protected by United States and international copyright laws. The compilation of all content included in or made available through any Retailez Service is the exclusive property of Retailez and protected by U.S. and international copyright laws.</p>
 <p>Retailez International Limited. All Rights Reserved. Reproduction prohibited other than in accordance with the following copyright notice and limited reproduction permissions.
 The contents of these pages are © Retailez International Limited, unless otherwise stated, or in some cases of Rampai Niaga Sdn Bhd. Reproduction of part or all of the contents in any form is prohibited other than in accordance with the following permissions:</p>
