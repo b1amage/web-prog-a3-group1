@@ -152,6 +152,7 @@ include '../backend/display_store_by_categories.php';
         </div>
 
         <?php
+                // Display the 5 related products
                 $feature_count = 0;
                 foreach ($products_data as $product):
                     if ($product[$field_name_products["store_id"]] == $store_id && $product[$field_name_products["id"]] != $id){

@@ -120,8 +120,8 @@ include '../backend/display_store_by_categories.php';
                 <h1>New Store</h1>
             </div>
             <div id="scroll" class="store-container">
-
                 <?php $store_count = 0;
+                // display the new stores
                 foreach ($stores_data as $store) :
                     if ($store_count == 10) {
                         break;
@@ -146,6 +146,7 @@ include '../backend/display_store_by_categories.php';
             <div id="scroll" class="product-container">
 
                 <?php $product_count = 0;
+                // Display the new products
                 foreach ($products_data as $product) :
                     if ($product_count == 10) {
                         break;
@@ -171,6 +172,7 @@ include '../backend/display_store_by_categories.php';
 
                 <?php
                 $feature_count = 0;
+                // Display the feature stores
                 foreach ($stores_data as $store):
                     $x = $store[$field_name_stores["featured"]];
                     if (strpos($x, "TRUE") !== FALSE) {
@@ -201,6 +203,7 @@ include '../backend/display_store_by_categories.php';
 
                 <?php
                 $feature_product_count = 0;
+                // Display the feature products
                 foreach ($products_data as $product) :
                     if ($product[$field_name_products["featured_in_mall"]] == "TRUE") {
                         if ($feature_product_count == 10) {
