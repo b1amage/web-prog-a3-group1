@@ -33,7 +33,7 @@ if (isset($_POST["submit-btn"])) {
 
         // Write username and the hashed password in the file
         fwrite($data_file, $_POST["username"]);
-        fwrite($data_file,"\n");
+        fwrite($data_file,",");
         fwrite($data_file, password_hash($_POST["password"], PASSWORD_DEFAULT));
         // Close the file after writing
         fclose($data_file);
