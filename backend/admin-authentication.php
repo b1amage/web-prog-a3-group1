@@ -8,10 +8,14 @@
         $admin_array = [];
         $admin_file = fopen('../data.txt', "r"); // Open the data.txt file
         flock($admin_file, LOCK_SH); // Set the file in shared mode (reader)
-        while (!feof($admin_file)) {
-            array_push($admin_array, fgets($admin_file) ) ;
-            // print_r(fgets($admin_file));
+        
+        $data = explode(",", fgets($admin_file));
+        foreach($data as $info) {
+            array_push($admin_array, $info);
         }
+
+        print_r($admin_array);
+
         $data_username = $admin_array[0];
         $data_hashed_password = $admin_array[1];
         
@@ -31,7 +35,7 @@
         $error_message = base64_encode("Incorrect username or password. Try again");
         
         // Verify admin username
-        if ($admin_username == substr($data_username, 0, -1)) {
+        if ($admin_username == $data_username) {
             $valid_admin = true;
         } else {
             $valid_admin = false;
