@@ -10,4 +10,6 @@ if (file_exists("install.php")) {
         header("Location: ../code/register.php");
     }
 }
+
+// A comment to check
 ?>
