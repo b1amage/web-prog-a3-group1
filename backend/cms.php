@@ -113,7 +113,7 @@ if (file_exists("install.php")) {
             <form name="content-editor" method="post" action="content-management.php">
                 <label for="file-name">Choose the page you want to edit:</label>
                 <div class="responsive-area">
-                    <select name="file-name" id="files">
+                    <select name="file-name" id="files" onchange="form.submit()">
                         <?php
                             if (isset($_GET['file_name'])) {
                                 $value = $_GET['file_name'];
@@ -173,7 +173,6 @@ if (isset($_GET['error'])) {
                     <div class="btn-area">
                         <input type="submit" class="button" name="submit-append" value="Append Content">
                         <input type="submit" class="button" name="submit-overwrite" value="Overwrite Content">
-                        <input type="submit" class="button" name="submit-open" value="View Content">
                     </div>
                 </fieldset>
             </form>   

@@ -43,8 +43,7 @@
     
     header("Location: ../backend/cms.php");
 
-    // Check if the user has clicked on the open button
-    if (isset($_POST['submit-open']) && $_POST['file-name'] !== "default") {
+    if ($_POST['file-name'] !== "default") {
         // Check if the textfile exist
         if(!file_exists($_POST['file-name'] . ".txt")){
             $error =  base64_encode("Error: This file does not exist.");
