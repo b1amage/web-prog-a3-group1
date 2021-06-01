@@ -178,68 +178,6 @@ if (isset($_GET['error'])) {
                 </fieldset>
             </form>   
             <br> 
-            <!-- Place to check the new content in the copyright.php, tos.php, policy.php pages -->
-            <!-- <h3>Check content of a page</h3>
-            <form name="read-file" method="post" action="content-management.php">
-                <label for="file-name">Choose the page you want to view:</label>
-                <div class="responsive-area">
-                    <select name="file-name" id="file-name">
-                        <option value="default" disabled="disabled" selected="true">Select a file</option>
-                        <option value="copyright">Copyright</option>
-                        <option value="tos">TOS</option>
-                        <option value="privacy">Privacy</option>
-                        <input type="submit" class="button" name="submit-open" value="View New Content">
-                    </select>
-                </div>
-                <div>
-                    <h1>
-                        <?php
-                            // Show the name of the file user want to view
-                            // if (isset($_GET['file_name'])) {
-                                
-                            //     switch($_GET['file_name']) {
-                            //         case "copyright":
-                            //             $file_name = "Copyright";
-                            //             break;
-                            //         case "tos":
-                            //             $file_name = "Terms of Services";
-                            //             break;
-                            //         case "privacy":
-                            //             $file_name = "Privacy Policy";
-                            //             break;
-                            //         default:
-                            //             break;
-                            //     }
-
-                            //     echo "The content of $file_name: "; 
-                            // }
-                        ?>
-                    </h1>
-                </div>
-                <fieldset>
-                    <legend>Content Reader</legend>
-                    <br>
-                    <?php
-
-                    // // Get the content users want to display and display it
-                    // if (isset($_SESSION['content-display'])) {
-                    //     $display = $_SESSION['content-display'];
-                    //     foreach($display as $line) {
-                    //         echo $line;
-                    //     }
-                    //     unset($_SESSION['content-display']);
-                    // } 
-
-                    // // Get the error message when file does not exist and display it
-                    // if (isset($_GET['error'])) {
-                    //     $error = base64_decode($_GET['error']);
-                    //     echo $error;
-                    // }
-                    ?>
-                    <br><br>
-                </fieldset>    
-            </form>
-            <br>     -->
             <!-- Place to upload new avatars for the team members -->
             <h3>Change team avatars</h3>
             <br>
