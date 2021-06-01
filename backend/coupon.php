@@ -3,7 +3,7 @@ if (file_exists("install.php")) {
     exit("The install.php file is exit");
 } else {
 session_start();
-header("Location: ../code/order_placement_2.php");
+header("Location: ../code/order_placement.php");
 
 // Set i = 1 for indexing and calculatings
 $i = 1;

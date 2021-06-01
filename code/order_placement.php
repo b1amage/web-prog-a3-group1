@@ -64,7 +64,7 @@ if (file_exists("../backend/install.php")) {
                         </li>
                         <li><a href="./faqs.php" class="nav__link">FAQs</a></li>
                         <li><a href="./contact.php" class="nav__link">Contact</a></li>
-                        <li><a href="./order_placement_2.php" class="nav__link"><i class="ti-shopping-cart"></i></a></li>
+                        <li><a href="./order_placement.php" class="nav__link"><i class="ti-shopping-cart"></i></a></li>
                     </ul>
                 </nav>
     
@@ -102,7 +102,7 @@ if (file_exists("../backend/install.php")) {
                         </li>
                         <li><a href="./faqs.php" class="nav__mobile-link">FAQs</a></li>
                         <li><a href="./contact.php" class="nav__mobile-link">Contact</a></li>
-                        <li><a href="./order_placement_2.php" class="nav__mobile-link"><i class="ti-shopping-cart"></i></a></li>
+                        <li><a href="./order_placement.php" class="nav__mobile-link"><i class="ti-shopping-cart"></i></a></li>
                     </ul>
                 </nav>
                 
