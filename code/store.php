@@ -14,13 +14,21 @@ include '../backend/product_by_store.php';
 include '../backend/display_store_by_categories.php';
 include '../backend/arrray_product_by_store.php';
 ?>
+<?php 
+        $store_id = $_GET["store_id"];
+        foreach ($stores_data as $store) {
+            if ($store[$field_name_stores["id"]] === $store_id) {
+                $store_name = $store[$field_name_stores["name"]];
+            }
+        };
+        ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home-Nike</title>
+    <title><?=$store_name; ?></title>
     <link rel="stylesheet" href="./css/store-home.css">
     <link rel="stylesheet" href="./css/store-container.css">
     <link rel="stylesheet" href="./css/header.css">
@@ -111,14 +119,6 @@ include '../backend/arrray_product_by_store.php';
     <main>
         <!-- New Product -->
         <div class="title">
-        <?php 
-        $store_id = $_GET["store_id"];
-        foreach ($stores_data as $store) {
-            if ($store[$field_name_stores["id"]] === $store_id) {
-                $store_name = $store[$field_name_stores["name"]];
-            }
-        };
-        ?>
         <h1><?=$store_name; ?></h1>
             <h1>New Product</h1>
         </div>
