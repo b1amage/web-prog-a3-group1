@@ -16,6 +16,8 @@ https://github.com/s3877698/web_programmming_asm3_group1
 - Icon from fontawsome
 
 # Admin account
+name: bao
+pass: 123456
 
 ## Group Members
 
