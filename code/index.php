@@ -161,7 +161,7 @@ include '../backend/display_store_by_categories.php';
                     } else {
                         // Increase the count by one
                         $product_count++; ?>
-
+                        
                         <div class="product 1">
                             <a href="./product-detail.php?product_id=<?=$product[$field_name_products["id"]]?>"><img src="./images/index-img/jd1.jpg" alt="nike-product" width="200" height="200"></a>
                             <h3><a href="./product-detail.php" class="underline"><?= $product[$field_name_products["name"]]; ?></a></h3>

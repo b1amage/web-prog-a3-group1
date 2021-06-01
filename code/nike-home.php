@@ -111,6 +111,15 @@ include '../backend/arrray_product_by_store.php';
     <main>
         <!-- New Product -->
         <div class="title">
+        <?php 
+        $store_id = $_GET["store_id"];
+        foreach ($stores_data as $store) {
+            if ($store[$field_name_stores["id"]] === $store_id) {
+                $store_name = $store[$field_name_stores["name"]];
+            }
+        };
+        ?>
+        <h1><?=$store_name; ?></h1>
             <h1>New Product</h1>
         </div>
         <div class="product-container">
