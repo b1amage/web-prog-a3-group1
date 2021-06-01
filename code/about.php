@@ -34,7 +34,7 @@ if (file_exists("../backend/install.php")) {
                     $duy_id = $_SESSION['duy_id'];
                 }
             ?>
-            <img src="./images/about-images/duy-img.jpeg?<?=$duy_id?>" width="200px" height="200px">
+            <img src="./images/about-images/duy-img.jpeg?id=<?=$duy_id?>" width="200px" height="200px">
         </div>
         <div class="info-body">
             <p><b>Email: </b><a href="#" target="blank">s3878141@rmit.edu.vn</a><br>
@@ -53,7 +53,7 @@ if (file_exists("../backend/install.php")) {
                     $bao_id = $_SESSION['bao_id'];
                 }
             ?>        
-            <img src="./images/about-images/bao-img.jpeg?<?=$bao_id?>" width="200px" height="200px">
+            <img src="./images/about-images/bao-img.jpeg?id=<?=$bao_id?>" width="200px" height="200px">
         </div>
         <div class="info-body">
             <p><b>Email: </b><a href="#" target="blank">s3877698@rmit.edu.vn</a><br>
@@ -72,7 +72,7 @@ if (file_exists("../backend/install.php")) {
                     $tuan_id = $_SESSION['tuan_id'];
                 }
             ?>
-            <img src="./images/about-images/tuan-image.jpeg?<?=$tuan_id?>" width="200px" height="200px">
+            <img src="./images/about-images/tuan-image.jpeg?id=<?=$tuan_id?>" width="200px" height="200px">
         </div>
         <div class="info-body">
             <b>Email: </b><a href="#" target="blank">s3877347@rmit.edu.vn</a><br>
@@ -91,7 +91,7 @@ if (file_exists("../backend/install.php")) {
                     $long_id = $_SESSION['long_id'];
                 }
             ?>
-            <img src="./images/about-images/long-image.jpeg?<?=$long_id?>" width="200px" height="200px">
+            <img src="./images/about-images/long-image.jpeg?id=<?=$long_id?>" width="200px" height="200px">
         </div>
         <div class="info-body">
             <b>Email: </b><a href="#" target="blank">s3878694@rmit.edu.vn</a><br>
@@ -201,7 +201,7 @@ if (file_exists("../backend/install.php")) {
                 <div class="team">    
                     <div class="avatar-box" id="duy-box">
                         <div class="img-box">
-                            <img src="./images/about-images/duy-img.jpeg?<?=$duy_id?>">
+                            <img src="./images/about-images/duy-img.jpeg?id=<?=$duy_id?>">
                         </div>
                         <div class="box-content">
                             <h1>Nguyen Anh Duy<br>
@@ -211,7 +211,7 @@ if (file_exists("../backend/install.php")) {
                     </div>
                     <div class="avatar-box" id="bao-box">
                         <div class="img-box">
-                            <img src="./images/about-images/bao-img.jpeg?<?=$bao_id?>">
+                            <img src="./images/about-images/bao-img.jpeg?id=<?=$bao_id?>">
                         </div>
                         <div class="box-content">
                             <h1>Nguyen Luu Quoc Bao<br>
@@ -221,7 +221,7 @@ if (file_exists("../backend/install.php")) {
                     </div>
                     <div class="avatar-box" id="tuan-box">
                         <div class="img-box">
-                            <img src="./images/about-images/tuan-image.jpeg?<?=$tuan_id?>">
+                            <img src="./images/about-images/tuan-image.jpeg?id=<?=$tuan_id?>">
                         </div>
                         <div class="box-content">
                             <h1>Dao Kha Tuan<br>
@@ -231,7 +231,7 @@ if (file_exists("../backend/install.php")) {
                     </div>
                     <div class="avatar-box" id="long-box">
                         <div class="img-box">
-                            <img src="./images/about-images/long-image.jpeg?<?=$long_id?>">
+                            <img src="./images/about-images/long-image.jpeg?id=<?=$long_id?>">
                         </div>
                         <div class="box-content">
                             <h1>Nguyen Trong Minh Long<br>
