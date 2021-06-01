@@ -108,6 +108,7 @@ if (file_exists("../backend/install.php")) {
             <select class="name-categ" name="name_categ" onchange="form.submit()">
                 <option value="" selected disabled hidden>Select the starting letter</option>
                 <option value="all">Display all</option>
+                <option value="a digit">Stores start with a digit</option>
                 <option value="A">A</option>
                 <option value="B">B</option>
                 <option value="C">C</option>
@@ -140,7 +141,7 @@ if (file_exists("../backend/install.php")) {
         <?php 
             // Display the first letter users chose to display matched stores
             if (isset($_SESSION['matched_letter'])) {
-                echo "<h2 style='text-align: center';>Stores start with letter {$_SESSION['matched_letter']}</h2>";
+                echo "<h2 style='text-align: center';>Stores start with {$_SESSION['matched_letter']}</h2>";
             } 
 
             // Inform users that they chose to display all the stores

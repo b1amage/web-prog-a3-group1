@@ -17,10 +17,19 @@ if (file_exists("install.php")) {
             $stores_data = get_data_from_csv('../backend/stores.csv');
             $matched_stores = [];
 
-            // Iterate through the stores.csv to find the matched stores
+            // Iterate through the stores.csv to find the matched stores 
             foreach($stores_data as $store) {
                 if (strpos($store[$field_name_stores['name']], $first_letter) === 0 && $store[$field_name_stores['name']] !== "name") {
                     $matched_stores[] = $store;
+                }
+            }
+
+            // If users want to see the stores starts with a digit, iterate through the stores.csv to find the matched stores
+            if ($first_letter === "a digit") {
+                foreach($stores_data as $store) {
+                    if (is_numeric($store[$field_name_stores['name']][0])) {
+                        $matched_stores[] = $store;
+                    }
                 }
             }
 
@@ -35,7 +44,7 @@ if (file_exists("install.php")) {
                 unset($_SESSION['matched_letter']);
 
                 // If there is no matched store, send the message to users
-                $no_matched_message = base64_encode("There is no store starts with letter {$first_letter}");
+                $no_matched_message = base64_encode("There is no store starts with {$first_letter}");
                 header("Location: ../code/store-browse-name.php?no_matched_message={$no_matched_message}");
             }
 
