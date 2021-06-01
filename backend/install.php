@@ -46,13 +46,6 @@ if (isset($_POST["clear-btn"])) {
     fclose($data_file);
 }
 
-// Kiem tra xem file nay co ton tai hay ko (de vao tat ca file php khac)
-// if (file_exists("install.php")) {
-//     exit("The install.php file is exit");
-// } else {
-//     // Write code here
-// }
-
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +57,7 @@ if (isset($_POST["clear-btn"])) {
     <title>Install</title>
 </head>
 <body>
-    <form action="install2.php" method="post">
+    <form action="install.php" method="post">
         <label for="username">Username</label>
         <br>
         <input type="text" name="username" id="username">
