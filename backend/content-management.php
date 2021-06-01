@@ -1,4 +1,7 @@
 <?php 
+if (file_exists("install.php")) {
+    exit("The install.php file is exit");
+} else {
     session_start();
     # Edit the content:
 
@@ -68,4 +71,5 @@
             header("Location: ../backend/cms.php?file_name=$file_name");
         }
     }
+}
 ?>

@@ -1,4 +1,7 @@
 <?php 
+if (file_exists("install.php")) {
+    exit("The install.php file is exit");
+} else {
     session_start();
     
     // Check if users submit the form
@@ -67,5 +70,6 @@
         // Close the admin file
         fclose($admin_file);
     }
+}
 
 ?>

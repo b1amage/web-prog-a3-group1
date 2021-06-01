@@ -1,4 +1,7 @@
 <?php
+if (file_exists("install.php")) {
+    exit("The install.php file is exit");
+} else {
     session_start();
     // get the id of product
     $id = $_GET["product_id"];
@@ -38,5 +41,6 @@
     print_r_with_lines($orderplacement);
 
     $_SESSION["order"] = $orderplacement; 
+}
 
 ?>

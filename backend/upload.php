@@ -1,4 +1,7 @@
 <?php
+if (file_exists("install.php")) {
+    exit("The install.php file is exit");
+} else {
     // Check duy-submit-btn
     if (isset($_POST['duy-submit-btn'])) {
         // Check if there is no error in the uploaded file 
@@ -44,4 +47,5 @@
         }
     }
     header("Location: ../backend/cms.php");
+}
 ?>
